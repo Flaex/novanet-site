@@ -3,8 +3,7 @@
 body {color:#808285; background:url(../img/bg.svg)}
 body, #nn-con form label input, #nn-con form textarea {font-family:'Fira Sans', sans-serif}
 
-.container {max-width:1440px; margin:0 auto; padding:5em 5em 0 5em; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; -webkit-box-shadow: 1px 0px 89px -21px rgba(0,0,0,0.64); -moz-box-shadow: 1px 0px 89px -21px rgba(0,0,0,0.64); box-shadow: 1px 0px 89px -21px rgba(0,0,0,0.64); background:#fff}
-.container {max-width:1440px; margin:0 auto; padding:5em 5em 0 5em; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; -webkit-box-shadow: 1px 0px 89px -21px rgba(0,0,0,0.64); -moz-box-shadow: 1px 0px 89px -21px rgba(0,0,0,0.64); box-shadow: 1px 0px 89px -21px rgba(0,0,0,0.64); background:#fff}
+.container {max-width:1440px; margin:0 auto; padding:5em 5em 0 5em; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; -webkit-box-shadow: 1px 0px 89px -21px rgba(0,0,0,0.44); -moz-box-shadow: 1px 0px 89px -21px rgba(0,0,0,0.44); box-shadow: 1px 0px 89px -21px rgba(0,0,0,0.44); background:#fff}
 
 .flexbox {display:flex; flex-wrap:wrap}
 .flex {display:flex; flex-direction:column; justify-content:center}
