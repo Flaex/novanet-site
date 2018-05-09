@@ -38,7 +38,7 @@ h2 {margin:0 0 0.3em 0; font-weight:900; font-size:1.8em; color:#4e4d50}
 h3 {margin:0.8em 0 0.2em 0; font-weight:900; font-size:1.5em}
 h4 {margin:0.4em 0 0.3em 0; font-weight:700; font-size:1.25em; color:#4e4d50}
 p {font-weight:300; font-size:1.3em; line-height:1.3em}
-.col-33 p {font-size:1.1em; line-height:1.3em}    
+.col-33 p {min-height:2.5em; font-size:1.1em; line-height:1.3em}    
 
 /* Colores */
 .green-1 {color:#85d100}
@@ -130,17 +130,21 @@ ul li i {font-size:1em}
 
 /* Botones */
 .tabs a {border-bottom:#d1d2d3 4px solid}
-.tabs a:hover {border-bottom:#4e4d50 4px solid; -moz-transition:all 250ms ease-in; -webkit-transition:all 250ms ease-in; -o-transition:all 250ms ease-in}
+.tabs a:hover {border-bottom:#4e4d50 4px solid; -moz-transition:all 500ms ease-in; -webkit-transition:all 500ms ease-in; -o-transition:all 500ms ease-in}
 .tabs a.act {border-bottom:#4e4d50 4px solid}
-.tabs a .btn {display:flex; flex-direction:column; justify-content:center; cursor:pointer; width:6em; height:6em; margin:0 0 0.25em 0; text-align:center}  
+.tabs a .btn {position:relative; display:flex; flex-direction:column; justify-content:center; cursor:pointer; width:6em; height:6em; margin:0 0 0.25em 0; text-align:center; overflow:hidden} 
+.tabs a .btn:before {content:''; position:absolute; top:0; left:0; width:6em; height:0; background:rgba(255,255,255,0.25); -webkit-transition-duration:0.4s; transition-duration:0.4s;}
+.tabs a .btn:hover:before {height:6em}
 
 /* Historia - Nosotros */
-#Ini .slog p {font-size:1.9em; line-height:1.2em; padding:0 0 1.2em 0}
+#Ini .slog p {font-size:1.9em; line-height:1.2em; padding:0 0 1.4em 0}
 #Ini .canvas {height:100%}
 
 /* Hacemos */
-#Hac .ico {display:flex; flex-direction:column; justify-content:center; margin:0.5em 0 0.8em 0; width:5em; height:5em; border-radius:50%; text-align:center}
+#Hac .ico {cursor:pointer; display:flex; flex-direction:column; justify-content:center; margin:0.5em 0 0.8em 0; width:5em; height:5em; border-radius:50%; text-align:center}
 #Hac .ico i {margin:0.4em 0 0; font-size:3.5em; color:#fff}
+#Hac .ico:hover {transform:translate(3em); -moz-transition:all 135ms ease-in; -webkit-transition:all 135ms ease-in; -o-transition:all 135ms ease-in; transition:all 135ms ease-in}
+#Hac .ico:not(:hover) {transform:translate(0); -moz-transition:all 135ms ease-in; -webkit-transition:all 135ms ease-in; -o-transition:all 135ms ease-in; transition:all 135ms ease-in}
 
 /* Portafolio */
 #Por .col-33 {margin:0.7em 0 3em 0}
@@ -160,27 +164,31 @@ ul li i {font-size:1em}
 
 #Por .link-ver p {font-weight:700; font-size:1.1em}
 
+.porfull .porfull-resu {margin:0 0 3em 0}
+.porfull .col-33 {margin:2.5em 0 0 0 !important}
+.porfull ul {padding-bottom:2.5em; border-bottom:#ecedee dotted 4px}
+
 /* Clientes */
 #Cli .slider {margin:2em 0 0 0}
 #Cli .slider div {cursor:pointer; width:16.666%; height:auto; text-align:center; -webkit-filter:grayscale(100%); -moz-filter:grayscale(100%); -o-filter:grayscale(100%); filter:grayscale(100%)}
 #Cli .slider div:hover {-webkit-filter:grayscale(0%); -moz-filter:grayscale(0%); -o-filter:grayscale(0%); filter:grayscale(0%); -moz-transition:all 250ms ease-in; -webkit-transition:all 250ms ease-in; -o-transition:all 250ms ease-in}
 #Cli .slider div img {width:80%}
 
-.porfull .porfull-res {margin:0 0 3em 0}
-.porfull .col-33 {margin:2.5em 0 0 0 !important}
-.porfull ul {padding-bottom:2.5em; border-bottom:#ecedee dotted 4px}
+/* Contacto y Login Whs */
+textarea, form label input::placeholder, form button {font-family:'Fira Sans', sans-serif}
+#Con .col-50 p {padding:0 0 2em 0}
+#Whs .col-50 p {padding:1em 0 2em 0}
+#Con .col-50 p, #Whs .col-50 p {border-bottom:#ecedee dotted 4px}
 
-/* Contacto */
-#Con form {margin:1.5em 0; padding:2em; width:100%; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; background:#f2efef}
-#Con form h4 {margin:0}
-#Con form label input, form textarea {width:100%; margin:2em 0 0 0; font-weight:300; font-size:1.2em; background:none; border:none; border-bottom:#00bebe 1px solid}
+#Con form, #Whs form {margin:3em 0; padding:2em; width:100%; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; background:#f2efef}
+#Con form h4, #Whs form h4 {margin:0}
+#Con form label input, form textarea, #Whs form label input {width:100%; margin:2em 0 0 0; font-weight:300; font-size:1.2em; background:none; border:none}
+#Con form label input, form textarea {border-bottom:#00bebe 1px solid}
+#Whs form label input {border-bottom:#008ed2 1px solid}
 #Con form textarea {resize:none; overflow:hidden}
-#Con form label input::placeholder {font-weight:300}
-#Con form button {margin:1.8em 0 0 0; padding:0.3em 1em; font-size:1.2em; color:#fff; background:#00bebe; border:none}
-#Con form button i {padding:0 0 0 0.5em; color:#fff}
-
-/*Formulario*/
-#Con form textarea, #Con form label input::placeholder, #Con form button {font-family:'Fira Sans', sans-serif}
+#Con form label input::placeholder, #Whs form label input::placeholder {font-weight:300}
+#Con form button, #Whs form button {margin:1.8em 0 0 0; padding:0.3em 1em; font-size:1.2em; color:#fff; border:none}
+#Con form button i, #Whs form button i {padding:0 0 0 0.5em; color:#fff}
 
 /* Footer */
 footer p {padding:0.7em 0 0 0; font-size:1em}
