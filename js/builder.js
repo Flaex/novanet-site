@@ -3,7 +3,7 @@ const bio = {
   "role" : "Visual designer and front-end web developer",
   "message": "Design and technology altogether",
   "skills": ["Visual designer", "UX design", "Web design", "Logo and branding", "Typography"],
-  "biopic" : "me.jpg"
+  "biopic" : "mdq-man-200.jpg"
 };
 
 function BioTemplate() {
