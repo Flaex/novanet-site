@@ -128,11 +128,12 @@ ul li i {font-size:1em}
 .tabs a {border-bottom:#d1d2d3 4px solid}
 .tabs a:hover {border-bottom:#4e4d50 4px solid; -moz-transition:all 500ms ease-in; -webkit-transition:all 500ms ease-in; -o-transition:all 500ms ease-in}
 .tabs a.act {border-bottom:#4e4d50 4px solid}
-.tabs .btn {position:relative; display:flex; flex-direction:column; justify-content:center; cursor:pointer; width:6em; height:6em; margin:0 0 0.25em 0; text-align:center; overflow:hidden} 
-.tabs .btn:before {content:''; position:absolute; top:0; left:0; width:6em; height:0; background:rgba(255,255,255,0.1); -webkit-transition-duration:0.4s; transition-duration:0.4s;}
-.tabs .btn:hover:before {height:6em}
-.tabs .btn:hover i {font-size:5.5em; -webkit-transition-duration:0.4s; transition-duration:0.4s}
-.tabs .btn:not(:hover) i {font-size:4.5em; -webkit-transition-duration:0.4s; transition-duration:0.4s}
+.tabs .btn {position:relative; display:flex; flex-direction:column; justify-content:center; width:6em; height:6em; margin:0 0 0.25em 0; text-align:center; overflow:hidden} 
+.tabs .btn-disp {cursor:pointer}
+.tabs .btn-disp:before {content:''; position:absolute; top:0; left:0; width:6em; height:0; background:rgba(255,255,255,0.1); -webkit-transition-duration:0.4s; transition-duration:0.4s;}
+.tabs .btn-disp:hover:before {height:6em}
+.tabs .btn-disp:hover i {font-size:5.5em; -webkit-transition-duration:0.4s; transition-duration:0.4s}
+.tabs .btn-disp:not(:hover) i {font-size:4.5em; -webkit-transition-duration:0.4s; transition-duration:0.4s}
 
 /* Logotipos */
 /* Logotipo de Novanet */
