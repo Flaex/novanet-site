@@ -8,6 +8,10 @@ body {color:#808285; background:url(../img/bg.svg); font-family:'Fira Sans', san
 
 a {text-decoration:none}
 ul li {list-style:none; text-align:center}
+
+table {border-collapse:separate; border-spacing:0; vertical-align:middle}
+caption, th, td {text-align:left; font-weight:normal; vertical-align:middle}
+a img {border:none}
     
 /* Contenedores */
 section {padding:2.5em 0}
@@ -82,58 +86,57 @@ p {font-weight:300; font-size:1.3em; line-height:1.3em}
 /* Iconos */
 i {font-style:normal; color:#808285}
 ul li i {font-size:1em}
-.tabs .btn i {margin:0.3em 0 0; font-size:4.5em; color:#fff}
+.tabs .btn i {margin:0.3em 0 0; font-size:1em; color:#fff}
 
-@font-face { font-family:"novanet-icons";
+@font-face {font-family:"novanet-icons";
   src:url("../fonts/novanet-icons.eot");
   src:url("../fonts/novanet-icons.eot?#iefix") format("embedded-opentype"),
     url("../fonts/novanet-icons.woff") format("woff"),
     url("../fonts/novanet-icons.ttf") format("truetype"),
     url("../fonts/novanet-icons.svg#novanet-icons") format("svg"); font-weight:normal; font-style:normal}
 
-[data-icon]:before { font-family:"novanet-icons" !important; content:attr(data-icon); font-style:normal !important; font-weight:normal !important; font-variant:normal !important; text-transform:none !important; speak:none; line-height:1; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale}
+[class^="ni-"]:before,[class*=" ni-"]:before {font-family:"novanet-icons" !important; font-style:normal !important; font-weight:normal !important; font-variant:normal !important; font-size:4.5em; text-transform:none !important; speak:none; line-height:1; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale}
 
-[class^="ni-"]:before,
-[class*=" ni-"]:before {font-family:"novanet-icons" !important; font-style:normal !important; font-weight:normal !important; font-variant:normal !important; text-transform:none !important; speak:none; line-height:1; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale}
+[data-icon]:before {font-family:"novanet-icons" !important; content:attr(data-icon); font-style:normal !important; font-weight:normal !important; font-variant:normal !important;  font-size:4.5em; text-align:center; text-transform:none !important; speak:none; line-height:1; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale}
 
 .ni-backend:before {content:"\61"}
-.ni-ball:before {content:"\62"}
-.ni-brain:before {content:"\63"}
-.ni-chat:before {content:"\64"}
-.ni-comment:before {content:"\65"}
-.ni-compass:before {content:"\66"}
-.ni-connection:before {content:"\67"}
-.ni-database:before {content:"\68"}
-.ni-frontend:before {content:"\69"}
-.ni-gear:before {content:"\6a"}
-.ni-index:before {content:"\6b"}
-.ni-integration:before {content:"\6c"}
-.ni-lock:before {content:"\6d"}
-.ni-logo:before {content:"\6e"}
-.ni-message:before {content:"\6f"}
-.ni-pencil:before {content:"\70"}
-.ni-pin:before {content:"\71"}
-.ni-portfolio:before {content:"\72"}
-.ni-printer:before {content:"\73"}
-.ni-responsive:before {content:"\74"}
-.ni-rocket:before {content:"\75"}
-.ni-star:before {content:"\76"}
-.ni-sync:before {content:"\77"}
-.ni-tap:before {content:"\78"}
+.ni-webpage:before {content:"\62"}
+.ni-ball:before {content:"\63"}
+.ni-message:before {content:"\64"}
+.ni-logo:before {content:"\65"}
+.ni-brain:before {content:"\66"}
+.ni-chat:before {content:"\67"}
+.ni-comment:before {content:"\68"}
+.ni-compass:before {content:"\69"}
+.ni-pencil:before {content:"\6a"}
+.ni-connection:before {content:"\6b"}
+.ni-pin:before {content:"\6c"}
+.ni-portfolio:before {content:"\6d"}
+.ni-printer:before {content:"\6e"}
+.ni-datebase:before {content:"\6f"}
+.ni-responsive:before {content:"\70"}
+.ni-rocket:before {content:"\71"}
+.ni-frontend:before {content:"\72"}
+.ni-star:before {content:"\73"}
+.ni-gear:before {content:"\74"}
+.ni-sync:before {content:"\75"}
+.ni-index:before {content:"\76"}
+.ni-tap:before {content:"\77"}
+.ni-integration:before {content:"\78"}
 .ni-tools:before {content:"\79"}
-.ni-webdev:before {content:"\7a"}
-.ni-webpage:before {content:"\41"}
+.ni-lock:before {content:"\7a"}
+.ni-webdev:before {content:"\41"}
 
 /* Botones */
 .tabs a {border-bottom:#d1d2d3 4px solid}
-.tabs a:hover {border-bottom:#4e4d50 4px solid; -moz-transition:all 500ms ease-in; -webkit-transition:all 500ms ease-in; -o-transition:all 500ms ease-in}
+.tabs a.disp:hover {border-bottom:#4e4d50 4px solid; -moz-transition:all 500ms ease-in; -webkit-transition:all 500ms ease-in; -o-transition:all 500ms ease-in}
 .tabs a.act {border-bottom:#4e4d50 4px solid}
 .tabs .btn {position:relative; display:flex; flex-direction:column; justify-content:center; width:6em; height:6em; margin:0 0 0.25em 0; text-align:center; overflow:hidden} 
 .tabs .btn-disp {cursor:pointer}
-.tabs .btn-disp:before {content:''; position:absolute; top:0; left:0; width:6em; height:0; background:rgba(255,255,255,0.1); -webkit-transition-duration:0.4s; transition-duration:0.4s;}
+.tabs .btn-disp:before {content:''; position:absolute; top:0; left:0; width:6em; height:0; background:rgba(255,255,255,0.1); -webkit-transition-duration:0.4s; transition-duration:0.4s}
 .tabs .btn-disp:hover:before {height:6em}
-.tabs .btn-disp:hover i {font-size:5.5em; -webkit-transition-duration:0.4s; transition-duration:0.4s}
-.tabs .btn-disp:not(:hover) i {font-size:4.5em; -webkit-transition-duration:0.4s; transition-duration:0.4s}
+.tabs .btn-disp:hover i {font-size:1.3em; -webkit-transition-duration:0.4s; transition-duration:0.4s}
+.tabs .btn-disp:not(:hover) i {font-size:1em; -webkit-transition-duration:0.4s; transition-duration:0.4s}
 
 /* Logotipos */
 /* Logotipo de Novanet */
@@ -212,12 +215,12 @@ a.log {width:100; height:100%}
 .bs, .cd, .bdl, .cmg, .tob, .qfs, .cms, .gp, .lcdh, .no, .per, .pev, .qui, .ss, .uni, .bc, .sh, .art, .gm, .emn, .gstar, .kul, .seg {background-size:63%; background-position:50%; background-repeat:no-repeat}
 
 /* Historia - Nosotros */
-#Ini .slog p {font-size:1.9em; line-height:1.2em; padding:0 0 1.4em 0}
+#Ini .slog p, .head-subtit {font-size:1.9em; line-height:1.2em; padding:0 0 1.4em 0}
 #Ini .canvas {height:100%}
 
 /* Hacemos */
 #Hac .ico {cursor:pointer; display:flex; flex-direction:column; justify-content:center; margin:0.5em 0 0.8em 0; width:5em; height:5em; border-radius:50%; text-align:center}
-#Hac .ico i {margin:0.4em 0 0; font-size:3.5em; color:#fff}
+#Hac .ico i {margin:0.6em 0 0 0; font-size:0.9em; color:#fff}
 #Hac .ico:hover {transform:translate(0.85em); -moz-transition:all 0.3s ease-in; -webkit-transition:all 0.3s ease-in; -o-transition:all 0.3s ease-in; transition:all 0.3s ease-in}
 #Hac .ico:not(:hover) {transform:translate(0); -moz-transition:all 0.3s ease-out; -webkit-transition:all 0.3s ease-out; -o-transition:all 0.3s ease-out; transition:all 0.3s ease-out}
 
@@ -233,8 +236,8 @@ a.log {width:100; height:100%}
 .circle  {-webkit-clip-path:circle(42.5% at 50% 52%); clip-path:circle(42.5% at 50% 52%)}
 .squareBg {-webkit-clip-path:inset(9% 9% 12% 9%); clip-path:inset(9% 9% 12% 9%)}
 .square {-webkit-clip-path:inset(10.5% 10.5%); clip-path:inset(10.5% 10.5%)}
-.triangleBg {-webkit-clip-path:polygon(50% 0%, 0% 90%, 100% 90%);clip-path:polygon(50% 6%, 0% 90%, 100% 90%)}
-.triangle {-webkit-clip-path:polygon(50% 10%, 0% 80%, 100% 80%);clip-path:polygon(50% 9%, 3% 91%, 97% 91%)}
+.triangleBg {-webkit-clip-path:polygon(50% 0%, 0% 90%, 100% 90%); clip-path:polygon(50% 6%, 0% 90%, 100% 90%)}
+.triangle {-webkit-clip-path:polygon(50% 10%, 0% 80%, 100% 80%); clip-path:polygon(50% 9%, 3% 91%, 97% 91%)}
 .triangle img {width:98% !important; margin:2% 1%}
 
 #Por .link-ver p {font-weight:700; font-size:1.1em}
@@ -263,6 +266,20 @@ textarea, form label input::placeholder, form button {font-family:'Fira Sans', s
 #Con form label input::placeholder, #Whs form label input::placeholder {font-weight:300}
 #Con form button, #Whs form button {margin:1.8em 0 0 0; padding:0.3em 1em; font-size:1.2em; color:#fff; border:none}
 #Con form button i, #Whs form button i {padding:0 0 0 0.5em; color:#fff}
+
+/* Página de Font Icons */
+
+.head-subtit a {text-decoration:none; font-weight:700; color:#808285}
+
+.glyphs.character-mapping, .glyphs.css-mapping {padding:1em 0 0}
+
+.glyphs.css-mapping li {margin:1.5em 2em 1.5em 0; display:flex; flex-wrap:wrap; width:22.5%; padding:0; border-bottom:#d1d2d3 1px solid}
+.glyphs.css-mapping .icon {width:30%; color:#4e4d50 !important; overflow:hidden; padding:0 0 0.5em 0}
+.glyphs.css-mapping input {width:70%; font-family:'Fira Sans', sans-serif; font-weight:300; padding:0 0 0.3em 0; font-size:1.2em; border:none; outline:0; text-transform:capitalize; color:#808285}
+.glyphs.character-mapping li {display:flex; flex-wrap:wrap; width:17.5%; margin:1.5em 1em}
+.glyphs.character-mapping .icon {margin:0 auto; width:35%; color:#4e4d50 !important; overflow:hidden}
+.glyphs.character-mapping .icon svg {fill:#000}
+.glyphs.character-mapping input {margin:0 40%; padding:0.2em; width:20%; font-family:'Fira Sans', sans-serif; font-weight:300; font-size:1.2em; border:none; border-bottom:1px solid #d8e0e5; text-align:center; color:#808285}
 
 /* Footer */
 footer p {padding:0.7em 0 0 0; font-size:1em}

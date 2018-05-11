@@ -65,7 +65,7 @@
 
 .slick-prev:before,
 .slick-next:before
-{font-family:FontAwesome\ 5 Brands;
+{font-family:'Fira Sans', sans-serif;     font-weight: 500;
         font-size: 26px;
     /* line-height: 1; */
     color: #055789;
@@ -76,7 +76,7 @@
 
 .slick-prev
 {
-    left: -25px;
+    left: -0px;
 }
 [dir='rtl'] .slick-prev
 {
@@ -94,7 +94,7 @@
 
 .slick-next
 {
-    right: -25px;
+    right: -0px;
 }
 [dir='rtl'] .slick-next
 {
