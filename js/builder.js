@@ -1,10 +1,21 @@
-const bio = {
-  "name" : "Freddy Polanía",
-  "role" : "Visual designer and front-end web developer",
-  "message": "Design and technology altogether",
-  "skills": ["Visual designer", "UX design", "Web design", "Logo and branding", "Typography"],
-  "biopic" : "mdq-man-200.jpg"
-};
+function shuffle(array) {
+  let currentIndex = array.length,
+    temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+  return array;
+}
 
 function BioTemplate() {
   this.name = '<h1 class="blueThree">%data%</h1>';
@@ -23,9 +34,41 @@ BioTemplate.prototype.display = function(arr) {
     this.skills[i] = '<li>' + arr.skills[i] + '</li>';
   }
   this.skillsWrappper = '<ul>' + this.skills.join("")  + '</ul>';
-  $('.bio-info').append(this.name, this.role, this.message, this.biopic, this.skillsWrappper);
+  $('.bio-info').append(this.name + this.role + this.message + this.biopic + this.skillsWrappper);
   console.log(arr.skills.length);
 };
 
 const bioPrint = new BioTemplate();
 bioPrint.display(bio);
+
+function ProjectsTemplate() {
+  this.entry = '<div class="project-entry flex-box"></div>';
+  this.title = '<h3>%data%</h3>';
+  this.description = '<p>%data%<p>';
+  this.dates = '<div class="date">%data%</div>';
+  this.list = '<div class="thumbs"></div>';
+  this.imageContainer = '<li class="projectThumb col-25 %data%">';
+  // this.imageHref = '';
+  this.imageMask = '<a><img class="%data%"';
+  this.image = ' <img src="img/%data%">';
+  this.modal = '<div class="modalDialog"><div><a href="#close" title="Close" class="close"><strong>x</strong></a><img class="preview" src="img/%data%"></div></li>';
+  this.works = [];
+};
+
+ProjectsTemplate.prototype.display = function(arr) {
+    for (i=0; i < arr.works.length;i++) {
+      $('#projects').append(this.entry);
+      $('.project-entry:last').append(this.list);
+      this.works.title = this.title.replace('%data%', arr.works[i].title);
+      this.works.description = this.title.replace('%data%', arr.works[i].description);
+      this.works.dates = this.dates.replace('%data%', arr.works[i].dates);
+
+      for (j=0; j < arr.works[i].images.length;j++) {
+        console.log(arr.works[i].images[j]);
+      }
+      $('.project-entry:last').append(this.works.title + this.works.description + this.works.dates);
+
+  }
+};
+const projectPrint = new ProjectsTemplate();
+projectPrint.display(projects);
