@@ -127,7 +127,7 @@ ul li i {font-size:1em}
 .ni-lock:before {content:"\7a"}
 .ni-webdev:before {content:"\41"}
 
-/* Botones */
+/* Los Botones */
 .tabs a {border-bottom:#d1d2d3 4px solid}
 .tabs a.disp:hover {border-bottom:#4e4d50 4px solid; -moz-transition:all 500ms ease-in; -webkit-transition:all 500ms ease-in; -o-transition:all 500ms ease-in}
 .tabs a.act {border-bottom:#4e4d50 4px solid}
