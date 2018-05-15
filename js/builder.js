@@ -35,7 +35,6 @@ BioTemplate.prototype.display = function(arr) {
   }
   this.skillsWrappper = '<ul>' + this.skills.join("")  + '</ul>';
   $('.bio-info').append(this.name + this.role + this.message + this.biopic + this.skillsWrappper);
-  console.log(arr.skills.length);
 };
 
 const bioPrint = new BioTemplate();
@@ -46,28 +45,24 @@ function ProjectsTemplate() {
   this.title = '<h3>%data%</h3>';
   this.description = '<p>%data%<p>';
   this.dates = '<div class="date">%data%</div>';
-  this.list = '<div class="thumbs"></div>';
-  this.imageContainer = '<li class="projectThumb col-25 %data%">';
-  // this.imageHref = '';
-  this.imageMask = '<a><img class="%data%"';
-  this.image = ' <img src="img/%data%">';
-  this.modal = '<div class="modalDialog"><div><a href="#close" title="Close" class="close"><strong>x</strong></a><img class="preview" src="img/%data%"></div></li>';
+  this.list = '<ul class="thumbs"></ul>';
+  this.image = '<li><img src="img/%data%"></li>';
   this.works = [];
 };
 
 ProjectsTemplate.prototype.display = function(arr) {
-    for (i=0; i < arr.works.length;i++) {
-      $('#projects').append(this.entry);
-      $('.project-entry:last').append(this.list);
-      this.works.title = this.title.replace('%data%', arr.works[i].title);
-      this.works.description = this.title.replace('%data%', arr.works[i].description);
-      this.works.dates = this.dates.replace('%data%', arr.works[i].dates);
-
-      for (j=0; j < arr.works[i].images.length;j++) {
-        console.log(arr.works[i].images[j]);
-      }
-      $('.project-entry:last').append(this.works.title + this.works.description + this.works.dates);
-
+  for (i=0; i < arr.works.length;i++) {
+    $('#projects').append(this.entry);
+    this.works.title = this.title.replace('%data%', arr.works[i].title);
+    this.works.description = this.title.replace('%data%', arr.works[i].description);
+    this.works.dates = this.dates.replace('%data%', arr.works[i].dates);
+    $('.project-entry:last').append(this.works.title + this.works.description + this.works.dates);
+    $('.project-entry:last').append(this.list);
+    for (j=0; j < arr.works[i].images.length;j++) {
+      this.imageRender = this.image.replace('%data%', arr.works[i].images[j].src);
+      console.log(arr.works[i].images[j]);
+      $('.thumbs:last').append(this.imageRender);
+    }
   }
 };
 const projectPrint = new ProjectsTemplate();
