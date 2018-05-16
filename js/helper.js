@@ -4,7 +4,7 @@ const bio = {
   "role" : "Visual designer and front-end web developer",
   "message": "Design and technology altogether",
   "skills": ["Visual designer", "UX design", "Web design", "Logo and branding", "Typography"],
-  "biopic" : "mdq-man-200.jpg"
+  "biopic" : "mdq-man1-200.jpg"
 };
 
 //Projects object

@@ -36,7 +36,12 @@ sssss/    `sssss:      ```         hdddds.``-ydddd+ sdddds.``-ydddd+ /ddddd/oddd
     <link href="css/base.css" rel="stylesheet" type="text/css">
     <!--Link FontAwesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <!--Slick Carousel-->
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
     <!--Script-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
     <!--Medias Queries-->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
 </head>
@@ -46,7 +51,7 @@ sssss/    `sssss:      ```         hdddds.``-ydddd+ sdddds.``-ydddd+ /ddddd/oddd
         <!--Cabecera-->
         <header class="flexbox">
             <div class="col-20"><a href="index.html" class="log"></a></div>
-                
+
             <div class="col-80 sm">
                 <ul class="col-15 sm-head flex flexbox">
                     <a href="https://www.facebook.com/GrupoNovanet" target="_blank">
@@ -59,7 +64,7 @@ sssss/    `sssss:      ```         hdddds.``-ydddd+ sdddds.``-ydddd+ /ddddd/oddd
                         <li class="flex"><i class="fab fa-instagram"></i></li>
                     </a>
                 </ul>
-            </div>    
+            </div>
         </header>
 
         <!--Inicio / Nosotros-->
@@ -73,14 +78,14 @@ sssss/    `sssss:      ```         hdddds.``-ydddd+ sdddds.``-ydddd+ /ddddd/oddd
                 <section id="Nos">
                     <h2>Nosotros</h2>
                     <div class="tabs flexbox">
-                        <a href="#" class="act">
-                            <div class="btn greenbg-1"><i class="icon ni-rocket"></i></div>
+                        <a href="#" class="act disp">
+                            <div class="btn btn-disp greenbg-1"><i class="icon ni-rocket"></i></div>
                         </a>
-                        <a href="#">
-                            <div class="btn greenbg-2"><i class="icon ni-brain"></i></div>
+                        <a class="disp" href="#">
+                            <div class="btn btn-disp greenbg-2"><i class="icon ni-brain"></i></div>
                         </a>
-                        <a href="#">
-                            <div class="btn greenbg-3"><i class="icon ni-ball"></i></div>
+                        <a class="disp" href="#">
+                            <div class="btn btn-disp greenbg-3"><i class="icon ni-ball"></i></div>
                         </a>
                     </div>
                     <div>
@@ -100,14 +105,14 @@ sssss/    `sssss:      ```         hdddds.``-ydddd+ sdddds.``-ydddd+ /ddddd/oddd
             <div class="col-100">
                 <h2>¿Qué hacemos?</h2>
                 <div class="tabs flexbox">
-                    <a class="act">
-                        <div class="btn bluebg-1"><i class="icon ni-pencil"></i></div>
+                    <a class="act disp">
+                        <div class="btn btn-disp bluebg-1"><i class="icon ni-pencil"></i></div>
                     </a>
-                    <a>
-                        <div class="btn bluebg-2"><i class="icon ni-webdev"></i></div>
+                    <a class="disp">
+                        <div class="btn btn-disp bluebg-2"><i class="icon ni-webdev"></i></div>
                     </a>
-                    <a>
-                        <div class="btn bluebg-3"><i class="icon ni-connection"></i></div>
+                    <a class="disp">
+                        <div class="btn btn-disp bluebg-3"><i class="icon ni-connection"></i></div>
                     </a>
                 </div>
                 <h3>Diseño gráfico</h3>
@@ -137,14 +142,14 @@ sssss/    `sssss:      ```         hdddds.``-ydddd+ sdddds.``-ydddd+ /ddddd/oddd
             <div class="col-100">
                 <h2>Portafolio</h2>
                 <div class="tabs flexbox">
-                    <a class="act">
-                        <div class="btn orangebg-1"><i class="icon ni-star"></i></div>
+                    <a class="act disp">
+                        <div class="btn btn-disp orangebg-1"><i class="icon ni-star"></i></div>
                     </a>
-                    <a>
-                        <div class="btn orangebg-2"><i class="icon ni-responsive"></i></div>
+                    <a class="disp">
+                        <div class="btn btn-disp orangebg-2"><i class="icon ni-responsive"></i></div>
                     </a>
-                    <a>
-                        <div class="btn orangebg-3"><i class="icon ni-logo"></i></div>
+                    <a class="disp">
+                        <div class="btn btn-disp orangebg-3"><i class="icon ni-logo"></i></div>
                     </a>
                 </div>
                 <h3>Branding</h3>
@@ -161,12 +166,12 @@ sssss/    `sssss:      ```         hdddds.``-ydddd+ sdddds.``-ydddd+ /ddddd/oddd
                     </li>
                     <li>
                         <div class="circleBg orangebg-1">
-                            <a href="#"><img class="circle" src="img/mdq-pap-200.jpg"/></a>
+                            <a href="#"><img class="circle" src="img/mdq-man1-200.jpg"/></a>
                         </div>
                     </li>
                     <li>
                         <div class="squareBg orangebg-1">
-                            <a href="#"><img class="square" src="img/mdq-man-200.jpg"/></a>
+                            <a href="#"><img class="square" src="img/mdq-man3-200.jpg"/></a>
                         </div>
                     </li>
                 </ul>
@@ -183,12 +188,12 @@ sssss/    `sssss:      ```         hdddds.``-ydddd+ sdddds.``-ydddd+ /ddddd/oddd
                     </li>
                     <li>
                         <div class="circleBg orangebg-1">
-                            <a href="#"><img class="circle" src="img/tob-pap-200.jpg"/></a>
+                            <a href="#"><img class="circle" src="img/tob-pap1-200.jpg"/></a>
                         </div>
                     </li>
                     <li>
                         <div class="triangleBg orangebg-1">
-                            <a href="#"><img class="triangle" src="img/tob-web-200.jpg"/></a>
+                            <a href="#"><img class="triangle" src="img/tob-web1-200.jpg"/></a>
                         </div>
                     </li>
                 </ul>
@@ -217,7 +222,9 @@ sssss/    `sssss:      ```         hdddds.``-ydddd+ sdddds.``-ydddd+ /ddddd/oddd
             </div>
 
             <div class="link-ver">
-                <a class="gray-3" href="portafolio.html"><p>Ver todo el portafolio <i class="orange-1 far fa-images"></i></p></a>
+                <a class="gray-3" href="portafolio.html">
+                    <p>Ver todo el portafolio <i class="orange-1 far fa-images"></i></p>
+                </a>
             </div>
         </section>
 
@@ -226,8 +233,8 @@ sssss/    `sssss:      ```         hdddds.``-ydddd+ sdddds.``-ydddd+ /ddddd/oddd
             <div class="col-100">
                 <h2>Clientes</h2>
                 <div class="tabs flexbox">
-                    <a class="act">
-                        <div class="btn redbg-1"><i class="icon ni-chat"></i></div>
+                    <a class="act disp">
+                        <div class="btn btn-disp redbg-1"><i class="icon ni-chat"></i></div>
                     </a>
                     <a>
                         <div class="btn redbg-2"></div>
@@ -238,12 +245,28 @@ sssss/    `sssss:      ```         hdddds.``-ydddd+ sdddds.``-ydddd+ /ddddd/oddd
                 </div>
             </div>
             <div class="col-100 slider flexbox">
-                <div><img src="img/logo-01.jpg" /></div>
-                <div><img src="img/logo-02.jpg" /></div>
-                <div><img src="img/logo-03.jpg" /></div>
-                <div><img src="img/logo-04.jpg" /></div>
-                <div><img src="img/logo-05.jpg" /></div>
-                <div><img src="img/logo-06.jpg" /></div>
+                <div class="bs"></div>
+                <div class="cd"></div>
+                <div class="cms"></div>
+                <div class="gp"></div>
+                <div class="bc"></div>
+                <div class="ss"></div>
+                <div class="tob"></div>
+                <div class="cmg"></div>
+                <div class="bdl"></div>
+                <div class="gm"></div>
+                <div class="emn"></div>
+                <div class="kul"></div>
+                <div class="gstar"></div>
+                <div class="seg"></div>
+                <div class="per"></div>
+                <div class="qui"></div>
+                <div class="qfs"></div>
+                <div class="no"></div>
+                <div class="art"></div>
+                <div class="lcdh"></div>
+                <div class="sh"></div>
+                <div class="uni"></div>
             </div>
         </section>
 
@@ -252,11 +275,11 @@ sssss/    `sssss:      ```         hdddds.``-ydddd+ sdddds.``-ydddd+ /ddddd/oddd
             <div class="col-100">
                 <h2>Contacto</h2>
                 <div class="tabs flexbox">
-                    <a class="act">
-                        <div class="btn aquabg-1"><i class="icon ni-pin"></i></div>
+                    <a class="act disp">
+                        <div class="btn btn-disp aquabg-1"><i class="icon ni-message"></i></div>
                     </a>
-                    <a>
-                        <div class="btn aquabg-2"><i class="icon ni-message"></i></div>
+                    <a class="disp">
+                        <div class="btn btn-disp aquabg-2"><i class="icon ni-pin"></i></div>
                     </a>
                     <a>
                         <div class="btn aquabg-3"></div>
@@ -282,7 +305,7 @@ sssss/    `sssss:      ```         hdddds.``-ydddd+ sdddds.``-ydddd+ /ddddd/oddd
             <div class="col-75 flex">
                 <p>Derechos reservados 2006-2018</p>
             </div>
-            <div class="col-10 sm">   
+            <div class="col-10 sm">
                 <ul class="sm-foot flex flexbox">
                     <a href="https://www.facebook.com/GrupoNovanet" target="_blank">
                         <li class="flex"><i class="fab fa-facebook-f"></i></li>
@@ -294,9 +317,47 @@ sssss/    `sssss:      ```         hdddds.``-ydddd+ sdddds.``-ydddd+ /ddddd/oddd
                         <li class="flex"><i class="fab fa-instagram"></i></li>
                     </a>
                 </ul>
-            </div>    
+            </div>
         </footer>
     </div>
+
+    <script>
+        $('.slider').slick({
+            dots: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+
+    </script>
 </body>
 
 </html>
