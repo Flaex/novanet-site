@@ -1,3 +1,4 @@
+// Multipurpose suffle array function
 function shuffle(array) {
   let currentIndex = array.length,
     temporaryValue, randomIndex;
@@ -16,6 +17,32 @@ function shuffle(array) {
   }
   return array;
 }
+
+function HeaderTemplate() {
+  this.src = '<img src="img/%data%" ';
+  this.alt = ' alt="%data%">';
+  this.content = '%data%';
+  this.list = '<ul class="col-15 sm-head flex flexbox"></ul>';
+  this.url = '<li class="flex"><a href="%data%" target="_blank">';
+  this.icon = '<i class="%data%"></i><li></a>';
+  this.sm = [];
+}
+
+HeaderTemplate.prototype.display = function(arr) {
+  this.src = this.src.replace('%data%', arr.logo.content);
+  this.alt = this.alt.replace('%data%', arr.logo.id);
+  $('.logo').append(this.src + this.alt);
+  $('.sm').append(this.list);
+  for (i = 0; i < arr.sm.length; i++) {
+    this.urlRender = this.url.replace('%data%', arr.sm[i].url);
+    this.iconRender = this.icon.replace('%data%', arr.sm[i].content);
+    $('.sm-head').append(this.urlRender + this.iconRender);
+  }
+  $('ul li:empty').remove();
+};
+
+const headerPrint = new HeaderTemplate();
+headerPrint.display(header);
 
 function BioTemplate() {
   this.name = '<h1 class="blueThree">%data%</h1>';
@@ -47,7 +74,6 @@ function ProjectsTemplate() {
   this.dates = '<div class="date">%data%</div>';
   this.list = '<ul class="thumbs"></ul>';
   this.imageContainer = '<li class="projectThumb col-25 %data%">';
-  // this.imageHref = '';
   this.imageMask = '<a><img class="%data%"';
   this.image = ' src="img/%data%">';
   this.modal = '<div class="modalDialog"><div><a href="#close" title="Close" class="close"><strong>x</strong></a><img class="preview" src="img/%data%"></div></li>';

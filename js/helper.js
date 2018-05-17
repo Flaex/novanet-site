@@ -1,3 +1,31 @@
+//Header object
+const header = {
+  "logo" :
+    {
+      "id" : "logo novanet",
+      "content" : "logo.svg"
+    },
+  "sm" : [
+    {
+      "id" : "facebook",
+      "content" : "fab fa-facebook-f",
+      "url" : "https://www.facebook.com/GrupoNovanet"
+    },
+    {
+      "id" : "twitter",
+      "content" : "fab fa-twitter",
+      "url" : "https://twitter.com/gruponovanet"
+    },
+    {
+      "id" : "instagram",
+      "content" : "fab fa-instagram",
+      "url" : "https://www.instagram.com/gruponovanet/"
+    }
+  ]
+};
+
+//Hidtorias object
+
 //Bio object
 const bio = {
   "name" : "Freddy Polanía",
