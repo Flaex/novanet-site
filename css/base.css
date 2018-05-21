@@ -1,7 +1,7 @@
 /* Novanet Estilos */
-body {color:#808285; background:url(../img/bg.svg); font-family:'Fira Sans', sans-serif}
+body {color:#808285; font-family:'Fira Sans', sans-serif}
 
-.container {max-width:1440px; margin:0 auto; padding:4em 5em 0 5em; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; -webkit-box-shadow:1px 0px 89px -21px rgba(0,0,0,0.44); -moz-box-shadow:1px 0px 89px -21px rgba(0,0,0,0.44); box-shadow:1px 0px 89px -21px rgba(0,0,0,0.44); background:#fff}
+.container {background:url(../img/bg.svg); margin:0 auto; padding:4em 5em 0 5em; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; -webkit-box-shadow:1px 0px 89px -21px rgba(0,0,0,0.44); -moz-box-shadow:1px 0px 89px -21px rgba(0,0,0,0.44); box-shadow:1px 0px 89px -21px rgba(0,0,0,0.44);}
 
 .flexbox {display:flex; flex-wrap:wrap}
 .flex {display:flex; flex-direction:column; justify-content:center}
@@ -28,7 +28,7 @@ section {padding:2.5em 0}
 .col-80, .col-75, .col-50, .col-33, .col-25 {padding:0 2em 0 0; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box}
 .col-20 {padding:0 1em 0 0; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box}
 header {}
-section#Nos, .porfull {padding:2.5em 0 0 0}
+div#Nos, .porfull {padding:2.5em 0 0 0}
 footer {padding:2em 0}
 
 .line {border-bottom:#ecedee dotted 4px}
@@ -85,9 +85,9 @@ p {font-weight:300; font-size:1.3em; line-height:1.3em}
 .sm-foot {height:40px}
 
 /* Botones */
-.tabs a {border-bottom:#d1d2d3 4px solid}
-.tabs a.disp:hover {border-bottom:#4e4d50 4px solid; -moz-transition:all 500ms ease-in; -webkit-transition:all 500ms ease-in; -o-transition:all 500ms ease-in}
-.tabs a.act {border-bottom:#4e4d50 4px solid}
+.tabs li{border-bottom:#d1d2d3 4px solid}
+.tabs li.disp:hover {border-bottom:#4e4d50 4px solid; -moz-transition:all 500ms ease-in; -webkit-transition:all 500ms ease-in; -o-transition:all 500ms ease-in}
+.tabs li.act {border-bottom:#4e4d50 4px solid}
 .tabs .btn {position:relative; display:flex; flex-direction:column; justify-content:center; width:6em; height:6em; margin:0 0 0.25em 0; text-align:center; overflow:hidden}
 .tabs .btn-disp {cursor:pointer}
 .tabs .btn-disp:before {content:''; position:absolute; top:0; left:0; width:6em; height:0; ; -webkit-transition-duration:0.4s; transition-duration:0.4s}
@@ -100,7 +100,7 @@ p {font-weight:300; font-size:1.3em; line-height:1.3em}
 
 
 /* Historia - Nosotros */
-#Ini .slog p, .head-subtit {font-size:1.9em; line-height:1.2em; padding:0 0 1.4em 0}
+#Ini .stories p, .head-subtit {font-size:1.9em; line-height:1.2em; padding:0 0 1.4em 0}
 #Ini .canvas {height:100%}
 
 /* Hacemos */

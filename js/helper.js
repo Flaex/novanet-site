@@ -24,16 +24,47 @@ const header = {
   ]
 };
 
-//Hidtorias object
+//Stories object
+const stories = {
+  "id" : "Creamos historias de éxito",
+  "content" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+  }
 
-//Bio object
-const bio = {
-  "name" : "Freddy Polanía",
-  "role" : "Visual designer and front-end web developer",
-  "message": "Design and technology altogether",
-  "skills": ["Visual designer", "UX design", "Web design", "Logo and branding", "Typography"],
-  "biopic" : "mdq-man1-200.jpg"
-};
+//Nosotros object
+const nosotros = {
+  "id" : "Nosotros",
+  "buttons" : [
+    {
+      "color" : "greenbg-1",
+      "icon" : "icon ni-rocket"
+    },
+    {
+      "color" : "greenbg-2",
+      "icon" : "icon ni-brain"
+    },
+    {
+      "color" : "greenbg-3",
+      "icon" : "icon ni-ball"
+    }
+  ],
+  "tabs" : [
+    {
+      "id" : "andar",
+      "title" : "¿En qué andamos?",
+      "content" : "Diseñamos contenido estratégico abarcando el proceso desde la concepción inicial hasta la ejecución final. Entendemos que la manera en la que tu negocio comunica es fundamental para establecer una conexión real con tus clientes.",
+    },
+    {
+      "id" : "pensar",
+      "title" : "¿En qué pensamos?",
+      "content" : "Utilizamos el diseño y la tecnología para impulsar el éxito de tus proyectos. Estamos día a día conectados con la innovación y la tendencia. Asumimos el diseño como un reto de cambio constante.",
+    },
+    {
+      "id" : "ir",
+      "title" : "¿Hacia dónde vamos?",
+      "content" : "Nos involucramos en primera persona con tus ideas como un socio más. Para nosotros es primordial promover el desarrollo de cada uno de tus propósitos y proveerte de las herramientas necesarias para lograrlos con éxito. Vamos mucho más allá.",
+    }
+  ]
+}
 
 //Projects object
 const projects = {

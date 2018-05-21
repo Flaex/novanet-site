@@ -44,28 +44,47 @@ HeaderTemplate.prototype.display = function(arr) {
 const headerPrint = new HeaderTemplate();
 headerPrint.display(header);
 
-function BioTemplate() {
-  this.name = '<h1 class="blueThree">%data%</h1>';
-  this.role = '<h2 class="blueTwo">%data%</h2>';
-  this.message = '<h3 class="welcomemessage">%data%</h3>';
-  this.biopic = '<div class="bioPic col-20"><img src="img/%data%"></div>';
-  this.skills = [];
+function StoriesTemplate() {
+  this.id = '<h1>%data%</h1>';
+  this.content = '<p>%data%</p>'
 };
 
-BioTemplate.prototype.display = function(arr) {
-  this.name = this.name.replace('%data%', arr.name);
-  this.role = this.role.replace('%data%', arr.role);
-  this.message = this.message.replace('%data%', arr.message);
-  this.biopic = this.biopic.replace('%data%', arr.biopic);
-  for (i = 0; i < arr.skills.length; i++) {
-    this.skills[i] = '<li>' + arr.skills[i] + '</li>';
+StoriesTemplate.prototype.display = function(arr) {
+  this.id = this.id.replace('%data%', arr.id);
+  this.content = this.content.replace('%data%', arr.content);
+  $('.stories').append(this.id + this.content);
+};
+
+const StoriesPrint = new StoriesTemplate();
+StoriesPrint.display(stories);
+
+function TabsTemplate() {
+  this.id = '<h2>%data%</h2>';
+  this.title = '<h3>%data%</h3>';
+  this.content = '<p>%data%</p>';
+  this.color = '<li class="btn btn-disp %data% disp"><a href="#">'
+  this.icon = '<i class="%data%"></i></a></li>';
+};
+
+TabsTemplate.prototype.display = function(arr) {
+  this.id = this.id.replace('%data%', arr.id);
+  $('#Nos').append(this.id);
+  $('#Nos').append('<ul class="tabs flexbox"></ul>');
+  $('#Nos').append('<div class="tabs-info flexbox"></ul>');
+  for (i = 0; i < arr.buttons.length; i++) {
+    this.colorRender = this.color.replace('%data%', arr.buttons[i].color);
+    this.iconRender = this.icon.replace('%data%', arr.buttons[i].icon);
+    $('.tabs').append(this.colorRender + this.iconRender);
   }
-  this.skillsWrappper = '<ul>' + this.skills.join("") + '</ul>';
-  $('.bio-info').append(this.name + this.role + this.message + this.biopic + this.skillsWrappper);
+  for (i = 0; i < arr.tabs.length; i++) {
+    this.titleRender = this.title.replace('%data%', arr.tabs[i].title);
+    this.contentRender = this.content.replace('%data%', arr.tabs[i].content);
+    $('.tabs-info').append(this.titleRender + this.contentRender);
+  }
 };
 
-const bioPrint = new BioTemplate();
-bioPrint.display(bio);
+const TabsContent = new TabsTemplate();
+TabsContent.display(nosotros);
 
 function ProjectsTemplate() {
   this.entry = '<div class="project-entry flex-box"></div>';
