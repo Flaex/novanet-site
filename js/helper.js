@@ -36,15 +36,18 @@ const nosotros = {
   "buttons" : [
     {
       "color" : "greenbg-1",
-      "icon" : "icon ni-rocket"
+      "icon" : "icon ni-rocket",
+      "href" : "#andar"
     },
     {
       "color" : "greenbg-2",
-      "icon" : "icon ni-brain"
+      "icon" : "icon ni-brain",
+      "href" : "#pensar"
     },
     {
       "color" : "greenbg-3",
-      "icon" : "icon ni-ball"
+      "icon" : "icon ni-ball",
+      "href" : "#ir"
     }
   ],
   "tabs" : [

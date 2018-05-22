@@ -2,14 +2,11 @@
 function shuffle(array) {
   let currentIndex = array.length,
     temporaryValue, randomIndex;
-
   // While there remain elements to shuffle...
   while (0 !== currentIndex) {
-
     // Pick a remaining element...
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex -= 1;
-
     // And swap it with the current element.
     temporaryValue = array[currentIndex];
     array[currentIndex] = array[randomIndex];
@@ -59,28 +56,39 @@ const StoriesPrint = new StoriesTemplate();
 StoriesPrint.display(stories);
 
 function TabsTemplate() {
+  this.tabContent = '<div id="%data%" class="tabs-info flexbox">';
   this.id = '<h2>%data%</h2>';
   this.title = '<h3>%data%</h3>';
-  this.content = '<p>%data%</p>';
-  this.color = '<li class="btn btn-disp %data% disp"><a href="#">'
+  this.content = '<p>%data%</p></div>';
+  this.color = '<li class="btn %data%">';
+  this.href = '<a class="btn-disp" href="%data%">'
   this.icon = '<i class="%data%"></i></a></li>';
 };
 
 TabsTemplate.prototype.display = function(arr) {
   this.id = this.id.replace('%data%', arr.id);
-  $('#Nos').append(this.id);
-  $('#Nos').append('<ul class="tabs flexbox"></ul>');
-  $('#Nos').append('<div class="tabs-info flexbox"></ul>');
+  $('#nos').append(this.id);
+  $('#nos').append('<ul class="tabs flexbox"></ul>');
   for (i = 0; i < arr.buttons.length; i++) {
     this.colorRender = this.color.replace('%data%', arr.buttons[i].color);
+    this.hrefRender  = this.href.replace('%data%', arr.buttons[i].href)
     this.iconRender = this.icon.replace('%data%', arr.buttons[i].icon);
-    $('.tabs').append(this.colorRender + this.iconRender);
+    $('.tabs').append(this.colorRender + this.hrefRender + this.iconRender);
   }
+  // $('.tabs').on('click', 'li', function(e) {
+  //   if ($(e.target).not('.selected')) {
+  //     $('li').addClass('selected');
+  //   } else if ($(e.target).hasClass('selected')) {
+  //     $(e.target).removeClass('selected');
+  //   }
+  // });
   for (i = 0; i < arr.tabs.length; i++) {
+    this.tabContentRender = this.tabContent.replace('%data%', arr.tabs[i].id);
     this.titleRender = this.title.replace('%data%', arr.tabs[i].title);
     this.contentRender = this.content.replace('%data%', arr.tabs[i].content);
-    $('.tabs-info').append(this.titleRender + this.contentRender);
+    $('#nos').append(this.tabContentRender + this.titleRender + this.contentRender);
   }
+  $('#nos').tabs();
 };
 
 const TabsContent = new TabsTemplate();
@@ -132,5 +140,5 @@ ProjectsTemplate.prototype.display = function(arr) {
     });
   }
 };
-const projectPrint = new ProjectsTemplate();
-projectPrint.display(projects);
+// const projectPrint = new ProjectsTemplate();
+// projectPrint.display(projects);
