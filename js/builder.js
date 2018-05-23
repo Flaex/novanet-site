@@ -75,13 +75,14 @@ TabsTemplate.prototype.display = function(arr) {
     this.iconRender = this.icon.replace('%data%', arr.buttons[i].icon);
     $('.tabs').append(this.colorRender + this.hrefRender + this.iconRender);
   }
-  // $('.tabs').on('click', 'li', function(e) {
-  //   if ($(e.target).not('.selected')) {
-  //     $('li').addClass('selected');
-  //   } else if ($(e.target).hasClass('selected')) {
-  //     $(e.target).removeClass('selected');
-  //   }
-  // });
+  $('li.btn').click(function() {
+    if ($(this).hasClass('ui-state-active')) {
+      $(this).addClass('selected');
+      $('.btn').removeClass('selected');
+    } else {
+
+    }
+  });
   for (i = 0; i < arr.tabs.length; i++) {
     this.tabContentRender = this.tabContent.replace('%data%', arr.tabs[i].id);
     this.titleRender = this.title.replace('%data%', arr.tabs[i].title);
