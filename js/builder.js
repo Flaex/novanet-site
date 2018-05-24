@@ -15,6 +15,7 @@ function shuffle(array) {
   return array;
 }
 
+// Header Superclass
 function HeaderTemplate() {
   this.src = '<img src="img/%data%" ';
   this.alt = ' alt="%data%">';
@@ -24,7 +25,7 @@ function HeaderTemplate() {
   this.icon = '<i class="%data%"></i><li></a>';
   this.sm = [];
 }
-
+// Header Superclass render function
 HeaderTemplate.prototype.display = function(arr) {
   this.src = this.src.replace('%data%', arr.logo.content);
   this.alt = this.alt.replace('%data%', arr.logo.id);
@@ -35,66 +36,103 @@ HeaderTemplate.prototype.display = function(arr) {
     this.iconRender = this.icon.replace('%data%', arr.sm[i].content);
     $('.sm-head').append(this.urlRender + this.iconRender);
   }
+  //Removes all empty <li>
   $('ul li:empty').remove();
 };
-
+// Header creation and renderization
 const headerPrint = new HeaderTemplate();
 headerPrint.display(header);
 
+// Stories Superclass
 function StoriesTemplate() {
   this.id = '<h1>%data%</h1>';
   this.content = '<p>%data%</p>'
 };
-
+// Stories Superclass render function
 StoriesTemplate.prototype.display = function(arr) {
   this.id = this.id.replace('%data%', arr.id);
   this.content = this.content.replace('%data%', arr.content);
   $('.stories').append(this.id + this.content);
 };
-
+// Stories creation and renderization
 const StoriesPrint = new StoriesTemplate();
 StoriesPrint.display(stories);
 
-function TabsTemplate() {
+// Section Superclass
+function SectionTemplate() {
   this.tabContent = '<div id="%data%" class="tabs-info flexbox">';
   this.id = '<h2>%data%</h2>';
   this.title = '<h3>%data%</h3>';
   this.content = '<p>%data%</p></div>';
+  this.contentIcon = '<div class="ico bluebg-1"><i class="%data%"></i></div>';
+  this.contentTitle = '<h4>%data%</h4>';
+  this.contentText = '<p>%data%</p>';
+  this.list = '<ul id="%data%" class="tabs flexbox"></ul>'
   this.color = '<li class="btn %data%">';
   this.href = '<a class="btn-disp" href="%data%">'
   this.icon = '<i class="%data%"></i></a></li>';
 };
-
-TabsTemplate.prototype.display = function(arr) {
+// Section render function
+SectionTemplate.prototype.display = function(arr, divId, listId) {
   this.id = this.id.replace('%data%', arr.id);
-  $('#nos').append(this.id);
-  $('#nos').append('<ul class="tabs flexbox"></ul>');
+  $(divId).append(this.id);
+  this.list = this.list.replace('%data%', listId)
+  $(divId).append(this.list);
+  // Tab render
   for (i = 0; i < arr.buttons.length; i++) {
     this.colorRender = this.color.replace('%data%', arr.buttons[i].color);
     this.hrefRender  = this.href.replace('%data%', arr.buttons[i].href)
     this.iconRender = this.icon.replace('%data%', arr.buttons[i].icon);
-    $('.tabs').append(this.colorRender + this.hrefRender + this.iconRender);
+    $('#' + listId).append(this.colorRender + this.hrefRender + this.iconRender);
   }
-  $('li.btn').click(function() {
-    if ($(this).hasClass('ui-state-active')) {
-      $(this).addClass('selected');
-      $('.btn').removeClass('selected');
-    } else {
-
+  // Tab content
+    for (i = 0; i < arr.tabs.length; i++) {
+      this.tabContentRender = this.tabContent.replace('%data%', arr.tabs[i].id);
+      this.titleRender = this.title.replace('%data%', arr.tabs[i].title);
+      if (Array.isArray(arr.tabs[i].content)) {
+        for (j = 0; j < arr.tabs[i].content.length; j++) {
+          this.contentIconRender = this.contentIcon.replace('%data%', arr.tabs[i].content[j].icon);
+          this.contentTitleRender = this.contentTitle.replace('%data%', arr.tabs[i].content[j].title);
+          this.contentTextRender = this.contentText.replace('%data%', arr.tabs[i].content[j].text);
+        }
+        $(divId).append(this.tabContentRender + this.titleRender + this.contentIconRender + this.contentTitleRender + this.contentTextRender );
+      } else {
+        this.contentRender = this.content.replace('%data%', arr.tabs[i].content);
+        $(divId).append(this.tabContentRender + this.titleRender + this.contentRender);
+      }
     }
-  });
-  for (i = 0; i < arr.tabs.length; i++) {
-    this.tabContentRender = this.tabContent.replace('%data%', arr.tabs[i].id);
-    this.titleRender = this.title.replace('%data%', arr.tabs[i].title);
-    this.contentRender = this.content.replace('%data%', arr.tabs[i].content);
-    $('#nos').append(this.tabContentRender + this.titleRender + this.contentRender);
-  }
-  $('#nos').tabs();
+    $(divId).tabs();
 };
 
-const TabsContent = new TabsTemplate();
-TabsContent.display(nosotros);
+// Section tabs focus event
+SectionTemplate.prototype.tabs = function (tab1, tab2, tab3) {
+  $(tab1).addClass('selected');
+  $('li.btn').click(function() {
+    if ($(tab1).hasClass('ui-state-active')) {
+      $(this).addClass('selected');
+      $(tab2).removeClass('selected');
+      $(tab3).removeClass('selected');
+    } else if ($(tab2).hasClass('ui-state-active')) {
+      $(this).addClass('selected');
+      $(tab1).removeClass('selected');
+      $(tab3).removeClass('selected');
+    } else if ($(tab3).hasClass('ui-state-active')) {
+      $(this).addClass('selected');
+      $(tab2).removeClass('selected');
+      $(tab1).removeClass('selected');
+    }
+  });
+}
+// Stories creation and renderization
+const SectionNos = new SectionTemplate();
+SectionNos.display(nosotros, '#nos', 'nosotros');
+SectionNos.tabs('.greenbg-1', '.greenbg-2', '.greenbg-3');
 
+const SectionHac = new SectionTemplate();
+SectionHac.display(hacemos, '#hac', 'hacemos');
+SectionHac.tabs('.bluebg-1', '.bluebg-2', '.bluebg-3');
+
+// Projects  Superclass
 function ProjectsTemplate() {
   this.entry = '<div class="project-entry flex-box"></div>';
   this.title = '<h3>%data%</h3>';
@@ -108,6 +146,7 @@ function ProjectsTemplate() {
   this.works = [];
 };
 
+// Projects render function
 ProjectsTemplate.prototype.display = function(arr) {
   for (i = 0; i < arr.works.length; i++) {
     $('#projects').append(this.entry);
@@ -141,5 +180,6 @@ ProjectsTemplate.prototype.display = function(arr) {
     });
   }
 };
+// // Projects creation and renderization
 // const projectPrint = new ProjectsTemplate();
 // projectPrint.display(projects);

@@ -32,7 +32,7 @@ footer {padding:2em 0}
 
 /* Tipografia */
 h1 {font-style:italic; font-weight:700; font-size:3.1em; line-height:1.1em}
-h2 {margin:0 0 0.3em 0; font-weight:900; font-size:1.8em; color:#4e4d50}
+h2 {margin:0 0 0.3em 0; font-weight:900; font-size:1.8em; color:#4e4d50; text-transform: capitalize;}
 h3 {margin:0.8em 0 0.2em 0; font-weight:900; font-size:1.5em}
 h4 {margin:0.4em 0 0.3em 0; font-weight:700; font-size:1.25em; color:#4e4d50}
 p {font-weight:300; font-size:1.3em; line-height:1.3em}
@@ -83,7 +83,7 @@ p {font-weight:300; font-size:1.3em; line-height:1.3em}
 
 /* Botones */
 .tabs li{border-bottom:#d1d2d3 4px solid}
-/* .tabs li:hover {border-bottom:#4e4d50 4px solid; -moz-transition:all 500ms ease-in; -webkit-transition:all 500ms ease-in; -o-transition:all 500ms ease-in} */
+.tabs li:hover {border-bottom:#808285 4px solid; -moz-transition:all 500ms ease-in; -webkit-transition:all 500ms ease-in; -o-transition:all 500ms ease-in}
 .tabs li.selected {border-bottom:#4e4d50 4px solid}
 .tabs .btn {position:relative; display:flex; flex-direction:column; justify-content:center; width:6em; height:6em; margin:0 0 0.25em 0; text-align:center; overflow:hidden}
 .tabs .btn-disp {cursor:pointer}
@@ -102,10 +102,10 @@ p {font-weight:300; font-size:1.3em; line-height:1.3em}
 #ini .canvas {height:100%}
 
 /* Hacemos */
-#Hac .ico {cursor:pointer; display:flex; flex-direction:column; justify-content:center; margin:0.5em 0 0.8em 0; width:5em; height:5em; border-radius:50%; text-align:center}
-#Hac .ico i {margin:0.6em 0 0 0; font-size:0.9em; color:#fff}
-#Hac .ico:hover {transform:translate(0.85em); -moz-transition:all 0.3s ease-in; -webkit-transition:all 0.3s ease-in; -o-transition:all 0.3s ease-in; transition:all 0.3s ease-in}
-#Hac .ico:not(:hover) {transform:translate(0); -moz-transition:all 0.3s ease-out; -webkit-transition:all 0.3s ease-out; -o-transition:all 0.3s ease-out; transition:all 0.3s ease-out}
+#hac .ico {cursor:pointer; display:flex; flex-direction:column; justify-content:center; margin:0.5em 0 0.8em 0; width:5em; height:5em; border-radius:50%; text-align:center}
+#hac .ico i {margin:0.6em 0 0 0; font-size:0.9em; color:#fff}
+#hac .ico:hover {transform:translate(0.85em); -moz-transition:all 0.3s ease-in; -webkit-transition:all 0.3s ease-in; -o-transition:all 0.3s ease-in; transition:all 0.3s ease-in}
+#hac .ico:not(:hover) {transform:translate(0); -moz-transition:all 0.3s ease-out; -webkit-transition:all 0.3s ease-out; -o-transition:all 0.3s ease-out; transition:all 0.3s ease-out}
 
 /* Portafolio */
 #Por .col-33 {margin:0.7em 0 3em 0}
@@ -193,7 +193,7 @@ ul li i {font-size:1em}
 .ni-pin:before {content:"\6c"}
 .ni-portfolio:before {content:"\6d"}
 .ni-printer:before {content:"\6e"}
-.ni-datebase:before {content:"\6f"}
+.ni-database:before {content:"\6f"}
 .ni-responsive:before {content:"\70"}
 .ni-rocket:before {content:"\71"}
 .ni-frontend:before {content:"\72"}
