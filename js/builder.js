@@ -20,8 +20,9 @@ function HeaderTemplate() {
   this.src = '<img src="img/%data%" ';
   this.alt = ' alt="%data%">';
   this.content = '%data%';
-  this.list = '<ul class="col-15 sm-head flex flexbox"></ul>';
-  this.url = '<li class="flex"><a href="%data%" target="_blank">';
+  this.list = '<ul class="sm-list"></ul>';
+  this.listItem = '<li style="order:%data%">';
+  this.url = '<li><a href="%data%" target="_blank">';
   this.icon = '<i class="%data%"></i><li></a>';
   this.sm = [];
 }
@@ -32,9 +33,10 @@ HeaderTemplate.prototype.display = function(arr) {
   $('.logo').append(this.src + this.alt);
   $('.sm').append(this.list);
   for (i = 0; i < arr.sm.length; i++) {
+    // this.listItemRender = this.listItem.replace('%data%', arr.sm[i].order);
     this.urlRender = this.url.replace('%data%', arr.sm[i].url);
     this.iconRender = this.icon.replace('%data%', arr.sm[i].content);
-    $('.sm-head').append(this.urlRender + this.iconRender);
+    $('.sm-list').append(this.urlRender + this.iconRender);
   }
   //Removes all empty <li>
   $('ul li:empty').remove();
