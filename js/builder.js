@@ -60,11 +60,12 @@ StoriesPrint.display(stories);
 
 // Section Superclass
 function SectionTemplate() {
-  this.tabContent = '<div id="%data%" class="tabs-info flexbox">';
   this.id = '<h2>%data%</h2>';
   this.title = '<h3>%data%</h3>';
-  this.content = '<p>%data%</p></div>';
-  this.contentIcon = '<div class="ico bluebg-1"><i class="%data%"></i></div>';
+  this.tabContent = '<div id="%data%" class="tabs-info flexbox"></div>';
+  this.content = '<p>%data%</p>';
+  this.contentIconContainer = '<div class="ico %data%">';
+  this.contentIcon = '<i class="%data%"></i></div>';
   this.contentTitle = '<h4>%data%</h4>';
   this.contentText = '<p>%data%</p>';
   this.list = '<ul id="%data%" class="tabs flexbox"></ul>'
@@ -81,31 +82,36 @@ SectionTemplate.prototype.display = function(arr, divId, listId) {
   // Tab render
   for (i = 0; i < arr.buttons.length; i++) {
     this.colorRender = this.color.replace('%data%', arr.buttons[i].color);
-    this.hrefRender  = this.href.replace('%data%', arr.buttons[i].href)
+    this.hrefRender = this.href.replace('%data%', arr.buttons[i].href)
     this.iconRender = this.icon.replace('%data%', arr.buttons[i].icon);
     $('#' + listId).append(this.colorRender + this.hrefRender + this.iconRender);
   }
   // Tab content
-    for (i = 0; i < arr.tabs.length; i++) {
+  for (i = 0; i < arr.tabs.length; i++) {
+    if (Array.isArray(arr.tabs[i].content)) {
+      for (j = 0; j < arr.tabs[i].content.length; j++) {
+        this.tabContentRender = this.tabContent.replace('%data%', arr.tabs[i].id);
+        this.contentIconContainerRender = this.contentIconContainer.replace('%data%', arr.buttons[i].color);
+        this.contentIconRender = this.contentIcon.replace('%data%', arr.tabs[i].content[j].icon);
+        this.contentTitleRender = this.contentTitle.replace('%data%', arr.tabs[i].content[j].title);
+        this.contentTextRender = this.contentText.replace('%data%', arr.tabs[i].content[j].text);
+        $(divId).append(this.tabContentRender);
+        $('#' + arr.tabs[i].id).append('<div class="col-33">' + this.contentIconContainerRender + this.contentIconRender + this.contentTitleRender + this.contentTextRender + '</div>');
+      }
+    } else {
       this.tabContentRender = this.tabContent.replace('%data%', arr.tabs[i].id);
       this.titleRender = this.title.replace('%data%', arr.tabs[i].title);
-      if (Array.isArray(arr.tabs[i].content)) {
-        for (j = 0; j < arr.tabs[i].content.length; j++) {
-          this.contentIconRender = this.contentIcon.replace('%data%', arr.tabs[i].content[j].icon);
-          this.contentTitleRender = this.contentTitle.replace('%data%', arr.tabs[i].content[j].title);
-          this.contentTextRender = this.contentText.replace('%data%', arr.tabs[i].content[j].text);
-        }
-        $(divId).append(this.tabContentRender + this.titleRender + this.contentIconRender + this.contentTitleRender + this.contentTextRender );
-      } else {
-        this.contentRender = this.content.replace('%data%', arr.tabs[i].content);
-        $(divId).append(this.tabContentRender + this.titleRender + this.contentRender);
-      }
+      this.contentRender = this.content.replace('%data%', arr.tabs[i].content);
+      $(divId).append(this.tabContentRender);
+      $('#' + arr.tabs[i].id).append(this.titleRender + this.contentRender);
     }
-    $(divId).tabs();
+  }
+  $('#hac div:empty').remove();
+  $(divId).tabs();
 };
 
 // Section tabs focus event
-SectionTemplate.prototype.tabs = function (tab1, tab2, tab3) {
+SectionTemplate.prototype.tabs = function(tab1, tab2, tab3) {
   $(tab1).addClass('selected');
   $('li.btn').click(function() {
     if ($(tab1).hasClass('ui-state-active')) {

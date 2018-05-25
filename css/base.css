@@ -20,7 +20,7 @@ section {padding:2.5em 0}
 .col-50 {width:50%}
 .col-75 {width:75%}
 .col-80 {width:80%}
-.col-100 {width:100%}
+.col-1 {width:100%}
 
 .col-80, .col-75, .col-50, .col-33, .col-25 {padding:0 2em 0 0; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box}
 .col-20 {padding:0 1em 0 0; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box}
