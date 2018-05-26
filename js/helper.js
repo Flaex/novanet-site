@@ -32,7 +32,7 @@ const stories = {
 
 //Nosotros object
 const nosotros = {
-  "id" : "nosotros",
+  "id" : "Nosotros",
   "buttons" : [
     {
       "color" : "greenbg-1",
@@ -54,7 +54,7 @@ const nosotros = {
     {
       "id" : "andar",
       "title" : "¿En qué andamos?",
-      "content" : "Diseñamos contenido estratégico abarcando el proceso desde la concepción inicial hasta la ejecución final. Entendemos que la manera en la que tu negocio comunica es fundamental para establecer una conexión real con tus clientes.",
+      "content" : "Diseñamos contenido desde la concepción inicial hasta la ejecución final. Entendemos que la manera en la que tu negocio comunica es fundamental para establecer una conexión real con tus clientes.",
     },
     {
       "id" : "pensar",
@@ -64,7 +64,7 @@ const nosotros = {
     {
       "id" : "ir",
       "title" : "¿Hacia dónde vamos?",
-      "content" : "Nos involucramos en primera persona con tus ideas como un socio más. Para nosotros es primordial promover el desarrollo de cada uno de tus propósitos y proveerte de las herramientas necesarias para lograrlos con éxito. Vamos mucho más allá.",
+      "content" : "Para nosotros es primordial promover el desarrollo de cada uno de tus propósitos y proveerte de las herramientas necesarias para lograrlos con éxito. Vamos mucho más allá.",
     }
   ]
 }

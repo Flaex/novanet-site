@@ -1,40 +1,23 @@
 /* Novanet Estilos */
 body {color:#808285; font-family:'Fira Sans', sans-serif}
 
-.container {display:flex; flex-wrap:wrap; flex-direction:column; justify-content:center; background:url(../img/bg.svg); margin:0 auto; padding:4em 5em 0 5em;}
+.container {display:flex; flex-wrap:wrap; background:url(../img/bg.svg); padding:4em 5em 0 5em;}
 a {text-decoration:none}
 ul li {list-style:none; text-align:center}
 table {border-collapse:separate; border-spacing:0; vertical-align:middle}
 caption, th, td {text-align:left; font-weight:normal; vertical-align:middle}
 a img {border:none}
 
-/* Anchos contenedor */
-section {padding:2.5em 0}
-.col-10 {width:10%}
-.col-15 {width:15%}
-.col-20 {width:20%}
-.col-25 {width:25%}
-.col-33 {width:33%}
-.col-50 {width:50%}
-.col-75 {width:75%}
-.col-80 {width:80%}
-.col-1 {width:100%}
-
-.col-80, .col-75, .col-50, .col-33, .col-25 {padding:0 2em 0 0; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box}
-.col-20 {padding:0 1em 0 0; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box}
-
-div#nos, .porfull {padding:2.5em 0 0 0}
+section, .stories, #nos {padding:2em 0; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box}
 footer {padding:2em 0}
-
 .line {border-bottom:#d1d2d3 solid 1px}
 
 /* Tipografia */
 h1 {font-style:italic; font-weight:700; font-size:3.1em; line-height:1.1em}
-h2 {margin:0 0 0.3em 0; font-weight:900; font-size:1.8em; color:#4e4d50; text-transform: capitalize;}
+h2 {margin:0 0 0.3em 0; font-weight:900; font-size:1.8em; color:#4e4d50 }
 h3 {margin:0.8em 0 0.2em 0; font-weight:900; font-size:1.5em}
 h4 {margin:0.4em 0 0.3em 0; font-weight:700; font-size:1.25em; color:#4e4d50}
 p {font-weight:300; font-size:1.3em; line-height:1.3em}
-.col-33 p {min-height:2.5em; font-size:1.1em; line-height:1.3em}
 
 /* Colores */
 .green-1 {color:#85d100}
@@ -74,14 +57,12 @@ p {font-weight:300; font-size:1.3em; line-height:1.3em}
 .graybg-2 {background:#808285}
 .graybg-3 {background:#4e4d50}
 
-/* Redes Sociales */
-
-
 .sm-foot {height:40px}
 
 /* Botones */
-.tabs li{border-bottom:#d1d2d3 4px solid}
-.tabs li:hover {border-bottom:#808285 4px solid; -moz-transition:all 500ms ease-in; -webkit-transition:all 500ms ease-in; -o-transition:all 500ms ease-in}
+.tabs { display: flex; flex-direction:row;}
+.tabs li {border-bottom:#d1d2d3 4px solid}
+.tabs li:hover {border-bottom:#808285 4px solid; -moz-transition:all 0.2s ease-in; -webkit-transition:all 0.2s ease-in; -o-transition:all 0.2s ease-in}
 .tabs li.selected {border-bottom:#4e4d50 4px solid}
 .tabs .btn {position:relative; display:flex; flex-direction:column; justify-content:center; width:6em; height:6em; margin:0 0 0.25em 0; text-align:center; overflow:hidden}
 .tabs .btn-disp {cursor:pointer}
@@ -90,26 +71,36 @@ p {font-weight:300; font-size:1.3em; line-height:1.3em}
 .tabs .btn-disp:hover:before {height:6em}
 .tabs .btn-disp:hover i {font-size:1.2em; -webkit-transition-duration:0.4s; transition-duration:0.4s}
 .tabs .btn-disp:not(:hover) i {font-size:1em; -webkit-transition-duration:0.4s; transition-duration:0.4s}
+.tabs-info {animation: fadeIn 0.3s ; -webkit-animation: fadeIn 0.3s ; -moz-animation: fadeIn 0.3s; -o-animation: fadeIn 0.3s;}
+@keyframes fadeIn { 0% { opacity: 0;}  100% { opacity: 100% }}
+
+.tabs-item {width: 33%; min-height:14em; }
+.tabs-item p { font-size:1.1em; line-height:1.3em; padding-right:0.5em}
 
 /* Header */
-header { display: flex; flex-direction:row;}
+header { display: flex; flex-wrap: wrap; width:100%}
 .logo { width: 20%; height: 4em; order: 1}
-.logo img { width: 90%}
+.logo img { width: 80%}
 .sm { width: 80%; order: 2; display: flex; justify-content:flex-end;}
 ul.sm-list { width: 15%; display: flex; }
 ul.sm-list li {width:1.7em; height:1.7em; margin:0 0.3em; list-style:none; border-radius:50%; text-align:center; border:#808285 solid 2px;}
 ul.sm-list li i {padding-top: 0.3em;}
 
 /* Historia - nosotros */
-#ini {width: 50%; }
-#ini .stories p, .head-subtit {font-size:1.9em; line-height:1.2em; padding:0 0 1.4em 0}
-#ini .canvas {height:100%}
+#ini {display: flex; flex-wrap: wrap; width:100%}
+#nos, .stories, .anim {width: 50%}
+.stories { order: 1}
+.stories p {font-size:1.9em; line-height:1.2em;}
+#ini canvas.anim { order: 2; height: auto}
+#nos {order: 3}
 
 /* Hacemos */
-#hac .ico {cursor:pointer; display:flex; flex-direction:column; justify-content:center; margin:0.5em 0 0.8em 0; width:5em; height:5em; border-radius:50%; text-align:center}
-#hac .ico i {margin:0.6em 0 0 0; font-size:0.9em; color:#fff}
-#hac .ico:hover {transform:translate(0.85em); -moz-transition:all 0.3s ease-in; -webkit-transition:all 0.3s ease-in; -o-transition:all 0.3s ease-in; transition:all 0.3s ease-in}
-#hac .ico:not(:hover) {transform:translate(0); -moz-transition:all 0.3s ease-out; -webkit-transition:all 0.3s ease-out; -o-transition:all 0.3s ease-out; transition:all 0.3s ease-out}
+#hac .ico {margin:0.5em 0 0.8em 0; width:5em; height:5em; border-radius:50%; text-align:center}
+#hac .ico i { line-height: 9.5em; font-size:0.9em; color:#fff}
+#hac .ico:hover {transform:translate(0.5em); -moz-transition:all 0.2s ease-in; -webkit-transition:all 0.2s ease-in; -o-transition:all 0.2s ease-in; transition:all 0.2s ease-in}
+#hac .ico:not(:hover) {transform:translate(0); -moz-transition:all 0.2s ease-out; -webkit-transition:all 0.2s ease-out; -o-transition:all 0.2s ease-out; transition:all 0.2s ease-out}
+#diseno, #desarrollo, #integracion { display: flex; flex-wrap: wrap;}
+#diseno h3 , #desarrollo h3, #integracion h3 { width: 100%}
 
 /* Portafolio */
 #Por .col-33 {margin:0.7em 0 3em 0}

@@ -64,16 +64,17 @@ StoriesPrint.display(stories);
 function SectionTemplate() {
   this.id = '<h2>%data%</h2>';
   this.title = '<h3>%data%</h3>';
-  this.tabContent = '<div id="%data%" class="tabs-info flexbox"></div>';
+  this.tabContent = '<div id="%data%" class="tabs-info"></div>';
   this.content = '<p>%data%</p>';
   this.contentIconContainer = '<div class="ico %data%">';
   this.contentIcon = '<i class="%data%"></i></div>';
   this.contentTitle = '<h4>%data%</h4>';
   this.contentText = '<p>%data%</p>';
-  this.list = '<ul id="%data%" class="tabs flexbox"></ul>'
+  this.list = '<ul id="%data%" class="tabs"></ul>'
   this.color = '<li class="btn %data%">';
   this.href = '<a class="btn-disp" href="%data%">'
   this.icon = '<i class="%data%"></i></a></li>';
+  this.tabItems = '<ul class="tabs-items">lalala</ul>';
 };
 // Section render function
 SectionTemplate.prototype.display = function(arr, divId, listId) {
@@ -91,6 +92,7 @@ SectionTemplate.prototype.display = function(arr, divId, listId) {
   // Tab content
   for (i = 0; i < arr.tabs.length; i++) {
     if (Array.isArray(arr.tabs[i].content)) {
+      this.titleRender = this.title.replace('%data%', arr.tabs[i].title);
       for (j = 0; j < arr.tabs[i].content.length; j++) {
         this.tabContentRender = this.tabContent.replace('%data%', arr.tabs[i].id);
         this.contentIconContainerRender = this.contentIconContainer.replace('%data%', arr.buttons[i].color);
@@ -98,8 +100,9 @@ SectionTemplate.prototype.display = function(arr, divId, listId) {
         this.contentTitleRender = this.contentTitle.replace('%data%', arr.tabs[i].content[j].title);
         this.contentTextRender = this.contentText.replace('%data%', arr.tabs[i].content[j].text);
         $(divId).append(this.tabContentRender);
-        $('#' + arr.tabs[i].id).append('<div class="col-33">' + this.contentIconContainerRender + this.contentIconRender + this.contentTitleRender + this.contentTextRender + '</div>');
+        $('#' + arr.tabs[i].id).append('<div class="tabs-item">' + this.contentIconContainerRender + this.contentIconRender + this.contentTitleRender + this.contentTextRender + '</div>');
       }
+      $('#' + arr.tabs[i].id).prepend(this.titleRender);
     } else {
       this.tabContentRender = this.tabContent.replace('%data%', arr.tabs[i].id);
       this.titleRender = this.title.replace('%data%', arr.tabs[i].title);
@@ -108,7 +111,7 @@ SectionTemplate.prototype.display = function(arr, divId, listId) {
       $('#' + arr.tabs[i].id).append(this.titleRender + this.contentRender);
     }
   }
-  $('#hac div:empty').remove();
+  // $('#hac div:empty').remove();
   $(divId).tabs();
 };
 
