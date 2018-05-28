@@ -68,8 +68,6 @@ function SectionTemplate() {
   this.tabParagraph = '<p>%data%</p>';
   this.tabItems = '<div class="tab-item"></div>';
 
-
-
   this.contentIconContainer = '<div class="ico %data%">';
   this.contentIcon = '<i class="%data%"></i></div>';
   this.contentTitle = '<h4>%data%</h4>';
@@ -106,32 +104,27 @@ SectionTemplate.prototype.display = function(arr, divId, listId) {
     this.tabInfoRender = this.tabInfo.replace('%data%', arr.tabs[i].id);
     this.tabTitleRender = this.tabTitle.replace('%data%', arr.tabs[i].tabTitle);
     if (Array.isArray(arr.tabs[i].content)) {
-      console.log('array detected');
-      $(divId).append(this.tabItems);
       for (j = 0; j < arr.tabs[i].content.length; j++) {
         this.contentIconContainerRender = this.contentIconContainer.replace('%data%', arr.sectionNavBtn[i].color);
         this.contentIconRender = this.contentIcon.replace('%data%', arr.tabs[i].content[j].icon);
         this.contentTitleRender = this.contentTitle.replace('%data%', arr.tabs[i].content[j].title);
         this.contentDatesRender = this.contentDates.replace('%data%', arr.tabs[i].content[j].dates)
         this.contentTextRender = this.contentText.replace('%data%', arr.tabs[i].content[j].text);
-
-        $('#' + arr.tabs[i].id).append('<div class="tab-item">' + this.contentIconContainerRender + this.contentIconRender + this.contentTitleRender + this.contentTextRender + this.contentDatesRender + this.testRender + '</div>');
+        $(divId).append(this.tabInfoRender);
+        $('#' + arr.tabs[i].id).append(this.contentIconContainerRender + this.contentIconRender + this.contentTitleRender + this.contentDatesRender + this.contentTextRender );
       }
-
-
-
-
-
     } else {
       this.tabParagraphRender = this.tabParagraph.replace('%data%', arr.tabs[i].content);
       this.tabTitleRender = this.tabTitle.replace('%data%', arr.tabs[i].tabTitle);
       $(divId).append(this.tabInfoRender);
       $('#' + arr.tabs[i].id).append(this.tabTitleRender + this.tabParagraphRender);
-
     }
-
   }
-  // $('#hac div:empty').remove();
+  $("p.dates:contains('undefined')").remove();
+  $("i.undefined:empty").remove();
+  $("div.ico:empty").remove();
+  // $('ul li:empty').remove();
+  // $("ul#test li:contains('undefined')").remove();
   $(divId).tabs();
 };
 
