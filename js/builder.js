@@ -19,7 +19,6 @@ function shuffle(array) {
 function HeaderTemplate() {
   this.src = '<img src="img/%data%" ';
   this.alt = ' alt="%data%">';
-  this.content = '%data%';
   this.smList = '<ul class="sm-list"></ul>';
   this.url = '<li><a href="%data%" target="_blank">';
   this.icon = '<i class="%data%"></i><li></a>';
@@ -66,25 +65,25 @@ function SectionTemplate() {
   this.tabInfo = '<div id="%data%" class="tabs-info"></div>';
   this.tabTitle = '<h3>%data%</h3>';
   this.tabParagraph = '<p>%data%</p>';
-  this.tabItems = '<div class="tab-item"></div>';
+  this.itemIconContainer = '<div class="ico %data%">';
+  this.itemIcon = '<i class="%data%"></i></div>';
+  this.itemTitle = '<h4>%data%</h4>';
+  this.itemText = '<p>%data%</p>';
+  this.itemDates = '<p class="dates">%data%</p>';
+  this.itemURL = '<a class="url" href="%data%">Ver</a>';
 
-  this.contentIconContainer = '<div class="ico %data%">';
-  this.contentIcon = '<i class="%data%"></i></div>';
-  this.contentTitle = '<h4>%data%</h4>';
-  this.contentText = '<p>%data%</p>';
-  this.contentDates = '<p class="dates">%data%</p>';
-
-  this.imageContainer = '<li class="projectThumb col-25 %data%">';
+  this.imageContainer = '<div class="projectThumb col-25 %data%">';
   this.imageMask = '<a><img class="%data%"';
   this.image = ' src="img/%data%">';
-  this.modal = '<div class="modalDialog"><div><a href="#close" title="Close" class="close"><strong>x</strong></a><img class="preview" src="img/%data%"></div></li>';
+  this.modal = '<div class="modalDialog"><div><a href="#close" title="Close" class="close"><strong>x</strong></a><img class="preview" src="img/%data%"></div></div>';
+  this.imageList = '<ul class="thumbs"></ul>';
 
 
   this.color = '<li class="btn %data%">';
   this.href = '<a class="btn-disp" href="%data%">'
   this.icon = '<i class="%data%"></i></a></li>';
 
-  this.test = '<ul class="thumbs"></ul>';
+
 };
 // Section render function
 SectionTemplate.prototype.display = function(arr, divId, listId) {
@@ -92,37 +91,61 @@ SectionTemplate.prototype.display = function(arr, divId, listId) {
   $(divId).append(this.sectionTitle);
   this.sectionNav= this.sectionNav.replace('%data%', listId)
   $(divId).append(this.sectionNav);
-  // Tab render
+  // Section navigation render
   for (i = 0; i < arr.sectionNavBtn.length; i++) {
     this.colorRender = this.color.replace('%data%', arr.sectionNavBtn[i].color);
     this.hrefRender = this.href.replace('%data%', arr.sectionNavBtn[i].href)
     this.iconRender = this.icon.replace('%data%', arr.sectionNavBtn[i].icon);
     $('#' + listId).append(this.colorRender + this.hrefRender + this.iconRender);
   }
-  // Tab content
+  // Tab content render
   for (i = 0; i < arr.tabs.length; i++) {
     this.tabInfoRender = this.tabInfo.replace('%data%', arr.tabs[i].id);
     this.tabTitleRender = this.tabTitle.replace('%data%', arr.tabs[i].tabTitle);
-    if (Array.isArray(arr.tabs[i].content)) {
-      for (j = 0; j < arr.tabs[i].content.length; j++) {
-        this.contentIconContainerRender = this.contentIconContainer.replace('%data%', arr.sectionNavBtn[i].color);
-        this.contentIconRender = this.contentIcon.replace('%data%', arr.tabs[i].content[j].icon);
-        this.contentTitleRender = this.contentTitle.replace('%data%', arr.tabs[i].content[j].title);
-        this.contentDatesRender = this.contentDates.replace('%data%', arr.tabs[i].content[j].dates)
-        this.contentTextRender = this.contentText.replace('%data%', arr.tabs[i].content[j].text);
-        $(divId).append(this.tabInfoRender);
-        $('#' + arr.tabs[i].id).append(this.contentIconContainerRender + this.contentIconRender + this.contentTitleRender + this.contentDatesRender + this.contentTextRender );
+    this.tabParagraphRender = this.tabParagraph.replace('%data%', arr.tabs[i].tabParagraph);
+    $(divId).append(this.tabInfoRender);
+    if (Array.isArray(arr.tabs[i].tabItems)) {
+      $('#' + arr.tabs[i].id).append(this.tabTitleRender);
+      for (j = 0; j < arr.tabs[i].tabItems.length; j++) {
+
+        this.itemIconContainerRender = this.itemIconContainer.replace('%data%', arr.sectionNavBtn[i].color);
+        this.itemIconRender = this.itemIcon.replace('%data%', arr.tabs[i].tabItems[j].icon);
+        this.itemTitleRender = this.itemTitle.replace('%data%', arr.tabs[i].tabItems[j].title);
+        this.itemDatesRender = this.itemDates.replace('%data%', arr.tabs[i].tabItems[j].dates)
+        this.itemTextRender = this.itemText.replace('%data%', arr.tabs[i].tabItems[j].text);
+        this.itemURLRender = this.itemURL.replace('%data%', arr.tabs[i].tabItems[j].url);
+
+        $('#' + arr.tabs[i].id).append('<div class="tab-item">' + this.itemIconContainerRender + this.itemIconRender + this.itemTitleRender + this.itemDatesRender + this.itemTextRender + this.itemURLRender + '</div>');
+
+        if (Array.isArray(arr.tabs[i].tabItems[j].images)) {
+
+          for (k = 0; k < arr.tabs[i].tabItems[j].images.length; k++) {
+            console.log(arr.tabs[i].tabItems[j].images[k]);
+
+            const shapes = [
+              ["circleBg", "circle"],
+              ["squareBg", "square"],
+              ["triangleBg", "triangle"]
+            ];
+            let randomFigures = shuffle(shapes);
+            this.imageContainer = this.imageContainer.replace('%data%', randomFigures[0][0]);
+            this.imageMask = this.imageMask.replace('%data%', randomFigures[0][1]);
+            this.imageRender = this.image.replace('%data%', arr.tabs[i].tabItems[j].images[k].src);
+            this.modalRender = this.modal.replace('%data%', arr.tabs[i].tabItems[j].images[k].href);
+            // $('#' + arr.tabs[i].id).append('<div class="tab-item">' + this.itemIconContainerRender + this.itemIconRender + this.itemTitleRender + this.itemDatesRender + this.itemTextRender + this.itemURLRender + '</div>');
+
+            $('#' + arr.tabs[i].id).append(this.imageContainer + this.imageMask + this.imageRender + this.modalRender);
+          }
+        }
       }
     } else {
-      this.tabParagraphRender = this.tabParagraph.replace('%data%', arr.tabs[i].content);
-      this.tabTitleRender = this.tabTitle.replace('%data%', arr.tabs[i].tabTitle);
-      $(divId).append(this.tabInfoRender);
       $('#' + arr.tabs[i].id).append(this.tabTitleRender + this.tabParagraphRender);
     }
   }
-  $("p.dates:contains('undefined')").remove();
+  $('a[href*="undefined"]').remove();
+  $("p:contains('undefined')").remove();
   $("i.undefined:empty").remove();
-  $("div.ico:empty").remove();
+  // $("div.ico:empty").remove();
   // $('ul li:empty').remove();
   // $("ul#test li:contains('undefined')").remove();
   $(divId).tabs();

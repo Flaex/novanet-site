@@ -54,17 +54,17 @@ const nosotros = {
     {
       "id" : "andar",
       "tabTitle" : "¿En qué andamos?",
-      "content" : "Diseñamos contenido desde la concepción inicial hasta la ejecución final. Entendemos que la manera en la que tu negocio comunica es fundamental para establecer una conexión real con tus clientes.",
+      "tabParagraph" : "Diseñamos contenido desde la concepción inicial hasta la ejecución final. Entendemos que la manera en la que tu negocio comunica es fundamental para establecer una conexión real con tus clientes.",
     },
     {
       "id" : "pensar",
       "tabTitle" : "¿En qué pensamos?",
-      "content" : "Utilizamos el diseño y la tecnología para impulsar el éxito de tus proyectos. Estamos día a día conectados con la innovación y la tendencia. Asumimos el diseño como un reto de cambio constante.",
+      "tabParagraph" : "Utilizamos el diseño y la tecnología para impulsar el éxito de tus proyectos. Estamos día a día conectados con la innovación y la tendencia. Asumimos el diseño como un reto de cambio constante.",
     },
     {
       "id" : "ir",
       "tabTitle" : "¿Hacia dónde vamos?",
-      "content" : "Para nosotros es primordial promover el desarrollo de cada uno de tus propósitos y proveerte de las herramientas necesarias para lograrlos con éxito. Vamos mucho más allá.",
+      "tabParagraph" : "Para nosotros es primordial promover el desarrollo de cada uno de tus propósitos y proveerte de las herramientas necesarias para lograrlos con éxito. Vamos mucho más allá.",
     }
   ]
 }
@@ -93,7 +93,7 @@ const hacemos = {
     {
       "id" : "diseno",
       "tabTitle" : "Diseño gráfico",
-      "content" : [
+      "tabItems" : [
         {
           "icon" : "icon ni-logo",
           "title" : "Logotipos",
@@ -114,7 +114,7 @@ const hacemos = {
     {
       "id" : "desarrollo",
       "tabTitle" : "Aplicaciones web",
-      "content" : [
+      "tabItems" : [
         {
           "icon" : "icon ni-webpage",
           "title" : "Sitios web",
@@ -135,7 +135,7 @@ const hacemos = {
     {
       "id" : "integracion",
       "tabTitle" : "Integración",
-      "content" : [
+      "tabItems" : [
         {
           "icon" : "icon ni-chat",
           "title" : "Integración en proyectos",
@@ -180,7 +180,7 @@ const proyectos = {
     {
       "id" : "branding",
       "tabTitle" : "Branding",
-      "content" : [
+      "tabItems" : [
         {
           "title": "Banco del Libro website",
           "dates": "May 2013",
@@ -202,7 +202,7 @@ const proyectos = {
     {
       "id" : "disenoweb",
       "tabTitle" : "Diseño UI/UX",
-      "content" : [
+      "tabItems" : [
         {
           "title": "Escuela de natación Rivas",
           "dates": "Oct 2017",
@@ -219,7 +219,7 @@ const proyectos = {
     {
       "id" : "logotipos",
       "tabTitle" : "Logotipos",
-      "content" : [
+      "tabItems" : [
         {
           "title": "Novanet website",
           "dates": "Jun 2015",
