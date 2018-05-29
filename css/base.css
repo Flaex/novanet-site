@@ -66,12 +66,12 @@ p {font-weight:300; font-size:1.3em; line-height:1.3em}
 .tabs li:hover {border-bottom:#808285 4px solid; -moz-transition:all 0.2s ease-in; -webkit-transition:all 0.2s ease-in; -o-transition:all 0.2s ease-in}
 .tabs li.selected {border-bottom:#4e4d50 4px solid}
 .tabs .btn {position:relative; display:flex; flex-direction:column; justify-content:center; width:6em; height:6em; margin:0 0 0.25em 0; text-align:center; overflow:hidden}
-.tabs .btn-disp {cursor:pointer}
-.tabs .btn-disp:focus { outline: none;}
-.tabs .btn-disp:before {content:''; position:absolute; top:0; left:0; width:6em; height:0; ; -webkit-transition-duration:0.4s; transition-duration:0.4s}
-.tabs .btn-disp:hover:before {height:6em}
-.tabs .btn-disp:hover i {font-size:1.2em; -webkit-transition-duration:0.4s; transition-duration:0.4s}
-.tabs .btn-disp:not(:hover) i {font-size:1em; -webkit-transition-duration:0.4s; transition-duration:0.4s}
+.tabs .btn {cursor:pointer}
+.tabs .btn:focus { outline: none;}
+.tabs .btn:before {content:''; position:absolute; top:0; left:0; width:6em; height:0; ; -webkit-transition-duration:0.4s; transition-duration:0.4s}
+.tabs .btn:hover:before {height:6em}
+.tabs .btn:hover i {font-size:1.2em; -webkit-transition-duration:0.4s; transition-duration:0.4s}
+.tabs .btn:not(:hover) i {font-size:1em; -webkit-transition-duration:0.4s; transition-duration:0.4s}
 .tabs-info {animation: fadeIn 0.3s ; -webkit-animation: fadeIn 0.3s ; -moz-animation: fadeIn 0.3s; -o-animation: fadeIn 0.3s;}
 @keyframes fadeIn { 0% { opacity: 0;}  100% { opacity: 100% }}
 .tab-item {width: 33%; min-height:14em; }

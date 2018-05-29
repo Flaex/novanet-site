@@ -72,15 +72,15 @@ function SectionTemplate() {
   this.itemDates = '<p class="dates">%data%</p>';
   this.itemURL = '<a class="url" href="%data%">Ver</a>';
 
-  this.imageContainer = '<div class="projectThumb col-25 %data%">';
-  this.imageMask = '<a><img class="%data%"';
-  this.image = ' src="img/%data%">';
+  this.imageContainer = '<div class="thumb %data%">';
+  this.imageHref = '<a class="btn" href="img/%data%">'
+  this.imageMask = '<img class="%data%"';
+  this.image = ' src="img/%data%"></a>';
   this.modal = '<div class="modalDialog"><div><a href="#close" title="Close" class="close"><strong>x</strong></a><img class="preview" src="img/%data%"></div></div>';
-  this.imageList = '<ul class="thumbs"></ul>';
-
+  this.imageList = '<div class="thumbs"></div>';
 
   this.color = '<li class="btn %data%">';
-  this.href = '<a class="btn-disp" href="%data%">'
+  this.href = '<a class="btn" href="%data%">';
   this.icon = '<i class="%data%"></i></a></li>';
 
 
@@ -107,35 +107,33 @@ SectionTemplate.prototype.display = function(arr, divId, listId) {
     if (Array.isArray(arr.tabs[i].tabItems)) {
       $('#' + arr.tabs[i].id).append(this.tabTitleRender);
       for (j = 0; j < arr.tabs[i].tabItems.length; j++) {
-
         this.itemIconContainerRender = this.itemIconContainer.replace('%data%', arr.sectionNavBtn[i].color);
         this.itemIconRender = this.itemIcon.replace('%data%', arr.tabs[i].tabItems[j].icon);
         this.itemTitleRender = this.itemTitle.replace('%data%', arr.tabs[i].tabItems[j].title);
         this.itemDatesRender = this.itemDates.replace('%data%', arr.tabs[i].tabItems[j].dates)
         this.itemTextRender = this.itemText.replace('%data%', arr.tabs[i].tabItems[j].text);
         this.itemURLRender = this.itemURL.replace('%data%', arr.tabs[i].tabItems[j].url);
-
-        $('#' + arr.tabs[i].id).append('<div class="tab-item">' + this.itemIconContainerRender + this.itemIconRender + this.itemTitleRender + this.itemDatesRender + this.itemTextRender + this.itemURLRender + '</div>');
-
         if (Array.isArray(arr.tabs[i].tabItems[j].images)) {
-
+          $('#' + arr.tabs[i].id).append('<div class="tab-item">' + this.itemIconContainerRender + this.itemIconRender + this.itemTitleRender + this.itemDatesRender + this.itemTextRender + this.itemURLRender + '</div>');
+          $('.tab-item').append(this.imageList);
           for (k = 0; k < arr.tabs[i].tabItems[j].images.length; k++) {
-            console.log(arr.tabs[i].tabItems[j].images[k]);
-
             const shapes = [
               ["circleBg", "circle"],
               ["squareBg", "square"],
               ["triangleBg", "triangle"]
-            ];
+            ]
             let randomFigures = shuffle(shapes);
-            this.imageContainer = this.imageContainer.replace('%data%', randomFigures[0][0]);
-            this.imageMask = this.imageMask.replace('%data%', randomFigures[0][1]);
+            this.imageContainerRender = this.imageContainer.replace('%data%', randomFigures[0][0]);
+            this.imageMaskRender = this.imageMask.replace('%data%', randomFigures[0][1]);
+            this.imageHrefRender = this.imageHref.replace('%data%', arr.tabs[i].tabItems[j].images[k].href)
             this.imageRender = this.image.replace('%data%', arr.tabs[i].tabItems[j].images[k].src);
-            this.modalRender = this.modal.replace('%data%', arr.tabs[i].tabItems[j].images[k].href);
-            // $('#' + arr.tabs[i].id).append('<div class="tab-item">' + this.itemIconContainerRender + this.itemIconRender + this.itemTitleRender + this.itemDatesRender + this.itemTextRender + this.itemURLRender + '</div>');
+            // this.modalRender = this.modal.replace('%data%', arr.tabs[i].tabItems[j].images[k].href);
+            this.imageItems = this.imageContainerRender + this.imageHrefRender + this.imageMaskRender + this.imageRender;
+            $('.thumbs:last').append(this.imageItems);
 
-            $('#' + arr.tabs[i].id).append(this.imageContainer + this.imageMask + this.imageRender + this.modalRender);
           }
+        } else {
+          $('#' + arr.tabs[i].id).append('<div class="tab-item">' + this.itemIconContainerRender + this.itemIconRender + this.itemTitleRender + this.itemDatesRender + this.itemTextRender + this.itemURLRender + '</div>');
         }
       }
     } else {
@@ -191,47 +189,9 @@ function ProjectsTemplate() {
   this.description = '<p>%data%<p>';
   this.dates = '<div class="date">%data%</div>';
   this.list = '<ul class="thumbs"></ul>';
-  this.imageContainer = '<li class="projectThumb col-25 %data%">';
+  this.imageContainer = '<li class="projectThumb %data%">';
   this.imageMask = '<a><img class="%data%"';
   this.image = ' src="img/%data%">';
   this.modal = '<div class="modalDialog"><div><a href="#close" title="Close" class="close"><strong>x</strong></a><img class="preview" src="img/%data%"></div></li>';
   this.works = [];
 };
-
-// Projects render function
-ProjectsTemplate.prototype.display = function(arr) {
-  for (i = 0; i < arr.works.length; i++) {
-    $('#projects').append(this.entry);
-    this.works.title = this.title.replace('%data%', arr.works[i].title);
-    this.works.description = this.title.replace('%data%', arr.works[i].description);
-    this.works.dates = this.dates.replace('%data%', arr.works[i].dates);
-    $('.project-entry:last').append(this.works.title + this.works.description + this.works.dates);
-    $('.project-entry:last').append(this.list);
-    for (j = 0; j < arr.works[i].images.length; j++) {
-      const shapes = [
-        ["circleBg", "circle"],
-        ["squareBg", "square"],
-        ["triangleBg", "triangle"]
-      ];
-      let randomFigures = shuffle(shapes);
-      this.imageContainer = this.imageContainer.replace('%data%', randomFigures[0][0]);
-      this.imageMask = this.imageMask.replace('%data%', randomFigures[0][1]);
-      this.imageRender = this.image.replace('%data%', arr.works[i].images[j].src);
-      this.modalRender = this.modal.replace('%data%', arr.works[i].images[j].href);
-      $('.thumbs:last').append(this.imageContainer + this.imageMask + this.imageRender + this.modalRender);
-    }
-    // Serial id's to a tag
-    $.each($('.projectThumb a'), function(index, value) {
-      let num = index + 1;
-      $(value).attr("href", "#openModal" + num);
-    });
-    //Serial id's to modal
-    $.each($('.modalDialog'), function(index, value) {
-      let num = index + 1;
-      $(value).attr("id", "openModal" + num);
-    });
-  }
-};
-// Projects creation and renderization
-// const projectPrint = new ProjectsTemplate();
-// projectPrint.display(projects);
