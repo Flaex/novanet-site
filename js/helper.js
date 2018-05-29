@@ -158,7 +158,7 @@ const hacemos = {
 
 //Hacemos object
 const proyectos = {
-  "sectionTitle" : "Proyectos",
+  "sectionTitle" : "Portafolio",
   "sectionNavBtn" : [
     {
       "color" : "orangebg-1",

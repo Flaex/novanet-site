@@ -49,6 +49,7 @@ function StoriesTemplate() {
   this.paragraph= '<p>%data%</p>'
 };
 // Stories Superclass render function
+// Takes an array as argument to display conent
 StoriesTemplate.prototype.display = function(arr) {
   this.title = this.title.replace('%data%', arr.title);
   this.paragraph = this.paragraph.replace('%data%', arr.paragraph);
@@ -62,6 +63,9 @@ storiesPrint.display(stories);
 function SectionTemplate() {
   this.sectionTitle = '<h2>%data%</h2>';
   this.sectionNav = '<ul id="%data%" class="tabs"></ul>';
+  this.tabColor = '<li class="btn %data%">';
+  this.tabHref = '<a class="btn" href="%data%">';
+  this.tabIcon = '<i class="%data%"></i></a></li>';
   this.tabInfo = '<div id="%data%" class="tabs-info"></div>';
   this.tabTitle = '<h3>%data%</h3>';
   this.tabParagraph = '<p>%data%</p>';
@@ -71,32 +75,26 @@ function SectionTemplate() {
   this.itemText = '<p>%data%</p>';
   this.itemDates = '<p class="dates">%data%</p>';
   this.itemURL = '<a class="url" href="%data%">Ver</a>';
-
   this.imageContainer = '<div class="thumb %data%">';
   this.imageHref = '<a class="btn" href="img/%data%">'
   this.imageMask = '<img class="%data%"';
   this.image = ' src="img/%data%"></a>';
   this.modal = '<div class="modalDialog"><div><a href="#close" title="Close" class="close"><strong>x</strong></a><img class="preview" src="img/%data%"></div></div>';
   this.imageList = '<div class="thumbs"></div>';
-
-  this.color = '<li class="btn %data%">';
-  this.href = '<a class="btn" href="%data%">';
-  this.icon = '<i class="%data%"></i></a></li>';
-
-
 };
 // Section render function
-SectionTemplate.prototype.display = function(arr, divId, listId) {
+// Takes an array, section ID and tab buttons ID as arguments to display content
+SectionTemplate.prototype.display = function(arr, divId, tabId) {
   this.sectionTitle= this.sectionTitle.replace('%data%', arr.sectionTitle);
   $(divId).append(this.sectionTitle);
-  this.sectionNav= this.sectionNav.replace('%data%', listId)
+  this.sectionNav= this.sectionNav.replace('%data%', tabId)
   $(divId).append(this.sectionNav);
-  // Section navigation render
+  // Navigation tabs buttons
   for (i = 0; i < arr.sectionNavBtn.length; i++) {
-    this.colorRender = this.color.replace('%data%', arr.sectionNavBtn[i].color);
-    this.hrefRender = this.href.replace('%data%', arr.sectionNavBtn[i].href)
-    this.iconRender = this.icon.replace('%data%', arr.sectionNavBtn[i].icon);
-    $('#' + listId).append(this.colorRender + this.hrefRender + this.iconRender);
+    this.colorRender = this.tabColor.replace('%data%', arr.sectionNavBtn[i].color);
+    this.hrefRender = this.tabHref.replace('%data%', arr.sectionNavBtn[i].href)
+    this.iconRender = this.tabIcon.replace('%data%', arr.sectionNavBtn[i].icon);
+    $('#' + tabId).append(this.colorRender + this.hrefRender + this.iconRender);
   }
   // Tab content render
   for (i = 0; i < arr.tabs.length; i++) {
@@ -104,8 +102,10 @@ SectionTemplate.prototype.display = function(arr, divId, listId) {
     this.tabTitleRender = this.tabTitle.replace('%data%', arr.tabs[i].tabTitle);
     this.tabParagraphRender = this.tabParagraph.replace('%data%', arr.tabs[i].tabParagraph);
     $(divId).append(this.tabInfoRender);
+    // Check if key is an array
     if (Array.isArray(arr.tabs[i].tabItems)) {
       $('#' + arr.tabs[i].id).append(this.tabTitleRender);
+      // Iteration for getting tab items
       for (j = 0; j < arr.tabs[i].tabItems.length; j++) {
         this.itemIconContainerRender = this.itemIconContainer.replace('%data%', arr.sectionNavBtn[i].color);
         this.itemIconRender = this.itemIcon.replace('%data%', arr.tabs[i].tabItems[j].icon);
@@ -113,9 +113,11 @@ SectionTemplate.prototype.display = function(arr, divId, listId) {
         this.itemDatesRender = this.itemDates.replace('%data%', arr.tabs[i].tabItems[j].dates)
         this.itemTextRender = this.itemText.replace('%data%', arr.tabs[i].tabItems[j].text);
         this.itemURLRender = this.itemURL.replace('%data%', arr.tabs[i].tabItems[j].url);
+        // Check if key is an array
         if (Array.isArray(arr.tabs[i].tabItems[j].images)) {
           $('#' + arr.tabs[i].id).append('<div class="tab-item">' + this.itemIconContainerRender + this.itemIconRender + this.itemTitleRender + this.itemDatesRender + this.itemTextRender + this.itemURLRender + '</div>');
           $('.tab-item').append(this.imageList);
+          // Iteration for getting images items
           for (k = 0; k < arr.tabs[i].tabItems[j].images.length; k++) {
             const shapes = [
               ["circleBg", "circle"],
@@ -123,6 +125,7 @@ SectionTemplate.prototype.display = function(arr, divId, listId) {
               ["triangleBg", "triangle"]
             ]
             let randomFigures = shuffle(shapes);
+            // Giving random values to images containers to display mask on proyects
             this.imageContainerRender = this.imageContainer.replace('%data%', randomFigures[0][0]);
             this.imageMaskRender = this.imageMask.replace('%data%', randomFigures[0][1]);
             this.imageHrefRender = this.imageHref.replace('%data%', arr.tabs[i].tabItems[j].images[k].href)
@@ -130,7 +133,6 @@ SectionTemplate.prototype.display = function(arr, divId, listId) {
             // this.modalRender = this.modal.replace('%data%', arr.tabs[i].tabItems[j].images[k].href);
             this.imageItems = this.imageContainerRender + this.imageHrefRender + this.imageMaskRender + this.imageRender;
             $('.thumbs:last').append(this.imageItems);
-
           }
         } else {
           $('#' + arr.tabs[i].id).append('<div class="tab-item">' + this.itemIconContainerRender + this.itemIconRender + this.itemTitleRender + this.itemDatesRender + this.itemTextRender + this.itemURLRender + '</div>');
@@ -140,16 +142,21 @@ SectionTemplate.prototype.display = function(arr, divId, listId) {
       $('#' + arr.tabs[i].id).append(this.tabTitleRender + this.tabParagraphRender);
     }
   }
+  // Catching and removing empty and undefined elements
   $('a[href*="undefined"]').remove();
   $("p:contains('undefined')").remove();
   $("i.undefined:empty").remove();
+
   // $("div.ico:empty").remove();
   // $('ul li:empty').remove();
   // $("ul#test li:contains('undefined')").remove();
+
+  // Assigning jQuery UI function for
   $(divId).tabs();
 };
 
-// Section tabs focus event
+// Navigation tab buttons focus event to assign active state
+// It recieves background tab colors as identifiers to assign state
 SectionTemplate.prototype.tabs = function(tab1, tab2, tab3) {
   $(tab1).addClass('selected');
   $('li.btn').click(function() {
@@ -168,7 +175,7 @@ SectionTemplate.prototype.tabs = function(tab1, tab2, tab3) {
     }
   });
 }
-// Stories creation and renderization
+// Sections creation and renderization
 const SectionNos = new SectionTemplate();
 SectionNos.display(nosotros, '#nos', 'nosotros');
 SectionNos.tabs('.greenbg-1', '.greenbg-2', '.greenbg-3');
@@ -180,18 +187,3 @@ SectionHac.tabs('.bluebg-1', '.bluebg-2', '.bluebg-3');
 const SectionPro = new SectionTemplate();
 SectionPro.display(proyectos, '#pro', 'proyectos');
 SectionPro.tabs('.orangebg-1', '.orangebg-2', '.orangebg-3');
-
-
-// Projects  Superclass
-function ProjectsTemplate() {
-  this.entry = '<div class="project-entry flex-box"></div>';
-  this.title = '<h3>%data%</h3>';
-  this.description = '<p>%data%<p>';
-  this.dates = '<div class="date">%data%</div>';
-  this.list = '<ul class="thumbs"></ul>';
-  this.imageContainer = '<li class="projectThumb %data%">';
-  this.imageMask = '<a><img class="%data%"';
-  this.image = ' src="img/%data%">';
-  this.modal = '<div class="modalDialog"><div><a href="#close" title="Close" class="close"><strong>x</strong></a><img class="preview" src="img/%data%"></div></li>';
-  this.works = [];
-};
