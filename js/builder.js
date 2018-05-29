@@ -75,7 +75,7 @@ function SectionTemplate() {
   this.itemText = '<p>%data%</p>';
   this.itemDates = '<p class="dates">%data%</p>';
   this.itemURL = '<a class="url" href="%data%">Ver</a>';
-  this.imageContainer = '<div class="thumb %data%">';
+  this.imageContainer = '<div class="thumb orangebg-1 %data%">';
   this.imageHref = '<a class="btn" href="img/%data%">'
   this.imageMask = '<img class="%data%"';
   this.image = ' src="img/%data%"></a>';
@@ -133,6 +133,9 @@ SectionTemplate.prototype.display = function(arr, divId, tabId) {
             // this.modalRender = this.modal.replace('%data%', arr.tabs[i].tabItems[j].images[k].href);
             this.imageItems = this.imageContainerRender + this.imageHrefRender + this.imageMaskRender + this.imageRender;
             $('.thumbs:last').append(this.imageItems);
+            $('.thumbs').on('click', 'div.thumb', function(e) {
+              console.log('Thumb clicked');
+            });
           }
         } else {
           $('#' + arr.tabs[i].id).append('<div class="tab-item">' + this.itemIconContainerRender + this.itemIconRender + this.itemTitleRender + this.itemDatesRender + this.itemTextRender + this.itemURLRender + '</div>');
@@ -185,5 +188,5 @@ SectionHac.display(hacemos, '#hac', 'hacemos');
 SectionHac.tabs('.bluebg-1', '.bluebg-2', '.bluebg-3');
 
 const SectionPro = new SectionTemplate();
-SectionPro.display(proyectos, '#pro', 'proyectos');
+SectionPro.display(portafolio, '#por', 'portafolio');
 SectionPro.tabs('.orangebg-1', '.orangebg-2', '.orangebg-3');

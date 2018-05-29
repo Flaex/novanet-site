@@ -157,7 +157,7 @@ const hacemos = {
 }
 
 //Hacemos object
-const proyectos = {
+const portafolio = {
   "sectionTitle" : "Portafolio",
   "sectionNavBtn" : [
     {
