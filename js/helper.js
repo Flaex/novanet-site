@@ -213,7 +213,7 @@ const portafolio = {
             {
               "src": "edr-log-200.jpg",
               "href" : "edr-log-900.jpg",
-              "modal" : 1
+              "modal" : 3
             }
           ]
         }
@@ -231,17 +231,17 @@ const portafolio = {
             {
               "src": "nn-web1-200.jpg",
               "href" : "nn-web1-900.jpg",
-              "modal" : 1
+              "modal" : 4
             },
             {
               "src": "nn-web2-200.jpg",
               "href" : "nn-web2-900.jpg",
-              "modal" : 2
+              "modal" : 5
             },
             {
               "src": "nn-web3-200.jpg",
               "href" : "nn-web3-900.jpg",
-              "modal" : 3
+              "modal" : 6
             }
           ]
         }
