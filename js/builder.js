@@ -76,10 +76,11 @@ function SectionTemplate() {
   this.itemDates = '<p class="dates">%data%</p>';
   this.itemURL = '<a class="url" href="%data%">Ver</a>';
   this.imageContainer = '<div class="thumb orangebg-1 %data%">';
-  this.imageHref = '<a class="btn" href="img/%data%">'
+  this.imageHref = '<a class="btn" href="#myModal%data%">'
   this.imageMask = '<img class="%data%"';
   this.image = ' src="img/%data%"></a>';
-  this.modal = '<div class="modalDialog"><div><a href="#close" title="Close" class="close"><strong>x</strong></a><img class="preview" src="img/%data%"></div></div>';
+  this.myModal = '<div id="myModal%data%"'
+  this.modal = ' class="modal"><div class="modal-content"><span class="close">&times;</span><img class="preview" src="img/%data%"></div>';
   this.imageList = '<div class="thumbs"></div>';
 };
 // Section render function
@@ -128,14 +129,13 @@ SectionTemplate.prototype.display = function(arr, divId, tabId) {
             // Giving random values to images containers to display mask on proyects
             this.imageContainerRender = this.imageContainer.replace('%data%', randomFigures[0][0]);
             this.imageMaskRender = this.imageMask.replace('%data%', randomFigures[0][1]);
-            this.imageHrefRender = this.imageHref.replace('%data%', arr.tabs[i].tabItems[j].images[k].href)
+            this.imageHrefRender = this.imageHref.replace('%data%', arr.tabs[i].tabItems[j].images[k].modal)
             this.imageRender = this.image.replace('%data%', arr.tabs[i].tabItems[j].images[k].src);
-            // this.modalRender = this.modal.replace('%data%', arr.tabs[i].tabItems[j].images[k].href);
-            this.imageItems = this.imageContainerRender + this.imageHrefRender + this.imageMaskRender + this.imageRender;
+            this.myModalRender = this.myModal.replace('%data%', arr.tabs[i].tabItems[j].images[k].modal);
+            this.modalRender = this.modal.replace('%data%', arr.tabs[i].tabItems[j].images[k].href);
+            this.imageItems = this.imageContainerRender + this.imageHrefRender + this.imageMaskRender + this.imageRender + this.myModalRender + this.modalRender ;
             $('.thumbs:last').append(this.imageItems);
-            $('.thumbs').on('click', 'div.thumb', function(e) {
-              console.log('Thumb clicked');
-            });
+
           }
         } else {
           $('#' + arr.tabs[i].id).append('<div class="tab-item">' + this.itemIconContainerRender + this.itemIconRender + this.itemTitleRender + this.itemDatesRender + this.itemTextRender + this.itemURLRender + '</div>');
