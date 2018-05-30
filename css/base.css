@@ -128,6 +128,7 @@ ul.sm-list li i {padding-top: 0.3em;}
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background: rgba(255,255,255,0.7);
+    animation: fadeIn 0.3s ; -webkit-animation: fadeIn 0.3s ; -moz-animation: fadeIn 0.3s; -o-animation: fadeIn 0.3s;
 
 }
 
