@@ -76,10 +76,12 @@ function SectionTemplate() {
   this.itemDates = '<p class="dates">%data%</p>';
   this.itemURL = '<a class="url" href="%data%">Ver</a>';
   this.imageContainer = '<div class="thumb orangebg-1 %data%">';
-  this.imageHref = '<a class="btn" href="img/%data%">'
+  this.imageHref = '<a class="btn" href="#myModal%data%">'
   this.imageMask = '<img class="%data%"';
   this.image = ' src="img/%data%"></a>';
-  this.modal = '<div class="modalDialog"><div><a href="#close" title="Close" class="close"><strong>x</strong></a><img class="preview" src="img/%data%"></div></div>';
+  this.modalStart = '<div id="';
+  this.modalId = 'myModal%data%';
+  this.modalContent = '" class="modal"><div class="modal-content"><span class="close">&times;</span><img class="preview" src="img/%data%"></div>';
   this.imageList = '<div class="thumbs"></div>';
 };
 // Section render function
@@ -128,14 +130,27 @@ SectionTemplate.prototype.display = function(arr, divId, tabId) {
             // Giving random values to images containers to display mask on proyects
             this.imageContainerRender = this.imageContainer.replace('%data%', randomFigures[0][0]);
             this.imageMaskRender = this.imageMask.replace('%data%', randomFigures[0][1]);
-            this.imageHrefRender = this.imageHref.replace('%data%', arr.tabs[i].tabItems[j].images[k].href)
+            this.imageHrefRender = this.imageHref.replace('%data%', arr.tabs[i].tabItems[j].images[k].modal)
             this.imageRender = this.image.replace('%data%', arr.tabs[i].tabItems[j].images[k].src);
-            // this.modalRender = this.modal.replace('%data%', arr.tabs[i].tabItems[j].images[k].href);
+            this.modalIdRender = this.modalId.replace('%data%', arr.tabs[i].tabItems[j].images[k].modal);
+            // $('.thumbs').on('click', 'a.btn' , function(e) {               
+            //    for (i = 0; i < arr.tabs.length; i++) {
+            //      for (j = 0; j < arr.tabs[i].tabItems.length; j++) {
+            //        for (k = 0; k < arr.tabs[i].tabItems[j].images.length; k++) {
+            //          this.modalId = 'myModal%data%';
+            //          this.modalIdRender = this.modalId.replace('%data%', arr.tabs[i].tabItems[j].images[k].modal);
+            //          $('#' + this.modalIdRender).css('display', 'block');
+            //        }
+            //      }
+            //    }
+            // });
+            this.modalContentRender = this.modalContent.replace('%data%', arr.tabs[i].tabItems[j].images[k].href);
             this.imageItems = this.imageContainerRender + this.imageHrefRender + this.imageMaskRender + this.imageRender;
             $('.thumbs:last').append(this.imageItems);
-            $('.thumbs').on('click', 'div.thumb', function(e) {
-              console.log('Thumb clicked');
-            });
+            $('body').append( this.modalStart + this.modalIdRender + this.modalContentRender);
+            // $('.modal').click(function() {
+            //   alert( "Handler for .click() called." );
+            // });
           }
         } else {
           $('#' + arr.tabs[i].id).append('<div class="tab-item">' + this.itemIconContainerRender + this.itemIconRender + this.itemTitleRender + this.itemDatesRender + this.itemTextRender + this.itemURLRender + '</div>');
