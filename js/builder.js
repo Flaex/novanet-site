@@ -79,7 +79,6 @@ function SectionTemplate() {
   this.imageHref = '<a class="btn" href="img/%data%">'
   this.imageMask = '<img class="%data%"';
   this.image = ' src="img/%data%"></a>';
-  this.modal = '<div class="modalDialog"><div><a href="#close" title="Close" class="close"><strong>x</strong></a><img class="preview" src="img/%data%"></div></div>';
   this.imageList = '<div class="thumbs"></div>';
 };
 // Section render function
@@ -130,12 +129,8 @@ SectionTemplate.prototype.display = function(arr, divId, tabId) {
             this.imageMaskRender = this.imageMask.replace('%data%', randomFigures[0][1]);
             this.imageHrefRender = this.imageHref.replace('%data%', arr.tabs[i].tabItems[j].images[k].href)
             this.imageRender = this.image.replace('%data%', arr.tabs[i].tabItems[j].images[k].src);
-            // this.modalRender = this.modal.replace('%data%', arr.tabs[i].tabItems[j].images[k].href);
             this.imageItems = this.imageContainerRender + this.imageHrefRender + this.imageMaskRender + this.imageRender;
             $('.thumbs:last').append(this.imageItems);
-            $('.thumbs').on('click', 'div.thumb', function(e) {
-              console.log('Thumb clicked');
-            });
           }
         } else {
           $('#' + arr.tabs[i].id).append('<div class="tab-item">' + this.itemIconContainerRender + this.itemIconRender + this.itemTitleRender + this.itemDatesRender + this.itemTextRender + this.itemURLRender + '</div>');
@@ -144,18 +139,33 @@ SectionTemplate.prototype.display = function(arr, divId, tabId) {
     } else {
       $('#' + arr.tabs[i].id).append(this.tabTitleRender + this.tabParagraphRender);
     }
+
   }
   // Catching and removing empty and undefined elements
   $('a[href*="undefined"]').remove();
   $("p:contains('undefined')").remove();
   $("i.undefined:empty").remove();
+  $("div.thumbs:empty").remove();
 
-  // $("div.ico:empty").remove();
   // $('ul li:empty').remove();
   // $("ul#test li:contains('undefined')").remove();
 
   // Assigning jQuery UI function for
   $(divId).tabs();
+  $('.thumbs').on('click', 'a.btn', function(e) {
+    e.preventDefault();
+    let imgPath = $(this).attr('href');
+    let modalRender = '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><img class="preview" src="' + imgPath + '"></div></div>';
+    $('.container').append(modalRender);
+    $('#myModal').css('display', 'block');
+    $('span.close').click(function() {
+      $('#myModal').remove();
+    });
+
+
+
+
+  });
 };
 
 // Navigation tab buttons focus event to assign active state
