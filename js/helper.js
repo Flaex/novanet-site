@@ -182,6 +182,97 @@ const portafolio = {
       "tabTitle" : "Branding",
       "tabItems" : [
         {
+          "title": "Merlin Data Quality",
+          "dates": "May 2017",
+          "text": "Normalización de logotipo, manual corporativo y aplicación de imagen corporativa en papelería comercial",
+          "images" : [
+             {
+               "src": "mdq-logo-200.jpg",
+               "href" : "mdq-logo-900.jpg"
+             },
+             {
+               "src": "mdq-man1-200.jpg",
+               "href" : "mdq-man1-900.jpg"
+             },
+             {
+               "src": "mdq-man2-200.jpg",
+               "href" : "mdq-man2-900.jpg"
+             },
+             {
+               "src": "mdq-man2-200.jpg",
+               "href" : "mdq-man3-900.jpg"
+             },
+             {
+               "src": "mdq-pap2-200.jpg",
+               "href" : "mdq-pap2-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "Groberplus",
+          "dates": "Jun 2017",
+          "text": "Diseño e impresión de catálogo de productos, página web.",
+          "images" : [
+             {
+               "src": "gp-cat2-200.jpg",
+               "href" : "gp-cat2-900.jpg"
+             },
+             {
+               "src": "gp-cat3-200.jpg",
+               "href" : "gp-cat3-900.jpg"
+             },
+             {
+               "src": "gp-cat4-200.jpg",
+               "href" : "gp-cat4-900.jpg"
+             },
+             {
+               "src": "gp-web1-200.jpg",
+               "href" : "gp-web1-900.jpg"
+             },
+             {
+               "src": "gp-web2-200.jpg",
+               "href" : "gp-web2-900.jpg"
+             },
+             {
+               "src": "gp-web3-200.jpg",
+               "href" : "gp-web3-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "Ejsupply",
+          "dates": "Mar 2013",
+          "text": "Diseño de señalización, infografías, papelería comercial y página web.",
+          "images" : [
+             {
+               "src": "ejs-pap1-200.jpg",
+               "href" : "ejs-pap1-900.jpg"
+             },
+             {
+               "src": "ejs-pap2-200.jpg",
+               "href" : "ejs-pap2-900.jpg"
+             },
+             {
+               "src": "ejs-pap3-200.jpg",
+               "href" : "ejs-pap3-900.jpg"
+             },
+             {
+               "src": "ejs-pap4-200.jpg",
+               "href" : "ejs-pap4-900.jpg"
+             },
+             {
+               "src": "ejs-web-200.jpg",
+               "href" : "ejs-web-900.jpg"
+             }
+           ]
+        }
+      ]
+    },
+    {
+      "id" : "disenoweb",
+      "tabTitle" : "Diseño UI/UX",
+      "tabItems" : [
+        {
           "title": "Banco del Libro website",
           "dates": "May 2013",
           "text": "Web design, html/css implementation.",
@@ -194,32 +285,17 @@ const portafolio = {
              {
                "src": "bdl-web2-200.jpg",
                "href" : "bdl-web2-900.jpg"
+             },
+             {
+               "src": "bdl-web4-200.jpg",
+               "href" : "bdl-web4-900.jpg"
+             },
+             {
+               "src": "bdl-web4-200.jpg",
+               "href" : "bdl-web4-900.jpg"
              }
            ]
-        }
-      ]
-    },
-    {
-      "id" : "disenoweb",
-      "tabTitle" : "Diseño UI/UX",
-      "tabItems" : [
-        {
-          "title": "Escuela de natación Rivas",
-          "dates": "Oct 2017",
-          "text": "Logo design.",
-          "images" : [
-            {
-              "src": "edr-log-200.jpg",
-              "href" : "edr-log-900.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id" : "logotipos",
-      "tabTitle" : "Logotipos",
-      "tabItems" : [
+        },
         {
           "title": "Novanet website",
           "dates": "Jun 2015",
@@ -238,10 +314,69 @@ const portafolio = {
               "href" : "nn-web3-900.jpg"
             }
           ]
+        },
+        {
+          "title": "Dos Espacios",
+          "dates": "May 2013",
+          "text": "Diseño e implementación web en plataformas e-commerce.",
+          "images" : [
+             {
+               "src": "de-web1-200.jpg",
+               "href" : "de-web1-900.jpg"
+             },
+             {
+               "src": "de-web2-200.jpg",
+               "href" : "de-web2-900.jpg"
+             },
+             {
+               "src": "de-web3-200.jpg",
+               "href" : "de-web3-900.jpg"
+             }
+           ]
+        }
+      ]
+    },
+    {
+      "id" : "logotipos",
+      "tabTitle" : "Logotipos",
+      "tabItems" : [
+        {
+          "title": "Escuela de natación Rivas",
+          "dates": "Oct 2017",
+          "text": "Diseño de identidad gráfica",
+          "images" : [
+            {
+              "src": "edr-log-200.jpg",
+              "href" : "edr-log-900.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Rhinovations. Remodeling Company",
+          "dates": "Abr 2018",
+          "text": "Diseño de logotipo",
+          "images" : [
+            {
+              "src": "rv-logo-200.jpg",
+              "href" : "rv-logo-900.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Unidad de Gimnasia Correctiva",
+          "dates": "Abr 2018",
+          "text": "Diseño de marca.",
+          "images" : [
+            {
+              "src": "ugc-logo-200.jpg",
+              "href" : "ugc-logo-900.jpg"
+            }
+          ]
         }
       ]
     }
-  ]
+  ],
+  "sectionLink" : "portafolio.html",
 }
 
 // //Projects object

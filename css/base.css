@@ -75,7 +75,7 @@ p {font-weight:300; font-size:1.3em; line-height:1.3em}
 .tabs-info {animation: fadeIn 0.3s ; -webkit-animation: fadeIn 0.3s ; -moz-animation: fadeIn 0.3s; -o-animation: fadeIn 0.3s;}
 @keyframes fadeIn { 0% { opacity: 0;}  100% { opacity: 100% }}
 .tab-item {width: 33%; min-height:14em; }
-.tab-item p { font-size:1.1em; line-height:1.3em; padding-right:0.5em}
+.tab-item p { font-size:1.1em; line-height:1.5em; padding-right:0.5em}
 
 /* Header */
 header { display: flex; flex-wrap: wrap; width:100%}
@@ -114,7 +114,7 @@ ul.sm-list li i {padding-top: 0.3em;}
 .triangle img {width: 98% !important; margin: 2% 1%;}
 
 #por .thumbs {margin:0.7em 0 3em 0}
-#por .thumbs .thumb {width: 29%}
+#por .thumbs .thumb {width: 7em;margin: 4% 7% 0 0}
 #por .thumbs .thumb img {width:100%}
 
 /* The Modal (background) */
@@ -143,9 +143,9 @@ ul.sm-list li i {padding-top: 0.3em;}
 
 span.close { position:relative; display: inline-block; -webkit-clip-path: circle(43% at 50% 50%); clip-path: circle(43% at 50% 50%)}
 .close {
-    color: #aaa;
+    color: #ff7e00;
     float: right;
-    font-size: 3em;
+    font-size: 4em;
     font-weight: bold;
 }
 
@@ -160,7 +160,8 @@ img.preview { margin: 0 auto; max-width: 100%; -moz-box-shadow: 1px 1px 3px #666
     -webkit-box-shadow: 1px 1px 3px #666;
     box-shadow: 1px 1px 3px #666;}
 
-#Por .link-ver p {font-weight:700; font-size:1.1em}
+#por .section-link {font-weight:700; font-size:1.1em; color:#4e4d50}
+
 
 .porfull .porfull-resu {margin:0 0 3em 0}
 .porfull .col-33 {margin:2.5em 0 0 0 !important}

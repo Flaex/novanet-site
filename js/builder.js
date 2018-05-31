@@ -63,6 +63,7 @@ storiesPrint.display(stories);
 function SectionTemplate() {
   this.sectionTitle = '<h2>%data%</h2>';
   this.sectionNav = '<ul id="%data%" class="tabs"></ul>';
+  this.sectionLink = '<a class="section-link" href="%data%">Ver todo el portafolio <i class="orange-1 far fa-images"></i></a>';
   this.tabColor = '<li class="btn %data%">';
   this.tabHref = '<a class="btn" href="%data%">';
   this.tabIcon = '<i class="%data%"></i></a></li>';
@@ -139,14 +140,14 @@ SectionTemplate.prototype.display = function(arr, divId, tabId) {
     } else {
       $('#' + arr.tabs[i].id).append(this.tabTitleRender + this.tabParagraphRender);
     }
-
   }
+  this.sectionLinkRender = this.sectionLink.replace('%data%', arr.sectionLink);
+  $(divId).append(this.sectionLinkRender);
   // Catching and removing empty and undefined elements
   $('a[href*="undefined"]').remove();
   $("p:contains('undefined')").remove();
   $("i.undefined:empty").remove();
   $("div.thumbs:empty").remove();
-
   // $('ul li:empty').remove();
   // $("ul#test li:contains('undefined')").remove();
 
@@ -161,10 +162,6 @@ SectionTemplate.prototype.display = function(arr, divId, tabId) {
     $('span.close').click(function() {
       $('#myModal').remove();
     });
-
-
-
-
   });
 };
 
