@@ -83,8 +83,8 @@ header { display: flex; flex-wrap: wrap; width:100%}
 .logo img { width: 80%}
 .sm { width: 80%; order: 2; display: flex; justify-content:flex-end;}
 ul.sm-list { width: 15%; display: flex; }
-ul.sm-list li {width:1.7em; height:1.7em; margin:0 0.3em; list-style:none; border-radius:50%; text-align:center; border:#808285 solid 2px;}
-ul.sm-list li i {padding-top: 0.3em;}
+ul.sm-list li {width:3em; height:3em; margin:0 0.3em; list-style:none; border-radius:50%; text-align:center; border:#808285 solid 2px;}
+ul.sm-list li i {padding-top: 0.5em;}
 
 
 
@@ -203,7 +203,7 @@ footer p {padding:0.7em 0 0 0; font-size:1em}
 
 /* Iconos */
 i {font-style:normal; color:#808285}
-ul li i {font-size:1em}
+ul li i {font-size:1.45em}
 .tabs .btn i {margin:0.3em 0 0; font-size:1em; color:#fff}
 
 @font-face {font-family:"novanet-icons";
