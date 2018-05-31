@@ -70,6 +70,8 @@ function SectionTemplate() {
   this.tabInfo = '<div id="%data%" class="tabs-info"></div>';
   this.tabTitle = '<h3>%data%</h3>';
   this.tabParagraph = '<p>%data%</p>';
+  this.tabLogoContainer = '<div class="slider"></div>';
+  this.tabLogoItem = '<div class="logo-item %data%"></div>';
   this.itemIconContainer = '<div class="ico %data%">';
   this.itemIcon = '<i class="%data%"></i></div>';
   this.itemTitle = '<h4>%data%</h4>';
@@ -113,6 +115,8 @@ SectionTemplate.prototype.display = function(arr, divId, tabId) {
         this.itemDatesRender = this.itemDates.replace('%data%', arr.tabs[i].tabItems[j].dates)
         this.itemTextRender = this.itemText.replace('%data%', arr.tabs[i].tabItems[j].text);
         this.itemURLRender = this.itemURL.replace('%data%', arr.tabs[i].tabItems[j].url);
+        this.tabLogoItemRender = this.tabLogoItem.replace('%data%', arr.tabs[i].tabItems[j].bg);
+
         // Check if key is an array
         if (Array.isArray(arr.tabs[i].tabItems[j].images)) {
           $('#' + arr.tabs[i].id).append('<div class="tab-item">' + this.itemIconContainerRender + this.itemIconRender + this.itemTitleRender + this.itemDatesRender + this.itemTextRender + this.itemURLRender + '</div>');
@@ -134,7 +138,7 @@ SectionTemplate.prototype.display = function(arr, divId, tabId) {
             $('.thumbs:last').append(this.imageItems);
           }
         } else {
-          $('#' + arr.tabs[i].id).append('<div class="tab-item">' + this.itemIconContainerRender + this.itemIconRender + this.itemTitleRender + this.itemDatesRender + this.itemTextRender + this.itemURLRender + '</div>');
+          $('#' + arr.tabs[i].id).append(this.tabLogoItemRender);
         }
       }
     } else {
@@ -145,8 +149,12 @@ SectionTemplate.prototype.display = function(arr, divId, tabId) {
   $(divId).append(this.sectionLinkRender);
   // Catching and removing empty and undefined elements
   $('a[href*="undefined"]').remove();
+  $("h3:contains('undefined')").remove();
+  $("h4:contains('undefined')").remove();
   $("p:contains('undefined')").remove();
   $("i.undefined:empty").remove();
+  $("div.ico:empty").remove();
+  $("div.tab-item:empty").remove();
   $("div.thumbs:empty").remove();
   // $('ul li:empty').remove();
   // $("ul#test li:contains('undefined')").remove();
@@ -197,3 +205,7 @@ SectionHac.tabs('.bluebg-1', '.bluebg-2', '.bluebg-3');
 const SectionPro = new SectionTemplate();
 SectionPro.display(portafolio, '#por', 'portafolio');
 SectionPro.tabs('.orangebg-1', '.orangebg-2', '.orangebg-3');
+
+const SectionCli = new SectionTemplate();
+SectionCli.display(clientes, '#cli', 'clientes');
+SectionCli.tabs('.redbg-1', '.redbg-2', '.redbg-3');

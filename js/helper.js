@@ -379,95 +379,90 @@ const portafolio = {
   "sectionLink" : "portafolio.html",
 }
 
-// //Projects object
-// const projects = {
-//   "works": [
-//     {
-//       "title": "Banco del Libro website",
-//       "dates": "May 2013",
-//       "text": "Web design, html/css implementation.",
-//       "url" : "http://galerias.bid-dimad.org/bid_14/?p=4191",
-//       "images" : [
-//         {
-//           "src": "bdl-web1-200.jpg",
-//           "href" : "bdl-web1-900.jpg"
-//         },
-//         {
-//           "src": "bdl-web2-200.jpg",
-//           "href" : "bdl-web2-900.jpg"
-//         }
-//       ]
-//     },
-//     {
-//       "title": "Novanet website",
-//       "dates": "Jun 2015",
-//       "text": "Responsive web design, html/css implementation.",
-//       "images" : [
-//         {
-//           "src": "nn-web1-200.jpg",
-//           "href" : "nn-web1-900.jpg"
-//         },
-//         {
-//           "src": "nn-web2-200.jpg",
-//           "href" : "nn-web2-900.jpg"
-//         },
-//         {
-//           "src": "nn-web3-200.jpg",
-//           "href" : "nn-web3-900.jpg"
-//         }
-//       ]
-//     },
-//     {
-//       "title": "Merlin Data Quality",
-//       "dates": "Ago 2017",
-//       "text": "Corporate manual and commercial stationery design.",
-//       "images" : [
-//         {
-//           "src": "mdq-man1-200.jpg",
-//           "href" : "mdq-man1-900.jpg"
-//         },
-//         {
-//           "src": "mdq-man3-200.jpg",
-//           "href" : "mdq-man3-900.jpg"
-//         }
-//       ]
-//     },
-//     {
-//       "title": "Take on Bar",
-//       "dates": "May 2016",
-//       "text": "Logo design, commercial stationery, brochure, web page.",
-//       "images" : [
-//         {
-//           "src": "tob-pap1-200.jpg",
-//           "href" : "tob-pap1-900.jpg"
-//         },
-//         {
-//           "src": "tob-pap2-200.jpg",
-//           "href" : "tob-pap2-900.jpg"
-//         }
-//       ]
-//     },
-//     {
-//       "title": "Novanet",
-//       "dates": "Dic 2017",
-//       "text": "Logo design.",
-//       "images" : [
-//         {
-//           "src": "nn-log-200.jpg",
-//           "href" : "nn-log-900.jpg"
-//         }
-//       ]
-//     },
-//     {
-//       "title": "Escuela de natación Rivas",
-//       "dates": "Oct 2017",
-//       "text": "Logo design.",
-//       "images" : [
-//         {
-//           "src": "edr-log-200.jpg",
-//           "href" : "edr-log-900.jpg"
-//         }
-//       ]
-//     }
-//   ]
-// };
+//Hacemos object
+const clientes = {
+  "sectionTitle" : "Clientes",
+  "sectionNavBtn" : [
+    {
+      "color" : "redbg-3",
+      "icon" : "icon ni-chat",
+      "href" : "#logotipos"
+    },
+    {
+      "color" : "redbg-2"
+    },
+    {
+      "color" : "redbg-1",
+    }
+  ],
+  "tabs" : [
+    {
+      "id" : "logos-clientes",
+      "tabItems" : [
+        {
+          "bg" : "bdl"
+        },
+        {
+          "bg" : "cd"
+        },
+        {
+          "bg" : "bs"
+        },
+        {
+          "bg" : "tob"
+        },
+        {
+          "bg" : "cms"
+        },
+        {
+          "bg" : "gp"
+        },
+        {
+          "bg" : "lcdh"
+        },
+        {
+          "bg" : "no"
+        },
+        {
+          "bg" : "per"
+        },
+        {
+          "bg" : "pev"
+        },
+        {
+          "bg" : "qui"
+        },
+        {
+          "bg" : "ss"
+        },
+        {
+          "bg" : "uni"
+        },
+        {
+          "bg" : "bc"
+        },
+        {
+          "bg" : "sh"
+        },
+        {
+          "bg" : "art"
+        },
+        {
+          "bg" : "gm"
+        },
+        {
+          "bg" : "emn"
+        },
+        {
+          "bg" : "gstar"
+        },
+        {
+          "bg" : "kul"
+        },
+        {
+          "bg" : "seg"
+        }
+      ]
+    }
+  ]
+}
