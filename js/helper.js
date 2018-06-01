@@ -156,7 +156,7 @@ const hacemos = {
   ]
 }
 
-//Hacemos object
+//Portafolio object
 const portafolio = {
   "sectionTitle" : "Portafolio",
   "sectionNavBtn" : [
@@ -379,7 +379,7 @@ const portafolio = {
   "sectionLink" : "portafolio.html",
 }
 
-//Hacemos object
+//Clientes object
 const clientes = {
   "sectionTitle" : "Clientes",
   "sectionNavBtn" : [
@@ -463,6 +463,37 @@ const clientes = {
           "bg" : "seg"
         }
       ]
+    }
+  ]
+}
+
+//Contacto object
+const contacto = {
+  "sectionTitle" : "Contacto",
+  "sectionNavBtn" : [
+    {
+      "color" : "aquabg-1",
+      "icon" : "icon ni-pin",
+      "href" : "#location"
+    },
+    {
+      "color" : "aquabg-2",
+      "icon" : "icon ni-message",
+      "href" : "#message"
+    },
+    {
+      "color" : "aquabg-3"
+    }
+  ],
+  "tabs" : [
+    {
+      "id" : "location",
+      "tabTitle" : "¿Dónde estamos ubicados?"
+    },
+    {
+      "id" : "message",
+      "tabTitle" : "¡Queremos conectar contigo!",
+      "tabParagraph" : "Juntos desarrollaremos las tácticas para generar las acciones para posicionarte donde quieres estar.",
     }
   ]
 }

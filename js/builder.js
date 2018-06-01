@@ -70,7 +70,9 @@ function SectionTemplate() {
   this.tabInfo = '<div id="%data%" class="tabs-info"></div>';
   this.tabTitle = '<h3>%data%</h3>';
   this.tabParagraph = '<p>%data%</p>';
+  this.tabMap = '<div id="map"></div>';
   this.tabLogoContainer = '<div class="slider"></div>';
+  this.tabLogoItem = '<div class="logo-item %data%"></div>';
   this.tabLogoItem = '<div class="logo-item %data%"></div>';
   this.itemIconContainer = '<div class="ico %data%">';
   this.itemIcon = '<i class="%data%"></i></div>';
@@ -104,9 +106,10 @@ SectionTemplate.prototype.display = function(arr, divId, tabId) {
     this.tabTitleRender = this.tabTitle.replace('%data%', arr.tabs[i].tabTitle);
     this.tabParagraphRender = this.tabParagraph.replace('%data%', arr.tabs[i].tabParagraph);
     $(divId).append(this.tabInfoRender);
+    $('#' + arr.tabs[i].id).append(this.tabTitleRender + this.tabParagraphRender);
     // Check if key is an array
     if (Array.isArray(arr.tabs[i].tabItems)) {
-      $('#' + arr.tabs[i].id).append(this.tabTitleRender);
+
       // Iteration for getting tab items
       for (j = 0; j < arr.tabs[i].tabItems.length; j++) {
         this.itemIconContainerRender = this.itemIconContainer.replace('%data%', arr.sectionNavBtn[i].color);
@@ -129,7 +132,7 @@ SectionTemplate.prototype.display = function(arr, divId, tabId) {
               ["triangleBg", "triangle"]
             ]
             let randomFigures = shuffle(shapes);
-            // Giving random values to images containers to display mask on proyects
+            // Giving random values to images containers to display mask on proects
             this.imageContainerRender = this.imageContainer.replace('%data%', randomFigures[0][0]);
             this.imageMaskRender = this.imageMask.replace('%data%', randomFigures[0][1]);
             this.imageHrefRender = this.imageHref.replace('%data%', arr.tabs[i].tabItems[j].images[k].href)
@@ -142,12 +145,12 @@ SectionTemplate.prototype.display = function(arr, divId, tabId) {
           $('#logos-clientes').addClass('slider');
         }
       }
-    } else {
-      $('#' + arr.tabs[i].id).append(this.tabTitleRender + this.tabParagraphRender);
-    }
+    } 
   }
   this.sectionLinkRender = this.sectionLink.replace('%data%', arr.sectionLink);
   $(divId).append(this.sectionLinkRender);
+  $('#location').append(this.tabMap);
+
   // Catching and removing empty and undefined elements
   $('a[href*="undefined"]').remove();
   $("h3:contains('undefined')").remove();
@@ -156,10 +159,8 @@ SectionTemplate.prototype.display = function(arr, divId, tabId) {
   $("i.undefined:empty").remove();
   $("div.undefined:empty").remove();
   $("div.ico:empty").remove();
-$("div.tab-item:empty").remove();
+  $("div.tab-item:empty").remove();
   $("div.thumbs:empty").remove();
-  // $('ul li:empty').remove();
-  // $("ul#test li:contains('undefined')").remove();
 
   // Assigning jQuery UI function for
   $(divId).tabs();
@@ -211,3 +212,7 @@ SectionPro.tabs('.orangebg-1', '.orangebg-2', '.orangebg-3');
 const SectionCli = new SectionTemplate();
 SectionCli.display(clientes, '#cli', 'clientes');
 SectionCli.tabs('.redbg-1', '.redbg-2', '.redbg-3');
+
+const SectionCon = new SectionTemplate();
+SectionCon.display(contacto, '#con', 'contacto');
+SectionCon.tabs('.aquabg-1', '.aquabg-2', '.aquabg-3');

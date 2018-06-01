@@ -22,7 +22,6 @@ Logo Ascii
     <link href="css/base.css" rel="stylesheet" type="text/css">
     <!--Slick Carousel-->
     <link rel="stylesheet" type="text/css" href="css/slick.css" />
-    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
 </head>
 <body>
   <main class="container">
@@ -38,6 +37,7 @@ Logo Ascii
     <section id="hac" class="line"></section>
     <section id="por" class="line"></section>
     <section id="cli" class="line"></section>
+    <section id="con" class="line"></section>
   </main>
   <script src="js/jquery-1.8.3.js"></script>
   <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
@@ -47,40 +47,54 @@ Logo Ascii
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="js/slick.min.js"></script>
   <script>
-  $('.slider').slick({
-      dots: true,
-      infinite: false,
-      speed: 300,
-      slidesToShow: 6,
-      slidesToScroll: 2,
-      responsive: [{
-              breakpoint: 1024,
-              settings: {
-                  slidesToShow: 4,
-                  slidesToScroll: 2,
-                  infinite: true,
-                  dots: true
-              }
-          },
-          {
-              breakpoint: 768,
-              settings: {
-                  slidesToShow: 4,
-                  slidesToScroll: 1
-              }
-          },
-          {
-              breakpoint: 480,
-              settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 1
-              }
-          }
-          // You can unslick at a given breakpoint now by adding:
-          // settings: "unslick"
-          // instead of a settings object
-      ]
-  });
+    $('.slider').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 6,
+        slidesToScroll: 2,
+        responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
   </script>
+  <script>
+    function initMap() {
+      var uluru = {lat: 10.489139, lng: -66.878127};
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12,
+        center: uluru
+      });
+      var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+      });
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBB4845mdrbpL1Ub833ZI1JzneXenLBU_Q&callback=initMap" async defer></script>
 </body>
 </html>
