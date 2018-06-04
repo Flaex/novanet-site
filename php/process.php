@@ -1,40 +1,61 @@
 <?php
-// process.php
+if(!isset($_POST['submit']))
+{
+	//This page should not be accessed directly. Need to submit the form.
+	echo "error; you need to submit the form!";
+}
+$name = $_POST['name'];
+$visitor_email = $_POST['email'];
+$message = $_POST['message'];
 
-$errors         = array();      // array to hold validation errors
-$data           = array();      // array to pass back data
+//Validate first
+if(empty($name)||empty($visitor_email))
+{
+    echo "Name and email are mandatory!";
+    exit;
+}
 
-// validate the variables ======================================================
-    // if any of these variables don't exist, add an error to our $errors array
+if(IsInjected($visitor_email))
+{
+    echo "Bad email value!";
+    exit;
+}
 
-    if (empty($_POST['name']))
-        $errors['name'] = 'Name is required.';
+$email_from = 'tom@amazing-designs.com';//<== update the email address
+$email_subject = "New Form submission";
+$email_body = "You have received a new message from the user $name.\n".
+    "Here is the message:\n $message".
 
-    if (empty($_POST['email']))
-        $errors['email'] = 'Email is required.';
+$to = "fpolania@gmail.com";//<== update the email address
+$headers = "From: $email_from \r\n";
+$headers .= "Reply-To: $visitor_email \r\n";
+//Send the email!
+mail($to,$email_subject,$email_body,$headers);
+//done. redirect to thank-you page.
+header('Location: thank-you.html');
 
-    if (empty($_POST['superheroAlias']))
-        $errors['superheroAlias'] = 'Superhero alias is required.';
 
-// return a response ===========================================================
+// Function to validate against any email injection attempts
+function IsInjected($str)
+{
+  $injections = array('(\n+)',
+              '(\r+)',
+              '(\t+)',
+              '(%0A+)',
+              '(%0D+)',
+              '(%08+)',
+              '(%09+)'
+              );
+  $inject = join('|', $injections);
+  $inject = "/$inject/i";
+  if(preg_match($inject,$str))
+    {
+    return true;
+  }
+  else
+    {
+    return false;
+  }
+}
 
-    // if there are any errors in our errors array, return a success boolean of false
-    if ( ! empty($errors)) {
-
-        // if there are items in our errors array, return those errors
-        $data['success'] = false;
-        $data['errors']  = $errors;
-    } else {
-
-        // if there are no errors process our form, then return a message
-
-        // DO ALL YOUR FORM PROCESSING HERE
-        // THIS CAN BE WHATEVER YOU WANT TO DO (LOGIN, SAVE, UPDATE, WHATEVER)
-
-        // show a message of success and provide a true success variable
-        $data['success'] = true;
-        $data['message'] = 'Success!';
-    }
-
-    // return all our data to an AJAX call
-    echo json_encode($data);
+?>

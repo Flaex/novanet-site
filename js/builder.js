@@ -74,6 +74,9 @@ function SectionTemplate() {
   this.tabLogoContainer = '<div class="slider"></div>';
   this.tabLogoItem = '<div class="logo-item %data%"></div>';
   this.tabLogoItem = '<div class="logo-item %data%"></div>';
+
+  this.tabForm = '<form method="post" name="myemailform" action="php/process.php"><p><label for="name">Enter Name: </label><br><input type="text" name="name"></p><p><label for="email">Enter Email Address:</label><br><input type="text" name="email"></p><p><label for="message">Enter Message:</label> <br><textarea name="message"></textarea></p><input type="submit" name="submit" value="submit"></form>'
+
   this.itemIconContainer = '<div class="ico %data%">';
   this.itemIcon = '<i class="%data%"></i></div>';
   this.itemTitle = '<h4>%data%</h4>';
@@ -145,13 +148,16 @@ SectionTemplate.prototype.display = function(arr, divId, tabId) {
           $('#logos-clientes').addClass('slider');
         }
       }
-    } 
+    }
   }
   this.sectionLinkRender = this.sectionLink.replace('%data%', arr.sectionLink);
   $(divId).append(this.sectionLinkRender);
   $('#location').append(this.tabMap);
+  $('#message').append(this.tabForm)
 
   // Catching and removing empty and undefined elements
+
+
   $('a[href*="undefined"]').remove();
   $("h3:contains('undefined')").remove();
   $("h4:contains('undefined')").remove();
@@ -161,6 +167,7 @@ SectionTemplate.prototype.display = function(arr, divId, tabId) {
   $("div.ico:empty").remove();
   $("div.tab-item:empty").remove();
   $("div.thumbs:empty").remove();
+
 
   // Assigning jQuery UI function for
   $(divId).tabs();

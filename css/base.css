@@ -171,19 +171,19 @@ img.preview { margin: 0 auto; max-width: 100%; -moz-box-shadow: 1px 1px 3px #666
 
 /* Contacto y Login Whs */
 textarea, form label input::placeholder, form button {font-family:'Fira Sans', sans-serif}
-#Con .col-50 p {padding:0 0 2em 0}
+#con .col-50 p {padding:0 0 2em 0}
 #Whs .col-50 p {padding:1em 0 2em 0}
-#Con .col-50 p, #Whs .col-50 p {border-bottom:#ecedee dotted 4px}
+#con .col-50 p, #Whs .col-50 p {border-bottom:#ecedee dotted 4px}
 
-#Con form, #Whs form {margin:3em 0; padding:2em; width:100%; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; background:#f2efef}
-#Con form h4, #Whs form h4 {margin:0}
-#Con form label input, form textarea, #Whs form label input {width:100%; margin:2em 0 0 0; font-weight:300; font-size:1.2em; background:none; border:none}
-#Con form label input, form textarea {border-bottom:#00bebe 1px solid}
-#Whs form label input {border-bottom:#008ed2 1px solid}
-#Con form textarea {resize:none; overflow:hidden}
-#Con form label input::placeholder, #Whs form label input::placeholder {font-weight:300}
-#Con form button, #Whs form button {margin:1.8em 0 0 0; padding:0.3em 1em; font-size:1.2em; color:#fff; border:none}
-#Con form button i, #Whs form button i {padding:0 0 0 0.5em; color:#fff}
+#con form, #whs form {margin:3em 0; padding:2em; width:50%; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; background:#f2efef}
+#con form h4, #Whs form h4 {margin:0}
+#con form input, form textarea, #Whs form label input {width:100%; margin:2em 0 0 0; font-weight:300; font-size:1.2em; background:none; border:none}
+#con form input, form textarea {border-bottom:#00bebe 1px solid}
+#Whs form input {border-bottom:#008ed2 1px solid}
+#con form textarea {resize:none; overflow:hidden}
+#con form input::placeholder, #Whs form label input::placeholder {font-weight:300}
+#con form button, #Whs form button {margin:1.8em 0 0 0; padding:0.3em 1em; font-size:1.2em; color:#fff; border:none}
+#con form button i, #Whs form button i {padding:0 0 0 0.5em; color:#fff}
 
 /* Footer */
 footer p {padding:0.7em 0 0 0; font-size:1em}
