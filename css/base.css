@@ -58,8 +58,6 @@ p {font-weight:300; font-size:1.3em; line-height:1.3em}
 .graybg-2 {background:#808285}
 .graybg-3 {background:#4e4d50}
 
-.sm-foot {height:40px}
-
 /* Botones */
 .tabs { display: flex; flex-direction:row;}
 .tabs li {border-bottom:#d1d2d3 4px solid}

@@ -49,7 +49,7 @@ headerPrint.display(header);
 // Stories Superclass
 function StoriesTemplate() {
   this.title = '<h1>%data%</h1>';
-  this.paragraph= '<p>%data%</p>'
+  this.paragraph = '<p>%data%</p>'
 };
 // Stories Superclass render function
 // Takes an array as argument to display conent
@@ -77,9 +77,7 @@ function SectionTemplate() {
   this.tabLogoContainer = '<div class="slider"></div>';
   this.tabLogoItem = '<div class="logo-item %data%"></div>';
   this.tabLogoItem = '<div class="logo-item %data%"></div>';
-
   this.tabForm = '<form method="post" name="myemailform" action="php/process.php"><input type="text" name="name" placeholder="Nombre y apellido"><input type="text" name="email" " placeholder="Email"><textarea name="message" placeholder="Mensaje"></textarea><input class="aquabg-1" type="submit" name="submit" value="Enviar"></form>'
-
   this.itemIconContainer = '<div class="ico %data%">';
   this.itemIcon = '<i class="%data%"></i></div>';
   this.itemTitle = '<h4>%data%</h4>';
@@ -95,9 +93,9 @@ function SectionTemplate() {
 // Section render function
 // Takes an array, section ID and tab buttons ID as arguments to display content
 SectionTemplate.prototype.display = function(arr, divId, tabId) {
-  this.sectionTitle= this.sectionTitle.replace('%data%', arr.sectionTitle);
+  this.sectionTitle = this.sectionTitle.replace('%data%', arr.sectionTitle);
   $(divId).append(this.sectionTitle);
-  this.sectionNav= this.sectionNav.replace('%data%', tabId)
+  this.sectionNav = this.sectionNav.replace('%data%', tabId)
   $(divId).append(this.sectionNav);
   // Navigation tabs buttons
   for (i = 0; i < arr.sectionNavBtn.length; i++) {
@@ -159,8 +157,6 @@ SectionTemplate.prototype.display = function(arr, divId, tabId) {
   $('#message').append(this.tabForm)
 
   // Catching and removing empty and undefined elements
-
-
   $('a[href*="undefined"]').remove();
   $("h3:contains('undefined')").remove();
   $("h4:contains('undefined')").remove();
@@ -170,7 +166,6 @@ SectionTemplate.prototype.display = function(arr, divId, tabId) {
   $("div.ico:empty").remove();
   $("div.tab-item:empty").remove();
   $("div.thumbs:empty").remove();
-
 
   // Assigning jQuery UI function for
   $(divId).tabs();
