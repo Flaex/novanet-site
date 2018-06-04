@@ -22,14 +22,17 @@ function HeaderTemplate() {
   this.smList = '<ul class="sm-list"></ul>';
   this.url = '<li><a href="%data%" target="_blank">';
   this.icon = '<i class="%data%"></i><li></a>';
-
+  this.legal = '<p>%data%</p>';
 }
+
 // Header Superclass render function
 HeaderTemplate.prototype.display = function(arr) {
   this.src = this.src.replace('%data%', arr.logo.src);
   this.alt = this.alt.replace('%data%', arr.logo.alt);
+  this.legal = this.legal.replace('%data%', arr.legal);
   $('.logo').append(this.src + this.alt);
   $('.sm').append(this.smList);
+  $('.legal').append(this.legal);
   //Iteration over social media array
   for (i = 0; i < arr.sm.length; i++) {
     this.urlRender = this.url.replace('%data%', arr.sm[i].url);
@@ -75,7 +78,7 @@ function SectionTemplate() {
   this.tabLogoItem = '<div class="logo-item %data%"></div>';
   this.tabLogoItem = '<div class="logo-item %data%"></div>';
 
-  this.tabForm = '<form method="post" name="myemailform" action="php/process.php"><p><label for="name">Enter Name: </label><br><input type="text" name="name"></p><p><label for="email">Enter Email Address:</label><br><input type="text" name="email"></p><p><label for="message">Enter Message:</label> <br><textarea name="message"></textarea></p><input type="submit" name="submit" value="submit"></form>'
+  this.tabForm = '<form method="post" name="myemailform" action="php/process.php"><input type="text" name="name" placeholder="Nombre y apellido"><input type="text" name="email" " placeholder="Email"><textarea name="message" placeholder="Mensaje"></textarea><input class="aquabg-1" type="submit" name="submit" value="Enviar"></form>'
 
   this.itemIconContainer = '<div class="ico %data%">';
   this.itemIcon = '<i class="%data%"></i></div>';

@@ -1,363 +1,116 @@
 <!DOCTYPE html>
 <html>
-<!--    
-                   `-/+ooo+/:`                                                                                                                   
-                 `/sssssssssss+`                                                                                                                 
-                `osssso+++osssso.                                                                                                         ``     
-                /sssso.   `ossss+                                                                                                       :yhy+`   
-    ``.---.`    /sssso.   `ossss+                                                                                                       hdddds+/`
-  ./osssssso+:` `osssso+/+osssso.  `/++-:+++/:.`       `.:+++/:.`   `://.      -//-    `-/+++/:.      -//--////:.`        `-////:.`     hdddddddy
-`/sssssssssssso- `/ossssssssso+.   ydddddddddddy/`   `+yddddddddy/` sdddd:    +dddd+ .ohddddddddy:   /dddddddddddy+`    :shdddddddy+`   hddddhyy:
-/sssso/..-+sssss.  .:/+ooo+/:.     hdddddhyhddddds` .yddddhyhdddddy`/ddddd/  oddddh--hddddhyhdddddo  oddddddhhdddddy.  odddddyyhddddh-  hdddd:`  
-sssss/    `sssss:      ```         hdddds.``-ydddd+ sdddds.``-ydddd+ /ddddd/oddddh- hddddo.``-hdddd: oddddh:.`-sddddy /ddddh-``:hddddh  hdddd:   
-+sssso:.../sssss.  `-/++o++/-.     hdddd-    +ddddo ydddd+   `sddddo  :dddddddddh.  hdddd/   `ydddd+ oddddo    .ddddd +ddddh.-ohddddh+  hdddd:   
-`+sssssoossssso: `/ossssssssso/.   hdddd-    +ddddo :dddddyooyddddh.   :dddddddh.   /dddddyoshddddd+ oddddo    .ddddd .hddddhhdddddh+.  hdddd:   
-  -+ossssssso/. `osssss+++osssso.  hdddd-    /ddddo  -ydddddddddds.     :hddddy.     :ydddddddddddd+ odddd+    .ddddh  .sddddddddddddh  hdddd-   
-    `.-:::-.`   /sssso.   `ossss+  -syy+     `oyyo.   `-+oyyyso/.        -syyo`       `-+syyysooyyo` .syys.     +yhy:    -+syhhhhhhhy/  :yhho`   
-                /sssso.   `ossss+    `         ``          ``              ``              ``   ``     ``        ``         `````````    ```     
-                `osssso+/+osssso.                                                                                                                
-                 `+sssssssssss+.                                                                                                                 
-                   `:/oosoo+:.                                                                                                                     
+<!--
+Logo Ascii
 -->
-
 <head>
     <title>novanet - diseño multimedia</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="El buen diseño es garantía de exito en tu negocio." />
     <meta name="author" content="">
     <!--favicon-->
     <link rel="shortcut icon" href="favicon.ico">
-    <!--Link GoogleFont-->
+    <!--GoogleFont-->
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,600,700,800,900" rel="stylesheet">
-    <!--Link Normalize-->
-    <link href="css/normalize.css" rel="stylesheet" type="text/css">
-    <!--Link CSS-->
-    <link href="css/base.css" rel="stylesheet" type="text/css">
-    <!--Link FontAwesome -->
+    <!--FontAwesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <!--Normalize-->
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <!--Main styles-->
+    <link href="css/base.css" rel="stylesheet" type="text/css">
     <!--Slick Carousel-->
     <link rel="stylesheet" type="text/css" href="css/slick.css" />
-    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
-    <!--Script-->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script type="text/javascript" src="js/slick.min.js"></script>
-    <!--Medias Queries-->
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <!--Slick Carousel-->
+    <script language="JavaScript" src="js/gen_validatorv31.js" type="text/javascript"></script>
 </head>
-
 <body>
-    <div class="container">
-        <!--Cabecera-->
-        <header class="flexbox">
-            <div class="col-20"><a href="index.html" class="log"></a></div>
-
-            <div class="col-80 sm">
-                <ul class="col-15 sm-head flex flexbox">
-                    <a href="https://www.facebook.com/GrupoNovanet" target="_blank">
-                        <li class="flex"><i class="fab fa-facebook-f"></i></li>
-                    </a>
-                    <a href="https://twitter.com/gruponovanet" target="_blank">
-                        <li class="flex"><i class="fab fa-twitter"></i></li>
-                    </a>
-                    <a href="https://www.instagram.com/gruponovanet/" target="_blank">
-                        <li class="flex"><i class="fab fa-instagram"></i></li>
-                    </a>
-                </ul>
-            </div>
-        </header>
-
-        <!--Inicio / Nosotros-->
-        <section id="Ini" class="line flexbox">
-            <div class="col-50">
-                <div class="slog line">
-                    <h1>Creamos historias de éxito</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                </div>
-
-                <section id="Nos">
-                    <h2>Nosotros</h2>
-                    <div class="tabs flexbox">
-                        <a href="#" class="act disp">
-                            <div class="btn btn-disp greenbg-1"><i class="icon ni-rocket"></i></div>
-                        </a>
-                        <a class="disp" href="#">
-                            <div class="btn btn-disp greenbg-2"><i class="icon ni-brain"></i></div>
-                        </a>
-                        <a class="disp" href="#">
-                            <div class="btn btn-disp greenbg-3"><i class="icon ni-ball"></i></div>
-                        </a>
-                    </div>
-                    <div>
-                        <h3>¿En qué andamos?</h3>
-                        <p>Diseñamos contenido estratégico abarcando el proceso desde la concepción inicial hasta la ejecución final. Entendemos que la manera en la que tu negocio comunica es fundamental para establecer una conexión real con tus clientes.</p>
-                    </div>
-                </section>
-            </div>
-
-            <div class="col-50 ani">
-                <div class="canvas"></div>
-            </div>
-        </section>
-
-        <!--Hacemos-->
-        <section id="Hac" class="line flexbox">
-            <div class="col-100">
-                <h2>¿Qué hacemos?</h2>
-                <div class="tabs flexbox">
-                    <a class="act disp">
-                        <div class="btn btn-disp bluebg-1"><i class="icon ni-pencil"></i></div>
-                    </a>
-                    <a class="disp">
-                        <div class="btn btn-disp bluebg-2"><i class="icon ni-webdev"></i></div>
-                    </a>
-                    <a class="disp">
-                        <div class="btn btn-disp bluebg-3"><i class="icon ni-connection"></i></div>
-                    </a>
-                </div>
-                <h3>Diseño gráfico</h3>
-            </div>
-
-            <div class="col-33">
-                <div class="ico bluebg-1"><i class="icon ni-logo"></i></div>
-                <h4>Logotipos</h4>
-                <p>Estudiamos las características de tu empresa para que a través de tu logotipo logres conectarte realmente con tu mercado. </p>
-            </div>
-
-            <div class="col-33">
-                <div class="ico bluebg-1"><i class="icon ni-printer"></i></div>
-                <h4>Impresos y digital</h4>
-                <p>Producimos piezas como papelería comercial, imágenes en redes sociales, boletines, banners promocionales, avisos de prensa, folletos, volantes, afiches, entre otros.</p>
-            </div>
-
-            <div class="col-33">
-                <div class="ico bluebg-1"><i class="icon ni-star"></i></div>
-                <h4>Branding</h4>
-                <p>Te ubicamos exactamente en el lugar indicado para que estés ahí en el momento en el que tus clientes te necesiten.</p>
-            </div>
-        </section>
-
-        <!--Portafolio-->
-        <section id="Por" class="line flexbox">
-            <div class="col-100">
-                <h2>Portafolio</h2>
-                <div class="tabs flexbox">
-                    <a class="act disp">
-                        <div class="btn btn-disp orangebg-1"><i class="icon ni-star"></i></div>
-                    </a>
-                    <a class="disp">
-                        <div class="btn btn-disp orangebg-2"><i class="icon ni-responsive"></i></div>
-                    </a>
-                    <a class="disp">
-                        <div class="btn btn-disp orangebg-3"><i class="icon ni-logo"></i></div>
-                    </a>
-                </div>
-                <h3>Branding</h3>
-            </div>
-
-            <div class="col-33">
-                <h4>Merlin Data Quality</h4>
-                <p>Logotipo, manual corporativo y aplicación de imagen corporativa en papelería comercial.</p>
-                <ul class="flexbox">
-                    <li>
-                        <div class="circleBg orangebg-1">
-                            <a href="#"><img class="circle" src="img/mdq-log-200.jpg"/></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="circleBg orangebg-1">
-                            <a href="#"><img class="circle" src="img/mdq-man1-200.jpg"/></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="squareBg orangebg-1">
-                            <a href="#"><img class="square" src="img/mdq-man3-200.jpg"/></a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-33">
-                <h4>Take on Bar</h4>
-                <p>Aplicación de imagen corporativa en papelería comercial, brochure, página web y redes sociales.</p>
-                <ul class="flexbox">
-                    <li>
-                        <div class="squareBg orangebg-1">
-                            <a href="#"><img class="square" src="img/tob-log-200.jpg"/></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="circleBg orangebg-1">
-                            <a href="#"><img class="circle" src="img/tob-pap1-200.jpg"/></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="triangleBg orangebg-1">
-                            <a href="#"><img class="triangle" src="img/tob-web1-200.jpg"/></a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-33">
-                <h4>Ejsupply</h4>
-                <p>Diseño de señalización, infografías, papelería comercial y página web.</p>
-                <ul class="flexbox">
-                    <li>
-                        <div class="squareBg orangebg-1">
-                            <a href="#"><img class="square" src="img/ejs-pap1-200.jpg"/></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="squareBg orangebg-1">
-                            <a href="#"><img class="square" src="img/ejs-pap2-200.jpg"/></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="triangleBg orangebg-1">
-                            <a href="#"><img class="triangle" src="img/ejs-web-200.jpg"/></a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="link-ver">
-                <a class="gray-3" href="portafolio.html">
-                    <p>Ver todo el portafolio <i class="orange-1 far fa-images"></i></p>
-                </a>
-            </div>
-        </section>
-
-        <!--Clientes-->
-        <section id="Cli" class="line flexbox">
-            <div class="col-100">
-                <h2>Clientes</h2>
-                <div class="tabs flexbox">
-                    <a class="act disp">
-                        <div class="btn btn-disp redbg-1"><i class="icon ni-chat"></i></div>
-                    </a>
-                    <a>
-                        <div class="btn redbg-2"></div>
-                    </a>
-                    <a>
-                        <div class="btn redbg-3"></div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-100 slider flexbox">
-                <div class="bs"></div>
-                <div class="cd"></div>
-                <div class="cms"></div>
-                <div class="gp"></div>
-                <div class="bc"></div>
-                <div class="ss"></div>
-                <div class="tob"></div>
-                <div class="cmg"></div>
-                <div class="bdl"></div>
-                <div class="gm"></div>
-                <div class="emn"></div>
-                <div class="kul"></div>
-                <div class="gstar"></div>
-                <div class="seg"></div>
-                <div class="per"></div>
-                <div class="qui"></div>
-                <div class="qfs"></div>
-                <div class="no"></div>
-                <div class="art"></div>
-                <div class="lcdh"></div>
-                <div class="sh"></div>
-                <div class="uni"></div>
-            </div>
-        </section>
-
-        <!--Contacto-->
-        <section id="Con" class="line flexbox">
-            <div class="col-100">
-                <h2>Contacto</h2>
-                <div class="tabs flexbox">
-                    <a class="act disp">
-                        <div class="btn btn-disp aquabg-1"><i class="icon ni-message"></i></div>
-                    </a>
-                    <a class="disp">
-                        <div class="btn btn-disp aquabg-2"><i class="icon ni-pin"></i></div>
-                    </a>
-                    <a>
-                        <div class="btn aquabg-3"></div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-50">
-                <h3>¡Queremos conectar contigo!</h3>
-                <p>Juntos desarrollaremos las tácticas para generar las acciones para posicionarte donde quieres estar.</p>
-                <form action="#">
-                    <h4 class="aqua-1">Envíanos un mensaje</h4>
-                    <label><input type="text" name="name" placeholder="Nombre y Apellido"></label>
-                    <label><input type="text" name="email" placeholder="Correo electrónico"></label>
-                    <textarea placeholder="Mensaje" rows="1"></textarea>
-                    <button class="aquabg-1">Enviar<i class="fas fa-arrow-right"></i></button>
-                </form>
-            </div>
-        </section>
-
-        <!--Pie de página-->
-        <footer class="flexbox">
-            <div class="col-15"><a href="index.html" class="log"></a></div>
-            <div class="col-75 flex">
-                <p>Derechos reservados 2006-2018</p>
-            </div>
-            <div class="col-10 sm">
-                <ul class="sm-foot flex flexbox">
-                    <a href="https://www.facebook.com/GrupoNovanet" target="_blank">
-                        <li class="flex"><i class="fab fa-facebook-f"></i></li>
-                    </a>
-                    <a href="https://twitter.com/gruponovanet" target="_blank">
-                        <li class="flex"><i class="fab fa-twitter"></i></li>
-                    </a>
-                    <a href="https://www.instagram.com/gruponovanet/" target="_blank">
-                        <li class="flex"><i class="fab fa-instagram"></i></li>
-                    </a>
-                </ul>
-            </div>
-        </footer>
-    </div>
-
-    <script>
-        $('.slider').slick({
-            dots: true,
-            infinite: false,
-            speed: 300,
-            slidesToShow: 6,
-            slidesToScroll: 1,
-            responsive: [{
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
-                        infinite: true,
-                        dots: true
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
+  <main class="container">
+    <header>
+        <div class="logo"></div>
+        <div class="sm"></div>
+    </header>
+    <section id="ini" class="line">
+      <div class="stories line"></div>
+      <div id="nos"></div>
+      <canvas class="anim">&nbsp;</canvas>
+    </section>
+    <section id="hac" class="line"></section>
+    <section id="por" class="line"></section>
+    <section id="cli" class="line"></section>
+    <section id="con" class="line"></section>
+    <footer>
+      <div class="logo"></div>
+      <div class="legal"></div>
+      <div class="sm"></div>
+    </footer>
+  </main>
+  <script src="js/jquery-1.8.3.js"></script>
+  <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+  <script src="js/helper.js"></script>
+  <script src="js/builder.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+  <script>
+    $('.slider').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 6,
+        slidesToScroll: 2,
+        responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true
                 }
-                // You can unslick at a given breakpoint now by adding:
-                // settings: "unslick"
-                // instead of a settings object
-            ]
-        });
-
-    </script>
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
+  </script>
+  <script>
+    function initMap() {
+      var uluru = {lat: 10.489139, lng: -66.878127};
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12,
+        center: uluru
+      });
+      var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+      });
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBB4845mdrbpL1Ub833ZI1JzneXenLBU_Q&callback=initMap" async defer></script>
+  <script language="JavaScript">
+  // Code for validating the form
+  // Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
+  // for details
+  var frmvalidator  = new Validator("myemailform");
+  frmvalidator.addValidation("name","req","Please provide your name");
+  frmvalidator.addValidation("email","req","Please provide your email");
+  frmvalidator.addValidation("email","email","Please enter a valid email address");
+  </script>
 </body>
-
 </html>

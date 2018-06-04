@@ -21,7 +21,8 @@ const header = {
       "icon" : "fab fa-instagram",
       "url" : "https://www.instagram.com/gruponovanet/"
     }
-  ]
+  ],
+  "legal" : "Derechos reservados 2006-2018."
 };
 
 //Stories object
