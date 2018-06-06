@@ -183,6 +183,79 @@ const portafolio = {
       "tabTitle" : "Branding",
       "tabItems" : [
         {
+          "title": "Lobees",
+          "dates": "May 2018",
+          "text": "Diseño web y redes sociales.",
+          "images" : [
+             {
+               "src": "lobees-logo-200.jpg",
+               "href" : "lobees-logo-900.jpg"
+             },
+             {
+               "src": "lobees-rrss2-200.jpg",
+               "href" : "lobees-rrss2-900.jpg"
+             },
+             {
+               "src": "lobees-web1-200.jpg",
+               "href" : "lobees-web1-900.jpg"
+             },
+             {
+               "src": "lobees-web2-900.jpg",
+               "href" : "cd-web3-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "Rhinovations",
+          "dates": "May 2018",
+          "text": "Diseño de logotipo, papelería comercial y branding.",
+          "images" : [
+             {
+               "src": "rv-logo-200.jpg",
+               "href" : "rv-logo-900.jpg"
+             },
+             {
+               "src": "rv-pap1-200.jpg",
+               "href" : "rv-pap1-900.jpg"
+             },
+             {
+               "src": "rv-pap2-200.jpg",
+               "href" : "rv-pap2-900.jpg"
+             },
+             {
+               "src": "rv-bra1-200.jpg",
+               "href" : "rv-bra1-900.jpg"
+             },
+             {
+               "src": "rv-bra2-200.jpg",
+               "href" : "rv-bra2-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "Zaituna Café",
+          "dates": "Dic 2017",
+          "text": "Diseño de identiadad corporativa y manual corporativo",
+          "images" : [
+             {
+               "src": "zc-logo-200.jpg",
+               "href" : "zc-logo-900.jpg"
+             },
+             {
+               "src": "zc-man1-200.jpg",
+               "href" : "zc-man1-900.jpg"
+             },
+             {
+               "src": "zc-man2-200.jpg",
+               "href" : "zc-man2-900.jpg"
+             },
+             {
+               "src": "zc-man3-200.jpg",
+               "href" : "zc-man-900.jpg"
+             }
+           ]
+        },
+        {
           "title": "Merlin Data Quality",
           "dates": "May 2017",
           "text": "Normalización de logotipo, manual corporativo y aplicación de imagen corporativa en papelería comercial",
@@ -264,6 +337,251 @@ const portafolio = {
              {
                "src": "ejs-web-200.jpg",
                "href" : "ejs-web-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "Take on Bar",
+          "dates": "May 2017",
+          "text": "Aplicación de imagen corporativa en papelería comercial, brochure, página web y redes sociales.",
+          "images" : [
+             {
+               "src": "tob-log-200.jpg",
+               "href" : "tob-log-900.jpg"
+             },
+             {
+               "src": "tob-pap1-200.jpg",
+               "href" : "tob-pap1-900.jpg"
+             },
+             {
+               "src": "tob-pap2-200.jpg",
+               "href" : "tob-pap2-900.jpg"
+             },
+             {
+               "src": "tob-web1-200.jpg",
+               "href" : "tob-web1-900.jpg"
+             },
+             {
+               "src": "tob-sm-200.jpg",
+               "href" : "tob-sm-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "Gamma Medical",
+          "dates": "May 2017",
+          "text": "Despliegue de marca en avisos de prensa, papelería comercial, página web y redes sociales.",
+          "images" : [
+             {
+               "src": "gm-log-200.jpg",
+               "href" : "gm-log-900.jpg"
+             },
+             {
+               "src": "gm-pap1-200.jpg",
+               "href" : "gm-pap1-900.jpg"
+             },
+             {
+               "src": "gm-pap2-200.jpg",
+               "href" : "gm-pap2-900.jpg"
+             },
+             {
+               "src": "gm-sm-200.jpg",
+               "href" : "gm-sm-900.jpg"
+             },
+             {
+               "src": "gm-web1-200.jpg",
+               "href" : "gm-web1-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "Perez & Parra",
+          "dates": "May 2017",
+          "text": "Diseño de papelería comercial y página web.",
+          "images" : [
+             {
+               "src": "p&p-log-200.jpg",
+               "href" : "p&p-log-900.jpg"
+             },
+             {
+               "src": "p&p-man-200.jpg",
+               "href" : "p&p-man-900.jpg"
+             },
+             {
+               "src": "p&p-pap1-200.jpg",
+               "href" : "p&p-pap1-900.jpg"
+             },
+             {
+               "src": "p&p-pap2-200.jpg",
+               "href" : "p&p-pap2-900.jpg"
+             },
+             {
+               "src": "p&p-web1-200.jpg",
+               "href" : "p&p-web1-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "Ben Sherman",
+          "dates": "May 2017",
+          "text": "Diseño e instalación de gigantografías, piezas de señalización y manual corporativo.",
+          "images" : [
+             {
+               "src": "bs-man-200.jpg",
+               "href" : "bs-man-900.jpg"
+             },
+             {
+               "src": "bs-post2-200.jpg",
+               "href" : "bs-post2-900.jpg"
+             },
+             {
+               "src": "bs-post1-200.jpg",
+               "href" : "bs-post1-900.jpg"
+             },
+             {
+               "src": "bs-rrhh-200.jpg",
+               "href" : "bs-rrhh-900.jpg"
+             },
+             {
+               "src": "bs-avi-200.jpg",
+               "href" : "bs-avi-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "EMN, Especialidades Médicas Nucleosistemas",
+          "dates": "May 2017",
+          "text": "Diseño y despliegue de señalización, piezas corporativas y papelería comercial.",
+          "images" : [
+             {
+               "src": "emn-log-200.jpg",
+               "href" : "emn-log-900.jpg"
+             },
+             {
+               "src": "emn-pap1-200.jpg",
+               "href" : "emn-pap1-900.jpg"
+             },
+             {
+               "src": "emn-pap2-200.jpg",
+               "href" : "emn-pap2-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "Quality Freight Services",
+          "dates": "May 2017",
+          "text": "Diseño de papelería comercial, página web y redes sociales.",
+          "images" : [
+             {
+               "src": "qfs-log-200.jpg",
+               "href" : "qfs-log-900.jpg"
+             },
+             {
+               "src": "qfs-pap-200.jpg",
+               "href" : "qfs-pap-900.jpg"
+             },
+             {
+               "src": "qfs-sm-200.jpg",
+               "href" : "qfs-sm-900.jpg"
+             },
+             {
+               "src": "qfs-web1-200.jpg",
+               "href" : "qfs-web1-900.jpg"
+             },
+             {
+               "src": "qfs-web2-200.jpg",
+               "href" : "qfs-web2-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "CMS, Caracas Multisport",
+          "dates": "May 2017",
+          "text": "Diseño de camisetas y aplicación de logotipo.",
+          "images" : [
+             {
+               "src": "cms-bran1-200.jpg",
+               "href" : "cms-bran1-900.jpg"
+             },
+             {
+               "src": "cms-bran2-200.jpg",
+               "href" : "cms-bran2-900.jpg"
+             },
+             {
+               "src": "cms-bran3-200.jpg",
+               "href" : "cms-bran3-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "Unipanda",
+          "dates": "May 2017",
+          "text": "Diseño de papelería comercial.",
+          "images" : [
+             {
+               "src": "uni-log-200.jpg",
+               "href" : "uni-log-900.jpg"
+             },
+             {
+               "src": "uni-pap1-200.jpg",
+               "href" : "uni-pap1-900.jpg"
+             },
+             {
+               "src": "uni-pap2-200.jpg",
+               "href" : "uni-pap2-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "Caracas Design 2015",
+          "dates": "May 2015",
+          "text": "Diseño web y redes sociales.",
+          "images" : [
+             {
+               "src": "cd-sm-200.jpg",
+               "href" : "cd-sm-900.jpg"
+             },
+             {
+               "src": "cd-web1-200.jpg",
+               "href" : "cd-web1-900.jpg"
+             },
+             {
+               "src": "cd-web2-200.jpg",
+               "href" : "cd-web2-900.jpg"
+             },
+             {
+               "src": "cd-web3-200.jpg",
+               "href" : "cd-web3-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "Bellychic",
+          "dates": "May 2017",
+          "text": "Diseño de manual corporativo y covers para redes sociales.",
+          "images" : [
+             {
+               "src": "bc-man1-200.jpg",
+               "href" : "bc-man1-900.jpg"
+             },
+             {
+               "src": "bc-man2-200.jpg",
+               "href" : "bc-man2-900.jpg"
+             },
+             {
+               "src": "bc-rrss-200.jpg",
+               "href" : "bc-rrss-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "La Casa del Habano",
+          "dates": "May 2017",
+          "text": "Diseño de anuncio impreso.",
+          "images" : [
+             {
+               "src": "lcdh-print-200.jpg",
+               "href" : "lcdh-print-900.jpg"
              }
            ]
         }
@@ -474,13 +792,13 @@ const contacto = {
   "sectionNavBtn" : [
     {
       "color" : "aquabg-1",
-      "icon" : "icon ni-pin",
-      "href" : "#location"
+      "icon" : "icon ni-message",
+      "href" : "#message"
     },
     {
       "color" : "aquabg-2",
-      "icon" : "icon ni-message",
-      "href" : "#message"
+      "icon" : "icon ni-pin",
+      "href" : "#location"
     },
     {
       "color" : "aquabg-3"
@@ -488,13 +806,13 @@ const contacto = {
   ],
   "tabs" : [
     {
-      "id" : "location",
-      "tabTitle" : "¿Dónde estamos ubicados?"
-    },
-    {
       "id" : "message",
       "tabTitle" : "¡Queremos conectar contigo!",
       "tabParagraph" : "Juntos desarrollaremos las tácticas para generar las acciones para posicionarte donde quieres estar.",
+    },
+    {
+      "id" : "location",
+      "tabTitle" : "¿Dónde estamos ubicados?"
     }
   ]
 }

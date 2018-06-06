@@ -91,8 +91,8 @@ function SectionTemplate() {
   this.imageList = '<div class="thumbs"></div>';
 };
 // Section render function
-// Takes an array, section ID and tab buttons ID as arguments to display content
-SectionTemplate.prototype.display = function(arr, divId, tabId, tabItemIndex, ) {
+// Takes an array(arr), section ID(divID), tab buttons ID(tabId) and a array index integer(tabItemIndex) as arguments to display content
+SectionTemplate.prototype.display = function(arr, divId, tabId, tabItemIndex) {
   this.sectionTitle = this.sectionTitle.replace('%data%', arr.sectionTitle);
   $(divId).append(this.sectionTitle);
   this.sectionNav = this.sectionNav.replace('%data%', tabId)
@@ -113,7 +113,6 @@ SectionTemplate.prototype.display = function(arr, divId, tabId, tabItemIndex, ) 
     $('#' + arr.tabs[i].id).append(this.tabTitleRender + this.tabParagraphRender);
     // Check if key is an array
     if (Array.isArray(arr.tabs[i].tabItems)) {
-      let tabItemIndex;
       let tabIndexArray = shuffle(arr.tabs[i].tabItems);
       // Iteration for getting tab items
       for (j = 0; j < tabItemIndex ; j++) {
@@ -204,19 +203,19 @@ SectionTemplate.prototype.tabs = function(tab1, tab2, tab3) {
 }
 // Sections creation and renderization
 const SectionNos = new SectionTemplate();
-SectionNos.display(nosotros, '#nos', 'nosotros');
+SectionNos.display(nosotros, '#nos', 'nosotros', 3);
 SectionNos.tabs('.greenbg-1', '.greenbg-2', '.greenbg-3');
 
 const SectionHac = new SectionTemplate();
-SectionHac.display(hacemos, '#hac', 'hacemos');
+SectionHac.display(hacemos, '#hac', 'hacemos', 3);
 SectionHac.tabs('.bluebg-1', '.bluebg-2', '.bluebg-3');
 
-const SectionPro = new SectionTemplate();
-SectionPro.display(portafolio, '#por', 'portafolio');
-SectionPro.tabs('.orangebg-1', '.orangebg-2', '.orangebg-3');
+const SectionPor = new SectionTemplate();
+SectionPor.display(portafolio, '#por-ini', 'portafolio', 3);
+SectionPor.tabs('.orangebg-1', '.orangebg-2', '.orangebg-3');
 
 const SectionCli = new SectionTemplate();
-SectionCli.display(clientes, '#cli', 'clientes');
+SectionCli.display(clientes, '#cli', 'clientes', 9);
 SectionCli.tabs('.redbg-1', '.redbg-2', '.redbg-3');
 
 const SectionCon = new SectionTemplate();
