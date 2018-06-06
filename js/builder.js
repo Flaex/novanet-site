@@ -92,7 +92,7 @@ function SectionTemplate() {
 };
 // Section render function
 // Takes an array, section ID and tab buttons ID as arguments to display content
-SectionTemplate.prototype.display = function(arr, divId, tabId) {
+SectionTemplate.prototype.display = function(arr, divId, tabId, tabItemIndex, ) {
   this.sectionTitle = this.sectionTitle.replace('%data%', arr.sectionTitle);
   $(divId).append(this.sectionTitle);
   this.sectionNav = this.sectionNav.replace('%data%', tabId)
@@ -113,16 +113,17 @@ SectionTemplate.prototype.display = function(arr, divId, tabId) {
     $('#' + arr.tabs[i].id).append(this.tabTitleRender + this.tabParagraphRender);
     // Check if key is an array
     if (Array.isArray(arr.tabs[i].tabItems)) {
-
+      let tabItemIndex;
+      let tabIndexArray = shuffle(arr.tabs[i].tabItems);
       // Iteration for getting tab items
-      for (j = 0; j < arr.tabs[i].tabItems.length; j++) {
+      for (j = 0; j < tabItemIndex ; j++) {
         this.itemIconContainerRender = this.itemIconContainer.replace('%data%', arr.sectionNavBtn[i].color);
-        this.itemIconRender = this.itemIcon.replace('%data%', arr.tabs[i].tabItems[j].icon);
-        this.itemTitleRender = this.itemTitle.replace('%data%', arr.tabs[i].tabItems[j].title);
-        this.itemDatesRender = this.itemDates.replace('%data%', arr.tabs[i].tabItems[j].dates)
-        this.itemTextRender = this.itemText.replace('%data%', arr.tabs[i].tabItems[j].text);
-        this.itemURLRender = this.itemURL.replace('%data%', arr.tabs[i].tabItems[j].url);
-        this.tabLogoItemRender = this.tabLogoItem.replace('%data%', arr.tabs[i].tabItems[j].bg);
+        this.itemIconRender = this.itemIcon.replace('%data%', tabIndexArray[j].icon);
+        this.itemTitleRender = this.itemTitle.replace('%data%', tabIndexArray[j].title);
+        this.itemDatesRender = this.itemDates.replace('%data%', tabIndexArray[j].dates)
+        this.itemTextRender = this.itemText.replace('%data%', tabIndexArray[j].text);
+        this.itemURLRender = this.itemURL.replace('%data%', tabIndexArray[j].url);
+        this.tabLogoItemRender = this.tabLogoItem.replace('%data%', tabIndexArray[j].bg);
 
         // Check if key is an array
         if (Array.isArray(arr.tabs[i].tabItems[j].images)) {
