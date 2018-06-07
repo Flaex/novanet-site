@@ -17,8 +17,8 @@ footer {padding:2em 0}
 h1 {font-style:italic; font-weight:700; font-size:3.1em; line-height:1.1em}
 h2 {margin:0 0 0.2em 0; font-weight:900; font-size:1.8em; color:#4e4d50 }
 h3 {margin:0.8em 0 0.1em 0; font-weight:900; font-size:1.5em}
-h4 {margin:0.4em 0 0.1em 0; font-weight:700; font-size:1.25em; color:#4e4d50}
-p {font-weight:300; font-size:1.3em; line-height:1.3em}
+h4 {margin:0.4em 0 0.1em 0; font-weight:900; font-size:1.25em; color:#4e4d50}
+p {font-weight:300; font-size:1.3em; line-height:1.4em}
 
 /* Colores */
 .green-1 {color:#85d100}
@@ -74,7 +74,8 @@ p {font-weight:300; font-size:1.3em; line-height:1.3em}
 .tabs-info {animation: fadeIn 0.3s ; -webkit-animation: fadeIn 0.3s ; -moz-animation: fadeIn 0.3s; -o-animation: fadeIn 0.3s;}
 @keyframes fadeIn { 0% { opacity: 0;}  100% { opacity: 100% }}
 .tab-item {width: 33%; min-height:14em; }
-.tab-item p { font-size:1.1em; line-height:1.5em; padding-right:0.5em}
+.tab-item p {font-size: 1.2em; line-height: 1.4em; padding-right: 1em;}
+.tab-item p.dates { font-size: 1.2em; line-height: 1.1em;; padding-right: 1em; font-style: italic;}
 
 /* Header */
 header { display: flex; flex-wrap: wrap; width:100%}
@@ -92,7 +93,7 @@ i {font-style:normal; color:#808285}
 .stories p {font-size:1.9em; line-height:1.2em;}
 
 /* Hacemos */
-#hac .ico {margin:0.5em 0 0.8em 0; width:5em; height:5em; border-radius:50%; text-align:center}
+#hac .ico {margin:0.5em 0 0em 0; width:5em; height:5em; border-radius:50%; text-align:center}
 #hac .ico i { line-height: 9.5em; font-size:0.9em; color:#fff}
 #hac .ico:hover {transform:translate(0.5em); -moz-transition:all 0.2s ease-in; -webkit-transition:all 0.2s ease-in; -o-transition:all 0.2s ease-in; transition:all 0.2s ease-in}
 #hac .ico:not(:hover) {transform:translate(0); -moz-transition:all 0.2s ease-out; -webkit-transition:all 0.2s ease-out; -o-transition:all 0.2s ease-out; transition:all 0.2s ease-out}
@@ -108,7 +109,7 @@ i {font-style:normal; color:#808285}
 .triangle {display: inline-block; position:relative; box-sizing:border-box; -webkit-clip-path: polygon(50% 10%, 0% 80%, 100% 80%);clip-path: polygon(50% 9%, 3% 91%, 97% 91%);}
 .triangle img {width: 98% !important; margin: 2% 1%;}
 #por .thumbs, #por-ini .thumbs {margin:0.7em 0 3em 0}
-#por .thumbs .thumb, #por-ini .thumbs .thumb  {width: 7em;margin: 4% 7% 0 0}
+#por .thumbs .thumb, #por-ini .thumbs .thumb  {width: 7em;margin: 0 7% 0 0}
 #por .thumbs .thumb img, #por-ini .thumbs .thumb img {width:100%}
 #por .section-link, #por-ini .section-link {font-weight:700; font-size:1.1em; color:#4e4d50}
 
@@ -153,14 +154,14 @@ textarea, form input::placeholder, form button {font-family:'Fira Sans', sans-se
 
 /* Footer */
 footer { display: flex; flex-wrap: wrap; width:100% }
-footer p {padding:0.7em 0 0 0; font-size:1.2em; line-height: 1.2em}
+footer p {padding:1em 0 0 0; font-size:1.2em; line-height: 1.2em}
 footer .logo { width: 15%; height: 4em; order: 1}
 footer .logo img { width: 80% }
 footer .legal { width: 25%; order: 2; display: flex;}
 footer .sm { width: 60%; order: 3; display: flex; justify-content:flex-end;}
 footer ul.sm-list { width: 20%; display: flex; }
 footer ul.sm-list li {width:2em; height:2em; margin:0 0.3em; list-style:none; border-radius:50%; text-align:center; border:#808285 solid 2px;}
-footer ul.sm-list li i {font-size:1.25em; padding-top: 0.25em;}
+footer ul.sm-list li i { font-size: 1.1em; padding-top: 0.4em;}
 
 /* Font Icons */
 .glyphs.character-mapping, .glyphs.css-mapping {padding:1em 0 0}

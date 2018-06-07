@@ -33,15 +33,13 @@ Logo Ascii
       <div class="logo"></div>
       <div class="sm"></div>
     </header>
-    <section id="ini" class="line">
+    <section id="ini" >
       <div class="stories line"></div>
-      <div id="nos"></div>
-      <canvas class="anim">&nbsp;</canvas>
+
     </section>
-    <section id="hac" class="line"></section>
+
     <section id="por-ini" class="line"></section>
-    <section id="cli" class="line"></section>
-    <section id="con" class="line"></section>
+
     <footer>
       <div class="logo"></div>
       <div class="legal"></div>
@@ -50,55 +48,8 @@ Logo Ascii
   </main>
   <script src="js/jquery-1.8.3.js"></script>
   <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
-  <script>
-
-  </script>
   <script src="js/helper.js"></script>
-  <script src="js/builder.js"></script>
-  <script>
-    // Sections creation and renderization
-    const SectionNos = new SectionTemplate();
-    SectionNos.sectionHeader(nosotros, '#nos', 'nosotros');
-    SectionNos.tabContent(nosotros, '#nos');
-    SectionNos.tabsFocus('.greenbg-1', '.greenbg-2', '.greenbg-3');
-
-    const SectionHac = new SectionTemplate();
-    SectionHac.sectionHeader(hacemos, '#hac', 'hacemos');
-    SectionHac.tabContent(hacemos, '#hac');
-    SectionHac.tabItems(hacemos, 3);
-    SectionHac.tabsFocus('.bluebg-1', '.bluebg-2', '.bluebg-3');
-
-    const SectionPor = new SectionTemplate();
-    SectionPor.sectionHeader(portafolio, '#por-ini', 'portafolio');
-    SectionPor.tabContent(portafolio, '#por-ini');
-    SectionPor.tabItems(portafolio, 3);
-    SectionPor.tabsFocus('.orangebg-1', '.orangebg-2', '.orangebg-3');
-
-    const SectionCli = new SectionTemplate();
-    SectionCli.sectionHeader(clientes, '#cli', 'clientes');
-    SectionCli.tabContent(clientes, '#cli');
-    SectionCli.tabItems(clientes, 12);
-    SectionCli.tabsFocus('.redbg-1', '.redbg-2', '.redbg-3');
-
-    const SectionCon = new SectionTemplate();
-    SectionCon.sectionHeader(contacto, '#con', 'contacto');
-    SectionCon.tabContent(contacto, '#con');
-    SectionCon.tabsFocus('.aquabg-1', '.aquabg-2', '.aquabg-3');
-
-    // Catching and removing empty and undefined elements
-    $('p:contains("undefined")').remove();
-    $('a[href*="undefined"]').remove();
-    $('.thumbs').on('click', 'a.btn', function(e) {
-      e.preventDefault();
-      let imgPath = $(this).attr('href');
-      let modalRender = '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><img class="preview" src="' + imgPath + '"></div></div>';
-      $('.container').append(modalRender);
-      $('#myModal').css('display', 'block');
-      $('span.close').click(function() {
-        $('#myModal').remove();
-      });
-    });
-  </script>
+  <script src="js/test.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="js/slick.min.js"></script>
@@ -151,8 +102,9 @@ Logo Ascii
         $('#myModal').remove();
       });
     });
-  </script>
-  <script>
+
+</script>
+  <!-- <script>
     function initMap() {
       var uluru = {
         lat: 10.489139,
@@ -177,7 +129,7 @@ Logo Ascii
     frmvalidator.addValidation("name", "req", "Please provide your name");
     frmvalidator.addValidation("email", "req", "Please provide your email");
     frmvalidator.addValidation("email", "email", "Please enter a valid email address");
-  </script>
+  </script> -->
 </body>
 
 </html>

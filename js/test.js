@@ -167,6 +167,18 @@ SectionTemplate.prototype.tabItems = function(arr, tabItemIndex) {
   $("h3:contains('undefined')").remove();
   $("h4:contains('undefined')").remove();
   $("div.tab-item:empty").remove();
+
+  // Modal for portfolio images
+  $('.thumbs').on('click', 'a.btn', function(e) {
+    e.preventDefault();
+    let imgPath = $(this).attr('href');
+    let modalRender = '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><img class="preview" src="' + imgPath + '"></div></div>';
+    $('.container').append(modalRender);
+    $('#myModal').css('display', 'block');
+    $('span.close').click(function() {
+      $('#myModal').remove();
+    });
+  });
 };
 
 // Navigation tab buttons focus event to assign active state
@@ -189,3 +201,5 @@ SectionTemplate.prototype.tabsFocus = function(tab1, tab2, tab3) {
     }
   });
 };
+
+// Sections creation and renderization
