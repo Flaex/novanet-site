@@ -134,7 +134,7 @@ SectionTemplate.prototype.tabItems = function(arr, tabItemIndex) {
       this.itemURLRender = this.itemURL.replace('%data%', tabIndexArray[j].url);
       this.tabLogoItemRender = this.tabLogoItem.replace('%data%', tabIndexArray[j].bg);
       if (Array.isArray(arr.tabs[i].tabItems[j].images)) {
-        $('#' + arr.tabs[i].id).append('<div class="tab-item">' + this.itemIconContainerRender + this.itemIconRender + this.itemTitleRender + this.itemDatesRender + this.itemTextRender + this.itemURLRender + '</div>');
+        $('#' + arr.tabs[i].id).append('<div class="tab-item">' + this.itemIconContainerRender + this.itemIconRender + this.itemTitleRender + this.itemTextRender + this.itemDatesRender + this.itemURLRender + '</div>');
         $('.tab-item').append(this.imageList);
         // Iteration for getting images items
         for (k = 0; k < arr.tabs[i].tabItems[j].images.length; k++) {
@@ -167,6 +167,7 @@ SectionTemplate.prototype.tabItems = function(arr, tabItemIndex) {
   $("h3:contains('undefined')").remove();
   $("h4:contains('undefined')").remove();
   $("div.tab-item:empty").remove();
+  $("div.thumbs:empty").remove();
 };
 
 // Navigation tab buttons focus event to assign active state

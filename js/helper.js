@@ -183,9 +183,86 @@ const portafolio = {
       "tabTitle" : "Branding",
       "tabItems" : [
         {
+          "title": "Lobees",
+          "dates": "May 2018",
+          "text": "Concepto de identidad gráfica, vistas web",
+          "images" : [
+             {
+               "src": "lb-logo-200.jpg",
+               "href" : "lb-logo-900.jpg"
+             },
+             {
+               "src": "lb-rrss2-200.jpg",
+               "href" : "lb-rrss2-900.jpg"
+             },
+             {
+               "src": "lb-web1-200.jpg",
+               "href" : "lb-web1-900.jpg"
+             },
+             {
+               "src": "lb-web2-200.jpg",
+               "href" : "lb-web2-900.jpg"
+             },
+             {
+               "src": "lb-web3-200.jpg",
+               "href" : "lb-web3-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "Rhinovations",
+          "dates": "May 2018",
+          "text": "Logotipo y piezas impresas.",
+          "images" : [
+             {
+               "src": "rv-logo-200.jpg",
+               "href" : "rv-logo-900.jpg"
+             },
+             {
+               "src": "rv-pap1-200.jpg",
+               "href" : "rv-pap1-900.jpg"
+             },
+             {
+               "src": "rv-pap2-200.jpg",
+               "href" : "rv-pap2-900.jpg"
+             },
+             {
+               "src": "rv-bra1-200.jpg",
+               "href" : "rv-bra1-900.jpg"
+             },
+             {
+               "src": "rv-bra2-200.jpg",
+               "href" : "rv-bra2-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "Zaituna Café",
+          "dates": "Dic 2017",
+          "text": "Identidad gráfica y branding.",
+          "images" : [
+             {
+               "src": "zc-logo-200.jpg",
+               "href" : "zc-logo-900.jpg"
+             },
+             {
+               "src": "zc-man1-200.jpg",
+               "href" : "zc-man1-900.jpg"
+             },
+             {
+               "src": "zc-man2-200.jpg",
+               "href" : "zc-man2-900.jpg"
+             },
+             {
+               "src": "zc-man3-200.jpg",
+               "href" : "zc-man3-900.jpg"
+             }
+           ]
+        },
+        {
           "title": "Merlin Data Quality",
           "dates": "May 2017",
-          "text": "Normalización de logotipo, manual corporativo y aplicación de imagen corporativa en papelería comercial",
+          "text": "Manual corporativo y aplicación de identidad en impresos.",
           "images" : [
              {
                "src": "mdq-logo-200.jpg",
@@ -212,7 +289,7 @@ const portafolio = {
         {
           "title": "Groberplus",
           "dates": "Jun 2017",
-          "text": "Diseño e impresión de catálogo de productos, página web.",
+          "text": "Impresión de catálogo de productos, página web.",
           "images" : [
              {
                "src": "gp-cat2-200.jpg",
@@ -243,7 +320,7 @@ const portafolio = {
         {
           "title": "Ejsupply",
           "dates": "Mar 2013",
-          "text": "Diseño de señalización, infografías, papelería comercial y página web.",
+          "text": "Señalización, infografías, papelería comercial y página web.",
           "images" : [
              {
                "src": "ejs-pap1-200.jpg",
@@ -270,7 +347,7 @@ const portafolio = {
         {
           "title": "Take on Bar",
           "dates": "May 2017",
-          "text": "Aplicación de imagen corporativa en papelería comercial, brochure, página web y redes sociales.",
+          "text": "Imagen corporativa en papelería comercial, brochure, página web y redes sociales.",
           "images" : [
              {
                "src": "tob-log-200.jpg",
@@ -297,7 +374,7 @@ const portafolio = {
         {
           "title": "Gamma Medical",
           "dates": "May 2017",
-          "text": "Despliegue de marca en avisos de prensa, papelería comercial, página web y redes sociales.",
+          "text": "Avisos de prensa, papelería comercial, página web y redes sociales.",
           "images" : [
              {
                "src": "gm-log-200.jpg",
@@ -324,7 +401,7 @@ const portafolio = {
         {
           "title": "Perez & Parra",
           "dates": "May 2017",
-          "text": "Diseño de papelería comercial y página web.",
+          "text": "Papelería comercial y página web.",
           "images" : [
              {
                "src": "p&p-log-200.jpg",
@@ -351,7 +428,7 @@ const portafolio = {
         {
           "title": "Ben Sherman",
           "dates": "May 2017",
-          "text": "Diseño e instalación de gigantografías, piezas de señalización y manual corporativo.",
+          "text": "Instalación de gigantografías, piezas de señalización y manual corporativo.",
           "images" : [
              {
                "src": "bs-man-200.jpg",
@@ -376,9 +453,9 @@ const portafolio = {
            ]
         },
         {
-          "title": "EMN, Especialidades Médicas Nucleosistemas",
+          "title": "Especialidades Médicas Nucleosistemas",
           "dates": "May 2017",
-          "text": "Diseño y despliegue de señalización, piezas corporativas y papelería comercial.",
+          "text": "Despliegue de señalización, piezas corporativas y papelería comercial.",
           "images" : [
              {
                "src": "emn-log-200.jpg",
@@ -397,7 +474,7 @@ const portafolio = {
         {
           "title": "Quality Freight Services",
           "dates": "May 2017",
-          "text": "Diseño de papelería comercial, página web y redes sociales.",
+          "text": "Papelería comercial, página web y redes sociales.",
           "images" : [
              {
                "src": "qfs-log-200.jpg",
@@ -424,7 +501,7 @@ const portafolio = {
         {
           "title": "CMS, Caracas Multisport",
           "dates": "May 2017",
-          "text": "Diseño de camisetas y aplicación de logotipo.",
+          "text": "Camisetas y aplicación de logotipo.",
           "images" : [
              {
                "src": "cms-bran1-200.jpg",
@@ -443,7 +520,7 @@ const portafolio = {
         {
           "title": "Unipanda",
           "dates": "May 2017",
-          "text": "Diseño de papelería comercial.",
+          "text": "Logotipo y papelería comercial.",
           "images" : [
              {
                "src": "uni-log-200.jpg",
@@ -462,7 +539,7 @@ const portafolio = {
         {
           "title": "Caracas Design 2015",
           "dates": "May 2015",
-          "text": "Diseño web y redes sociales.",
+          "text": "Página web y redes sociales.",
           "images" : [
              {
                "src": "cd-sm-200.jpg",
@@ -485,7 +562,7 @@ const portafolio = {
         {
           "title": "Bellychic",
           "dates": "May 2017",
-          "text": "Diseño de manual corporativo y covers para redes sociales.",
+          "text": "Manual corporativo y covers para redes sociales.",
           "images" : [
              {
                "src": "bc-man1-200.jpg",
@@ -504,7 +581,7 @@ const portafolio = {
         {
           "title": "La Casa del Habano",
           "dates": "May 2017",
-          "text": "Diseño de anuncio impreso.",
+          "text": "Anuncio impreso.",
           "images" : [
              {
                "src": "lcdh-print-200.jpg",
@@ -517,68 +594,364 @@ const portafolio = {
     {
       "id" : "disenoweb",
       "tabTitle" : "Diseño UI/UX",
-      "tabItems" : [
+      "tabItems": [
         {
-          "title": "Banco del Libro website",
-          "dates": "May 2013",
-          "text": "Web design, html/css implementation.",
-          "url" : "http://galerias.bid-dimad.org/bid_14/?p=4191",
-          "images" : [
-             {
-               "src": "bdl-web1-200.jpg",
-               "href" : "bdl-web1-900.jpg"
-             },
-             {
-               "src": "bdl-web2-200.jpg",
-               "href" : "bdl-web2-900.jpg"
-             },
-             {
-               "src": "bdl-web4-200.jpg",
-               "href" : "bdl-web4-900.jpg"
-             },
-             {
-               "src": "bdl-web4-200.jpg",
-               "href" : "bdl-web4-900.jpg"
-             }
-           ]
+          "title": "Lobees",
+          "dates": "May 2018",
+          "text": "Vistas web para aplicación.",
+          "images": [{
+              "src": "lb-web1-200.jpg",
+              "href": "lb-web1-900.jpg"
+            },
+            {
+              "src": "lb-web2-200.jpg",
+              "href": "lb-web2-900.jpg"
+            },
+            {
+              "src": "lb-web3-200.jpg",
+              "href": "lb-web3-900.jpg"
+            }
+          ]
         },
         {
-          "title": "Novanet website",
-          "dates": "Jun 2015",
-          "text": "Responsive web design, html/css implementation.",
-          "images" : [
-            {
-              "src": "nn-web1-200.jpg",
-              "href" : "nn-web1-900.jpg"
+          "title": "Groberplus",
+          "dates": "Jun 2017",
+          "text": "Sitio web en CMS, catálogo productos.",
+          "images": [{
+              "src": "gp-web1-200.jpg",
+              "href": "gp-web1-900.jpg"
             },
             {
-              "src": "nn-web2-200.jpg",
-              "href" : "nn-web2-900.jpg"
+              "src": "gp-web2-200.jpg",
+              "href": "gp-web2-900.jpg"
             },
             {
-              "src": "nn-web3-200.jpg",
-              "href" : "nn-web3-900.jpg"
+              "src": "gp-web3-200.jpg",
+              "href": "gp-web3-900.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Banco del Libro",
+          "dates": "May 2014",
+          "text": "Portal web en CMS. Selección Bienal Iberoamericana de Diseño BID 2014",
+          "images": [{
+              "src": "bdl-web1-200.jpg",
+              "href": "bdl-web1-900.jpg"
+            },
+            {
+              "src": "bdl-web2-200.jpg",
+              "href": "bdl-web2-900.jpg"
+            },
+            {
+              "src": "bdl-web3-200.jpg",
+              "href": "bdl-web3-900.jpg"
+            },
+            {
+              "src": "bdl-web4-200.jpg",
+              "href": "bdl-web4-900.jpg"
             }
           ]
         },
         {
           "title": "Dos Espacios",
-          "dates": "May 2013",
-          "text": "Diseño e implementación web en plataformas e-commerce.",
-          "images" : [
-             {
-               "src": "de-web1-200.jpg",
-               "href" : "de-web1-900.jpg"
-             },
-             {
-               "src": "de-web2-200.jpg",
-               "href" : "de-web2-900.jpg"
-             },
-             {
-               "src": "de-web3-200.jpg",
-               "href" : "de-web3-900.jpg"
-             }
-           ]
+          "dates": "May 2015",
+          "text": "Integración web en plataformas e-commerce.",
+          "images": [{
+              "src": "de-web1-200.jpg",
+              "href": "de-web1-900.jpg"
+            },
+            {
+              "src": "de-web2-200.jpg",
+              "href": "de-web2-900.jpg"
+            },
+            {
+              "src": "de-web3-200.jpg",
+              "href": "de-web3-900.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Ejsupply",
+          "dates": "Mar 2013",
+          "text": "Sitio web corporativo.",
+          "images": [{
+            "src": "ejs-web-200.jpg",
+            "href": "ejs-web-900.jpg"
+          }]
+        },
+        {
+          "title": "Take on Bar",
+          "dates": "May 2017",
+          "text": "Sitio web bajo CMS.",
+          "images": [{
+            "src": "tob-web1-200.jpg",
+            "href": "tob-web1-900.jpg"
+          }]
+        },
+        {
+          "title": "Gamma Medical",
+          "dates": "May 2017",
+          "text": "Integración en CMS.",
+          "images": [{
+              "src": "gm-web-200.jpg",
+              "href": "gm-web-900.jpg"
+            },
+            {
+              "src": "gm-web1-200.jpg",
+              "href": "gm-web1-900.jpg"
+            },
+            {
+              "src": "gm-web2-200.jpg",
+              "href": "gm-web2-900.jpg"
+            },
+          ]
+        },
+        {
+          "title": "Perez & Parra",
+          "dates": "May 2017",
+          "text": "Sitio bajo gestor de contenidos.",
+          "images": [{
+              "src": "p&p-web1-200.jpg",
+              "href": "p&p-web1-900.jpg"
+            },
+            {
+              "src": "p&p-web2-200.jpg",
+              "href": "p&p-web2-900.jpg"
+            },
+            {
+              "src": "p&p-web3-200.jpg",
+              "href": "p&p-web3-900.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Quality Freight Services",
+          "dates": "May 2017",
+          "text": "Página web en CMS e imágenes para redes sociales.",
+          "images": [{
+              "src": "qfs-web1-200.jpg",
+              "href": "qfs-web1-900.jpg"
+            },
+            {
+              "src": "qfs-web2-200.jpg",
+              "href": "qfs-web2-900.jpg"
+            },
+            {
+              "src": "qfs-web2-200.jpg",
+              "href": "qfs-web2-900.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Caracas Design 2015",
+          "dates": "May 2015",
+          "text": "Sitio web en CMS.",
+          "images": [{
+              "src": "cd-web1-200.jpg",
+              "href": "cd-web1-900.jpg"
+            },
+            {
+              "src": "cd-web2-200.jpg",
+              "href": "cd-web2-900.jpg"
+            },
+            {
+              "src": "cd-web3-200.jpg",
+              "href": "cd-web3-900.jpg"
+            }
+          ]
+        },
+        {
+          "title": "AJR Trading",
+          "dates": "May 2015",
+          "text": "Portal web en CMS.",
+          "images": [{
+              "src": "ajr-web1-200.jpg",
+              "href": "ajr-web1-900.jpg"
+            },
+            {
+              "src": "ajr-web2-200.jpg",
+              "href": "ajr-web2-900.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Apanage",
+          "dates": "May 2015",
+          "text": "Sitio web corporativo.",
+          "images": [{
+              "src": "apa-web1-200.jpg",
+              "href": "apa-web1-900.jpg"
+            },
+            {
+              "src": "apa-web2-200.jpg",
+              "href": "apa-web2-900.jpg"
+            },
+            {
+              "src": "apa-web3-200.jpg",
+              "href": "apa-web3-900.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Artc",
+          "dates": "May 2015",
+          "text": "Página web bajo CMS.",
+          "images": [{
+              "src": "art-web1-200.jpg",
+              "href": "art-web1-900.jpg"
+            },
+            {
+              "src": "art-web2-200.jpg",
+              "href": "art-web2-900.jpg"
+            },
+            {
+              "src": "art-web3-200.jpg",
+              "href": "art-web3-900.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Caribbean Media Group",
+          "dates": "May 2015",
+          "text": "Sitio web bajo gestor de contenido.",
+          "images": [{
+              "src": "cmg-web1-200.jpg",
+              "href": "cmg-web1-900.jpg"
+            },
+            {
+              "src": "cmg-web2-200.jpg",
+              "href": "cmg-web2-900.jpg"
+            },
+            {
+              "src": "cmg-web3-200.jpg",
+              "href": "cmg-web3-900.jpg"
+            },
+            {
+              "src": "cmg-web4-200.jpg",
+              "href": "cmg-web4-900.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Egloff Group",
+          "dates": "May 2015",
+          "text": "Sitio web corporativa bajo CMS.",
+          "images": [{
+              "src": "eg-web1-200.jpg",
+              "href": "eg-web1-900.jpg"
+            },
+            {
+              "src": "eg-web2-200.jpg",
+              "href": "eg-web2-900.jpg"
+            },
+            {
+              "src": "eg-web3-200.jpg",
+              "href": "eg-web3-900.jpg"
+            }
+          ]
+        },
+        {
+          "title": "G-Star",
+          "dates": "May 2015",
+          "text": "Portal web con gestor de contenido propietario.",
+          "images": [{
+              "src": "gstar-web1-200.jpg",
+              "href": "gstar-web1-900.jpg"
+            },
+            {
+              "src": "gstar-web2-200.jpg",
+              "href": "gstar-web2-900.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Kulinaria",
+          "dates": "May 2015",
+          "text": "Propuestas web.",
+          "images": [{
+              "src": "kul-web1-200.jpg",
+              "href": "kul-web1-900.jpg"
+            },
+            {
+              "src": "kul-web2-200.jpg",
+              "href": "kul-web2-900.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Main Global Services",
+          "dates": "May 2015",
+          "text": "Portal web gestionable.",
+          "images": [{
+              "src": "mgs-web1-200.jpg",
+              "href": "mgs-web1-900.jpg"
+            },
+            {
+              "src": "mgs-web2-200.jpg",
+              "href": "mgs-web2-900.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Quirutec",
+          "dates": "May 2015",
+          "text": "Portal web con gestor de contenido.",
+          "images": [{
+              "src": "qui-web1-200.jpg",
+              "href": "qui-web1-900.jpg"
+            },
+            {
+              "src": "qui-web2-200.jpg",
+              "href": "qui-web2-900.jpg"
+            },
+            {
+              "src": "qui-web3-200.jpg",
+              "href": "qui-web3-900.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Suministros Sausalito",
+          "dates": "May 2015",
+          "text": "Landing page.",
+          "images": [{
+              "src": "sum-web1-200.jpg",
+              "href": "sum-web1-900.jpg"
+            },
+            {
+              "src": "sum-web2-200.jpg",
+              "href": "sum-web2-900.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Vecchietti D'Lima & Asociados",
+          "dates": "May 2015",
+          "text": "Sitio web.",
+          "images": [{
+              "src": "vdl-web1-200.jpg",
+              "href": "vdl-web1-900.jpg"
+            },
+            {
+              "src": "vdl-web2-200.jpg",
+              "href": "vdl-web2-900.jpg"
+            }
+          ]
+        },
+        {
+          "title": "Psi-cocina",
+          "dates": "May 2015",
+          "text": "Página web bajo gestor de contenido.",
+          "images": [{
+              "src": "psi-web1-200.jpg",
+              "href": "psi-web1-900.jpg"
+            },
+            {
+              "src": "psi-web2-200.jpg",
+              "href": "psi-web2-900.jpg"
+            }
+          ]
         }
       ]
     },
@@ -587,37 +960,224 @@ const portafolio = {
       "tabTitle" : "Logotipos",
       "tabItems" : [
         {
-          "title": "Escuela de natación Rivas",
-          "dates": "Oct 2017",
-          "text": "Diseño de identidad gráfica",
+          "title": "Lobees",
+          "dates": "May 2018",
+          "text": "Identidad gráfica para portal web.",
           "images" : [
-            {
-              "src": "edr-log-200.jpg",
-              "href" : "edr-log-900.jpg"
-            }
-          ]
+             {
+               "src": "lb-logo-200.jpg",
+               "href" : "lb-logo-900.jpg"
+             }
+           ]
         },
         {
-          "title": "Rhinovations. Remodeling Company",
-          "dates": "Abr 2018",
-          "text": "Diseño de logotipo",
+          "title": "Rhinovations",
+          "dates": "May 2018",
+          "text": "Logotipo para compañía de remodelación",
           "images" : [
-            {
-              "src": "rv-logo-200.jpg",
-              "href" : "rv-logo-900.jpg"
-            }
-          ]
+             {
+               "src": "rv-logo-200.jpg",
+               "href" : "rv-logo-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "Zaituna Café",
+          "dates": "Dic 2017",
+          "text": "Imagen gràfica para restaurant.",
+          "images" : [
+             {
+               "src": "zc-logo-200.jpg",
+               "href" : "zc-logo-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "Merlin Data Quality",
+          "dates": "May 2017",
+          "text": "Normalización de logotipo.",
+          "images" : [
+             {
+               "src": "mdq-logo-200.jpg",
+               "href" : "mdq-logo-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "Take on Bar",
+          "dates": "May 2017",
+          "text": "Logotipo para barra móvil.",
+          "images" : [
+             {
+               "src": "tob-log-200.jpg",
+               "href" : "tob-log-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "Gamma Medical",
+          "dates": "May 2017",
+          "text": "Identidad gráfica para proveedores médicos.",
+          "images" : [
+             {
+               "src": "gm-log-200.jpg",
+               "href" : "gm-log-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "Perez & Parra",
+          "dates": "May 2017",
+          "text": "Imagen corporativa para bufete abogados.",
+          "images" : [
+             {
+               "src": "p&p-log-200.jpg",
+               "href" : "p&p-log-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "EMN, Especialidades Médicas Nucleosistemas",
+          "dates": "May 2017",
+          "text": "Logotipo para distribuidores equipos médicos.",
+          "images" : [
+             {
+               "src": "emn-log-200.jpg",
+               "href" : "emn-log-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "Quality Freight Services",
+          "dates": "May 2017",
+          "text": "Identidad visual para compañia de courier.",
+          "images" : [
+             {
+               "src": "qfs-log-200.jpg",
+               "href" : "qfs-log-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "Unipanda",
+          "dates": "May 2017",
+          "text": "Logotipo para empresa de confección de uniformes.",
+          "images" : [
+             {
+               "src": "uni-log-200.jpg",
+               "href" : "uni-log-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "Gemelos 4x4.com",
+          "dates": "May 2017",
+          "text": "Identidad gráfica para fabricantes de piezas para rústicos.",
+          "images" : [
+             {
+               "src": "4x4-log-200.jpg",
+               "href" : "4x4-log-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "Dideas",
+          "dates": "May 2017",
+          "text": "Logotipo para colectivo creativo.",
+          "images" : [
+             {
+               "src": "did-log-200.jpg",
+               "href" : "did-log-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "edr",
+          "dates": "May 2017",
+          "text": "Imagen corporativa para escuela deportiva.",
+          "images" : [
+             {
+               "src": "edr-log-200.jpg",
+               "href" : "edr-log-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "Kotelcasa",
+          "dates": "May 2017",
+          "text": "Logotipo para distribuidores de casas prefabricadas.",
+          "images" : [
+             {
+               "src": "kc-log-200.jpg",
+               "href" : "kc-log-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "Latin America Cable",
+          "dates": "May 2017",
+          "text": "Identidad gráfica para empresa de TV pro cable.",
+          "images" : [
+             {
+               "src": "lat-log-200.jpg",
+               "href" : "lat-log-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "Vecchietti D`Lima & Asociados",
+          "dates": "May 2017",
+          "text": "Logotipo para contadores públicos.",
+          "images" : [
+             {
+               "src": "vdl-log-200.jpg",
+               "href" : "vdl-log-900.jpg"
+             }
+           ]
         },
         {
           "title": "Unidad de Gimnasia Correctiva",
-          "dates": "Abr 2018",
-          "text": "Diseño de marca.",
+          "dates": "May 2017",
+          "text": "Imagen corporativa para adecuación atlética.",
           "images" : [
-            {
-              "src": "ugc-logo-200.jpg",
-              "href" : "ugc-logo-900.jpg"
-            }
-          ]
+             {
+               "src": "ugc-logo-200.jpg",
+               "href" : "ugc-logo-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "Sagirbienca",
+          "dates": "May 2017",
+          "text": "Logotipo para asesor inmobiliario. ",
+          "images" : [
+             {
+               "src": "sag-log-200.jpg",
+               "href" : "sag-log-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "Escritorio Jurídico Rojas Sandoval & Asocidos",
+          "dates": "May 2017",
+          "text": "Identidad gráfica para bufete abogados.",
+          "images" : [
+             {
+               "src": "rsa-log-200.jpg",
+               "href" : "rsa-log-900.jpg"
+             }
+           ]
+        },
+        {
+          "title": "Orlando Maniglia",
+          "dates": "May 2017",
+          "text": "Logotipo personal.",
+          "images" : [
+             {
+               "src": "om-log-200.jpg",
+               "href" : "om-log-900.jpg"
+             }
+           ]
         }
       ]
     }
