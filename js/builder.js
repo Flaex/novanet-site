@@ -58,15 +58,12 @@ StoriesTemplate.prototype.display = function(arr) {
   this.paragraph = this.paragraph.replace('%data%', arr.paragraph);
   $('.stories').append(this.title + this.paragraph);
 };
-// Stories creation and renderization
-const storiesPrint = new StoriesTemplate();
-storiesPrint.display(stories);
 
 // Section Superclass
 function SectionTemplate() {
   this.sectionTitle = '<h2>%data%</h2>';
   this.sectionNav = '<ul id="%data%" class="tabs"></ul>';
-  this.sectionLink = '<a class="section-link" href="%data%">Ver todo el portafolio <i class="orange-1 far fa-images"></i></a>';
+  this.sectionLink = '<a class="section-link" href="%data%">Ver más casos de éxito <i class="orange-1 far fa-images"></i></a>';
   this.tabColor = '<li class="btn %data%">';
   this.tabHref = '<a class="btn" href="%data%">';
   this.tabIcon = '<i class="%data%"></i></a></li>';
@@ -76,14 +73,13 @@ function SectionTemplate() {
   this.tabMap = '<div id="map"></div>';
   this.tabLogoContainer = '<div class="slider"></div>';
   this.tabLogoItem = '<div class="logo-item %data%"></div>';
-  this.tabLogoItem = '<div class="logo-item %data%"></div>';
   this.tabForm = '<form method="post" name="myemailform" action="php/process.php"><input type="text" name="name" placeholder="Nombre y apellido"><input type="text" name="email" " placeholder="Email"><textarea name="message" placeholder="Mensaje"></textarea><input class="aquabg-1" type="submit" name="submit" value="Enviar"></form>'
   this.itemIconContainer = '<div class="ico %data%">';
   this.itemIcon = '<i class="%data%"></i></div>';
   this.itemTitle = '<h4>%data%</h4>';
   this.itemText = '<p>%data%</p>';
   this.itemDates = '<p class="dates">%data%</p>';
-  this.itemURL = '<a class="url" href="%data%">Ver</a>';
+  this.itemURL = '<a class="url orange-1" href="%data%">Ver reseña</a>';
   this.imageContainer = '<div class="thumb orangebg-1 %data%">';
   this.imageHref = '<a class="btn" href="img/%data%">'
   this.imageMask = '<img class="%data%"';
@@ -153,7 +149,7 @@ SectionTemplate.prototype.tabItems = function(arr, tabItemIndex) {
           $('.thumbs:last').append(this.imageItems);
         }
       } else {
-        $('#' + arr.tabs[i].id).append('<div class="tab-item">' + this.itemIconContainerRender + this.itemIconRender + this.itemTitleRender + this.itemDatesRender + this.itemTextRender + this.itemURLRender + '</div>' + this.tabLogoItemRender);
+        $('#' + arr.tabs[i].id).append('<div class="tab-item">' + this.itemIconContainerRender + this.itemIconRender + this.itemTitleRender + this.itemDatesRender + this.itemTextRender + this.itemURLRender + this.tabLogoItemRender + '</div>');
         $('#logos-clientes').addClass('slider');
       }
     }

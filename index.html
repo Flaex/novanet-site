@@ -57,6 +57,9 @@ Logo Ascii
   <script src="js/builder.js"></script>
   <script>
     // Sections creation and renderization
+    const storiesPrint = new StoriesTemplate();
+    storiesPrint.display(storiesHome);
+
     const SectionNos = new SectionTemplate();
     SectionNos.sectionHeader(nosotros, '#nos', 'nosotros');
     SectionNos.tabContent(nosotros, '#nos');
@@ -88,6 +91,8 @@ Logo Ascii
     // Catching and removing empty and undefined elements
     $('p:contains("undefined")').remove();
     $('a[href*="undefined"]').remove();
+    
+    // Modal for portfolio images
     $('.thumbs').on('click', 'a.btn', function(e) {
       e.preventDefault();
       let imgPath = $(this).attr('href');

@@ -25,9 +25,14 @@ const header = {
   "legal" : "Derechos reservados 2006-2018."
 };
 
-//Stories object
-const stories = {
+//Stories objects
+const storiesHome = {
   "title" : "Creamos historias de éxito",
+  "paragraph" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+  }
+
+const storiesPor = {
+  "title" : "Tu marca, al alcance de tus usuarios",
   "paragraph" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
   }
 
@@ -188,14 +193,6 @@ const portafolio = {
           "text": "Concepto de identidad gráfica, vistas web",
           "images" : [
              {
-               "src": "lb-logo-200.jpg",
-               "href" : "lb-logo-900.jpg"
-             },
-             {
-               "src": "lb-rrss2-200.jpg",
-               "href" : "lb-rrss2-900.jpg"
-             },
-             {
                "src": "lb-web1-200.jpg",
                "href" : "lb-web1-900.jpg"
              },
@@ -215,24 +212,16 @@ const portafolio = {
           "text": "Logotipo y piezas impresas.",
           "images" : [
              {
-               "src": "rv-logo-200.jpg",
-               "href" : "rv-logo-900.jpg"
-             },
-             {
                "src": "rv-pap1-200.jpg",
                "href" : "rv-pap1-900.jpg"
              },
              {
-               "src": "rv-pap2-200.jpg",
-               "href" : "rv-pap2-900.jpg"
-             },
-             {
-               "src": "rv-bra1-200.jpg",
-               "href" : "rv-bra1-900.jpg"
-             },
-             {
                "src": "rv-bra2-200.jpg",
                "href" : "rv-bra2-900.jpg"
+             },
+             {
+               "src": "rv-pap2-200.jpg",
+               "href" : "rv-pap2-900.jpg"
              }
            ]
         },
@@ -241,10 +230,6 @@ const portafolio = {
           "dates": "Dic 2017",
           "text": "Identidad gráfica y branding.",
           "images" : [
-             {
-               "src": "zc-logo-200.jpg",
-               "href" : "zc-logo-900.jpg"
-             },
              {
                "src": "zc-man1-200.jpg",
                "href" : "zc-man1-900.jpg"
@@ -262,12 +247,8 @@ const portafolio = {
         {
           "title": "Merlin Data Quality",
           "dates": "May 2017",
-          "text": "Manual corporativo y aplicación de identidad en impresos.",
+          "text": "Manual corporativo y papelería comercial.",
           "images" : [
-             {
-               "src": "mdq-logo-200.jpg",
-               "href" : "mdq-logo-900.jpg"
-             },
              {
                "src": "mdq-man1-200.jpg",
                "href" : "mdq-man1-900.jpg"
@@ -275,10 +256,6 @@ const portafolio = {
              {
                "src": "mdq-man2-200.jpg",
                "href" : "mdq-man2-900.jpg"
-             },
-             {
-               "src": "mdq-man2-200.jpg",
-               "href" : "mdq-man3-900.jpg"
              },
              {
                "src": "mdq-pap2-200.jpg",
@@ -292,16 +269,8 @@ const portafolio = {
           "text": "Impresión de catálogo de productos, página web.",
           "images" : [
              {
-               "src": "gp-cat2-200.jpg",
-               "href" : "gp-cat2-900.jpg"
-             },
-             {
                "src": "gp-cat3-200.jpg",
                "href" : "gp-cat3-900.jpg"
-             },
-             {
-               "src": "gp-cat4-200.jpg",
-               "href" : "gp-cat4-900.jpg"
              },
              {
                "src": "gp-web1-200.jpg",
@@ -310,22 +279,14 @@ const portafolio = {
              {
                "src": "gp-web2-200.jpg",
                "href" : "gp-web2-900.jpg"
-             },
-             {
-               "src": "gp-web3-200.jpg",
-               "href" : "gp-web3-900.jpg"
              }
            ]
         },
         {
           "title": "Ejsupply",
           "dates": "Mar 2013",
-          "text": "Señalización, infografías, papelería comercial y página web.",
+          "text": "Señalización, infografías, papelería y página web.",
           "images" : [
-             {
-               "src": "ejs-pap1-200.jpg",
-               "href" : "ejs-pap1-900.jpg"
-             },
              {
                "src": "ejs-pap2-200.jpg",
                "href" : "ejs-pap2-900.jpg"
@@ -333,10 +294,6 @@ const portafolio = {
              {
                "src": "ejs-pap3-200.jpg",
                "href" : "ejs-pap3-900.jpg"
-             },
-             {
-               "src": "ejs-pap4-200.jpg",
-               "href" : "ejs-pap4-900.jpg"
              },
              {
                "src": "ejs-web-200.jpg",
@@ -347,19 +304,11 @@ const portafolio = {
         {
           "title": "Take on Bar",
           "dates": "May 2017",
-          "text": "Imagen corporativa en papelería comercial, brochure, página web y redes sociales.",
+          "text": "Papelería comercial, brochure y página web",
           "images" : [
-             {
-               "src": "tob-log-200.jpg",
-               "href" : "tob-log-900.jpg"
-             },
              {
                "src": "tob-pap1-200.jpg",
                "href" : "tob-pap1-900.jpg"
-             },
-             {
-               "src": "tob-pap2-200.jpg",
-               "href" : "tob-pap2-900.jpg"
              },
              {
                "src": "tob-web1-200.jpg",
@@ -374,19 +323,11 @@ const portafolio = {
         {
           "title": "Gamma Medical",
           "dates": "May 2017",
-          "text": "Avisos de prensa, papelería comercial, página web y redes sociales.",
+          "text": "Papelería comercial, página web y redes sociales.",
           "images" : [
-             {
-               "src": "gm-log-200.jpg",
-               "href" : "gm-log-900.jpg"
-             },
              {
                "src": "gm-pap1-200.jpg",
                "href" : "gm-pap1-900.jpg"
-             },
-             {
-               "src": "gm-pap2-200.jpg",
-               "href" : "gm-pap2-900.jpg"
              },
              {
                "src": "gm-sm-200.jpg",
@@ -404,63 +345,43 @@ const portafolio = {
           "text": "Papelería comercial y página web.",
           "images" : [
              {
-               "src": "p&p-log-200.jpg",
-               "href" : "p&p-log-900.jpg"
+               "src": "p&p-web1-200.jpg",
+               "href" : "p&p-web1-900.jpg"
              },
              {
                "src": "p&p-man-200.jpg",
                "href" : "p&p-man-900.jpg"
              },
              {
-               "src": "p&p-pap1-200.jpg",
-               "href" : "p&p-pap1-900.jpg"
-             },
-             {
                "src": "p&p-pap2-200.jpg",
                "href" : "p&p-pap2-900.jpg"
-             },
-             {
-               "src": "p&p-web1-200.jpg",
-               "href" : "p&p-web1-900.jpg"
              }
            ]
         },
         {
           "title": "Ben Sherman",
           "dates": "May 2017",
-          "text": "Instalación de gigantografías, piezas de señalización y manual corporativo.",
+          "text": "Gigantografías, señalización y manual corporativo.",
           "images" : [
-             {
-               "src": "bs-man-200.jpg",
-               "href" : "bs-man-900.jpg"
-             },
              {
                "src": "bs-post2-200.jpg",
                "href" : "bs-post2-900.jpg"
              },
              {
+               "src": "bs-man-200.jpg",
+               "href" : "bs-man-900.jpg"
+             },
+             {
                "src": "bs-post1-200.jpg",
                "href" : "bs-post1-900.jpg"
-             },
-             {
-               "src": "bs-rrhh-200.jpg",
-               "href" : "bs-rrhh-900.jpg"
-             },
-             {
-               "src": "bs-avi-200.jpg",
-               "href" : "bs-avi-900.jpg"
              }
            ]
         },
         {
           "title": "Especialidades Médicas Nucleosistemas",
           "dates": "May 2017",
-          "text": "Despliegue de señalización, piezas corporativas y papelería comercial.",
+          "text": "Señalización y papelería comercial.",
           "images" : [
-             {
-               "src": "emn-log-200.jpg",
-               "href" : "emn-log-900.jpg"
-             },
              {
                "src": "emn-pap1-200.jpg",
                "href" : "emn-pap1-900.jpg"
@@ -477,16 +398,8 @@ const portafolio = {
           "text": "Papelería comercial, página web y redes sociales.",
           "images" : [
              {
-               "src": "qfs-log-200.jpg",
-               "href" : "qfs-log-900.jpg"
-             },
-             {
                "src": "qfs-pap-200.jpg",
                "href" : "qfs-pap-900.jpg"
-             },
-             {
-               "src": "qfs-sm-200.jpg",
-               "href" : "qfs-sm-900.jpg"
              },
              {
                "src": "qfs-web1-200.jpg",
@@ -523,10 +436,6 @@ const portafolio = {
           "text": "Logotipo y papelería comercial.",
           "images" : [
              {
-               "src": "uni-log-200.jpg",
-               "href" : "uni-log-900.jpg"
-             },
-             {
                "src": "uni-pap1-200.jpg",
                "href" : "uni-pap1-900.jpg"
              },
@@ -542,16 +451,12 @@ const portafolio = {
           "text": "Página web y redes sociales.",
           "images" : [
              {
-               "src": "cd-sm-200.jpg",
-               "href" : "cd-sm-900.jpg"
-             },
-             {
                "src": "cd-web1-200.jpg",
                "href" : "cd-web1-900.jpg"
              },
              {
-               "src": "cd-web2-200.jpg",
-               "href" : "cd-web2-900.jpg"
+               "src": "cd-sm-200.jpg",
+               "href" : "cd-sm-900.jpg"
              },
              {
                "src": "cd-web3-200.jpg",
@@ -599,7 +504,8 @@ const portafolio = {
           "title": "Lobees",
           "dates": "May 2018",
           "text": "Vistas web para aplicación.",
-          "images": [{
+          "images": [
+            {
               "src": "lb-web1-200.jpg",
               "href": "lb-web1-900.jpg"
             },
@@ -617,7 +523,8 @@ const portafolio = {
           "title": "Groberplus",
           "dates": "Jun 2017",
           "text": "Sitio web en CMS, catálogo productos.",
-          "images": [{
+          "images": [
+            {
               "src": "gp-web1-200.jpg",
               "href": "gp-web1-900.jpg"
             },
@@ -634,14 +541,12 @@ const portafolio = {
         {
           "title": "Banco del Libro",
           "dates": "May 2014",
-          "text": "Portal web en CMS. Selección Bienal Iberoamericana de Diseño BID 2014",
-          "images": [{
+          "text": "Selección Bienal Iberoamericana de Diseño 2014.",
+          "url" : "http://galerias.bid-dimad.org/bid_14/?p=4191",
+          "images": [
+            {
               "src": "bdl-web1-200.jpg",
               "href": "bdl-web1-900.jpg"
-            },
-            {
-              "src": "bdl-web2-200.jpg",
-              "href": "bdl-web2-900.jpg"
             },
             {
               "src": "bdl-web3-200.jpg",
@@ -657,7 +562,8 @@ const portafolio = {
           "title": "Dos Espacios",
           "dates": "May 2015",
           "text": "Integración web en plataformas e-commerce.",
-          "images": [{
+          "images": [
+            {
               "src": "de-web1-200.jpg",
               "href": "de-web1-900.jpg"
             },
@@ -684,19 +590,26 @@ const portafolio = {
           "title": "Take on Bar",
           "dates": "May 2017",
           "text": "Sitio web bajo CMS.",
-          "images": [{
-            "src": "tob-web1-200.jpg",
-            "href": "tob-web1-900.jpg"
-          }]
+          "images": [
+            {
+              "src": "tob-web1-200.jpg",
+              "href": "tob-web1-900.jpg"
+            },
+            {
+              "src": "tob-web2-200.jpg",
+              "href": "tob-web2-900.jpg"
+            },
+            {
+              "src": "tob-web3-200.jpg",
+              "href": "tob-web3-900.jpg"
+            }
+          ]
         },
         {
           "title": "Gamma Medical",
           "dates": "May 2017",
           "text": "Integración en CMS.",
-          "images": [{
-              "src": "gm-web-200.jpg",
-              "href": "gm-web-900.jpg"
-            },
+          "images": [
             {
               "src": "gm-web1-200.jpg",
               "href": "gm-web1-900.jpg"
@@ -704,7 +617,7 @@ const portafolio = {
             {
               "src": "gm-web2-200.jpg",
               "href": "gm-web2-900.jpg"
-            },
+            }
           ]
         },
         {
@@ -818,10 +731,6 @@ const portafolio = {
           "images": [{
               "src": "cmg-web1-200.jpg",
               "href": "cmg-web1-900.jpg"
-            },
-            {
-              "src": "cmg-web2-200.jpg",
-              "href": "cmg-web2-900.jpg"
             },
             {
               "src": "cmg-web3-200.jpg",
@@ -1092,7 +1001,7 @@ const portafolio = {
            ]
         },
         {
-          "title": "edr",
+          "title": "Escuela deportiva Rivas",
           "dates": "May 2017",
           "text": "Imagen corporativa para escuela deportiva.",
           "images" : [

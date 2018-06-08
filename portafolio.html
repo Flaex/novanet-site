@@ -35,11 +35,8 @@ Logo Ascii
     </header>
     <section id="ini">
       <div class="stories line"></div>
-
     </section>
-
     <section id="por" class="line"></section>
-
     <footer>
       <div class="logo"></div>
       <div class="legal"></div>
@@ -52,16 +49,21 @@ Logo Ascii
   <script src="js/builder.js"></script>
   <script>
     // Sections creation and renderization
+    const storiesPrint = new StoriesTemplate();
+    storiesPrint.display(storiesPor);
+
     const SectionPorIni = new SectionTemplate();
     SectionPorIni.sectionHeader(portafolio, '#por', 'portafolio');
     SectionPorIni.tabContent(portafolio, '#por');
-    SectionPorIni.tabItems(portafolio, 15);
+    SectionPorIni.tabItems(portafolio, 9);
     SectionPorIni.tabsFocus('.orangebg-1', '.orangebg-2', '.orangebg-3');
 
     // Catching and removing empty and undefined elements
     $("a.section-link").remove();
     $('p:contains("undefined")').remove();
     $('a[href*="undefined"]').remove();
+    
+    // Modal for portfolio images
     $('.thumbs').on('click', 'a.btn', function(e) {
       e.preventDefault();
       let imgPath = $(this).attr('href');
