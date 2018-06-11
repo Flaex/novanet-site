@@ -63,7 +63,7 @@ StoriesTemplate.prototype.display = function(arr) {
 function SectionTemplate() {
   this.sectionTitle = '<h2>%data%</h2>';
   this.sectionNav = '<ul id="%data%" class="tabs"></ul>';
-  this.sectionLink = '<a class="section-link" href="%data%">Ver más casos de éxito <i class="orange-1 far fa-images"></i></a>';
+  this.sectionLink = '<h4><a class="section-link" href="%data%">Ver más casos de éxito <i class="orange-1 far fa-images"></i></a></h4>';
   this.tabColor = '<li class="btn %data%">';
   this.tabHref = '<a class="btn" href="%data%">';
   this.tabIcon = '<i class="%data%"></i></a></li>';
@@ -73,7 +73,8 @@ function SectionTemplate() {
   this.tabMap = '<div id="map"></div>';
   this.tabLogoContainer = '<div class="slider"></div>';
   this.tabLogoItem = '<div class="logo-item %data%"></div>';
-  this.tabFormCon = '<form method="post" name="myemailform" action="php/process.php"><input type="text" name="name" placeholder="Nombre y apellido"><input type="text" name="email" " placeholder="Email"><textarea name="message" placeholder="Mensaje"></textarea><input class="aquabg-1" type="submit" name="submit" value="Enviar"></form>';
+  this.tabInCon = '<div id="instagram-feed"><h4>Síguenos en instagram <a class="aqua-1" href="https://www.instagram.com/gruponovanet/" target="_blank">@gruponovanet</a></h4><!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/62ecc39e51b659099da9a64c2e8f76b5.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe></div>';
+  this.tabFormCon = '<form method="post" name="myemailform" action="php/process.php"><h4>Envíanos un mensaje</h4><input type="text" name="name" placeholder="Nombre y apellido"><input type="text" name="email" " placeholder="Email"><textarea name="message" placeholder="Mensaje"></textarea><input class="aquabg-1" type="submit" name="submit" value="Enviar"></form>';
   this.tabFormWhs = '<form method="post" action="https://secure.yourwebhosting.com/secureLogin" enctype="application/x-www-form-urlencoded"><input type="hidden" name="__token_timestamp__" value="1431957845"><input type="hidden" name="__token_val__" value="fdc8d9dac6115067faf5792194ee9aeb"><input type="hidden" name="destination" value="http://www.yourwebhosting.com/controlpanel/index.bml" /><input type="text" name="credential_0" value="" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input formfield" placeholder="Usuario" id="name" /><input type="password" name="credential_1" value="" class="validate[required,custom[email]] feedback-input formfield" id="email" placeholder="Contraseña" /><input type="submit" name="submit" value="Iniciar sesión" class="bluebg-1" /></form>';
   this.itemIconContainer = '<div class="ico %data%">';
   this.itemIcon = '<i class="%data%"></i></div>';
@@ -116,7 +117,9 @@ SectionTemplate.prototype.tabContent = function(arr, divId) {
   $(divId).append(this.sectionLinkRender);
   $('#location').append(this.tabMap);
   $('#message').append(this.tabFormCon);
-  $('#login-whs').append(this.tabFormWhs);
+  $('#message').append(this.tabInCon);
+  $('#login-whs').prepend(this.tabFormWhs);
+
 };
 
 SectionTemplate.prototype.tabItems = function(arr, tabItemIndex) {
@@ -185,6 +188,36 @@ SectionTemplate.prototype.tabsFocus = function(tab1, tab2, tab3) {
       $(this).addClass('selected');
       $(tab2).removeClass('selected');
       $(tab1).removeClass('selected');
+    }
+  });
+};
+
+SectionTemplate.prototype.tabsFocusAnimation = function(tab1, tab2, tab3, anim1, anim2, anim3) {
+  // CreateJs animation toggle
+  $(anim1).addClass('show');
+  $(anim2).removeClass('show');
+  $(anim2).addClass('hide');
+  $(anim3).removeClass('show');
+  $(anim3).addClass('hide');
+  $('li.btn').click(function() {
+    if ($(tab1).hasClass('ui-state-active')) {
+      $(anim1).addClass('show');
+      $(anim2).removeClass('show');
+      $(anim2).addClass('hide');
+      $(anim3).removeClass('show');
+      $(anim3).addClass('hide');
+    } else if ($(tab2).hasClass('ui-state-active')) {
+      $(anim1).removeClass('show');
+      $(anim1).addClass('hide');
+      $(anim2).addClass('show');
+      $(anim3).removeClass('show');
+      $(anim3).addClass('hide');
+    } else if ($(tab3).hasClass('ui-state-active')) {
+      $(anim1).removeClass('show');
+      $(anim1).addClass('hide');
+      $(anim2).addClass('hide');
+      $(anim2).removeClass('show');
+      $(anim3).addClass('show');
     }
   });
 };

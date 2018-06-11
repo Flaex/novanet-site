@@ -25,9 +25,12 @@ Logo Ascii
   <link rel="stylesheet" type="text/css" href="css/slick.css" />
   <!--Form input validation-->
   <script language="JavaScript" src="js/gen_validatorv31.js" type="text/javascript"></script>
+  <!--Instagram responsive feed from https://lightwidget.com/-->
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script src="js/nosotros.js"></script>
 </head>
 
-<body>
+<body onload="init();">
   <nav id="nav"></nav>
   <main id="main" class="container">
     <header>
@@ -37,7 +40,11 @@ Logo Ascii
     <section id="ini" class="line">
       <div class="stories line"></div>
       <div id="nos"></div>
-      <canvas class="ini">&nbsp;</canvas>
+      <div class="canvasContainer">
+        <canvas id="rocket"></canvas>
+        <canvas id="brain"></canvas>
+        <canvas id="goal"></canvas>
+      </div>
     </section>
     <section id="hac" class="line"></section>
     <section id="por-ini" class="line"></section>
@@ -68,6 +75,7 @@ Logo Ascii
     SectionNos.sectionHeader(nosotros, '#nos', 'nosotros');
     SectionNos.tabContent(nosotros, '#nos');
     SectionNos.tabsFocus('.greenbg-1', '.greenbg-2', '.greenbg-3');
+    SectionNos.tabsFocusAnimation('.greenbg-1', '.greenbg-2', '.greenbg-3', 'canvas#rocket', 'canvas#brain', 'canvas#goal')
 
     const SectionHac = new SectionTemplate();
     SectionHac.sectionHeader(hacemos, '#hac', 'hacemos');
@@ -80,6 +88,7 @@ Logo Ascii
     SectionPor.tabContent(portafolio, '#por-ini');
     SectionPor.tabItems(portafolio, 3);
     SectionPor.tabsFocus('.orangebg-1', '.orangebg-2', '.orangebg-3');
+    
 
     const SectionCli = new SectionTemplate();
     SectionCli.sectionHeader(clientes, '#cli', 'clientes');

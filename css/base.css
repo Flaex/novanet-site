@@ -10,7 +10,7 @@ a img {border:none}
 
 section, .stories, #nos {padding:2em 0; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box}
 #por, #por-ini, #hac, #cli, #con { width: 100%}
-footer {padding:2em 0}
+footer {padding:1em 0}
 .line {border-bottom:#d1d2d3 solid 1px}
 
 /* Tipografia */
@@ -58,9 +58,6 @@ p {font-weight:300; font-size:1.3em; line-height:1.4em}
 .graybg-2 {background:#808285}
 .graybg-3 {background:#4e4d50}
 
-/**/
-
-
 /* Tabs Sections */
 section .tabs { display: flex; flex-direction:row;}
 section .tabs li {border-bottom:#d1d2d3 4px solid}
@@ -98,7 +95,12 @@ i {font-style:normal; color:#808285}
 
 /* Historia - nosotros */
 #ini { width:100%; display: grid; grid-auto-flow: column; grid-template-columns: 50% 50%;}
-#ini canvas.ini { grid-row: 1 / span 2;}
+#ini .canvasContainer { grid-row: 1 / span 2; overflow: hidden;}
+.hide { display: none;}
+.show { display: block;}
+#ini #rocket { width: 125%; margin-left: -7em; animation: fadeIn 0.3s; -webkit-animation: fadeIn 0.3s}
+#ini #brain { width: 125%; margin-left: -3.5em; margin-top: -5em; animation: fadeIn 0.3s; -webkit-animation: fadeIn 0.3s}
+#ini #goal { width: 125%; margin-left: -1.5em; animation: fadeIn 0.3s;-webkit-animation: fadeIn 0.3s}
 
 .stories p {font-size:1.9em; line-height:1.2em;}
 
@@ -121,7 +123,7 @@ i {font-style:normal; color:#808285}
 #por .thumbs, #por-ini .thumbs {margin:0em 0 3em 0}
 #por .thumbs .thumb, #por-ini .thumbs .thumb  {width: 7em;margin: 0.5em 1em 0 0}
 #por .thumbs .thumb img, #por-ini .thumbs .thumb img {width:100%}
-#por .section-link, #por-ini .section-link {font-weight:700; font-size:1.1em; color:#4e4d50}
+#por .section-link, #por-ini .section-link {font-weight:900; color: #4e4d50}
 #por a.url { line-height: 1.6em; font-weight: 700}
 
 /* The Modal (background) */
@@ -152,8 +154,8 @@ textarea, form input::placeholder, form button {font-family:'Fira Sans', sans-se
 #con .col-50 p {padding:0 0 2em 0}
 #Whs .col-50 p {padding:1em 0 2em 0}
 #con .col-50 p, #Whs .col-50 p {border-bottom:#ecedee dotted 4px}
-#con form, #whs form {margin:3em 0; padding:2em; width:50%; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; background:#f2efef}
-#con form h4, #whs form h4 {margin:0}
+#con form, #whs form {margin:1em 0; padding:2em; width:50%; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; background:#f2efef}
+#con form h4, #whs form h4 {margin-bottom: 1em;}
 #con form input[type=text], form textarea, #whs form input[type=text], #whs form input[type=password] {width:100%; margin:1em 0 1.5em 0; font-weight:300; font-size:1.2em; background:none; border:none}
 #con form input[type=text], form textarea {border-bottom:#00bebe 1px solid}
 #whs form input[type=text], #whs form input[type=password] {border-bottom:#008ed2 1px solid}
@@ -161,6 +163,11 @@ textarea, form input::placeholder, form button {font-family:'Fira Sans', sans-se
 #con form input::placeholder, #whs form input::placeholder {font-weight:300}
 #con form input[type=submit], #whs form input[type=submit] { font-family:'Fira Sans', sans-serif; font-weight: 300; padding:0.3em 1em; font-size:1.2em; color:#fff; border:none}
 #con form input[type=submit] i, #whs form input[type=submit] i {padding:0 0 0 0.5em; color:#fff}
+#con #instagram-feed { width: 50% !important; padding: 0.5em 2em 0em 2em; box-sizing: border-box;}
+#con #instagram-feed a:visited { color:#00bebe }
+#con #instagram-feed iframe {margin-top: 1.5em; min-height:310px;}
+#con #message {display:flex; flex-wrap:wrap; }
+#con #message p { width: 100%}
 #map { width: 100%; height: 400px; margin-top: 1em; background-color: grey;}
 
 /* Footer */
