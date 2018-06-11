@@ -25,6 +25,78 @@ const header = {
   "legal" : "Derechos reservados 2006-2018."
 };
 
+const navigation = {
+    "sectionTitle" : "",
+    "sectionNavBtn" : [
+      {
+        "color" : "graybg-1",
+        "icon" : "fas fa-chevron-up",
+        "href" : "#main"
+      },
+      {
+        "color" : "greenbg-1",
+        "icon" : "icon ni-comment",
+        "href" : "#ini"
+      },
+      {
+        "color" : "bluebg-1",
+        "icon" : "icon ni-tools",
+        "href" : "#hac"
+      },
+      {
+        "color" : "orangebg-1",
+        "icon" : "icon ni-portfolio",
+        "href" : "#por-ini"
+      },
+      {
+        "color" : "redbg-3",
+        "icon" : "icon ni-chat",
+        "href" : "#cli"
+      },
+      {
+        "color" : "aquabg-1",
+        "icon" : "icon ni-message",
+        "href" : "#con"
+      }
+    ]
+};
+
+const navigationInt = {
+    "sectionTitle" : "",
+    "sectionNavBtn" : [
+      {
+        "color" : "graybg-1",
+        "icon" : "fas fa-chevron-left",
+        "href" : "index.html#main"
+      },
+      {
+        "color" : "greenbg-1",
+        "icon" : "icon ni-comment",
+        "href" : "index.html#ini"
+      },
+      {
+        "color" : "bluebg-1",
+        "icon" : "icon ni-tools",
+        "href" : "index.html#hac"
+      },
+      {
+        "color" : "orangebg-1",
+        "icon" : "icon ni-portfolio",
+        "href" : "index.html#por-ini"
+      },
+      {
+        "color" : "redbg-3",
+        "icon" : "icon ni-chat",
+        "href" : "index.html#cli"
+      },
+      {
+        "color" : "aquabg-1",
+        "icon" : "icon ni-message",
+        "href" : "index.html#con"
+      }
+    ]
+};
+
 //Stories objects
 const storiesHome = {
   "title" : "Creamos historias de éxito",

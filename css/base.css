@@ -1,7 +1,7 @@
 /* Novanet Estilos */
-body {color:#808285; font-family:'Fira Sans', sans-serif}
+body {color:#808285; font-family:'Fira Sans', sans-serif; display: flex; flex-wrap: wrap;}
 
-.container {display:flex; flex-wrap:wrap; background:url(../img/bg.svg); padding:4em 5em 0 5em;}
+.container { width: 94%; display:flex; flex-wrap:wrap; box-sizing: border-box; background:url(../img/bg.svg); padding: 4em 5em 0 2em}
 a {text-decoration:none}
 ul li {list-style:none; text-align:center}
 table {border-collapse:separate; border-spacing:0; vertical-align:middle}
@@ -58,24 +58,34 @@ p {font-weight:300; font-size:1.3em; line-height:1.4em}
 .graybg-2 {background:#808285}
 .graybg-3 {background:#4e4d50}
 
-/* Botones */
-.tabs { display: flex; flex-direction:row;}
-.tabs li {border-bottom:#d1d2d3 4px solid}
-.tabs li:hover {border-bottom:#808285 4px solid; -moz-transition:all 0.2s ease-in; -webkit-transition:all 0.2s ease-in; -o-transition:all 0.2s ease-in}
-.tabs li.selected {border-bottom:#4e4d50 4px solid}
-.tabs .btn {position:relative; display:flex; flex-direction:column; justify-content:center; width:6em; height:6em; margin:0 0 0.25em 0; text-align:center; overflow:hidden}
-.tabs .btn {cursor:pointer}
-.tabs .btn:focus { outline: none;}
-.tabs .btn:before {content:''; position:absolute; top:0; left:0; width:6em; height:0; ; -webkit-transition-duration:0.4s; transition-duration:0.4s}
-.tabs .btn:hover:before {height:6em}
-.tabs .btn:hover i {font-size:1.2em; -webkit-transition-duration:0.4s; transition-duration:0.4s}
-.tabs .btn:not(:hover) i {font-size:1em; -webkit-transition-duration:0.4s; transition-duration:0.4s}
-.tabs .btn i {margin:0.3em 0 0; font-size:1em; color:#fff}
-.tabs-info {animation: fadeIn 0.3s ; -webkit-animation: fadeIn 0.3s ; -moz-animation: fadeIn 0.3s; -o-animation: fadeIn 0.3s;}
+/**/
+
+
+/* Tabs Sections */
+section .tabs { display: flex; flex-direction:row;}
+section .tabs li {border-bottom:#d1d2d3 4px solid}
+section .tabs li:hover {border-bottom:#808285 4px solid; -moz-transition:all 0.2s ease-in; -webkit-transition:all 0.2s ease-in; -o-transition:all 0.2s ease-in}
+section .tabs li.selected {border-bottom:#4e4d50 4px solid}
+section .tabs .btn {position:relative; display:flex; flex-direction:column; justify-content:center; width:6em; height:6em; margin:0 0 0.25em 0; text-align:center; overflow:hidden}
+section .tabs .btn {cursor:pointer}
+section .tabs .btn:focus { outline: none;}
+section .tabs .btn:before {content:''; position:absolute; top:0; left:0; width:6em; height:0; ; -webkit-transition-duration:0.4s; transition-duration:0.4s}
+section .tabs .btn:hover:before {height:6em}
+section .tabs .btn:hover i {font-size:1.2em; -webkit-transition-duration:0.4s; transition-duration:0.4s}
+section .tabs .btn:not(:hover) i {font-size:1em; -webkit-transition-duration:0.4s; transition-duration:0.4s}
+section .tabs .btn i {margin:0.3em 0 0; font-size:1em; color:#fff}
+section .tabs-info {animation: fadeIn 0.3s ; -webkit-animation: fadeIn 0.3s ; -moz-animation: fadeIn 0.3s; -o-animation: fadeIn 0.3s;}
 @keyframes fadeIn { 0% { opacity: 0;}  100% { opacity: 100% }}
-.tab-item {width: 33%; }
-.tab-item p {font-size: 1.2em; line-height: 1.4em; padding-right: 1em;}
-.tab-item p.dates { font-size: 1.2em; line-height: 1.1em;; padding-right: 1em; font-style: italic;}
+section .tab-item {width: 33%; }
+section .tab-item p {font-size: 1.2em; line-height: 1.4em; padding-right: 1em;}
+section .tab-item p.dates { font-size: 1.2em; line-height: 1.1em;; padding-right: 1em; font-style: italic;}
+
+nav { width: 6%; display: flex; flex-wrap: wrap; justify-content: center; padding-top: 4em}
+nav .tabs { position: fixed;}
+nav .tabs li { border-radius: 50%; min-width: 58px; min-height: 58px; margin-bottom: 1em; box-sizing: border-box; padding:0.6em;}
+nav .tabs li i { font-size: 0.55em;color: white}
+nav .tabs li i.fa-chevron-up, nav .tabs li i.fa-chevron-left { padding-top: 1em; font-size: 0.75em;}
+
 
 /* Header */
 header { display: flex; flex-wrap: wrap; width:100%}
