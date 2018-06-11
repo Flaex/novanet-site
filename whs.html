@@ -21,19 +21,24 @@ Logo Ascii
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <!--Main styles-->
   <link href="css/base.css" rel="stylesheet" type="text/css">
+  <!--Slick Carousel-->
+  <link rel="stylesheet" type="text/css" href="css/slick.css" />
+  <!--Form input validation-->
+  <script language="JavaScript" src="js/gen_validatorv31.js" type="text/javascript"></script>
 </head>
 
 <body>
+  <nav id="nav"></nav>
   <main class="container">
     <header>
       <div class="logo"></div>
       <div class="sm"></div>
     </header>
     <section id="ini" class="line">
-      <div class="stories line"></div>
-      <div id="nos"></div>
-      <canvas class="anim">&nbsp;</canvas>
+      <div class="stories"></div>
+      <canvas><p>lalalala</p></canvas>
     </section>
+    <section id="whs" class="line"></section>
     <footer>
       <div class="logo"></div>
       <div class="legal"></div>
@@ -46,14 +51,47 @@ Logo Ascii
   <script src="js/builder.js"></script>
   <script>
     // Sections creation and renderization
+    const Nav = new SectionTemplate();
+    Nav.sectionHeader(navigationInt, '#nav', 'navigation');
 
     const storiesPrint = new StoriesTemplate();
-    storiesPrint.display(storiesCont);
+    storiesPrint.display(storiesWhs);
+
+    const SectionWhs = new SectionTemplate();
+    SectionWhs.sectionHeader(whs, '#whs', 'hosting');
+    SectionWhs.tabContent(whs, '#whs');
+
+    SectionWhs.tabsFocus('.bluebg-1', '.bluebg-2', '.bluebg-3');
 
     // Catching and removing empty and undefined elements
     $("a.section-link").remove();
     $('p:contains("undefined")').remove();
     $('a[href*="undefined"]').remove();
+
+    // Scrolling for all anchors on the page
+    $( 'nav ul.tabs a.btn[href^="#"]').on('click', function(event) {
+      var target = $(this.getAttribute('href'));
+      if( target.length ) {
+          event.preventDefault();
+          $('html, body').stop().animate({
+              scrollTop: target.offset().top
+          }, 1000);
+      }
+    });
+
+    // Modal for portfolio images
+    $('.thumbs').on('click', 'a.btn', function(e) {
+      e.preventDefault();
+      let imgPath = $(this).attr('href');
+      let modalRender = '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><img class="preview" src="' + imgPath + '"></div></div>';
+      $('.container').append(modalRender);
+      $('#myModal').css('display', 'block');
+      $('span.close').click(function() {
+        $('#myModal').remove();
+      });
+    });
   </script>
+
 </body>
+
 </html>

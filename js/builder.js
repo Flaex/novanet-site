@@ -73,7 +73,8 @@ function SectionTemplate() {
   this.tabMap = '<div id="map"></div>';
   this.tabLogoContainer = '<div class="slider"></div>';
   this.tabLogoItem = '<div class="logo-item %data%"></div>';
-  this.tabForm = '<form method="post" name="myemailform" action="php/process.php"><input type="text" name="name" placeholder="Nombre y apellido"><input type="text" name="email" " placeholder="Email"><textarea name="message" placeholder="Mensaje"></textarea><input class="aquabg-1" type="submit" name="submit" value="Enviar"></form>'
+  this.tabFormCon = '<form method="post" name="myemailform" action="php/process.php"><input type="text" name="name" placeholder="Nombre y apellido"><input type="text" name="email" " placeholder="Email"><textarea name="message" placeholder="Mensaje"></textarea><input class="aquabg-1" type="submit" name="submit" value="Enviar"></form>';
+  this.tabFormWhs = '<form method="post" action="https://secure.yourwebhosting.com/secureLogin" enctype="application/x-www-form-urlencoded"><input type="hidden" name="__token_timestamp__" value="1431957845"><input type="hidden" name="__token_val__" value="fdc8d9dac6115067faf5792194ee9aeb"><input type="hidden" name="destination" value="http://www.yourwebhosting.com/controlpanel/index.bml" /><input type="text" name="credential_0" value="" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input formfield" placeholder="Usuario" id="name" /><input type="password" name="credential_1" value="" class="validate[required,custom[email]] feedback-input formfield" id="email" placeholder="Contraseña" /><input type="submit" name="submit" value="Iniciar sesión" class="bluebg-1" /></form>';
   this.itemIconContainer = '<div class="ico %data%">';
   this.itemIcon = '<i class="%data%"></i></div>';
   this.itemTitle = '<h4>%data%</h4>';
@@ -114,7 +115,8 @@ SectionTemplate.prototype.tabContent = function(arr, divId) {
   this.sectionLinkRender = this.sectionLink.replace('%data%', arr.sectionLink);
   $(divId).append(this.sectionLinkRender);
   $('#location').append(this.tabMap);
-  $('#message').append(this.tabForm)
+  $('#message').append(this.tabFormCon);
+  $('#login-whs').append(this.tabFormWhs);
 };
 
 SectionTemplate.prototype.tabItems = function(arr, tabItemIndex) {

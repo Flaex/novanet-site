@@ -49,7 +49,7 @@ const navigation = {
         "href" : "#por-ini"
       },
       {
-        "color" : "redbg-3",
+        "color" : "redbg-1",
         "icon" : "icon ni-chat",
         "href" : "#cli"
       },
@@ -85,7 +85,7 @@ const navigationInt = {
         "href" : "index.html#por-ini"
       },
       {
-        "color" : "redbg-3",
+        "color" : "redbg-1",
         "icon" : "icon ni-chat",
         "href" : "index.html#cli"
       },
@@ -101,12 +101,22 @@ const navigationInt = {
 const storiesHome = {
   "title" : "Creamos historias de éxito",
   "paragraph" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
-  }
+};
 
 const storiesPor = {
   "title" : "Tu marca, al alcance de tus usuarios",
   "paragraph" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
-  }
+};
+
+const storiesCon = {
+  "title" : "¡Gracias por contactarnos!",
+  "paragraph" : "Para nosotros es muy importante todo lo que tengas que decir. A la brevedad posible estaremos respondiendo a tu mensaje."
+};
+
+const storiesWhs = {
+  "title" : "Acceso servicios web",
+  "paragraph" : "Todo lo que necesita para construir y lanzar su nuevo sitio web, te proporcionamos las herramientas para comercializarlo y atraer a una audiencia."
+};
 
 //Nosotros object
 const nosotros = {
@@ -145,7 +155,7 @@ const nosotros = {
       "tabParagraph" : "Para nosotros es primordial promover el desarrollo de cada uno de tus propósitos y proveerte de las herramientas necesarias para lograrlos con éxito. Vamos mucho más allá.",
     }
   ]
-}
+};
 
 //Hacemos object
 const hacemos = {
@@ -232,7 +242,7 @@ const hacemos = {
       ]
     }
   ]
-}
+};
 
 //Portafolio object
 const portafolio = {
@@ -1164,7 +1174,7 @@ const portafolio = {
     }
   ],
   "sectionLink" : "portafolio.html",
-}
+};
 
 //Clientes object
 const clientes = {
@@ -1252,7 +1262,7 @@ const clientes = {
       ]
     }
   ]
-}
+};
 
 //Contacto object
 const contacto = {
@@ -1283,4 +1293,30 @@ const contacto = {
       "tabTitle" : "¿Dónde estamos ubicados?"
     }
   ]
-}
+};
+
+//Contacto object
+const whs = {
+  "sectionTitle" : "Web hosting services",
+  "sectionNavBtn" : [
+    {
+      "color" : "bluebg-1",
+      "icon" : "icon ni-gear",
+      "href" : "#login-whs"
+    },
+    {
+      "color" : "bluebg-2"
+
+    },
+    {
+      "color" : "bluebg-3"
+    }
+  ],
+  "tabs" : [
+    {
+      "id" : "login-whs",
+      "tabTitle" : "Ingrese a su cuenta",
+      "tabParagraph" : "Para iniciar sesión, deberá tener habilitadas las cookies en su navegador. Estamos comprometidos con su privacidad y las cookies nos permiten brindarle una experiencia personalizada y un mejor servicio. Al iniciar sesión y usar su cuenta, acepta la Política de privacidad y los Términos de servicio.",
+    }
+  ]
+};

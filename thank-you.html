@@ -34,11 +34,6 @@ Logo Ascii
       <div id="nos"></div>
       <canvas class="anim">&nbsp;</canvas>
     </section>
-    <footer>
-      <div class="logo"></div>
-      <div class="legal"></div>
-      <div class="sm"></div>
-    </footer>
   </main>
   <script src="js/jquery-1.8.3.js"></script>
   <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
@@ -46,14 +41,18 @@ Logo Ascii
   <script src="js/builder.js"></script>
   <script>
     // Sections creation and renderization
-
     const storiesPrint = new StoriesTemplate();
-    storiesPrint.display(storiesCont);
+    storiesPrint.display(storiesCon);
 
     // Catching and removing empty and undefined elements
     $("a.section-link").remove();
     $('p:contains("undefined")').remove();
     $('a[href*="undefined"]').remove();
+
+    // Redirection to home page
+    window.setTimeout('window.open("index.html#con","_self")',5000);
+
+
   </script>
 </body>
 </html>
