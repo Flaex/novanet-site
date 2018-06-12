@@ -37,13 +37,8 @@ Logo Ascii
       <div class="logo"></div>
       <div class="sm"></div>
     </header>
-    <section id="ini" class="line">
+    <section id="iniPor" class="line">
       <div class="stories"></div>
-      <div class="canvasContainer">
-        <canvas id="bra"></canvas>
-        <canvas id="web"></canvas>
-        <canvas id="log"></canvas>
-      </div>
     </section>
     <section id="por" class="line"></section>
     <footer>
@@ -68,8 +63,7 @@ Logo Ascii
     SectionPorIni.sectionHeader(portafolio, '#por', 'portafolio');
     SectionPorIni.tabContent(portafolio, '#por');
     SectionPorIni.tabItems(portafolio, 9);
-    SectionPorIni.tabsFocus('.orangebg-1', '.orangebg-2', '.orangebg-3');
-    SectionPorIni.tabsFocusAnimation('.orangebg-1', '.orangebg-2', '.orangebg-3', 'canvas#bra', 'canvas#web', 'canvas#log')
+    SectionPorIni.tabsFocus('.orangebg-1', '.orangebg-2', '.orangebg-3');    
 
     // Catching and removing empty and undefined elements
     $("a.section-link").remove();

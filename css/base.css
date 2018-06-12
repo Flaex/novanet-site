@@ -95,12 +95,12 @@ i {font-style:normal; color:#808285}
 
 /* Historia - nosotros */
 #ini { width:100%; display: grid; grid-auto-flow: column; grid-template-columns: 50% 50%;}
-#ini .canvasContainer { grid-row: 1 / span 2; overflow: hidden;}
+#ini .canvasContainer { grid-row: 1 / span 2; overflow: hidden; box-sizing: border-box;}
 .hide { display: none;}
 .show { display: block;}
-#ini #rocket { width: 125%; margin-left: -7em; animation: fadeIn 0.3s; -webkit-animation: fadeIn 0.3s}
-#ini #brain { width: 125%; margin-left: -3.5em; margin-top: -5em; animation: fadeIn 0.3s; -webkit-animation: fadeIn 0.3s}
-#ini #goal { width: 125%; margin-left: -1.5em; animation: fadeIn 0.3s;-webkit-animation: fadeIn 0.3s}
+#ini #rocket { width: 105%; margin-left: -7em; animation: fadeIn 0.3s; -webkit-animation: fadeIn 0.3s}
+#ini #brain { width: 105%; margin-left: -3.5em;  animation: fadeIn 0.3s; -webkit-animation: fadeIn 0.3s}
+#ini #goal { width: 105%; margin-left: -1.5em; padding-top: 3em;animation: fadeIn 0.3s;-webkit-animation: fadeIn 0.3s}
 
 .stories p {font-size:1.9em; line-height:1.2em;}
 
@@ -125,6 +125,13 @@ i {font-style:normal; color:#808285}
 #por .thumbs .thumb img, #por-ini .thumbs .thumb img {width:100%}
 #por .section-link, #por-ini .section-link {font-weight:900; color: #4e4d50}
 #por a.url { line-height: 1.6em; font-weight: 700}
+
+#iniPor { width:100%; display: flex; flex-wrap: wrap;}
+#iniPor .stories { width: 50%}
+#iniPor .canvasContainer { width: 50%; overflow: hidden; box-sizing: border-box;}
+#iniPor #bra { width: 90%; animation: fadeIn 0.3s; -webkit-animation: fadeIn 0.3s}
+#iniPor #web { width: 90%; animation: fadeIn 0.3s; -webkit-animation: fadeIn 0.3s}
+#iniPor #log { width: 90%; animation: fadeIn 0.3s;-webkit-animation: fadeIn 0.3s}
 
 /* The Modal (background) */
 .modal {display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background: rgba(255,255,255,0.7); animation: fadeIn 0.3s ; -webkit-animation: fadeIn 0.3s ; -moz-animation: fadeIn 0.3s; -o-animation: fadeIn 0.3s}
@@ -154,7 +161,7 @@ textarea, form input::placeholder, form button {font-family:'Fira Sans', sans-se
 #con .col-50 p {padding:0 0 2em 0}
 #Whs .col-50 p {padding:1em 0 2em 0}
 #con .col-50 p, #Whs .col-50 p {border-bottom:#ecedee dotted 4px}
-#con form, #whs form {margin:1em 0; padding:2em; width:50%; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; background:#f2efef}
+#con form, #whs form {margin:1em 0; padding:2em; width:50%; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
 #con form h4, #whs form h4 {margin-bottom: 1em;}
 #con form input[type=text], form textarea, #whs form input[type=text], #whs form input[type=password] {width:100%; margin:1em 0 1.5em 0; font-weight:300; font-size:1.2em; background:none; border:none}
 #con form input[type=text], form textarea {border-bottom:#00bebe 1px solid}
