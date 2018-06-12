@@ -35,27 +35,27 @@ const navigation = {
       },
       {
         "color" : "greenbg-1",
-        "icon" : "icon ni-comment",
+        "icon" : "ni-comment",
         "href" : "#ini"
       },
       {
         "color" : "bluebg-1",
-        "icon" : "icon ni-tools",
+        "icon" : "ni-tools",
         "href" : "#hac"
       },
       {
         "color" : "orangebg-1",
-        "icon" : "icon ni-portfolio",
+        "icon" : "ni-portfolio",
         "href" : "#por-ini"
       },
       {
         "color" : "redbg-1",
-        "icon" : "icon ni-chat",
+        "icon" : "ni-chat",
         "href" : "#cli"
       },
       {
         "color" : "aquabg-1",
-        "icon" : "icon ni-message",
+        "icon" : "ni-message",
         "href" : "#con"
       }
     ]
@@ -71,27 +71,27 @@ const navigationInt = {
       },
       {
         "color" : "greenbg-1",
-        "icon" : "icon ni-comment",
+        "icon" : "ni-comment",
         "href" : "index.html#ini"
       },
       {
         "color" : "bluebg-1",
-        "icon" : "icon ni-tools",
+        "icon" : "ni-tools",
         "href" : "index.html#hac"
       },
       {
         "color" : "orangebg-1",
-        "icon" : "icon ni-portfolio",
+        "icon" : "ni-portfolio",
         "href" : "index.html#por-ini"
       },
       {
         "color" : "redbg-1",
-        "icon" : "icon ni-chat",
+        "icon" : "ni-chat",
         "href" : "index.html#cli"
       },
       {
         "color" : "aquabg-1",
-        "icon" : "icon ni-message",
+        "icon" : "ni-message",
         "href" : "index.html#con"
       }
     ]
@@ -124,17 +124,17 @@ const nosotros = {
   "sectionNavBtn" : [
     {
       "color" : "greenbg-1",
-      "icon" : "icon ni-rocket",
+      "icon" : "ni-rocket",
       "href" : "#andar"
     },
     {
       "color" : "greenbg-2",
-      "icon" : "icon ni-brain",
+      "icon" : "ni-brain",
       "href" : "#pensar"
     },
     {
       "color" : "greenbg-3",
-      "icon" : "icon ni-ball",
+      "icon" : "ni-ball",
       "href" : "#ir"
     }
   ],
@@ -163,17 +163,17 @@ const hacemos = {
   "sectionNavBtn" : [
     {
       "color" : "bluebg-1",
-      "icon" : "icon ni-pencil",
+      "icon" : "ni-pencil",
       "href" : "#diseno"
     },
     {
       "color" : "bluebg-2",
-      "icon" : "icon ni-webdev",
+      "icon" : "ni-webdev",
       "href" : "#desarrollo"
     },
     {
       "color" : "bluebg-3",
-      "icon" : "icon ni-connection",
+      "icon" : "ni-connection",
       "href" : "#integracion"
     }
   ],
@@ -183,17 +183,17 @@ const hacemos = {
       "tabTitle" : "Diseño gráfico",
       "tabItems" : [
         {
-          "icon" : "icon ni-logo",
+          "icon" : "ni-logo",
           "title" : "Logotipos",
           "text" : "Estudiamos las características de tu empresa para que a través de tu logotipo logres conectarte realmente con tu mercado."
         },
         {
-          "icon" : "icon ni-printer",
+          "icon" : "ni-printer",
           "title" : "Impresos y digital",
           "text" : "Producimos piezas como papelería comercial, imágenes en redes sociales, boletines, banners promocionales, avisos de prensa, folletos, volantes, afiches, entre otros."
         },
         {
-          "icon" : "icon ni-star",
+          "icon" : "ni-star",
           "title" : "Branding",
           "text" : "Te ubicamos exactamente en el lugar indicado para que estés ahí en el momento en el que tus clientes te necesiten."
         }
@@ -204,17 +204,17 @@ const hacemos = {
       "tabTitle" : "Aplicaciones web",
       "tabItems" : [
         {
-          "icon" : "icon ni-webpage",
+          "icon" : "ni-webpage",
           "title" : "Sitios web",
           "text" : "Tus usuarios merecen experimentar lo mejor de tus ideas a través de la web. Para que estés alineado con la tendencia orientamos el diseño a la adaptabilidad y su funcionabilidad en dispositivos móviles."
         },
         {
-          "icon" : "icon ni-tap",
+          "icon" : "ni-tap",
           "title" : "Interfaces de usuario y desarrollo frontend",
           "text" : "Diseñamos e implementamos vistas para aplicaciones web, gestores de contenido propietario o de código abierto."
         },
         {
-          "icon" : "icon ni-database",
+          "icon" : "ni-database",
           "title" : "Aplicaciones backend",
           "text" : "Están basadas en la web y diseñadas para satisfacer las necesidades de tu organización en procesos administrativos, logísticos o mecanismos de información."
         }
@@ -225,17 +225,17 @@ const hacemos = {
       "tabTitle" : "Integración",
       "tabItems" : [
         {
-          "icon" : "icon ni-chat",
+          "icon" : "ni-chat",
           "title" : "Integración en proyectos",
           "text" : "Nos integramos con tus procesos para realizar diversas tareas de implementación en medios digitales, desarrollo de aplicaciones y piezas de diseño en general."
         },
         {
-          "icon" : "icon ni-sync",
+          "icon" : "ni-sync",
           "title" : "Gestión de Contenido",
           "text" : "Hacemos grandes esfuerzos por conocer realmente tu mercado para poder generar piezas que sean capaces de conectar con sus realidades para luego implementarlas en diversas plataformas."
         },
         {
-          "icon" : "icon ni-compass",
+          "icon" : "ni-compass",
           "title" : "Tecnologías de la información",
           "text" : "Te apoyamos constantemente en el descubrimiento de tecnologías adaptadas a tus necesidades. Ubicamos tus ideas dentro de lo que es tendencia a nivel global."
         }
@@ -250,17 +250,17 @@ const portafolio = {
   "sectionNavBtn" : [
     {
       "color" : "orangebg-1",
-      "icon" : "icon ni-star",
+      "icon" : "ni-star",
       "href" : "#branding"
     },
     {
       "color" : "orangebg-2",
-      "icon" : "icon ni-responsive",
+      "icon" : "ni-responsive",
       "href" : "#disenoweb"
     },
     {
       "color" : "orangebg-3",
-      "icon" : "icon ni-logo",
+      "icon" : "ni-logo",
       "href" : "#logotipos"
     }
   ],
@@ -1182,7 +1182,7 @@ const clientes = {
   "sectionNavBtn" : [
     {
       "color" : "redbg-3",
-      "icon" : "icon ni-chat",
+      "icon" : "ni-chat",
       "href" : "#logotipos"
     },
     {
@@ -1270,12 +1270,12 @@ const contacto = {
   "sectionNavBtn" : [
     {
       "color" : "aquabg-1",
-      "icon" : "icon ni-message",
+      "icon" : "ni-message",
       "href" : "#message"
     },
     {
       "color" : "aquabg-2",
-      "icon" : "icon ni-pin",
+      "icon" : "ni-pin",
       "href" : "#location"
     },
     {
@@ -1301,7 +1301,7 @@ const whs = {
   "sectionNavBtn" : [
     {
       "color" : "bluebg-1",
-      "icon" : "icon ni-gear",
+      "icon" : "ni-gear",
       "href" : "#login-whs"
     },
     {

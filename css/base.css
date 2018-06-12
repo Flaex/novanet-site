@@ -198,44 +198,48 @@ footer ul.sm-list li i { font-size: 1.1em; padding-top: 0.4em;}
 .glyphs.character-mapping .icon svg {fill:#000}
 .glyphs.character-mapping input {margin:0.5em 0 0; padding:0.3em 0; width:100%; font-family:'Fira Sans', sans-serif; font-weight:300; font-size:1.3em; border:none; text-align:center; color:#fff; background:#808285}
 
-@font-face {font-family:"novanet-icons";
+@font-face {
+  font-family: "novanet-icons";
   src:url("../fonts/novanet-icons.eot");
   src:url("../fonts/novanet-icons.eot?#iefix") format("embedded-opentype"),
     url("../fonts/novanet-icons.woff") format("woff"),
     url("../fonts/novanet-icons.ttf") format("truetype"),
-    url("../fonts/novanet-icons.svg#novanet-icons") format("svg"); font-weight:normal; font-style:normal}
+    url("../fonts/novanet-icons.svg#novanet-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 
-[class^="ni-"]:before,[class*=" ni-"]:before {font-family:"novanet-icons" !important; font-style:normal !important; font-weight:normal !important; font-variant:normal !important; font-size:4.5em; text-transform:none !important; speak:none; line-height:1; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale}
+[data-icon]:before { font-family: "novanet-icons" !important; content: attr(data-icon); font-size: 4.5em; font-style: normal !important; font-weight: normal !important; font-variant: normal !important; text-transform: none !important; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+[class^="ni-"]:before, [class*=" ni-"]:before { font-family: "novanet-icons" !important; font-size: 4.5em; font-style: normal !important; font-weight: normal !important; font-variant: normal !important; text-transform: none !important; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
 
-[data-icon]:before {font-family:"novanet-icons" !important; content:attr(data-icon); font-style:normal !important; font-weight:normal !important; font-variant:normal !important;  font-size:4.5em; text-align:center; text-transform:none !important; speak:none; line-height:1; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale}
-
-.ni-backend:before {content:"\61"}
-.ni-webpage:before {content:"\62"}
-.ni-ball:before {content:"\63"}
-.ni-message:before {content:"\64"}
-.ni-logo:before {content:"\65"}
-.ni-brain:before {content:"\66"}
-.ni-chat:before {content:"\67"}
-.ni-comment:before {content:"\68"}
-.ni-compass:before {content:"\69"}
-.ni-pencil:before {content:"\6a"}
-.ni-connection:before {content:"\6b"}
-.ni-pin:before {content:"\6c"}
-.ni-portfolio:before {content:"\6d"}
-.ni-printer:before {content:"\6e"}
-.ni-database:before {content:"\6f"}
-.ni-responsive:before {content:"\70"}
-.ni-rocket:before {content:"\71"}
-.ni-frontend:before {content:"\72"}
-.ni-star:before {content:"\73"}
-.ni-gear:before {content:"\74"}
-.ni-sync:before {content:"\75"}
-.ni-index:before {content:"\76"}
-.ni-tap:before {content:"\77"}
-.ni-integration:before {content:"\78"}
-.ni-tools:before {content:"\79"}
-.ni-lock:before {content:"\7a"}
-.ni-webdev:before {content:"\41"}
+.ni-backend:before { content: "\61";}
+.ni-ball:before { content: "\62";}
+.ni-brain:before { content: "\63";}
+.ni-chat:before { content: "\64";}
+.ni-comment:before { content: "\65";}
+.ni-compass:before { content: "\66";}
+.ni-connection:before { content: "\67";}
+.ni-database:before { content: "\68";}
+.ni-frontend:before { content: "\69";}
+.ni-gear:before { content: "\6a";}
+.ni-index:before { content: "\6b";}
+.ni-integration:before { content: "\6c";}
+.ni-lock:before { content: "\6d";}
+.ni-logo:before { content: "\6e";}
+.ni-message:before { content: "\6f";}
+.ni-pencil:before { content: "\70";}
+.ni-phone:before { content: "\71";}
+.ni-pin:before { content: "\72";}
+.ni-portfolio:before { content: "\73";}
+.ni-printer:before { content: "\74";}
+.ni-responsive:before { content: "\75";}
+.ni-rocket:before { content: "\76";}
+.ni-star:before { content: "\77";}
+.ni-sync:before { content: "\78";}
+.ni-tap:before { content: "\79";}
+.ni-tools:before { content: "\7a";}
+.ni-webdev:before { content: "\41";}
+.ni-webpage:before { content: "\42";}
 
 /* Logotipos clientes */
 .bs, .cd, .bdl, .cmg, .tob, .qfs, .cms, .gp, .lcdh, .no, .per, .pev, .qui, .ss, .uni, .bc, .sh, .art, .gm, .emn, .gstar, .kul, .seg {background-size:50%; background-position:50%; background-repeat:no-repeat}
