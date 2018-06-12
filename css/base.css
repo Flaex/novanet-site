@@ -1,24 +1,21 @@
 /* Novanet Estilos */
 body {color:#808285; font-family:'Fira Sans', sans-serif; display: flex; flex-wrap: wrap;}
-
-.container { width: 94%; display:flex; flex-wrap:wrap; box-sizing: border-box; background:url(../img/bg.svg); padding: 4em 5em 0 2em}
+.container { display:flex; flex-wrap:wrap; box-sizing: border-box; background:url(../img/bg.svg)}
 a {text-decoration:none}
 ul li {list-style:none; text-align:center}
 table {border-collapse:separate; border-spacing:0; vertical-align:middle}
 caption, th, td {text-align:left; font-weight:normal; vertical-align:middle}
 a img {border:none}
-
-section, .stories, #nos {padding:2em 0; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box}
+section, .stories, #nos { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box}
 #por, #por-ini, #hac, #cli, #con { width: 100%}
-footer {padding:1em 0}
 .line {border-bottom:#d1d2d3 solid 1px}
 
 /* Tipografia */
-h1 {font-style:italic; font-weight:700; font-size:3.1em; line-height:1.1em}
-h2 {margin:0 0 0.2em 0; font-weight:900; font-size:1.8em; color:#4e4d50 }
-h3 {margin:0.8em 0 0.1em 0; font-weight:900; font-size:1.5em}
-h4 {margin:0.4em 0 0.1em 0; font-weight:900; font-size:1.25em; color:#4e4d50}
-p {font-weight:300; font-size:1.3em; line-height:1.4em}
+h1 { font-style:italic; font-weight:700;}
+h2 { font-weight:900; color:#4e4d50 }
+h3 { font-weight:900;}
+h4 { font-weight:900; color:#4e4d50}
+p { font-weight:300; }
 
 /* Colores */
 .green-1 {color:#85d100}
@@ -63,25 +60,23 @@ section .tabs { display: flex; flex-direction:row;}
 section .tabs li {border-bottom:#d1d2d3 4px solid}
 section .tabs li:hover {border-bottom:#808285 4px solid; -moz-transition:all 0.2s ease-in; -webkit-transition:all 0.2s ease-in; -o-transition:all 0.2s ease-in}
 section .tabs li.selected {border-bottom:#4e4d50 4px solid}
-section .tabs .btn {position:relative; display:flex; flex-direction:column; justify-content:center; width:6em; height:6em; margin:0 0 0.25em 0; text-align:center; overflow:hidden}
+section .tabs .btn {position:relative; display:flex; flex-direction:column; justify-content:center; text-align:center; overflow:hidden}
 section .tabs .btn {cursor:pointer}
 section .tabs .btn:focus { outline: none;}
-section .tabs .btn:before {content:''; position:absolute; top:0; left:0; width:6em; height:0; ; -webkit-transition-duration:0.4s; transition-duration:0.4s}
-section .tabs .btn:hover:before {height:6em}
-section .tabs .btn:hover i {font-size:1.2em; -webkit-transition-duration:0.4s; transition-duration:0.4s}
+section .tabs .btn:before {content:''; position:absolute; -webkit-transition-duration:0.4s; transition-duration:0.4s}
+section .tabs .btn:hover i { -webkit-transition-duration:0.4s; transition-duration:0.4s}
 section .tabs .btn:not(:hover) i {font-size:1em; -webkit-transition-duration:0.4s; transition-duration:0.4s}
-section .tabs .btn i {margin:0.3em 0 0; font-size:1em; color:#fff}
+section .tabs .btn i { color:#fff}
 section .tabs-info {animation: fadeIn 0.3s ; -webkit-animation: fadeIn 0.3s ; -moz-animation: fadeIn 0.3s; -o-animation: fadeIn 0.3s;}
 @keyframes fadeIn { 0% { opacity: 0;}  100% { opacity: 100% }}
-section .tab-item {width: 33%; }
-section .tab-item p {font-size: 1.2em; line-height: 1.4em; padding-right: 1em;}
-section .tab-item p.dates { font-size: 1.2em; line-height: 1.1em;; padding-right: 1em; font-style: italic;}
+section .tab-item {width: 33.3333333%; }
+section .tab-item p.dates { font-style: italic;}
 
-nav { width: 6%; display: flex; flex-wrap: wrap; justify-content: center; padding-top: 4em}
+nav { display: flex; flex-wrap: wrap; justify-content: center;}
 nav .tabs { position: fixed;}
-nav .tabs li { border-radius: 50%; min-width: 58px; min-height: 58px; margin-bottom: 1em; box-sizing: border-box; padding: 0.7em 0.6em 0 0.6em;}
-nav .tabs li i { font-size: 0.55em;color: white}
-nav .tabs li i.fa-chevron-up, nav .tabs li i.fa-chevron-left { padding-top: 1em; font-size: 0.75em;}
+nav .tabs li { border-radius: 50%; box-sizing: border-box}
+nav .tabs li i { color: white}
+
 
 /* Header */
 header { display: flex; flex-wrap: wrap; width:100%}
@@ -94,19 +89,17 @@ ul.sm-list li i {font-size:1.45em; padding-top: 0.35em;}
 i {font-style:normal; color:#808285}
 
 /* Historia - nosotros */
-#ini { width:100%; display: grid; grid-auto-flow: column; grid-template-columns: 50% 50%;}
-#ini .canvasContainer { grid-row: 1 / span 2; overflow: hidden; box-sizing: border-box;}
+#ini { width:100%;}
+#ini .canvasContainer {overflow: hidden; box-sizing: border-box;}
 .hide { display: none;}
 .show { display: block;}
-#ini #rocket { width: 105%; margin-left: -7em; animation: fadeIn 0.3s; -webkit-animation: fadeIn 0.3s}
-#ini #brain { width: 105%; margin-left: -3.5em;  animation: fadeIn 0.3s; -webkit-animation: fadeIn 0.3s}
-#ini #goal { width: 105%; margin-left: -1.5em; padding-top: 3em;animation: fadeIn 0.3s;-webkit-animation: fadeIn 0.3s}
-
-.stories p {font-size:1.9em; line-height:1.2em;}
+#ini #rocket { animation: fadeIn 0.3s; -webkit-animation: fadeIn 0.3s}
+#ini #brain { animation: fadeIn 0.3s; -webkit-animation: fadeIn 0.3s}
+#ini #goal {  animation: fadeIn 0.3s;-webkit-animation: fadeIn 0.3s}
 
 /* Hacemos */
-#hac .ico {margin:0.5em 0 0em 0; width:5em; height:5em; border-radius:50%; text-align:center}
-#hac .ico i { line-height: 9.5em; font-size:0.9em; color:#fff}
+#hac .ico {border-radius:50%; text-align:center}
+#hac .ico i {color:#fff}
 #hac .ico:hover {transform:translate(0.5em); -moz-transition:all 0.2s ease-in; -webkit-transition:all 0.2s ease-in; -o-transition:all 0.2s ease-in; transition:all 0.2s ease-in}
 #hac .ico:not(:hover) {transform:translate(0); -moz-transition:all 0.2s ease-out; -webkit-transition:all 0.2s ease-out; -o-transition:all 0.2s ease-out; transition:all 0.2s ease-out}
 #diseno, #desarrollo, #integracion, #branding, #disenoweb, #logotipos, #logos-clientes { display: flex; flex-wrap: wrap;}
@@ -120,24 +113,18 @@ i {font-style:normal; color:#808285}
 .triangleBg {display: inline-block; position:relative; box-sizing:border-box; -webkit-clip-path: polygon(50% 0%, 0% 90%, 100% 90%);clip-path:polygon(50% 6%, 0% 90%, 100% 90%);}
 .triangle {display: inline-block; position:relative; box-sizing:border-box; -webkit-clip-path: polygon(50% 10%, 0% 80%, 100% 80%);clip-path: polygon(50% 9%, 3% 91%, 97% 91%);}
 .triangle img {width: 98% !important; margin: 2% 1%;}
-#por .thumbs, #por-ini .thumbs {margin:0em 0 3em 0}
 #por .thumbs .thumb, #por-ini .thumbs .thumb  {width: 7em;margin: 0.5em 1em 0 0}
 #por .thumbs .thumb img, #por-ini .thumbs .thumb img {width:100%}
 #por .section-link, #por-ini .section-link {font-weight:900; color: #4e4d50}
-#por a.url { line-height: 1.6em; font-weight: 700}
-
+#por a.url {font-weight: 700}
 #iniPor { width:100%; display: flex; flex-wrap: wrap;}
-#iniPor .stories { width: 50%}
-#iniPor .canvasContainer { width: 50%; overflow: hidden; box-sizing: border-box;}
-#iniPor #bra { width: 90%; animation: fadeIn 0.3s; -webkit-animation: fadeIn 0.3s}
-#iniPor #web { width: 90%; animation: fadeIn 0.3s; -webkit-animation: fadeIn 0.3s}
-#iniPor #log { width: 90%; animation: fadeIn 0.3s;-webkit-animation: fadeIn 0.3s}
+#iniPor .canvasContainer { overflow: hidden; box-sizing: border-box;}
+#iniPor #bra { animation: fadeIn 0.3s; -webkit-animation: fadeIn 0.3s}
+#iniPor #web { animation: fadeIn 0.3s; -webkit-animation: fadeIn 0.3s}
+#iniPor #log { animation: fadeIn 0.3s;-webkit-animation: fadeIn 0.3s}
 
 /* The Modal (background) */
 .modal {display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background: rgba(255,255,255,0.7); animation: fadeIn 0.3s ; -webkit-animation: fadeIn 0.3s ; -moz-animation: fadeIn 0.3s; -o-animation: fadeIn 0.3s}
-
-/* Modal Content/Box */
-.modal-content {margin: 1.5% auto;  padding: 10px; width: 50% }
 
 /* The Close Button */
 span.close { position:relative; display: inline-block; -webkit-clip-path: circle(43% at 50% 50%); clip-path: circle(43% at 50% 50%)}
@@ -145,23 +132,16 @@ span.close { position:relative; display: inline-block; -webkit-clip-path: circle
 .close:hover, .close:focus { color: black; text-decoration: none; cursor: pointer;}
 img.preview { margin: 0 auto; max-width: 100%; -moz-box-shadow: 1px 1px 3px #666; -webkit-box-shadow: 1px 1px 3px #666; box-shadow: 1px 1px 3px #666 }
 
-.porfull .porfull-resu {margin:0 0 3em 0}
-.porfull .col-33 {margin:2.5em 0 0 0 !important}
-.porfull ul {padding-bottom:2.5em; border-bottom:#ecedee dotted 4px}
-
 /* Clientes */
-#cli .slider {margin:2em 0 0 0}
-#cli .slider div {cursor:pointer; width:100%; height:9em; text-align:center; -webkit-filter:grayscale(100%); -moz-filter:grayscale(100%); -o-filter:grayscale(100%); filter:grayscale(100%)}
+#cli .slider div {cursor:pointer; width:100%; text-align:center; -webkit-filter:grayscale(100%); -moz-filter:grayscale(100%); -o-filter:grayscale(100%); filter:grayscale(100%)}
 #cli .slider div:hover {-webkit-filter:grayscale(0%); -moz-filter:grayscale(0%); -o-filter:grayscale(0%); filter:grayscale(0%); -moz-transition:all 0.25s ease-in; -webkit-transition:all 0.25s ease-in; -o-transition:all 0.25s ease-in}
-.logo-item { width: 1em; height: 1em}
-#cli .logos-clientes { height: 100%; height: 220px}
 
 /* Contacto y Login Whs */
 textarea, form input::placeholder, form button {font-family:'Fira Sans', sans-serif}
-#con .col-50 p {padding:0 0 2em 0}
-#Whs .col-50 p {padding:1em 0 2em 0}
-#con .col-50 p, #Whs .col-50 p {border-bottom:#ecedee dotted 4px}
-#con form, #whs form {margin:1em 0; padding:2em; width:50%; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
+#con p {padding:0 0 2em 0}
+#whs p {padding:1em 0 2em 0}
+#con p, #whs p {border-bottom:#ecedee dotted 4px}
+#con form, #whs form {margin:1em 0; padding:2em; width:50%; background-color: #e8e9ea; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
 #con form h4, #whs form h4 {margin-bottom: 1em;}
 #con form input[type=text], form textarea, #whs form input[type=text], #whs form input[type=password] {width:100%; margin:1em 0 1.5em 0; font-weight:300; font-size:1.2em; background:none; border:none}
 #con form input[type=text], form textarea {border-bottom:#00bebe 1px solid}
@@ -312,3 +292,69 @@ footer ul.sm-list li i { font-size: 1.1em; padding-top: 0.4em;}
 
 /* Logo de Cámara de Aseguradores de Venezuela */
 .seg {background-image:url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAxNzIgMTcyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxNzIgMTcyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGZpbGw9IiMzODlFQzgiIGQ9Ik02MC4xLDkyLjJ2MTUuMWMwLDUtNC4xLDktOSw5SDExLjNjLTUsMC05LTQtOS05VjY0LjZjMC01LDQuMS05LDktOWgzOS44YzUsMCw5LDQuMSw5LDl2MTVMMzMuNyw1OC44DQoJCWwwLjMsMC4zYy0wLjYtMC41LTEuMy0wLjgtMi4xLTAuOGMtMS43LDAtMy4xLDEuNC0zLjEsMy4xdjQ5LjRjMCwxLjcsMS40LDMuMSwzLjEsMy4xYzAuOCwwLDEuNS0wLjMsMi4xLTAuOEw2MC4xLDkyLjJ6Ii8+DQoJPGc+DQoJCTxwYXRoIGZpbGw9IiMzMjMwMzEiIGQ9Ik00MC42LDg0LjVDNDEsODMuMSw0Mi40LDgyLDQ0LDgyYzEuNiwwLDIuOSwxLDMuNCwyLjVoOS4xQzU2LDc4LjEsNTAuNiw3Myw0NCw3M2MtNi42LDAtMTIsNS0xMi41LDExLjUNCgkJCUg0MC42eiIvPg0KCQk8cGF0aCBmaWxsPSIjMzIzMDMxIiBkPSJNNDcuNCw4Ni44Yy0wLjUsMS40LTEuOCwyLjUtMy40LDIuNWMtMS42LDAtMi45LTEtMy40LTIuNWgtOS4xYzAuNiw2LjQsNiwxMS41LDEyLjUsMTEuNQ0KCQkJYzYuNiwwLDEyLTUsMTIuNi0xMS41SDQ3LjR6Ii8+DQoJPC9nPg0KCTxnPg0KCQk8cGF0aCBkPSJNNzQuNSw2Ni40Yy0wLjMtMS42LTEuNi0yLjQtMy4xLTIuNGMtMi43LDAtMy44LDIuMi0zLjgsNC40YzAsMi4yLDEuMSw0LjQsMy44LDQuNGMxLjksMCwzLjEtMS40LDMuMi0zLjJoMQ0KCQkJYy0wLjMsMi41LTEuOCw0LjEtNC4yLDQuMWMtMy4yLDAtNC44LTIuNS00LjgtNS4zYzAtMi44LDEuNi01LjMsNC44LTUuM2MxLjksMCwzLjgsMS4xLDQuMSwzLjNINzQuNXoiLz4NCgkJPHBhdGggZD0iTTc2LjgsNjguM2MwLjEtMS43LDEuMy0yLjQsMy0yLjRjMS4zLDAsMi43LDAuNCwyLjcsMi4zdjMuOWMwLDAuMywwLjIsMC41LDAuNSwwLjVjMC4xLDAsMC4yLDAsMC4zLTAuMXYwLjcNCgkJCWMtMC4yLDAtMC4zLDAuMS0wLjYsMC4xYy0wLjksMC0xLTAuNS0xLTEuM2gwYy0wLjYsMC45LTEuMywxLjUtMi43LDEuNWMtMS4zLDAtMi40LTAuNy0yLjQtMi4xYzAtMi4xLDItMi4xLDMuOS0yLjMNCgkJCWMwLjctMC4xLDEuMS0wLjIsMS4xLTFjMC0xLjItMC45LTEuNS0xLjktMS41Yy0xLjEsMC0xLjksMC41LTIsMS43TDc2LjgsNjguM0w3Ni44LDY4LjN6IE04MS42LDY5LjRMODEuNiw2OS40DQoJCQljLTAuMSwwLjItMC41LDAuMy0wLjgsMC4zYy0xLjUsMC4zLTMuNCwwLjMtMy40LDEuN2MwLDAuOSwwLjgsMS40LDEuNiwxLjRjMS40LDAsMi42LTAuOSwyLjUtMi4zTDgxLjYsNjkuNEw4MS42LDY5LjR6DQoJCQkgTTc5LjYsNjUuMWgtMC43bDEuNS0yaDEuMUw3OS42LDY1LjF6Ii8+DQoJCTxwYXRoIGQ9Ik04NC4yLDY2LjFoMC44djEuMmgwYzAuNS0wLjksMS4yLTEuNCwyLjQtMS40YzEsMCwxLjgsMC41LDIuMSwxLjRjMC40LTEsMS40LTEuNCwyLjMtMS40YzEuNiwwLDIuNCwwLjgsMi40LDIuNnY1aC0wLjkNCgkJCXYtNC45YzAtMS4yLTAuNS0xLjktMS43LTEuOWMtMS41LDAtMiwxLjMtMiwyLjZ2NC4xaC0wLjl2LTVjMC0xLTAuNC0xLjgtMS41LTEuOGMtMS41LDAtMi4yLDEuMi0yLjIsMi43djQuMWgtMC45TDg0LjIsNjYuMQ0KCQkJTDg0LjIsNjYuMXoiLz4NCgkJPHBhdGggZD0iTTk1LjksNjguM2MwLjEtMS43LDEuMy0yLjQsMy0yLjRjMS4zLDAsMi43LDAuNCwyLjcsMi4zdjMuOWMwLDAuMywwLjIsMC41LDAuNSwwLjVjMC4xLDAsMC4yLDAsMC4zLTAuMXYwLjcNCgkJCWMtMC4yLDAtMC4zLDAuMS0wLjYsMC4xYy0wLjksMC0xLTAuNS0xLTEuM2gwYy0wLjYsMC45LTEuMywxLjUtMi43LDEuNWMtMS4zLDAtMi40LTAuNy0yLjQtMi4xYzAtMi4xLDItMi4xLDMuOS0yLjMNCgkJCWMwLjctMC4xLDEuMS0wLjIsMS4xLTFjMC0xLjItMC45LTEuNS0xLjktMS41Yy0xLjEsMC0xLjksMC41LTIsMS43TDk1LjksNjguM0w5NS45LDY4LjN6IE0xMDAuNyw2OS40TDEwMC43LDY5LjQNCgkJCWMtMC4xLDAuMi0wLjUsMC4zLTAuOCwwLjNjLTEuNSwwLjMtMy40LDAuMy0zLjQsMS43YzAsMC45LDAuOCwxLjQsMS42LDEuNGMxLjQsMCwyLjYtMC45LDIuNS0yLjMNCgkJCUMxMDAuNyw3MC42LDEwMC43LDY5LjQsMTAwLjcsNjkuNHoiLz4NCgkJPHBhdGggZD0iTTEwMy4zLDY2LjFoMC44djEuN2gwYzAuNS0xLjIsMS40LTEuOSwyLjgtMS44djAuOWMtMS42LTAuMS0yLjcsMS4xLTIuNywyLjZ2My45aC0wLjlMMTAzLjMsNjYuMUwxMDMuMyw2Ni4xeiIvPg0KCQk8cGF0aCBkPSJNMTA3LjcsNjguM2MwLjEtMS43LDEuMy0yLjQsMy0yLjRjMS4zLDAsMi43LDAuNCwyLjcsMi4zdjMuOWMwLDAuMywwLjIsMC41LDAuNSwwLjVjMC4xLDAsMC4yLDAsMC4zLTAuMXYwLjcNCgkJCWMtMC4yLDAtMC4zLDAuMS0wLjYsMC4xYy0wLjksMC0xLTAuNS0xLTEuM2gwYy0wLjYsMC45LTEuMywxLjUtMi43LDEuNWMtMS4zLDAtMi40LTAuNy0yLjQtMi4xYzAtMi4xLDItMi4xLDMuOS0yLjMNCgkJCWMwLjctMC4xLDEuMS0wLjIsMS4xLTFjMC0xLjItMC45LTEuNS0xLjktMS41Yy0xLjEsMC0xLjksMC41LTIsMS43TDEwNy43LDY4LjNMMTA3LjcsNjguM3ogTTExMi41LDY5LjRMMTEyLjUsNjkuNA0KCQkJYy0wLjEsMC4yLTAuNSwwLjMtMC44LDAuM2MtMS41LDAuMy0zLjQsMC4zLTMuNCwxLjdjMCwwLjksMC44LDEuNCwxLjYsMS40YzEuNCwwLDIuNi0wLjksMi41LTIuM1Y2OS40eiIvPg0KCQk8cGF0aCBkPSJNNzMuNCw5MC40aC0wLjhWODloMGMtMC40LDAuOS0xLjUsMS42LTIuNiwxLjZjLTIuMiwwLTMuMy0xLjgtMy4zLTMuOWMwLTIuMSwxLjEtMy45LDMuMy0zLjljMS4xLDAsMi4xLDAuNiwyLjUsMS42aDANCgkJCXYtNC4yaDAuOVY5MC40eiBNNjkuOSw4OS44YzEuOSwwLDIuNi0xLjYsMi42LTMuMWMwLTEuNS0wLjctMy4xLTIuNi0zLjFjLTEuNywwLTIuNCwxLjYtMi40LDMuMUM2Ny41LDg4LjIsNjguMiw4OS44LDY5LjksODkuOHoiDQoJCQkvPg0KCQk8cGF0aCBkPSJNNzUuNiw4N2MwLDEuMywwLjcsMi45LDIuNCwyLjljMS4zLDAsMi0wLjgsMi4zLTEuOWgwLjljLTAuNCwxLjctMS4zLDIuNi0zLjIsMi42Yy0yLjMsMC0zLjMtMS44LTMuMy0zLjkNCgkJCWMwLTEuOSwxLTMuOSwzLjMtMy45YzIuMywwLDMuMywyLDMuMiw0LjFDODEuMiw4Nyw3NS42LDg3LDc1LjYsODd6IE04MC4zLDg2LjJjMC0xLjMtMC45LTIuNi0yLjMtMi42Yy0xLjUsMC0yLjMsMS4zLTIuNCwyLjYNCgkJCUg4MC4zeiIvPg0KCQk8cGF0aCBkPSJNODkuNCw4MC4zaDEuMWw0LDEwLjFoLTFsLTEuMi0zLjFoLTQuNmwtMS4yLDMuMWgtMUw4OS40LDgwLjN6IE04Ny45LDg2LjRoNGwtMS45LTUuMkw4Ny45LDg2LjR6Ii8+DQoJCTxwYXRoIGQ9Ik05OS42LDg1LjJjMC0xLjEtMC45LTEuNi0xLjktMS42Yy0wLjgsMC0xLjcsMC4zLTEuNywxLjNjMCwwLjgsMC45LDEuMSwxLjUsMS4ybDEuMiwwLjNjMSwwLjIsMi4xLDAuNywyLjEsMg0KCQkJYzAsMS42LTEuNiwyLjItMi45LDIuMmMtMS43LDAtMi45LTAuOC0zLTIuNmgwLjljMC4xLDEuMiwxLDEuOCwyLjIsMS44YzAuOCwwLDItMC40LDItMS40YzAtMC44LTAuOC0xLjEtMS42LTEuM2wtMS4xLTAuMw0KCQkJYy0xLjItMC4zLTItMC43LTItMmMwLTEuNSwxLjUtMiwyLjctMmMxLjUsMCwyLjYsMC44LDIuNywyLjNMOTkuNiw4NS4yTDk5LjYsODUuMnoiLz4NCgkJPHBhdGggZD0iTTEwMi42LDg3YzAsMS4zLDAuNywyLjksMi40LDIuOWMxLjMsMCwyLTAuOCwyLjMtMS45aDAuOWMtMC40LDEuNy0xLjMsMi42LTMuMiwyLjZjLTIuMywwLTMuMy0xLjgtMy4zLTMuOQ0KCQkJYzAtMS45LDEtMy45LDMuMy0zLjljMi4zLDAsMy4zLDIsMy4yLDQuMUMxMDguMiw4NywxMDIuNiw4NywxMDIuNiw4N3ogTTEwNy4zLDg2LjJjMC0xLjMtMC45LTIuNi0yLjMtMi42Yy0xLjUsMC0yLjMsMS4zLTIuNCwyLjYNCgkJCUgxMDcuM3oiLz4NCgkJPHBhdGggZD0iTTExNS41LDg5LjhjMCwyLjItMC44LDMuNS0zLjIsMy41Yy0xLjUsMC0yLjktMC42LTMtMi4yaDAuOWMwLjIsMS4xLDEuMSwxLjUsMi4xLDEuNWMxLjYsMCwyLjMtMSwyLjMtMi44di0xaDANCgkJCWMtMC40LDAuOS0xLjMsMS41LTIuMywxLjVjLTIuMywwLTMuMy0xLjctMy4zLTMuN2MwLTIsMS4yLTMuNywzLjMtMy43YzEuMSwwLDIsMC43LDIuMywxLjVoMHYtMS4zaDAuOUwxMTUuNSw4OS44TDExNS41LDg5Ljh6DQoJCQkgTTExNC42LDg2LjZjMC0xLjQtMC43LTMtMi4zLTNjLTEuNywwLTIuNCwxLjUtMi40LDNjMCwxLjUsMC44LDIuOSwyLjQsMi45QzExMy44LDg5LjUsMTE0LjYsODguMSwxMTQuNiw4Ni42eiIvPg0KCQk8cGF0aCBkPSJNMTIzLjEsOTAuNGgtMC44di0xLjNoMGMtMC41LDEtMS40LDEuNS0yLjUsMS41Yy0xLjgsMC0yLjYtMS4xLTIuNi0yLjh2LTQuN2gwLjl2NC44YzAsMS4zLDAuNSwyLDIsMg0KCQkJYzEuNSwwLDIuMi0xLjQsMi4yLTIuOXYtMy44aDAuOUwxMjMuMSw5MC40TDEyMy4xLDkwLjR6Ii8+DQoJCTxwYXRoIGQ9Ik0xMjQuOCw4My4xaDAuOHYxLjdoMGMwLjUtMS4yLDEuNC0xLjksMi44LTEuOHYwLjljLTEuNi0wLjEtMi43LDEuMS0yLjcsMi42djMuOWgtMC45TDEyNC44LDgzLjFMMTI0LjgsODMuMXoiLz4NCgkJPHBhdGggZD0iTTEyOS4yLDg1LjNjMC4xLTEuNywxLjMtMi40LDMtMi40YzEuMywwLDIuNywwLjQsMi43LDIuM3YzLjljMCwwLjMsMC4yLDAuNSwwLjUsMC41YzAuMSwwLDAuMiwwLDAuMy0wLjF2MC43DQoJCQljLTAuMiwwLTAuMywwLjEtMC42LDAuMWMtMC45LDAtMS0wLjUtMS0xLjNoMGMtMC42LDAuOS0xLjMsMS41LTIuNywxLjVjLTEuMywwLTIuNC0wLjctMi40LTIuMWMwLTIuMSwyLTIuMSwzLjktMi4zDQoJCQljMC43LTAuMSwxLjEtMC4yLDEuMS0xYzAtMS4yLTAuOS0xLjUtMS45LTEuNWMtMS4xLDAtMS45LDAuNS0yLDEuN0wxMjkuMiw4NS4zTDEyOS4yLDg1LjN6IE0xMzQsODYuNEwxMzQsODYuNA0KCQkJYy0wLjEsMC4yLTAuNSwwLjMtMC44LDAuM2MtMS41LDAuMy0zLjQsMC4zLTMuNCwxLjdjMCwwLjksMC44LDEuNCwxLjYsMS40YzEuNCwwLDIuNi0wLjksMi41LTIuM1Y4Ni40TDEzNCw4Ni40eiIvPg0KCQk8cGF0aCBkPSJNMTQzLDkwLjRoLTAuOFY4OWgwYy0wLjQsMC45LTEuNSwxLjYtMi42LDEuNmMtMi4yLDAtMy4zLTEuOC0zLjMtMy45YzAtMi4xLDEuMS0zLjksMy4zLTMuOWMxLjEsMCwyLjIsMC42LDIuNSwxLjZoMA0KCQkJdi00LjJoMC45TDE0Myw5MC40TDE0Myw5MC40eiBNMTM5LjYsODkuOGMxLjksMCwyLjYtMS42LDIuNi0zLjFjMC0xLjUtMC43LTMuMS0yLjYtMy4xYy0xLjcsMC0yLjQsMS42LTIuNCwzLjENCgkJCUMxMzcuMiw4OC4yLDEzNy45LDg5LjgsMTM5LjYsODkuOHoiLz4NCgkJPHBhdGggZD0iTTE1MS4zLDg2LjdjMCwyLjEtMS4yLDMuOS0zLjUsMy45Yy0yLjIsMC0zLjUtMS44LTMuNS0zLjljMC0yLjEsMS4yLTMuOSwzLjUtMy45QzE1MC4xLDgyLjksMTUxLjMsODQuNiwxNTEuMyw4Ni43eg0KCQkJIE0xNDUuMyw4Ni43YzAsMS42LDAuOCwzLjEsMi42LDMuMWMxLjcsMCwyLjYtMS42LDIuNi0zLjFjMC0xLjYtMC44LTMuMS0yLjYtMy4xQzE0Ni4xLDgzLjYsMTQ1LjMsODUuMiwxNDUuMyw4Ni43eiIvPg0KCQk8cGF0aCBkPSJNMTUyLjYsODMuMWgwLjh2MS43aDBjMC41LTEuMiwxLjQtMS45LDIuOC0xLjh2MC45Yy0xLjYtMC4xLTIuNywxLjEtMi43LDIuNnYzLjloLTAuOUwxNTIuNiw4My4xTDE1Mi42LDgzLjF6Ii8+DQoJCTxwYXRoIGQ9Ik0xNTcuMyw4N2MwLDEuMywwLjcsMi45LDIuNCwyLjljMS4zLDAsMi0wLjgsMi4zLTEuOWgwLjljLTAuNCwxLjctMS4zLDIuNi0zLjIsMi42Yy0yLjMsMC0zLjMtMS44LTMuMy0zLjkNCgkJCWMwLTEuOSwxLTMuOSwzLjMtMy45YzIuMywwLDMuMywyLDMuMiw0LjFDMTYyLjksODcsMTU3LjMsODcsMTU3LjMsODd6IE0xNjIuMSw4Ni4yYzAtMS4zLTAuOS0yLjYtMi4zLTIuNmMtMS41LDAtMi4zLDEuMy0yLjQsMi42DQoJCQlIMTYyLjF6Ii8+DQoJCTxwYXRoIGQ9Ik0xNjguNSw4NS4yYzAtMS4xLTAuOS0xLjYtMS45LTEuNmMtMC44LDAtMS43LDAuMy0xLjcsMS4zYzAsMC44LDAuOSwxLjEsMS41LDEuMmwxLjIsMC4zYzEsMC4yLDIuMSwwLjcsMi4xLDINCgkJCWMwLDEuNi0xLjYsMi4yLTIuOSwyLjJjLTEuNywwLTIuOS0wLjgtMy0yLjZoMC45YzAuMSwxLjIsMSwxLjgsMi4yLDEuOGMwLjgsMCwyLTAuNCwyLTEuNGMwLTAuOC0wLjgtMS4xLTEuNi0xLjNsLTEuMS0wLjMNCgkJCWMtMS4yLTAuMy0yLTAuNy0yLTJjMC0xLjUsMS41LTIsMi43LTJjMS41LDAsMi42LDAuOCwyLjcsMi4zTDE2OC41LDg1LjJMMTY4LjUsODUuMnoiLz4NCgkJPHBhdGggZD0iTTczLjQsMTA3LjNoLTAuOFYxMDZoMGMtMC40LDAuOS0xLjUsMS42LTIuNiwxLjZjLTIuMiwwLTMuMy0xLjgtMy4zLTMuOWMwLTIuMSwxLjEtMy45LDMuMy0zLjljMS4xLDAsMi4xLDAuNiwyLjUsMS42aDANCgkJCXYtNC4yaDAuOVYxMDcuM3ogTTY5LjksMTA2LjhjMS45LDAsMi42LTEuNiwyLjYtMy4xYzAtMS41LTAuNy0zLjEtMi42LTMuMWMtMS43LDAtMi40LDEuNi0yLjQsMy4xDQoJCQlDNjcuNSwxMDUuMiw2OC4yLDEwNi44LDY5LjksMTA2Ljh6Ii8+DQoJCTxwYXRoIGQ9Ik03NS42LDEwMy45YzAsMS4zLDAuNywyLjksMi40LDIuOWMxLjMsMCwyLTAuOCwyLjMtMS45aDAuOWMtMC40LDEuNy0xLjMsMi42LTMuMiwyLjZjLTIuMywwLTMuMy0xLjgtMy4zLTMuOQ0KCQkJYzAtMS45LDEtMy45LDMuMy0zLjljMi4zLDAsMy4zLDIsMy4yLDQuMUg3NS42eiBNODAuMywxMDMuMmMwLTEuMy0wLjktMi42LTIuMy0yLjZjLTEuNSwwLTIuMywxLjMtMi40LDIuNkg4MC4zeiIvPg0KCQk8cGF0aCBkPSJNODUuNCw5Ny4yaDFsMy4zLDloMGwzLjMtOWgxbC0zLjcsMTAuMWgtMS4xTDg1LjQsOTcuMnoiLz4NCgkJPHBhdGggZD0iTTk0LjUsMTAzLjljMCwxLjMsMC43LDIuOSwyLjQsMi45YzEuMywwLDItMC44LDIuMy0xLjloMC45Yy0wLjQsMS43LTEuMywyLjYtMy4yLDIuNmMtMi4zLDAtMy4zLTEuOC0zLjMtMy45DQoJCQljMC0xLjksMS0zLjksMy4zLTMuOWMyLjMsMCwzLjMsMiwzLjIsNC4xSDk0LjV6IE05OS4yLDEwMy4yYzAtMS4zLTAuOS0yLjYtMi4zLTIuNmMtMS41LDAtMi4zLDEuMy0yLjQsMi42SDk5LjJ6Ii8+DQoJCTxwYXRoIGQ9Ik0xMDEuMywxMDBoMC45djEuM2gwYzAuMy0wLjksMS4zLTEuNSwyLjMtMS41YzIuMSwwLDIuNywxLjEsMi43LDIuOHY0LjdoLTAuOXYtNC42YzAtMS4zLTAuNC0yLjItMS45LTIuMg0KCQkJYy0xLjQsMC0yLjMsMS4xLTIuMywyLjV2NC4zaC0wLjlDMTAxLjMsMTA3LjMsMTAxLjMsMTAwLDEwMS4zLDEwMHoiLz4NCgkJPHBhdGggZD0iTTEwOS40LDEwMy45YzAsMS4zLDAuNywyLjksMi40LDIuOWMxLjMsMCwyLTAuOCwyLjMtMS45aDAuOWMtMC40LDEuNy0xLjMsMi42LTMuMiwyLjZjLTIuMywwLTMuMy0xLjgtMy4zLTMuOQ0KCQkJYzAtMS45LDEtMy45LDMuMy0zLjljMi4zLDAsMy4zLDIsMy4yLDQuMUgxMDkuNHogTTExNC4xLDEwMy4yYzAtMS4zLTAuOS0yLjYtMi4zLTIuNmMtMS41LDAtMi4zLDEuMy0yLjQsMi42SDExNC4xeiIvPg0KCQk8cGF0aCBkPSJNMTE2LjYsMTA2LjZoNXYwLjhoLTYuMXYtMC43bDQuOC01LjhoLTQuNFYxMDBoNS42djAuNkwxMTYuNiwxMDYuNnoiLz4NCgkJPHBhdGggZD0iTTEyOC43LDEwNy4zaC0wLjhWMTA2aDBjLTAuNSwxLTEuNCwxLjUtMi41LDEuNWMtMS44LDAtMi42LTEuMS0yLjYtMi44VjEwMGgwLjl2NC44YzAsMS4zLDAuNSwyLDIsMg0KCQkJYzEuNSwwLDIuMi0xLjQsMi4yLTIuOVYxMDBoMC45TDEyOC43LDEwNy4zTDEyOC43LDEwNy4zeiIvPg0KCQk8cGF0aCBkPSJNMTMwLjksMTAzLjljMCwxLjMsMC43LDIuOSwyLjQsMi45YzEuMywwLDItMC44LDIuMy0xLjloMC45Yy0wLjQsMS43LTEuMywyLjYtMy4yLDIuNmMtMi4zLDAtMy4zLTEuOC0zLjMtMy45DQoJCQljMC0xLjksMS0zLjksMy4zLTMuOWMyLjMsMCwzLjMsMiwzLjIsNC4xSDEzMC45eiBNMTM1LjYsMTAzLjJjMC0xLjMtMC45LTIuNi0yLjMtMi42Yy0xLjUsMC0yLjMsMS4zLTIuNCwyLjZIMTM1LjZ6Ii8+DQoJCTxwYXRoIGQ9Ik0xMzcuNyw5Ny4yaDAuOXYxMC4xaC0wLjlWOTcuMnoiLz4NCgkJPHBhdGggZD0iTTE0MC4yLDEwMi4zYzAuMS0xLjcsMS4zLTIuNCwzLTIuNGMxLjMsMCwyLjcsMC40LDIuNywyLjN2My45YzAsMC4zLDAuMiwwLjUsMC41LDAuNWMwLjEsMCwwLjIsMCwwLjMtMC4xdjAuNw0KCQkJYy0wLjIsMC0wLjMsMC4xLTAuNiwwLjFjLTAuOSwwLTEtMC41LTEtMS4zaDBjLTAuNiwwLjktMS4zLDEuNS0yLjcsMS41Yy0xLjMsMC0yLjQtMC43LTIuNC0yLjFjMC0yLjEsMi0yLjEsMy45LTIuMw0KCQkJYzAuNy0wLjEsMS4xLTAuMiwxLjEtMWMwLTEuMi0wLjktMS41LTEuOS0xLjVjLTEuMSwwLTEuOSwwLjUtMiwxLjdMMTQwLjIsMTAyLjNMMTQwLjIsMTAyLjN6IE0xNDUsMTAzLjRMMTQ1LDEwMy40DQoJCQljLTAuMSwwLjItMC41LDAuMy0wLjgsMC4zYy0xLjUsMC4zLTMuNCwwLjMtMy40LDEuN2MwLDAuOSwwLjgsMS40LDEuNiwxLjRjMS40LDAsMi42LTAuOSwyLjUtMi4zTDE0NSwxMDMuNEwxNDUsMTAzLjR6Ii8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=')}
+
+/*-- Responsive styles -- */
+
+@media only screen and (min-width:1024px) {
+.container { width: 94%; padding: 4em 5em 0 2em;}
+section, .stories, #nos {padding:2em 0;}
+
+h1 {font-size:3.1em; line-height:1.1em}
+h2 {margin:0 0 0.2em 0; font-size:1.8em; color:#4e4d50 }
+h3 {margin:0.8em 0 0.1em 0; font-size:1.5em}
+h4 {margin:0.4em 0 0.1em 0; font-size:1.25em; color:#4e4d50}
+p {font-weight:300; font-size:1.3em; line-height:1.4em}
+
+section .tabs .btn { width:6em; height:6em; margin:0 0 0.25em 0;}
+section .tabs .btn:before {top:0; left:0; width:6em; height:0;}
+section .tabs .btn:hover:before {height:6em}
+section .tabs .btn:hover i {font-size:1.2em}
+section .tabs .btn i {margin:0.3em 0 0; font-size:1em;}
+section .tab-item p {font-size: 1.2em; line-height: 1.4em; padding-right: 1em;}
+section .tab-item p.dates { font-size: 1.2em; line-height: 1.1em; padding-right: 1em;}
+
+nav { width: 6%; padding-top: 4em}
+nav .tabs li { min-width: 58px; min-height: 58px; margin-bottom: 1em; padding: 0.7em 0.6em 0 0.6em;}
+nav .tabs li i { font-size: 0.55em;}
+nav .tabs li i.fa-chevron-up, nav .tabs li i.fa-chevron-left { padding-top: 1em; font-size: 0.75em;}
+
+/* Historia - nosotros */
+#ini { display: grid; grid-auto-flow: column; grid-template-columns: 50% 50%;}
+#ini .canvasContainer { grid-row: 1 / span 2;}
+#ini #rocket { width: 105%; margin-left: -7em; }
+#ini #brain { width: 105%; margin-left: -3.5em; }
+#ini #goal { width: 105%; margin-left: -1.5em; }
+.stories p {font-size:1.9em; line-height:1.2em;}
+
+/* Hacemos */
+#hac .ico {margin:0.5em 0 0em 0; width:5em; height:5em;}
+#hac .ico i { line-height: 9.5em; font-size:0.9em;}
+
+/* Portafolio */
+#por .thumbs, #por-ini .thumbs {margin:0em 0 3em 0}
+#por a.url { line-height: 1.6em}
+#iniPor .stories { width: 50%}
+#iniPor .canvasContainer { width: 50%}
+#iniPor #bra { width: 90%;}
+#iniPor #web { width: 90%;}
+#iniPor #log { width: 90%;}
+
+/* Modal Content/Box */
+.modal-content {margin: 1.5% auto;  padding: 10px; width: 50% }
+
+/* Clientes */
+#cli .slider {margin:2em 0 0 0}
+#cli .slider div { height:9em;}
+#cli .logos-clientes { height: 220px}
+
+footer {padding:1em 0}
+}
+
+@media only screen and (max-width:768px) {
+nav { display: none;}
+.container { width: 100%; padding: 1em}
+header .logo { width: 40%}
+header .sm { width: 60%}
+
+
+}
