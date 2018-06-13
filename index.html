@@ -21,8 +21,6 @@ Logo Ascii
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <!--Main styles-->
   <link href="css/base.css" rel="stylesheet" type="text/css">
-  <!--Slick Carousel-->
-  <link rel="stylesheet" type="text/css" href="css/slick.css" />
   <!--Form input validation-->
   <script language="JavaScript" src="js/gen_validatorv31.js" type="text/javascript"></script>
   <!--Instagram responsive feed from https://lightwidget.com/-->
@@ -31,6 +29,7 @@ Logo Ascii
 </head>
 
 <body onload="init();">
+  <div id="hamburguer" onclick="openNav()">&#9776;</div>
   <nav id="nav"></nav>
   <main id="main" class="container">
     <header>
@@ -93,7 +92,7 @@ Logo Ascii
     const SectionCli = new SectionTemplate();
     SectionCli.sectionHeader(clientes, '#cli', 'clientes');
     SectionCli.tabContent(clientes, '#cli');
-    SectionCli.tabItems(clientes, 12);
+    SectionCli.tabItems(clientes, 8);
     SectionCli.tabsFocus('.redbg-1', '.redbg-2', '.redbg-3');
 
     const SectionCon = new SectionTemplate();
@@ -104,6 +103,16 @@ Logo Ascii
     // Catching and removing empty and undefined elements
     $('p:contains("undefined")').remove();
     $('a[href*="undefined"]').remove();
+    $('.thumbs').on('click', 'a.btn', function(e) {
+      e.preventDefault();
+      let imgPath = $(this).attr('href');
+      let modalRender = '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><img class="preview" src="' + imgPath + '"></div></div>';
+      $('.container').append(modalRender);
+      $('#myModal').css('display', 'block');
+      $('span.close').click(function() {
+        $('#myModal').remove();
+      });
+    });
 
   // Scrolling for all anchors on the page
     $('nav ul.tabs a.btn[href^="#"]').on('click', function(event) {
@@ -127,59 +136,11 @@ Logo Ascii
         $('#myModal').remove();
       });
     });
-  </script>
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="js/slick.min.js"></script>
-  <script>
-    $('.slider').slick({
-      dots: true,
-      infinite: false,
-      speed: 300,
-      slidesToShow: 6,
-      slidesToScroll: 2,
-      responsive: [{
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 4,
-            slidesToScroll: 2,
-            infinite: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 4,
-            slidesToScroll: 1
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1
-          }
-        }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-      ]
-    });
-  </script>
-  <script>
-    $('p:contains("undefined")').remove();
-    $('a[href*="undefined"]').remove();
-    $('.thumbs').on('click', 'a.btn', function(e) {
-      e.preventDefault();
-      let imgPath = $(this).attr('href');
-      let modalRender = '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><img class="preview" src="' + imgPath + '"></div></div>';
-      $('.container').append(modalRender);
-      $('#myModal').css('display', 'block');
-      $('span.close').click(function() {
-        $('#myModal').remove();
-      });
-    });
+
+    // Sidebar menu functions
+    $('#navigation').prepend('<li class="btn" onclick="closeNav()"><a class="btn"><i class="fas fa-times-circle"></i></a></li>')
+    function openNav() {$('#nav').css('width','45px');}
+    function closeNav() {$('#nav').css('width','0');}
   </script>
   <script>
     function initMap() {

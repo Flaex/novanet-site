@@ -31,6 +31,7 @@ Logo Ascii
 </head>
 
 <body onload="init()">
+  <div id="hamburguer" onclick="openNav()">&#9776;</div>
   <nav id="nav"></nav>
   <main class="container">
     <header>
@@ -63,7 +64,7 @@ Logo Ascii
     SectionPorIni.sectionHeader(portafolio, '#por', 'portafolio');
     SectionPorIni.tabContent(portafolio, '#por');
     SectionPorIni.tabItems(portafolio, 9);
-    SectionPorIni.tabsFocus('.orangebg-1', '.orangebg-2', '.orangebg-3');    
+    SectionPorIni.tabsFocus('.orangebg-1', '.orangebg-2', '.orangebg-3');
 
     // Catching and removing empty and undefined elements
     $("a.section-link").remove();
@@ -92,6 +93,10 @@ Logo Ascii
         $('#myModal').remove();
       });
     });
+    // Sidebar menu functions
+    $('#navigation').prepend('<li class="btn" onclick="closeNav()"><a class="btn"><i class="fas fa-times-circle"></i></a></li>')
+    function openNav() {$('#nav').css('width','45px');}
+    function closeNav() {$('#nav').css('width','0');}
   </script>
 
 </body>

@@ -71,7 +71,6 @@ function SectionTemplate() {
   this.tabTitle = '<h3>%data%</h3>';
   this.tabParagraph = '<p>%data%</p>';
   this.tabMap = '<div id="map"></div>';
-  this.tabLogoContainer = '<div class="slider"></div>';
   this.tabLogoItem = '<div class="logo-item %data%"></div>';
   this.tabInCon = '<div id="instagram-feed"><h4>Síguenos en instagram <a class="aqua-1" href="https://www.instagram.com/gruponovanet/" target="_blank">@gruponovanet</a></h4><!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/62ecc39e51b659099da9a64c2e8f76b5.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe></div>';
   this.tabFormCon = '<form method="post" name="myemailform" action="php/process.php"><h4>Envíanos un mensaje</h4><input type="text" name="name" placeholder="Nombre y apellido"><input type="text" name="email" " placeholder="Email"><textarea name="message" placeholder="Mensaje"></textarea><input class="aquabg-1" type="submit" name="submit" value="Enviar"></form>';
@@ -155,7 +154,7 @@ SectionTemplate.prototype.tabItems = function(arr, tabItemIndex) {
         }
       } else {
         $('#' + arr.tabs[i].id).append('<div class="tab-item">' + this.itemIconContainerRender + this.itemIconRender + this.itemTitleRender + this.itemDatesRender + this.itemTextRender + this.itemURLRender + this.tabLogoItemRender + '</div>');
-        $('#logos-clientes').addClass('slider');
+        $('#logos-clientes').addClass('logo-list');
       }
     }
   }
@@ -165,6 +164,7 @@ SectionTemplate.prototype.tabItems = function(arr, tabItemIndex) {
   $("div.undefined:empty").remove();
   $("i.undefined:empty").remove();
   $("div.ico:empty").remove();
+  $("h2:empty").remove();
   $("h3:contains('undefined')").remove();
   $("h4:contains('undefined')").remove();
   $("div.tab-item:empty").remove();

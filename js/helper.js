@@ -22,7 +22,7 @@ const header = {
       "url" : "https://www.instagram.com/gruponovanet/"
     }
   ],
-  "legal" : "Derechos reservados 2006-2018."
+  "legal" : "Derechos reservados 2018."
 };
 
 const navigation = {
@@ -57,7 +57,7 @@ const navigation = {
         "color" : "aquabg-1",
         "icon" : "ni-message",
         "href" : "#con"
-      }
+      },
     ]
 };
 
