@@ -141,47 +141,89 @@ footer ul.sm-list li {list-style:none; border-radius:50%; text-align:center; bor
 .glyphs.character-mapping input {margin:0.5em 0 0; padding:0.3em 0; width:100%; font-family:'Fira Sans', sans-serif; font-weight:300; font-size:1.3em; border:none; text-align:center; color:#fff; background:#808285}
 
 @font-face {
-  font-family: "novanet-icons";
-  src:url("../fonts/novanet-icons.eot");
-  src:url("../fonts/novanet-icons.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/novanet-icons.woff") format("woff"),
-    url("../fonts/novanet-icons.ttf") format("truetype"),
-    url("../fonts/novanet-icons.svg#novanet-icons") format("svg");
+  font-family: 'novanet-icons';
+  src: url('../font/novanet-icons.eot?66370771');
+  src: url('../font/novanet-icons.eot?66370771#iefix') format('embedded-opentype'),
+       url('../font/novanet-icons.woff2?66370771') format('woff2'),
+       url('../font/novanet-icons.woff?66370771') format('woff'),
+       url('../font/novanet-icons.ttf?66370771') format('truetype'),
+       url('../font/novanet-icons.svg?66370771#novanet-icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'novanet-icons';
+    src: url('../font/novanet-icons.svg?66370771#novanet-icons') format('svg');
+  }
+}
+*/
 
-[data-icon]:before { font-family: "novanet-icons" !important; content: attr(data-icon); font-size: 4.5em; font-style: normal !important; font-weight: normal !important; font-variant: normal !important; text-transform: none !important; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
-[class^="ni-"]:before, [class*=" ni-"]:before { font-family: "novanet-icons" !important; font-size: 4.5em; font-style: normal !important; font-weight: normal !important; font-variant: normal !important; text-transform: none !important; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+ [class^="ni-"]:before, [class*=" ni-"]:before {
+  font-family: "novanet-icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  font-size: 4.5em;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  /* opacity: .8; */
 
-.ni-backend:before { content: "\61";}
-.ni-ball:before { content: "\62";}
-.ni-brain:before { content: "\63";}
-.ni-chat:before { content: "\64";}
-.ni-comment:before { content: "\65";}
-.ni-compass:before { content: "\66";}
-.ni-connection:before { content: "\67";}
-.ni-database:before { content: "\68";}
-.ni-frontend:before { content: "\69";}
-.ni-gear:before { content: "\6a";}
-.ni-index:before { content: "\6b";}
-.ni-integration:before { content: "\6c";}
-.ni-lock:before { content: "\6d";}
-.ni-logo:before { content: "\6e";}
-.ni-message:before { content: "\6f";}
-.ni-pencil:before { content: "\70";}
-.ni-phone:before { content: "\71";}
-.ni-pin:before { content: "\72";}
-.ni-portfolio:before { content: "\73";}
-.ni-printer:before { content: "\74";}
-.ni-responsive:before { content: "\75";}
-.ni-rocket:before { content: "\76";}
-.ni-star:before { content: "\77";}
-.ni-sync:before { content: "\78";}
-.ni-tap:before { content: "\79";}
-.ni-tools:before { content: "\7a";}
-.ni-webdev:before { content: "\41";}
-.ni-webpage:before { content: "\42";}
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.ni-webdev:before { content: '\41'; } /* 'A' */
+.ni-webpage:before { content: '\42'; } /* 'B' */
+.ni-backend:before { content: '\61'; } /* 'a' */
+.ni-ball:before { content: '\62'; } /* 'b' */
+.ni-brain:before { content: '\63'; } /* 'c' */
+.ni-chat:before { content: '\64'; } /* 'd' */
+.ni-comment:before { content: '\65'; } /* 'e' */
+.ni-compass:before { content: '\66'; } /* 'f' */
+.ni-connection:before { content: '\67'; } /* 'g' */
+.ni-database:before { content: '\68'; } /* 'h' */
+.ni-frontend:before { content: '\69'; } /* 'i' */
+.ni-gear:before { content: '\6a'; } /* 'j' */
+.ni-index:before { content: '\6b'; } /* 'k' */
+.ni-integration:before { content: '\6c'; } /* 'l' */
+.ni-lock:before { content: '\6d'; } /* 'm' */
+.ni-logo:before { content: '\6e'; } /* 'n' */
+.ni-message:before { content: '\6f'; } /* 'o' */
+.ni-pencil:before { content: '\70'; } /* 'p' */
+.ni-phone:before { content: '\71'; } /* 'q' */
+.ni-pin:before { content: '\72'; } /* 'r' */
+.ni-portfolio:before { content: '\73'; } /* 's' */
+.ni-printer:before { content: '\74'; } /* 't' */
+.ni-responsive:before { content: '\75'; } /* 'u' */
+.ni-rocket:before { content: '\76'; } /* 'v' */
+.ni-star:before { content: '\77'; } /* 'w' */
+.ni-sync:before { content: '\78'; } /* 'x' */
+.ni-tap:before { content: '\79'; } /* 'y' */
+.ni-tools:before { content: '\7a'; } /* 'z' */
 
 /* Logotipos clientes */
 .bs, .cd, .bdl, .cmg, .tob, .qfs, .cms, .gp, .lcdh, .no, .per, .pev, .qui, .ss, .uni, .bc, .sh, .art, .gm, .emn, .gstar, .kul, .seg {background-size:70%; background-position:50%; background-repeat:no-repeat}
@@ -283,7 +325,7 @@ ul.sm-list li i {font-size:1.45em; padding-top: 0.35em;}
 nav { width: 6%; padding-top: 4em}
 nav { display: flex; flex-wrap: wrap; justify-content: center;}
 nav .tabs { position: fixed;}
-nav .tabs li { min-width: 58px; min-height: 58px; margin-bottom: 1em; padding: 0.7em 0.6em 0 0.6em;}
+nav .tabs li { min-width: 58px; min-height: 58px; margin-bottom: 1em; padding: 0.5em;}
 nav .tabs li i { font-size: 0.55em;}
 nav .tabs li i.fa-chevron-up, nav .tabs li i.fa-chevron-left { padding-top: 1em; font-size: 0.75em;}
 #hamburguer { display: none;}
@@ -371,7 +413,7 @@ p {font-weight:300; font-size:1em; line-height:1.4em}
 nav { height: 100%; width: 0; position: fixed; z-index: 1;  top: 0;  right: 0;  background-color: rgba(255,255,255, 0.8);  overflow-x: hidden;  transition: 0.5s; padding-top: 13px;}
 nav #navigation .closebtn {  position: absolute; top: 0; right: 25px; font-size: 36px; margin-left: 50px;}
 nav .tabs {margin: 0 0 0 2.5px; position: fixed;}
-nav .tabs li { min-width: 40px; min-height: 40px; margin-bottom: 0.5em; box-sizing: border-box; padding-top: 0.35em}
+nav .tabs li { min-width: 40px; min-height: 40px; margin-bottom: 0.5em; box-sizing: border-box; padding-top: 0.25em; padding-left: 0.15em; }
 nav .tabs li i { font-size: 0.45em;}
 nav .tabs li i.fa-chevron-up, nav .tabs li i.fa-chevron-left { padding-top: 1em; font-size: 0.6em;}
 nav .tabs li i.fa-times-circle {color: #808285; font-size: 1.5em;padding-top: 0.10em}
