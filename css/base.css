@@ -348,6 +348,7 @@ section .tab-item p.dates { font-size: 1.2em; line-height: 1.1em; padding-right:
 #ini #rocket { width: 105%; margin-left: -7em; }
 #ini #brain { width: 105%; margin-left: -3.5em; }
 #ini #goal { width: 105%; margin-left: -1.5em; }
+#ini #con { width: 105%; margin-left: -1.5em; margin-top: -3em}
 .stories p {font-size:1.9em; line-height:1.2em;}
 
 /*-- Hacemos --*/
@@ -381,13 +382,13 @@ section .tab-item p.dates { font-size: 1.2em; line-height: 1.1em; padding-right:
 #con form input[type=text], form textarea, #whs form input[type=text], #whs form input[type=password] {width:100%; margin:1em 0 1.5em 0;  font-size:1.2em;}
 #con form input[type=submit], #whs form input[type=submit] { padding:0.3em 1em; font-size:1.2em;}
 #con form input[type=submit] i, #whs form input[type=submit] i {padding:0 0 0 0.5em; }
-#con #instagram-feed { width: 50% !important; padding: 0.5em 2em 0em 2em; }
-#con #instagram-feed iframe {margin-top: 1.5em; min-height:310}
+#con #instagram-feed { width: 50% !important; padding: 2em 0 0 3em }
+#con #instagram-feed iframe {margin-top: 1.25em; min-height:310px}
 #map { width: 100%; height: 400px; margin-top: 1em; background-color: grey;}
 
 /*-- Footer --*/
-footer {padding:1em 0}
-footer p {padding:1em 0 0 0; font-size:1.2em; line-height: 1.2em}
+footer { padding: 2em 0;}
+footer p {padding: 0.5em 0 0 0; font-size:1.2em; line-height: 1.2em}
 footer .logo { width: 15%; height: 4em;}
 footer .logo img { width: 80% }
 footer .legal { width: 25%;}
@@ -418,7 +419,6 @@ nav .tabs li i { font-size: 0.45em;}
 nav .tabs li i.fa-chevron-up, nav .tabs li i.fa-chevron-left { padding-top: 1em; font-size: 0.6em;}
 nav .tabs li i.fa-times-circle {color: #808285; font-size: 1.5em;padding-top: 0.10em}
 #hamburguer { position: fixed; box-sizing: border-box; padding: 0.3em 0.4em; top: 12px; right: 2px;font-size:22px; color: #808285;cursor:pointer; border-radius: 50%; border: #808285 solid 2px;}
-
 
 /*-- Section tab buttons --*/
 section .tabs .btn { width:4em; height:4em; margin:0 0 0.25em 0;}
