@@ -329,6 +329,8 @@ nav .tabs li { min-width: 58px; min-height: 58px; margin-bottom: 1em; padding: 0
 nav .tabs li i { font-size: 0.55em;}
 nav .tabs li i.fa-chevron-up, nav .tabs li i.fa-chevron-left { padding-top: 1em; font-size: 0.75em;}
 #hamburguer { display: none;}
+.menu { display: none}
+
 
 /*-- Section tab buttons --*/
 section .tabs .btn { width:6em; height:6em; margin:0 0 0.25em 0;}
@@ -353,7 +355,7 @@ section .tab-item p.dates { font-size: 1.2em; line-height: 1.1em; padding-right:
 
 /*-- Hacemos --*/
 #hac .ico {margin:0.5em 0 0em 0; width:5em; height:5em;}
-#hac .ico i { line-height: 9.5em; font-size:0.9em;}
+#hac .ico i { line-height: 7.75em; font-size:0.9em;}
 
 /*-- Portafolio --*/
 #por .thumbs, #por-ini .thumbs {margin:0em 0 3em 0}
@@ -411,14 +413,14 @@ h4 {font-size:1.1em;}
 p {font-weight:300; font-size:1em; line-height:1.4em}
 
 /*-- Navigation --*/
-nav { height: 100%; width: 0; position: fixed; z-index: 1;  top: 0;  right: 0;  background-color: rgba(255,255,255, 0.8);  overflow-x: hidden;  transition: 0.5s; padding-top: 13px;}
+nav { height: 100%; width: 0; position: fixed; z-index: 1;  top: 0;  right: 0;  background-color: rgba(255,255,255, 0.8);  overflow-x: hidden;  transition: 0.5s; padding-top: 8px;}
 nav #navigation .closebtn {  position: absolute; top: 0; right: 25px; font-size: 36px; margin-left: 50px;}
-nav .tabs {margin: 0 0 0 2.5px; position: fixed;}
+nav .tabs {margin: 0 0 0 4px; position: fixed;}
 nav .tabs li { min-width: 40px; min-height: 40px; margin-bottom: 0.5em; box-sizing: border-box; padding-top: 0.25em; padding-left: 0.15em; }
 nav .tabs li i { font-size: 0.45em;}
 nav .tabs li i.fa-chevron-up, nav .tabs li i.fa-chevron-left { padding-top: 1em; font-size: 0.6em;}
 nav .tabs li i.fa-times-circle {color: #808285; font-size: 1.5em;padding-top: 0.10em}
-#hamburguer { position: fixed; box-sizing: border-box; padding: 0.3em 0.4em; top: 12px; right: 2px;font-size:22px; color: #808285;cursor:pointer; border-radius: 50%; border: #808285 solid 2px;}
+#hamburguer { position: fixed; box-sizing: border-box; padding: 0.3em 0.4em; top: 5px; right: 5px;font-size:22px; color: #808285;cursor:pointer; border-radius: 50%; border: #808285 solid 2px;}
 
 /*-- Section tab buttons --*/
 section .tabs .btn { width:4em; height:4em; margin:0 0 0.25em 0;}
