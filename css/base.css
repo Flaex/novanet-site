@@ -131,99 +131,48 @@ footer ul.sm-list {  display: flex; }
 footer ul.sm-list li {list-style:none; border-radius:50%; text-align:center; border:#808285 solid 2px;}
 
 /*-- Font Icons --*/
-.glyphs.character-mapping, .glyphs.css-mapping {padding:1em 0 0}
-.glyphs.css-mapping li {margin:1.5em 2em 1.5em 0; display:flex; flex-wrap:wrap; width:22.5%; padding:0; border-bottom:1px solid #d8e0e5}
-.glyphs.css-mapping .icon {width:30%; color:#4e4d50 !important; overflow:hidden; padding:0 0 0.5em 0}
-.glyphs.css-mapping input {width:70%; font-family:'Fira Sans', sans-serif; font-weight:300; padding:0 0 0.3em 0; font-size:1.2em; border:none; outline:0; text-transform:capitalize; color:#808285}
-.glyphs.character-mapping li {display:flex; flex-wrap:wrap; width:10.3%; margin:0.8em  0.88em 1.6em 0.88em}
-.glyphs.character-mapping .icon {width:100%; padding:0.45em 0 0 0; text-align:center; color:#4e4d50 !important; border:1px solid #d1d2d3}
-.glyphs.character-mapping .icon svg {fill:#000}
-.glyphs.character-mapping input {margin:0.5em 0 0; padding:0.3em 0; width:100%; font-family:'Fira Sans', sans-serif; font-weight:300; font-size:1.3em; border:none; text-align:center; color:#fff; background:#808285}
-
 @font-face {
-  font-family: 'novanet-icons';
-  src: url('../font/novanet-icons.eot?66370771');
-  src: url('../font/novanet-icons.eot?66370771#iefix') format('embedded-opentype'),
-       url('../font/novanet-icons.woff2?66370771') format('woff2'),
-       url('../font/novanet-icons.woff?66370771') format('woff'),
-       url('../font/novanet-icons.ttf?66370771') format('truetype'),
-       url('../font/novanet-icons.svg?66370771#novanet-icons') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'novanet-icons';
-    src: url('../font/novanet-icons.svg?66370771#novanet-icons') format('svg');
-  }
-}
-*/
-
- [class^="ni-"]:before, [class*=" ni-"]:before {
   font-family: "novanet-icons";
-  font-style: normal;
+  src:url("../font/novanet-icons.eot");
+  src:url("../font/novanet-icons.eot?#iefix") format("embedded-opentype"),
+    url("../font/novanet-icons.woff") format("woff"),
+    url("../font/novanet-icons.ttf") format("truetype"),
+    url("../font/novanet-icons.svg#novanet-icons") format("svg");
   font-weight: normal;
-  speak: none;
-  font-size: 4.5em;
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  text-align: center;
-  /* opacity: .8; */
-
-  /* For safety - reset parent styles, that can break glyph codes*/
-  font-variant: normal;
-  text-transform: none;
-
-  /* fix buttons height, for twitter bootstrap */
-  line-height: 1em;
-
-  /* Animation center compensation - margins should be symmetric */
-  /* remove if not needed */
-
-
-  /* you can be more comfortable with increased icons size */
-  /* font-size: 120%; */
-
-  /* Font smoothing. That was taken from TWBS */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  font-style: normal;
 }
 
-.ni-webdev:before { content: '\41'; } /* 'A' */
-.ni-webpage:before { content: '\42'; } /* 'B' */
-.ni-backend:before { content: '\61'; } /* 'a' */
-.ni-ball:before { content: '\62'; } /* 'b' */
-.ni-brain:before { content: '\63'; } /* 'c' */
-.ni-chat:before { content: '\64'; } /* 'd' */
-.ni-comment:before { content: '\65'; } /* 'e' */
-.ni-compass:before { content: '\66'; } /* 'f' */
-.ni-connection:before { content: '\67'; } /* 'g' */
-.ni-database:before { content: '\68'; } /* 'h' */
-.ni-frontend:before { content: '\69'; } /* 'i' */
-.ni-gear:before { content: '\6a'; } /* 'j' */
-.ni-index:before { content: '\6b'; } /* 'k' */
-.ni-integration:before { content: '\6c'; } /* 'l' */
-.ni-lock:before { content: '\6d'; } /* 'm' */
-.ni-logo:before { content: '\6e'; } /* 'n' */
-.ni-message:before { content: '\6f'; } /* 'o' */
-.ni-pencil:before { content: '\70'; } /* 'p' */
-.ni-phone:before { content: '\71'; } /* 'q' */
-.ni-pin:before { content: '\72'; } /* 'r' */
-.ni-portfolio:before { content: '\73'; } /* 's' */
-.ni-printer:before { content: '\74'; } /* 't' */
-.ni-responsive:before { content: '\75'; } /* 'u' */
-.ni-rocket:before { content: '\76'; } /* 'v' */
-.ni-star:before { content: '\77'; } /* 'w' */
-.ni-sync:before { content: '\78'; } /* 'x' */
-.ni-tap:before { content: '\79'; } /* 'y' */
-.ni-tools:before { content: '\7a'; } /* 'z' */
+[data-icon]:before { font-family: "novanet-icons" !important; content: attr(data-icon); font-style: normal !important; font-weight: normal !important; font-variant: normal !important; text-transform: none !important; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+[class^="ni-"]:before, [class*=" ni-"]:before {  font-family: "novanet-icons" !important; font-size: 4.5em; font-style: normal !important; font-weight: normal !important; font-variant: normal !important; text-transform: none !important; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+
+.ni-backend:before { content: "\61";}
+.ni-ball:before { content: "\62";}
+.ni-brain:before { content: "\63";}
+.ni-chat:before { content: "\64";}
+.ni-comment:before { content: "\65";}
+.ni-compass:before { content: "\66";}
+.ni-connection:before { content: "\67";}
+.ni-database:before { content: "\68";}
+.ni-frontend:before { content: "\69";}
+.ni-gear:before { content: "\6a";}
+.ni-index:before { content: "\6b";}
+.ni-integration:before { content: "\6c";}
+.ni-lock:before { content: "\6d";}
+.ni-logo:before { content: "\6e";}
+.ni-message:before { content: "\6f";}
+.ni-pencil:before { content: "\70";}
+.ni-phone:before { content: "\71";}
+.ni-pin:before { content: "\72";}
+.ni-portfolio:before { content: "\73";}
+.ni-printer:before { content: "\74";}
+.ni-responsive:before { content: "\75";}
+.ni-rocket:before { content: "\76";}
+.ni-star:before { content: "\77";}
+.ni-sync:before { content: "\78";}
+.ni-tap:before { content: "\79";}
+.ni-tools:before { content: "\7a";}
+.ni-webdev:before { content: "\41";}
+.ni-webpage:before { content: "\42";}
 
 /* Logotipos clientes */
 .bs, .cd, .bdl, .cmg, .tob, .qfs, .cms, .gp, .lcdh, .no, .per, .pev, .qui, .ss, .uni, .bc, .sh, .art, .gm, .emn, .gstar, .kul, .seg {background-size:70%; background-position:50%; background-repeat:no-repeat}
@@ -299,11 +248,250 @@ footer ul.sm-list li {list-style:none; border-radius:50%; text-align:center; bor
 
 /*-- Responsive styles -- */
 
+@media only screen and (min-width:320px) and (max-width:767px) {
+
+.container {padding: 1em;}
+section, .stories, #nos { padding: 0.5em 0 1em 0;}
+
+/*-- Typography --*/
+h1 {font-size:2em; line-height:1.1em}
+h2 {font-size:1.4em; }
+h3 {font-size:1.3em}
+h4 {font-size:1.1em;}
+p {font-weight:300; font-size:1em; line-height:1.4em}
+
+/*-- Navigation --*/
+nav { height: 100%; width: 0; position: fixed; z-index: 1;  top: 0;  right: 0;  background-color: rgba(255,255,255, 0.8);  overflow-x: hidden;  transition: 0.5s; padding-top: 8px;}
+nav #navigation .closebtn {  position: absolute; top: 0; right: 25px; font-size: 36px; margin-left: 50px;}
+nav .tabs {margin: 0 0 0 4px; position: fixed;}
+nav .tabs li { min-width: 40px; min-height: 40px; margin-bottom: 0.5em; box-sizing: border-box; padding-top: 0.4em; }
+nav .tabs li i { font-size: 0.45em;}
+nav .tabs li i.fa-chevron-up, nav .tabs li i.fa-chevron-left { padding-top: 1em; font-size: 0.6em;}
+nav .tabs li i.fa-times-circle {color: #808285; font-size: 1.5em;padding-top: 0.10em}
+#hamburguer { position: fixed; box-sizing: border-box; padding: 0.3em 0.4em; top: 8px; right: 6px;font-size:22px; color: #808285;cursor:pointer; border-radius: 50%; border: #808285 solid 2px;}
+
+/*-- Section tab buttons --*/
+section .tabs .btn { width:4em; height:4em; margin:0 0 0.25em 0;}
+section .tabs .btn:before {top:0; left:0; width:6em; height:0;}
+section .tabs .btn:hover:before {height:6em}
+section .tabs .btn i {margin:0.7em 0 0 0; font-size:0.7em;}
+section .tabs .btn:hover i {font-size:0.9em}
+section .tab-item {width:100%; }
+
+/*-- Header --*/
+header .logo { width: 55%;}
+header .logo img { width: 100%}
+header .sm { display: none}
+
+/*-- Historia - nosotros --*/
+#ini { display: flex; flex-wrap: wrap;}
+#ini #rocket { width: 140%; margin-left: -4.5em; margin-top: -3em}
+#ini #brain { width: 140%; margin-left: -4em; margin-top: -4em }
+#ini #goal { width: 140%; margin-left: -3em; margin-top: -1.5em }
+.stories p {font-size:1.4em; line-height:1.2em;}
+.canvasContainer { height: 60%}
+
+/*-- Hacemos --*/
+#hac .ico {margin:0.5em 0 0em 0; width:4em; height:4em;}
+#hac .ico i { line-height: 9.5em; font-size:0.7em;}
+#por-ini .tab-item { border-bottom:#d1d2d3 solid 1px; margin-bottom: 0.7em; padding-bottom: 0.7em}
+#por-ini .tab-item:last-of-type {  border-bottom:0;}
+
+/*-- Portafolio --*/
+#por .thumbs .thumb, #por-ini .thumbs .thumb { width: 5.5em; margin: 0.5em 0.5em 0 0}
+/*-- Modal Content/Box --*/
+.modal-content {margin: 1.5% auto;  padding: 10px; width: 90% }
+
+/*-- Contacto / WHS --*/
+#cli .tab-item {width:50%;}
+#cli .logos-clientes { height: 220px}
+#cli .logo-list {margin:2em 0 0 0}
+#cli .logo-list .logo-item { height:9em;}
+
+#con #instagram-feed { margin-top: 1.5em}
+#con form, #whs form { margin: 1em 0; padding: 1em;}
+#con form input[type=text], form textarea, #whs form input[type=text], #whs form input[type=password] { width: 100%; margin: 1em 0 1.5em 0; font-size: 0.9em;}
+#con form input[type=submit], #whs form input[type=submit] { padding: 0.3em 1em; font-size: 0.9em;}
+
+footer {padding:1em 0}
+footer p { font-size:0.85em; line-height: 1.2em; padding-top:0.35em }
+footer .logo { width: 40%;}
+footer .logo img { width: 90%}
+footer .legal { width: 60%;}
+
+footer ul.sm-list { margin-top: 0.7em}
+footer ul.sm-list li {width:1.5em; height:1.5em;  margin-right: 1em}
+footer ul.sm-list li i { font-size: 0.9em; padding-top:0.35em }
+}
+
+@media only screen and (width:1024px) and (height:768px) {
+ .container { width: 90% !important; padding: 4em 5em 0 1em !important}
+ nav { width: 10% !important}
+ .menu { display: none !important;}
+ section .tab-item { width: 100% !important; margin-bottom: 0.5em}
+ #ini #rocket { width: 150% !important; padding-top: 12em !important}
+ #ini #brain {  width: 150% !important; padding-top: 8em !important}
+ #ini #goal {  width: 150% !important; padding-top: 10em !important }
+ #ini #con { width: 150% !important; }
+ #cli .tab-item {width: 25% !important;}
+ header .logo { width: 40% !important}
+ header .sm { width: 60% !important}
+ header .logo img { width: 70% !important;}
+ footer .logo { width: 15%; height: 4em;}
+ footer .logo img { width: 90% !important}
+ footer .legal { width: 30% !important}
+ footer .legal p { padding-top: 0.2em !important}
+ footer .sm { width: 55% !important }
+
+}
+
+@media only screen and (width:1024px) and (height:1366px) {
+ .container { width: 90% !important; padding: 4em 5em 0 1em !important}
+ nav { width: 10% !important}
+ .menu { display: none !important;}
+ section .tab-item { width: 100% !important; margin-bottom: 0.5em}
+ #ini #rocket { width: 150% !important; padding-top: 12em !important}
+ #ini #brain {  width: 150% !important; padding-top: 8em !important}
+ #ini #goal {  width: 150% !important; padding-top: 10em !important }
+ #ini #con { width: 150% !important; }
+ #cli .tab-item {width: 25% !important;}
+ header .logo { width: 40% !important}
+ header .sm { width: 60% !important}
+ header .logo img { width: 70% !important;}
+ footer .logo { width: 15%; height: 4em;}
+ footer .logo img { width: 90% !important}
+ footer .legal { width: 30% !important}
+ footer .legal p { padding-top: 0.2em !important}
+ footer .sm { width: 55% !important }
+
+}
+
+@media only screen and (width:1280px)  {
+  #ini #rocket { width: 150% !important;  margin-left: -7em !important; margin-top: 7em !important}
+  #ini #brain { width: 150% !important;  margin-left: -7em !important; margin-top: 5em !important}
+  #ini #goal { width: 150% !important;  margin-left: -7em !important; margin-top: 7em !important}
+  .thumbs .thumb { width:5.5em !important;}
+}
+
+@media only screen and (width:1440px)  {
+  #ini #rocket { width: 120% !important;  margin-left: -4em !important; margin-top: 6em !important}
+  #ini #brain { width: 120% !important;  margin-left: -4em !important; margin-top: 4em !important}
+  #ini #goal { width: 120% !important;  margin-left: -4em !important; margin-top: 6em !important}
+  .thumbs .thumb { width:5.5em !important;}
+}
+
+@media only screen and (width:1600px)  {
+  #ini #rocket { width: 120% !important;  margin-left: -4em !important; margin-top: 6em !important}
+  #ini #brain { width: 120% !important;  margin-left: -4em !important; margin-top: 4em !important}
+  #ini #goal { width: 120% !important;  margin-left: -4em !important; margin-top: 6em !important}
+}
+
+@media only screen and (min-width:767px) and (max-width:1023px) {
+
+  /*-- Main containers --*/
+  .container { width: 90%; padding: 4em 2em 0 0.5em;}
+  section, .stories, #nos {padding:1em 0 1em 0;}
+
+  /*-- Typography --*/
+  h1 {font-size:2.4em; line-height:1.1em}
+  h2 {margin:0 0 0.2em 0; font-size:1.6em; }
+  h3 {margin:0.8em 0 0.1em 0; font-size:1.3em}
+  h4 {margin:0.4em 0 0.1em 0; font-size:1.15em;}
+  p {font-weight:300; font-size:1.25em; line-height:1.3em}
+
+  /*-- Header --*/
+
+  header .logo { width: 40%; height: 4em;}
+  header .logo img { width: 80%}
+  header .sm { width: 60%;}
+  ul.sm-list {}
+  ul.sm-list li {width:2em; height:2em; margin:0 0.3em;}
+  ul.sm-list li i {font-size:1.2em; padding-top: 0.35em;}
+
+  /*-- Navigation --*/
+  nav { width: 10%; padding-top: 4em}
+  nav { display: flex; flex-wrap: wrap; justify-content: center;}
+  nav .tabs { position: fixed;}
+  nav .tabs li { min-width: 45px; min-height: 45px; margin-bottom: 1em; padding-top: 0.5em;}
+  nav .tabs li i { font-size: 0.5em;}
+  nav .tabs li i.fa-chevron-up, nav .tabs li i.fa-chevron-left { padding-top: 0.5em; font-size: 0.75em;}
+  #hamburguer { display: none;}
+  .menu { display: none}
+
+
+  /*-- Section tab buttons --*/
+  section .tabs .btn { width: 4.5em; height: 4.5em;; margin:0 0 0.25em 0;}
+  section .tabs .btn:before {top:0; left:0; width:6em; height:0;}
+  section .tabs .btn:hover:before {height:6em}
+  section .tabs .btn:hover i {font-size:1em}
+  section .tabs .btn:not(:hover) i {font-size:0.8em;}
+  section .tabs .btn i {margin:0.7em 0 0; font-size:1em;}
+  section .tab-item { width: 100%; margin-bottom: 0.5em}
+
+  section .tab-item p {font-size: 1.2em; line-height: 1.4em; padding-right: 1em;}
+  section .tab-item p.dates { font-size: 1.2em; line-height: 1.1em; padding-right: 1em;}
+
+  /*-- Historia - nosotros --*/
+  #ini { display: grid; grid-auto-flow: column; grid-template-columns: 50% 50%;}
+  #ini .canvasContainer { grid-row: 1 / span 2;}
+  #ini #rocket { width: 200%; margin-left: -10.5em; margin-top: 7.5em;}
+  #ini #brain {  width: 200%; margin-left: -10.5em; margin-top: 5.5em}
+  #ini #goal {  width: 200%; margin-left: -8.5em; margin-top: 8.5em }
+  #ini #con { width: 105%; margin-left: -1.5em; margin-top: -3em}
+  .stories p {font-size:1.4em; line-height:1.2em;}
+
+  /*-- Hacemos --*/
+  #hac .ico {margin:0.5em 0 0em 0; width:4em; height:4em; box-sizing: border-box; padding-top: 0.75em}
+  #hac .ico i { font-size:0.9em;}
+
+  /*-- Portafolio --*/
+  #por .thumbs, #por-ini .thumbs {margin:0em 0 3em 0}
+  #por a.url { line-height: 1.6em}
+  #por .thumbs .thumb, #por-ini .thumbs .thumb  {width: 7em;margin: 0.5em 1em 0 0}
+  #iniPor .stories {}
+  #iniPor .canvasContainer { width: 50%}
+  #iniPor #bra { width: 90%;}
+  #iniPor #web { width: 90%;}
+  #iniPor #log { width: 90%;}
+
+  /*-- Modal Content/Box --*/
+  .modal-content {margin: 1.5% auto;  padding: 10px; width: 50% }
+
+  /*-- Clientes --*/
+  #cli .tab-item {width:25%;}
+  #cli .logos-clientes { height: 220px}
+  #cli .logo-list {margin:2em 0 0 0}
+  #cli .logo-list .logo-item { height:9em;}
+
+  /*-- Contacto / WHS --*/
+  #con p {padding:0 0 2em 0}
+  #whs p {padding:1em 0 2em 0}
+  #con form, #whs form {margin:1em 0; padding:2em;}
+  #con form h4, #whs form h4 {margin-bottom: 1em;}
+  #con form input[type=text], form textarea, #whs form input[type=text], #whs form input[type=password] {width:100%; margin:1em 0 1.5em 0;  font-size:1.2em;}
+  #con form input[type=submit], #whs form input[type=submit] { padding:0.3em 1em; font-size:1.2em;}
+  #con form input[type=submit] i, #whs form input[type=submit] i {padding:0 0 0 0.5em; }
+  #con #instagram-feed { width: 100% !important; padding: 2em 0 0 3em }
+  #con #instagram-feed iframe {margin-top: 1.25em; min-height:310px}
+  #map { width: 100%; height: 400px; margin-top: 1em; background-color: grey;}
+
+  /*-- Footer --*/
+  footer { padding: 2em 0;}
+  footer p {padding: 0.5em 0 0 0; font-size:1.2em; line-height: 1.2em}
+  footer .logo { width: 25%; height: 4em;}
+  footer .logo img { width: 80% }
+  footer .legal { width: 50%;}
+  footer .sm { width: 25%; }
+  footer ul.sm-list {}
+  footer ul.sm-list li {width:2em; height:2em; margin:0 0.3em;}
+  footer ul.sm-list li i { font-size: 1.1em; padding-top: 0.4em;}
+}
+
 @media only screen and (min-width:1024px) {
 
 /*-- Main containers --*/
 .container { width: 94%; padding: 4em 5em 0 2em;}
-section, .stories, #nos {padding:2em 0;}
+section, .stories, #nos {padding:2em 0 1em 0;}
 
 /*-- Typography --*/
 h1 {font-size:3.1em; line-height:1.1em}
@@ -317,7 +505,7 @@ p {font-weight:300; font-size:1.3em; line-height:1.4em}
 header .logo { width: 20%; height: 4em;}
 header .logo img { width: 80%}
 header .sm { width: 80%;}
-ul.sm-list { width: 16%;}
+ul.sm-list {}
 ul.sm-list li {width:2.5em; height:2.5em; margin:0 0.3em;}
 ul.sm-list li i {font-size:1.45em; padding-top: 0.35em;}
 
@@ -325,9 +513,9 @@ ul.sm-list li i {font-size:1.45em; padding-top: 0.35em;}
 nav { width: 6%; padding-top: 4em}
 nav { display: flex; flex-wrap: wrap; justify-content: center;}
 nav .tabs { position: fixed;}
-nav .tabs li { min-width: 58px; min-height: 58px; margin-bottom: 1em; padding: 0.5em;}
+nav .tabs li { min-width: 58px; min-height: 58px; margin-bottom: 1em; padding-top: 0.8em;}
 nav .tabs li i { font-size: 0.55em;}
-nav .tabs li i.fa-chevron-up, nav .tabs li i.fa-chevron-left { padding-top: 1em; font-size: 0.75em;}
+nav .tabs li i.fa-chevron-up, nav .tabs li i.fa-chevron-left { padding-top: 0.85em; font-size: 0.75em;}
 #hamburguer { display: none;}
 .menu { display: none}
 
@@ -338,7 +526,7 @@ section .tabs .btn:before {top:0; left:0; width:6em; height:0;}
 section .tabs .btn:hover:before {height:6em}
 section .tabs .btn:hover i {font-size:1.2em}
 section .tabs .btn:not(:hover) i {font-size:1em;}
-section .tabs .btn i {margin:0.3em 0 0; font-size:1em;}
+section .tabs .btn i {margin:0.6em 0 0; font-size:1em;}
 section .tab-item {width: 33.3333333%; }
 
 section .tab-item p {font-size: 1.2em; line-height: 1.4em; padding-right: 1em;}
@@ -354,14 +542,14 @@ section .tab-item p.dates { font-size: 1.2em; line-height: 1.1em; padding-right:
 .stories p {font-size:1.9em; line-height:1.2em;}
 
 /*-- Hacemos --*/
-#hac .ico {margin:0.5em 0 0em 0; width:5em; height:5em;}
-#hac .ico i { line-height: 7.75em; font-size:0.9em;}
+#hac .ico {margin:0.5em 0 0em 0; width:5em; height:5em; box-sizing: border-box; padding-top: 0.75em}
+#hac .ico i { font-size:0.9em;}
 
 /*-- Portafolio --*/
 #por .thumbs, #por-ini .thumbs {margin:0em 0 3em 0}
 #por a.url { line-height: 1.6em}
 #por .thumbs .thumb, #por-ini .thumbs .thumb  {width: 7em;margin: 0.5em 1em 0 0}
-#iniPor .stories { width: 50%}
+#iniPor .stories {}
 #iniPor .canvasContainer { width: 50%}
 #iniPor #bra { width: 90%;}
 #iniPor #web { width: 90%;}
@@ -395,81 +583,6 @@ footer .logo { width: 15%; height: 4em;}
 footer .logo img { width: 80% }
 footer .legal { width: 25%;}
 footer .sm { width: 60%; }
-footer ul.sm-list { width: 20%; }
 footer ul.sm-list li {width:2em; height:2em; margin:0 0.3em;}
 footer ul.sm-list li i { font-size: 1.1em; padding-top: 0.4em;}
-}
-
-@media only screen and (min-width:320px) and (max-width:767px) {
-
-.container {padding: 1em;}
-section, .stories, #nos { padding: 0.5em 0 1em 0;}
-
-/*-- Typography --*/
-h1 {font-size:2em; line-height:1.1em}
-h2 {font-size:1.4em; }
-h3 {font-size:1.3em}
-h4 {font-size:1.1em;}
-p {font-weight:300; font-size:1em; line-height:1.4em}
-
-/*-- Navigation --*/
-nav { height: 100%; width: 0; position: fixed; z-index: 1;  top: 0;  right: 0;  background-color: rgba(255,255,255, 0.8);  overflow-x: hidden;  transition: 0.5s; padding-top: 8px;}
-nav #navigation .closebtn {  position: absolute; top: 0; right: 25px; font-size: 36px; margin-left: 50px;}
-nav .tabs {margin: 0 0 0 4px; position: fixed;}
-nav .tabs li { min-width: 40px; min-height: 40px; margin-bottom: 0.5em; box-sizing: border-box; padding-top: 0.25em; padding-left: 0.15em; }
-nav .tabs li i { font-size: 0.45em;}
-nav .tabs li i.fa-chevron-up, nav .tabs li i.fa-chevron-left { padding-top: 1em; font-size: 0.6em;}
-nav .tabs li i.fa-times-circle {color: #808285; font-size: 1.5em;padding-top: 0.10em}
-#hamburguer { position: fixed; box-sizing: border-box; padding: 0.3em 0.4em; top: 5px; right: 5px;font-size:22px; color: #808285;cursor:pointer; border-radius: 50%; border: #808285 solid 2px;}
-
-/*-- Section tab buttons --*/
-section .tabs .btn { width:4em; height:4em; margin:0 0 0.25em 0;}
-section .tabs .btn:before {top:0; left:0; width:6em; height:0;}
-section .tabs .btn:hover:before {height:6em}
-section .tabs .btn i {margin:0.3em 0 0; font-size:0.7em;}
-section .tabs .btn:hover i {font-size:0.9em}
-section .tab-item {width:100%; }
-
-/*-- Header --*/
-header .logo { width: 55%;}
-header .logo img { width: 100%}
-header .sm { display: none}
-
-/*-- Historia - nosotros --*/
-#ini { display: flex; flex-wrap: wrap;}
-#ini #rocket { width: 140%; margin-left: -4em; margin-top: -3em}
-#ini #brain { width: 140%; margin-left: -3em; margin-top: -4em }
-#ini #goal { width: 140%; margin-left: -3em; margin-top: -1.5em }
-.stories p {font-size:1.4em; line-height:1.2em;}
-.canvasContainer { height: 60%}
-
-/*-- Hacemos --*/
-#hac .ico {margin:0.5em 0 0em 0; width:4em; height:4em;}
-#hac .ico i { line-height: 9.5em; font-size:0.7em;}
-#por-ini .tab-item { border-bottom:#d1d2d3 solid 1px; margin-bottom: 0.7em; padding-bottom: 0.7em}
-#por-ini .tab-item:last-of-type {  border-bottom:0;}
-
-/*-- Portafolio --*/
-#por .thumbs .thumb, #por-ini .thumbs .thumb { width: 5em; margin: 0.5em 0.5em 0 0}
-
-/*-- Contacto / WHS --*/
-#cli .tab-item {width:50%;}
-#cli .logos-clientes { height: 220px}
-#cli .logo-list {margin:2em 0 0 0}
-#cli .logo-list .logo-item { height:9em;}
-
-#con #instagram-feed { margin-top: 1.5em}
-#con form, #whs form { margin: 1em 0; padding: 1em;}
-#con form input[type=text], form textarea, #whs form input[type=text], #whs form input[type=password] { width: 100%; margin: 1em 0 1.5em 0; font-size: 0.9em;}
-#con form input[type=submit], #whs form input[type=submit] { padding: 0.3em 1em; font-size: 0.9em;}
-
-footer {padding:1em 0}
-footer p { font-size:0.85em; line-height: 1.2em; padding-top:0.35em }
-footer .logo { width: 40%;}
-footer .logo img { width: 90%}
-footer .legal { width: 60%;}
-
-footer ul.sm-list { margin-top: 0.7em}
-footer ul.sm-list li {width:1.5em; height:1.5em;  margin-right: 1em}
-footer ul.sm-list li i { font-size: 0.9em; padding-top:0.35em }
 }
