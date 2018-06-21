@@ -308,7 +308,7 @@ header .sm { display: none}
 #cli .logo-list {margin:2em 0 0 0}
 #cli .logo-list .logo-item { height:9em;}
 
-#con #instagram-feed { margin-top: 1.5em}
+#con #instagram-feed { margin-top: 1.5em; width: 100%;}
 #con form, #whs form { margin: 1em 0; padding: 1em;}
 #con form input[type=text], form textarea, #whs form input[type=text], #whs form input[type=password] { width: 100%; margin: 1em 0 1.5em 0; font-size: 0.9em;}
 #con form input[type=submit], #whs form input[type=submit] { padding: 0.3em 1em; font-size: 0.9em;}
