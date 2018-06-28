@@ -465,7 +465,7 @@ footer ul.sm-list li i { font-size: 0.9em; padding-top:0.35em }
 
   /*-- Contacto / WHS --*/
   #con p {padding:0 0 2em 0}
-  #whs p {padding:1em 0 2em 0}
+
   #con form, #whs form {margin:1em 0; padding:2em;}
   #con form h4, #whs form h4 {margin-bottom: 1em;}
   #con form input[type=text], form textarea, #whs form input[type=text], #whs form input[type=password] {width:100%; margin:1em 0 1.5em 0;  font-size:1.2em;}
@@ -566,7 +566,7 @@ section .tab-item p.dates { font-size: 1.2em; line-height: 1.1em; padding-right:
 
 /*-- Contacto / WHS --*/
 #con p {padding:0 0 2em 0}
-#whs p {padding:1em 0 2em 0}
+
 #con form, #whs form {margin:1em 0; padding:2em; width:50%;}
 #con form h4, #whs form h4 {margin-bottom: 1em;}
 #con form input[type=text], form textarea, #whs form input[type=text], #whs form input[type=password] {width:100%; margin:1em 0 1.5em 0;  font-size:1.2em;}

@@ -100,12 +100,12 @@ const navigationInt = {
 //Stories objects
 const storiesHome = {
   "title" : "Creamos historias de éxito",
-  "paragraph" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+  "paragraph" : "Desarrollamos tu marca y proyectamos tu empresa desde su concepción hasta la implementación final."
 };
 
 const storiesPor = {
   "title" : "Tu marca, al alcance de tus usuarios",
-  "paragraph" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+  "paragraph" : "Escuchamos atentamente tu audiencia y generamos valor agregado a tu empresa."
 };
 
 const storiesCon = {
@@ -115,7 +115,7 @@ const storiesCon = {
 
 const storiesWhs = {
   "title" : "Acceso servicios web",
-  "paragraph" : "Todo lo que necesita para construir y lanzar su nuevo sitio web, te proporcionamos las herramientas para comercializarlo y atraer a una audiencia."
+  "paragraph" : "Todo lo que necesita para construir y lanzar su nuevo sitio web, te proporcionamos las herramientas para comercializarlo y atraer audiencia."
 };
 
 //Nosotros object
