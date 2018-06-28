@@ -110,7 +110,7 @@ img.preview { margin: 0 auto; max-width: 100%; -moz-box-shadow: 1px 1px 3px #666
 textarea, form input::placeholder, form button {font-family:'Fira Sans', sans-serif}
 #con form, #whs form {background-color: #e8e9ea; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
 #con form input[type=text], form textarea, #whs form input[type=text], #whs form input[type=password] {font-weight:300; background:none; border:none}
-#con form input[type=text], form textarea {border-bottom:#00bebe 1px solid}
+#con form input[type=text], form textarea {border-bottom:#00bebe 1px solid; color: #808285; font-family: 'Fira Sans', sans-serif;}
 #whs form input[type=text], #whs form input[type=password] {border-bottom:#008ed2 1px solid}
 #con form textarea {resize:none; overflow:hidden}
 #con form input::placeholder, #whs form input::placeholder {font-weight:300}

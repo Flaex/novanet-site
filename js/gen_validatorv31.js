@@ -469,7 +469,7 @@ function TestShouldSelectChk(objValue,chkValue,strError)
 	{
      if(!strError || strError.length ==0)
         {
-        	strError = "Debe hacer uan slección "+objValue.name;
+        	strError = "Debe hacer una selección "+objValue.name;
         }//if
 	  sfm_show_error_msg(strError,objValue);
 
