@@ -250,7 +250,7 @@ footer ul.sm-list li {list-style:none; border-radius:50%; text-align:center; bor
 
 @media only screen and (min-width:320px) and (max-width:767px) {
 
-.container {padding: 1em;}
+.container {padding: 1em; background:url(../img/bg-m.svg) !important}
 section, .stories, #nos { padding: 0.5em 0 1em 0;}
 
 /*-- Typography --*/
