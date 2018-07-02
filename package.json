@@ -1,0 +1,24 @@
+{
+  "name": "nn-site-pkg",
+  "version": "1.0.0",
+  "description": "novanet site package list",
+  "main": "index.html",
+  "scripts": {
+    "test": "nntest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://fpolania@bitbucket.org/fpolania/novanet_site.git"
+  },
+  "keywords": [
+    "novane",
+    "site"
+  ],
+  "author": "Freddy Polanía",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/fpolania/novanet_site#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.5",
+    "gulp": "^4.0.0"
+  }
+}
