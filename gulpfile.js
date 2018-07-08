@@ -1,6 +1,7 @@
 const {src, task, watch} = require('gulp');
 const browserSync = require('browser-sync').create();
 const eslint = require('gulp-eslint');
+const jasmine = require('gulp-jasmine-phantom');
 
 task('default', () => {
   browserSync.init({
@@ -22,4 +23,12 @@ task('lint', () => {
         // To have the process exit with an error code (1) on
         // lint error, return the stream and pipe to failAfterError last.
         .pipe(eslint.failAfterError());
+});
+
+task('tests', () => {
+  return src('spec/test.js')
+         .pipe(jasmine({
+           integration : true,
+           vendor : 'js/*.js'
+         }));
 });

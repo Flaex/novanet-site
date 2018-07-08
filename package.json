@@ -29,6 +29,7 @@
     "gulp": "^4.0.0"
   },
   "dependencies": {
-    "gulp-eslint": "^5.0.0"
+    "gulp-eslint": "^5.0.0",
+    "gulp-jasmine-phantom": "^3.0.0"
   }
 }
