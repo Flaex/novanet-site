@@ -42,8 +42,8 @@ HeaderTemplate.prototype.sectionHeader = function(arr) {
     $('ul li:empty').remove()
 }
 // Header creation and renderization
-const headerPrint = new HeaderTemplate();
-headerPrint.sectionHeader(header);
+const headerPrint = new HeaderTemplate()
+headerPrint.sectionHeader(header)
 
 // Stories Superclass
 function StoriesTemplate() {

@@ -1,7 +1,11 @@
-const {src, task, watch} = require('gulp');
+const {src, task, watch, dest} = require('gulp');
 const browserSync = require('browser-sync').create();
 const eslint = require('gulp-eslint');
 const jasmine = require('gulp-jasmine-phantom');
+const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
+const concat = require('gulp-concat');
+
 
 task('default', () => {
   browserSync.init({
@@ -27,8 +31,28 @@ task('lint', () => {
 
 task('tests', () => {
   return src('spec/test.js')
-         .pipe(jasmine({
-           integration : true,
-           vendor : 'js/*.js'
-         }));
+    .pipe(jasmine({
+     integration : true,
+     vendor : 'js/*.js'
+    }));
+});
+
+task('styles', () => {
+  return src('sass/**/*.scss')
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(autoprefixer({browsers: ['last 2 versions']}))
+    .pipe(dest('dist/css'))
+    .pipe(browserSync.stream());
+});
+
+task('topscript', () => {
+  return src(['js/nosotros.js', 'js/gen_validatorv31.js'])
+    .pipe(concat('topscript.js'))
+    .pipe(dest('dist/js'));
+});
+
+task('botscript', () => {
+  return src(['js/jquery-1.8.3.js', 'js/jquery-ui-1.9.2.custom.min.js', 'js/helper.js', 'js/builder.js'])
+    .pipe(concat('botscript.js'))
+    .pipe(dest('dist/js'));
 });
