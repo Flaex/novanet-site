@@ -1,10 +1,12 @@
-const {src, task, watch, dest} = require('gulp');
+const {src, task, watch, dest, series} = require('gulp');
 const browserSync = require('browser-sync').create();
 const eslint = require('gulp-eslint');
 const jasmine = require('gulp-jasmine-phantom');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const babel = require('gulp-babel');
 
 
 task('default', () => {
@@ -37,7 +39,27 @@ task('tests', () => {
     }));
 });
 
-task('styles', () => {
+task('css', () => {
+  return src(['css/normalize.css', 'css/base.css'])
+    .pipe(concat('styles.css'))
+    .pipe(dest('css'));
+});
+
+task('cssdist', () => {
+  return src(['css/normalize.css', 'css/base.css'])
+    .pipe(concat('styles.css'))
+    .pipe(dest('dist/css'));
+});
+
+task('sass', () => {
+  return src('sass/**/*.scss')
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(autoprefixer({browsers: ['last 2 versions']}))
+    .pipe(dest('css'))
+    .pipe(browserSync.stream());
+});
+
+task('sassdist', () => {
   return src('sass/**/*.scss')
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(autoprefixer({browsers: ['last 2 versions']}))
@@ -45,14 +67,55 @@ task('styles', () => {
     .pipe(browserSync.stream());
 });
 
-task('topscript', () => {
+task('jstop', () => {
   return src(['js/nosotros.js', 'js/gen_validatorv31.js'])
     .pipe(concat('topscript.js'))
+    .pipe(dest('js'));
+});
+
+task('jsbot', () => {
+  return src(['js/jquery-1.8.3.js', 'js/jquery-ui-1.9.2.custom.min.js', 'js/helper.js', 'js/builder.js'])
+    .pipe(concat('botscript.js'))
+    .pipe(dest('js'));
+});
+
+task('jstopdist', () => {
+  return src(['js/createjs.min.js', 'js/nosotros.js', 'js/gen_validatorv31.js'])
+    .pipe(concat('topscript.js'))
+    .pipe(uglify())
     .pipe(dest('dist/js'));
 });
 
-task('botscript', () => {
-  return src(['js/jquery-1.8.3.js', 'js/jquery-ui-1.9.2.custom.min.js', 'js/helper.js', 'js/builder.js'])
+task('jsbotdist', () => {
+  return src(['js/jquery-1.8.3.js', 'js/jquery-ui-1.9.2.custom.js', 'js/helper.js', 'js/builder.js'])
     .pipe(concat('botscript.js'))
     .pipe(dest('dist/js'));
 });
+
+// task('jquery', () => {
+//   return src(['js/jquery-1.8.3.js', 'js/jquery-ui-1.9.2.custom.js' ])
+//     .pipe(dest('dist/js'));
+// });
+
+task('views', () => {
+  return src(['*.html', '*.ico'])
+    .pipe(dest('dist'));
+});
+
+task('images', () => {
+  return src('img/*.*')
+    .pipe(dest('dist/img'));
+});
+
+task('font', () => {
+  return src('font/*.*')
+    .pipe(dest('dist/font'));
+});
+
+task('php', () => {
+  return src('php/*.php')
+    .pipe(dest('dist/php'));
+});
+
+task('dev', series('css', 'jstop', 'jsbot'));
+task('dist', series('cssdist', 'jstopdist', 'jsbotdist', 'images', 'views', 'font', 'php'));
