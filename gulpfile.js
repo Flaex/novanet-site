@@ -5,9 +5,11 @@ const jasmine = require('gulp-jasmine-phantom');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const concat = require('gulp-concat');
-const uglify = require('gulp-uglify');
 const babel = require('gulp-babel');
-
+const uglify = require('gulp-uglify');
+const cleanCSS = require('gulp-clean-css');
+const gzip = require('gulp-gzip');
+const sourcemaps = require('gulp-sourcemaps');
 
 task('default', () => {
   browserSync.init({
@@ -41,6 +43,7 @@ task('tests', () => {
 
 task('css', () => {
   return src(['css/normalize.css', 'css/base.css'])
+    // .pipe(sourcemaps.init())
     .pipe(concat('styles.css'))
     .pipe(dest('css'));
 });
@@ -48,6 +51,7 @@ task('css', () => {
 task('cssdist', () => {
   return src(['css/normalize.css', 'css/base.css'])
     .pipe(concat('styles.css'))
+    .pipe(cleanCSS())
     .pipe(dest('dist/css'));
 });
 
@@ -68,13 +72,13 @@ task('sassdist', () => {
 });
 
 task('jstop', () => {
-  return src(['js/nosotros.js', 'js/gen_validatorv31.js'])
+  return src(['js/createjs.min.js', 'js/nosotros.js', 'js/gen_validatorv31.js'])
     .pipe(concat('topscript.js'))
     .pipe(dest('js'));
 });
 
 task('jsbot', () => {
-  return src(['js/jquery-1.8.3.js', 'js/jquery-ui-1.9.2.custom.min.js', 'js/helper.js', 'js/builder.js'])
+  return src(['js/jquery-1.8.3.js', 'js/jquery-ui-1.9.2.custom.js', 'js/helper.js', 'js/builder.js'])
     .pipe(concat('botscript.js'))
     .pipe(dest('js'));
 });
@@ -82,20 +86,17 @@ task('jsbot', () => {
 task('jstopdist', () => {
   return src(['js/createjs.min.js', 'js/nosotros.js', 'js/gen_validatorv31.js'])
     .pipe(concat('topscript.js'))
-    .pipe(uglify())
+    .pipe(gzip())
     .pipe(dest('dist/js'));
 });
 
 task('jsbotdist', () => {
   return src(['js/jquery-1.8.3.js', 'js/jquery-ui-1.9.2.custom.js', 'js/helper.js', 'js/builder.js'])
+
     .pipe(concat('botscript.js'))
+    .pipe(gzip())
     .pipe(dest('dist/js'));
 });
-
-// task('jquery', () => {
-//   return src(['js/jquery-1.8.3.js', 'js/jquery-ui-1.9.2.custom.js' ])
-//     .pipe(dest('dist/js'));
-// });
 
 task('views', () => {
   return src(['*.html', '*.ico'])
