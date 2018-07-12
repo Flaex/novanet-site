@@ -1,0 +1,47 @@
+{
+  "name": "nn-site-pkg",
+  "version": "1.0.0",
+  "description": "novanet site package list",
+  "main": "index.html",
+  "scripts": {
+    "test": "nntest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://fpolania@bitbucket.org/fpolania/novanet_site.git"
+  },
+  "keywords": [
+    "novane",
+    "site"
+  ],
+  "author": "Freddy Polanía",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/fpolania/novanet_site#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.5",
+    "eslint": "^5.0.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "gulp": "^4.0.0"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^5.0.0",
+    "gulp-gzip": "^1.4.2",
+    "gulp-jasmine-phantom": "^3.0.0",
+    "gulp-order": "^1.1.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "make-error-cause": "^2.2.0"
+  }
+}

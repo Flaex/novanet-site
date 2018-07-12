@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<!--
+           .77777777..
+        ...7777777777...                                                                    .
+         ..7777 ..7777..                                                                    .OOZ
+.. .. .....7777 ..7777..       .      . .   .         ..  . .   .    ..  .          .  .    7OOO ..
+.77777777,.7777777777...OO:OOOO,     .$OOOI   :OO.   =OO... OOOO+.   $O7OOOO.    . ?OOOO .  7OOOOOZ
+7777777777..77777777~. +OOOOOOZOO.. ?OOOOOOO~ OOOO . OOOO.OOOOOOOO  .OOOOOOOOO ..,OOOOOOZZ. 7OOOOOOO
+777:   7777....,=....  +OOOO~?OOOO OOOO7:ZOOOO.OOOO OOOO OOOO?=OOOO .OOOO?=OOOO 7OOOO:?OOOO 7OOOO:
+777: ..7777....:=.... .+OOO   ?OOO OOOO   OOOO ?OOOOZOO..OOO=   OOO:.OOO+   OOO:OOOO  :OOOO 7OOO .
+7777777777..77777777~..+OOO   +OOO OOOO$:OOOOO  OOOOOO+  OOOO?=OOOO: OOO+   OOO:7OOOOOOOO=  7OOO
+.77777777~.7777777777,.+OOO ..+OOO  OOOOOOOOZ    OOOO=  ..ZOZOOOOOO: OOO+.  OOO: 7OOOOOOOOZ 7ZOO
+  ..,:.....7777...7777..OO:    7O7    $OOO7      .ZO=   .. .OOOO=OO .$O7    ZZO    ?OOOOOO7. OO?
+  ... .. ..7777 ..7777..     .  .       .  .        .    ..   ..    .  ..         .      .  .  .
+        . .7777777777.
+        . ..77777777...
+          . ..,?7=..
+-->
+
+<head>
+  <title>novanet - estudio de diseño</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="description" content="Estudio de diseño multimedios" />
+  <meta name="Keywords" content="Diseño gráfico, páginas web, integración tecnologías." />
+  <!--FB opengraph-->
+  <meta property="og:image" content="http://www.gruponovanet.com.ve/site/img/og-thumbnail.png" />
+  <meta property="og:title" content="Novanet - Estudio de diseño integral" />
+  <meta property="og:url" content="http://www.gruponovanet.com.ve/site/" />
+  <meta property="og:site_name" content="Novanet - Estudio de diseño integral." />
+  <meta property="og:description" content="Creamos historias de éxito." />
+  <meta property="og:type" content="website" />
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--favicon-->
+  <link rel="shortcut icon" href="favicon.ico">
+  <!--GoogleFont-->
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,600,700,800,900" rel="stylesheet">
+  <!--FontAwesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+  <!--Styles-->
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <!--if lt IE 9-->
+  <!--[if lt IE 9]>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/livingston-css3-mediaqueries-js/1.0.0/css3-mediaqueries.js"></script>
+      <style type="text/css">
+        .container { display:table; width: 100%;}
+        .row { height: 100%; display: table-row;}
+        .col-sm-4 { display: table-cell;}
+      </style>
+  <![endif]-->
+  <!--Form input validation-->
+  <!--Instagram responsive feed from https://lightwidget.com/-->
+  <script src="js/topscript.js"></script>
+</head>
+
+<body onload="init();">
+  <div id="hamburguer" onclick="openNav()">&#9776;</div>
+  <nav id="nav"></nav>
+  <main id="main" class="container">
+    <header>
+      <div class="logo"></div>
+      <div class="sm"></div>
+    </header>
+    <section id="ini" class="line">
+      <div class="stories line"></div>
+      <div id="nos"></div>
+      <div class="canvasContainer">
+        <canvas id="rocket"></canvas>
+        <canvas id="brain"></canvas>
+        <canvas id="goal"></canvas>
+      </div>
+    </section>
+    <section id="hac" class="line"></section>
+    <section id="por-ini" class="line"></section>
+    <section id="cli" class="line"></section>
+    <section id="con" class="line"></section>
+    <footer>
+      <div class="logo"></div>
+      <div class="legal"></div>
+      <div class="sm"></div>
+    </footer>
+  </main>
+  <script src="js/botscript.js"></script>
+  <script>
+    // Sections creation and renderization
+    const Nav = new SectionTemplate();
+    Nav.sectionHeader(navigation, '#nav', 'navigation');
+
+    const storiesPrint = new StoriesTemplate();
+    storiesPrint.display(storiesHome);
+
+    const SectionNos = new SectionTemplate();
+    SectionNos.sectionHeader(nosotros, '#nos', 'nosotros');
+    SectionNos.tabContent(nosotros, '#nos');
+    SectionNos.tabsFocus('.greenbg-1', '.greenbg-2', '.greenbg-3');
+    SectionNos.tabsFocusAnimation('.greenbg-1', '.greenbg-2', '.greenbg-3', 'canvas#rocket', 'canvas#brain', 'canvas#goal')
+
+    const SectionHac = new SectionTemplate();
+    SectionHac.sectionHeader(hacemos, '#hac', 'hacemos');
+    SectionHac.tabContent(hacemos, '#hac');
+    SectionHac.tabItems(hacemos, 3);
+    SectionHac.tabsFocus('.bluebg-1', '.bluebg-2', '.bluebg-3');
+
+    const SectionPor = new SectionTemplate();
+    SectionPor.sectionHeader(portafolio, '#por-ini', 'portafolio');
+    SectionPor.tabContent(portafolio, '#por-ini');
+    SectionPor.tabItems(portafolio, 3);
+    SectionPor.tabsFocus('.orangebg-1', '.orangebg-2', '.orangebg-3');
+
+
+    const SectionCli = new SectionTemplate();
+    SectionCli.sectionHeader(clientes, '#cli', 'clientes');
+    SectionCli.tabContent(clientes, '#cli');
+    SectionCli.tabItems(clientes, 8);
+    SectionCli.tabsFocus('.redbg-1', '.redbg-2', '.redbg-3');
+
+    const SectionCon = new SectionTemplate();
+    SectionCon.sectionHeader(contacto, '#con', 'contacto');
+    SectionCon.tabContent(contacto, '#con');
+    SectionCon.tabsFocus('.aquabg-1', '.aquabg-2', '.aquabg-3');
+
+    // Catching and removing empty and undefined elements
+    $('p:contains("undefined")').remove();
+    $('a[href*="undefined"]').remove();
+    $('.thumbs').on('click', 'a.btn', function(e) {
+      e.preventDefault();
+      let imgPath = $(this).attr('href');
+      let modalRender = '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><img class="preview" src="' + imgPath + '"></div></div>';
+      $('.container').append(modalRender);
+      $('#myModal').css('display', 'block');
+      $('span.close').click(function() {
+        $('#myModal').remove();
+      });
+    });
+
+    // Scrolling for all anchors on the page
+    $('nav ul.tabs a.btn[href^="#"]').on('click', function(event) {
+      var target = $(this.getAttribute('href'));
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+          scrollTop: target.offset().top
+        }, 1000);
+      }
+    });
+
+    // Modal for portfolio images
+    $('.thumbs').on('click', 'a.btn', function(e) {
+      e.preventDefault();
+      let imgPath = $(this).attr('href');
+      let modalRender = '<div id="myModal" class="modal"><div class="modal-content"><span class="close">&times;</span><img class="preview" src="' + imgPath + '"></div></div>';
+      $('.container').append(modalRender);
+      $('#myModal').css('display', 'block');
+      $('span.close').click(function() {
+        $('#myModal').remove();
+      });
+    });
+
+    // Sidebar menu functions
+    $('#navigation').prepend('<li class="btn menu" onclick="closeNav()"><a class="btn"><i class="fas fa-times-circle"></i></a></li>')
+
+    function openNav() {
+      $('#nav').css('width', '50px');
+    }
+
+    function closeNav() {
+      $('#nav').css('width', '0');
+    }
+
+    // Code for validating the form
+    // Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
+    // for details
+    var frmvalidator = new Validator("myemailform");
+    frmvalidator.addValidation("name", "req", "Por favor introduce tu nombre");
+    frmvalidator.addValidation("email", "req", "Por favor introduce tu email");
+    frmvalidator.addValidation("email", "email", "Por favor introduce uan dirección de correo válida");
+    // Google maps
+    function initMap() {
+      var uluru = {
+        lat: 10.489139,
+        lng: -66.878127
+      };
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 16,
+        center: uluru
+      });
+      var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+      });
+    }
+
+    //Google analitics
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-15832718-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBB4845mdrbpL1Ub833ZI1JzneXenLBU_Q&callback=initMap" async defer></script>
+</body>
+
+</html>
