@@ -84,7 +84,7 @@ task('jsbot', () => {
 });
 
 task('jstopdist', () => {
-  return src(['js/createjs.min.js', 'js/nosotros.js', 'js/gen_validatorv31.js'])
+  return src(['js/createjs.min.js', 'js/nosotros.js', 'js/contacto.js', 'js/gen_validatorv31.js'])
     .pipe(concat('topscript.js'))
     .pipe(gzip())
     .pipe(dest('dist/js'));
