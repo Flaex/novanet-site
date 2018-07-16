@@ -83,17 +83,24 @@ task('jsbot', () => {
     .pipe(dest('js'));
 });
 
-task('jstopdist', () => {
-  return src(['js/createjs.min.js', 'js/nosotros.js', 'js/contacto.js', 'js/gen_validatorv31.js'])
-    .pipe(concat('topscript.js'))
+task('indextop', () => {
+  return src(['js/createjs.min.js', 'js/nosotros.js', 'js/gen_validatorv31.js'])
+    .pipe(concat('indextop.js'))
     .pipe(gzip())
     .pipe(dest('dist/js'));
 });
 
-task('jsbotdist', () => {
+task('contop', () => {
+  return src(['js/createjs.min.js', 'js/contacto.js'])
+    .pipe(concat('contop.js'))
+    .pipe(gzip())
+    .pipe(dest('dist/js'));
+});
+
+task('bot', () => {
   return src(['js/jquery-1.8.3.js', 'js/jquery-ui-1.9.2.custom.js', 'js/helper.js', 'js/builder.js'])
 
-    .pipe(concat('botscript.js'))
+    .pipe(concat('bot.js'))
     .pipe(gzip())
     .pipe(dest('dist/js'));
 });
@@ -119,4 +126,4 @@ task('php', () => {
 });
 
 task('dev', series('css', 'jstop', 'jsbot'));
-task('dist', series('cssdist', 'jstopdist', 'jsbotdist', 'images', 'views', 'font', 'php'));
+task('dist', series('cssdist', 'indextop', 'bot', 'contop', 'images', 'views', 'font', 'php'));
