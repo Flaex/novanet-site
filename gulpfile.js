@@ -95,6 +95,11 @@ task('bot', () => {
 task('contop', () => {
   return src(['js/createjs.min.js', 'js/contacto.js'])
     .pipe(concat('contop.js'))
+    .pipe(dest('js'));
+});
+task('contopgz', () => {
+  return src(['js/createjs.min.js', 'js/contacto.js'])
+    .pipe(concat('contop.js'))
     .pipe(gzip())
     .pipe(dest('dist/js'));
 });
@@ -119,5 +124,5 @@ task('php', () => {
     .pipe(dest('dist/php'));
 });
 
-task('dev', series('css', 'jstop', 'jsbot'));
-task('dist', series('cssdist', 'indextop', 'bot', 'contop', 'images', 'views', 'font', 'php'));
+task('dev', series('css', 'jstop', 'jsbot', 'contop'));
+task('dist', series('cssdist', 'indextop', 'bot', 'contopgz', 'images', 'views', 'font', 'php'));

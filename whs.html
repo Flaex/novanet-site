@@ -71,7 +71,7 @@
       <div class="sm"></div>
     </footer>
   </main>
-  <script src="js/bot.js.gz"></script>
+  <script src="js/botscript.js"></script>
   <script>
     // Sections creation and renderization
     const Nav = new SectionTemplate();
@@ -90,6 +90,8 @@
     $("a.section-link").remove();
     $('p:contains("undefined")').remove();
     $('a[href*="undefined"]').remove();
+    $('li:empty').remove();
+    $('span.tooltiptext:contains("undefined")').remove();
 
     // Scrolling for all anchors on the page
     $('nav ul.tabs a.btn[href^="#"]').on('click', function(event) {
@@ -110,7 +112,7 @@
       $('.container').append(modalRender);
       $('#myModal').css('display', 'block');
       $('span.close').click(function() {
-        $('#myModal').remove();
+      $('#myModal').remove();
       });
     });
   </script>

@@ -2,7 +2,7 @@
 if(!isset($_POST['submit']))
 {
 	//This page should not be accessed directly. Need to submit the form.
-	echo "Error! Esta pagina no muestra contenido, por favor regrese al formulario.";
+	echo "Error! Esta archivo no muestra contenido, por favor regrese al formulario.";
 }
 $name = $_POST['name'];
 $visitor_email = $_POST['email'];
@@ -11,7 +11,7 @@ $message = $_POST['message'];
 //Validate first
 if(empty($name)||empty($visitor_email))
 {
-    echo "Los campos Nombre y correo son obligatorios";
+    echo "Los campos nombre y correo son obligatorios";
     exit;
 }
 
@@ -23,7 +23,7 @@ if(IsInjected($visitor_email))
 
 $email_from = $visitor_email;//<== update the email address
 $email_subject = "Nuevo mensaje formulario de contacto gruponovanet.com.ve";
-$email_body = "$name le enviado un mensaje: \n".
+$email_body = "$name ha enviado un mensaje: \n".
     					"$message\n".
 
 $to = "info@gruponovanet.com.ve";//<== update the email address

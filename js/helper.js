@@ -76,31 +76,37 @@ const navigationInt = {
     "sectionTitle" : "",
     "sectionNavBtn" : [
       {
+        "id" : "inicio",
         "color" : "graybg-1",
         "icon" : "fas fa-chevron-left",
         "href" : "index.html#main"
       },
       {
+        "id" : "Nosotros",
         "color" : "greenbg-1",
         "icon" : "ni-comment",
         "href" : "index.html#ini"
       },
       {
+        "id" : "¿Qué hacemos?",
         "color" : "bluebg-1",
         "icon" : "ni-tools",
         "href" : "index.html#hac"
       },
       {
+        "id" : "portafolio",
         "color" : "orangebg-1",
         "icon" : "ni-portfolio",
         "href" : "index.html#por-ini"
       },
       {
+        "id" : "clientes",
         "color" : "redbg-1",
         "icon" : "ni-chat",
         "href" : "index.html#cli"
       },
       {
+        "id" : "contacto",
         "color" : "aquabg-1",
         "icon" : "ni-message",
         "href" : "index.html#con"
