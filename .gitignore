@@ -1,5 +1,5 @@
 dist/
-!dist/index.html
+!/dist/index.html
 css/styles.css
 js/botscript.js
 js/topscript.js
