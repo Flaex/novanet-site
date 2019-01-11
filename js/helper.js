@@ -7,6 +7,11 @@ const header = {
     },
   "sm" : [
     {
+      "id" : "juegos",
+      "icon" : "fas fa-gamepad",
+      "url" : "games/memory/"
+    },
+    {
       "id" : "facebook",
       "icon" : "fab fa-facebook-f",
       "url" : "https://www.facebook.com/GrupoNovanet"
@@ -29,31 +34,37 @@ const navigation = {
     "sectionTitle" : "",
     "sectionNavBtn" : [
       {
+        "id" : "inicio",
         "color" : "graybg-1",
         "icon" : "fas fa-chevron-up",
         "href" : "#main"
       },
       {
+        "id" : "Nosotros",
         "color" : "greenbg-1",
         "icon" : "ni-comment",
         "href" : "#ini"
       },
       {
+        "id" : "¿Qué hacemos?",
         "color" : "bluebg-1",
         "icon" : "ni-tools",
         "href" : "#hac"
       },
       {
+        "id" : "portafolio",
         "color" : "orangebg-1",
         "icon" : "ni-portfolio",
         "href" : "#por-ini"
       },
       {
+        "id" : "clientes",
         "color" : "redbg-1",
         "icon" : "ni-chat",
         "href" : "#cli"
       },
       {
+        "id" : "contacto",
         "color" : "aquabg-1",
         "icon" : "ni-message",
         "href" : "#con"

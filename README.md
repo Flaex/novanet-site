@@ -24,12 +24,12 @@ To start and open the front-end application on the default browser, navigate to 
 ```html
 <!-- This line just before de closing <head> tag -->
 <script src="js/topscript.js"></script>
-<!-- Replace it for this line just after the opening <body> tag -->
+<!-- Replace it for this -->
 <script src="js/indextop.js.gz"></script>
 
 <!-- This line just after de closing <main> tag -->
 <script src="js/botscript.js"></script>
-<!-- Replace it for this line of code in the same location of the DOM -->
+<!-- Replace it for this -->
 <script src="js/bot.js.gz"></script>
 ```
 

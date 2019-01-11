@@ -40,8 +40,74 @@ header { display: flex; flex-wrap: wrap; width: 100%}
 header .logo { order: 1}
 header .sm { order: 2; display: flex; justify-content:flex-end;}
 ul.sm-list { display: flex; }
-ul.sm-list li {list-style:none; border-radius:50%; text-align:center; border:#808285 solid 2px;}
+ul.sm-list li {list-style:none; border-radius:50%; text-align:center; background-color:#FFF; border:#808285 solid 2px;}
+ul.sm-list li.juegos { border:none; background-color:#a80e41; border:#a80e41 solid 2px;}
+ul.sm-list li.juegos i {color:#FFF}
 i {font-style:normal; color:#808285}
+
+ul#navigation li a i.tooltip .tooltiptext {
+  font-size: 0.6em;
+  width: 80px;
+  top: 130%;
+  left: 50% ;
+  margin-left: -40px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+
+ul#navigation li.graybg-1 a i.tooltip .tooltiptext { font-size: 1em}
+
+ul#navigation li a i.tooltip .tooltiptext {
+  font-size: 1.3em;
+  width: 90px;
+  top: 130%;
+  left: 50% ;
+  margin-left: -45px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+
+ul.sm-list li a i.tooltip .tooltiptext {
+  font-size: 0.6em;
+  width: 80px;
+  top: 130%;
+  left: 50% ;
+  margin-left: -40px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+
+ul.sm-list li a i.tooltip .tooltiptext::after, ul#navigation li a i.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;  /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #4e4d50 transparent;
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  font-family:'Fira Sans', sans-serif;
+  font-weight: 300;
+  visibility: hidden;
+  background-color: #4e4d50 ;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  text-transform: capitalize;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
 
 /*-- Tabs Sections --*/
 section .tabs { display: flex; flex-direction:row;}

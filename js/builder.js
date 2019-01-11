@@ -19,9 +19,12 @@ function HeaderTemplate() {
     this.src = '<img src="img/%data%" '
     this.alt = ' alt="%data%">'
     this.smList = '<ul class="sm-list"></ul>'
-    this.url = '<li><a href="%data%" target="_blank">'
-    this.icon = '<i class="%data%"></i><li></a>'
+    this.smItem = '<li class="%data%">'
+    this.url = '<a href="%data%" target="_blank">'
+    this.icon = '<i class="%data% tooltip">'
+    this.tooltip = '<span class="tooltiptext">%data%</span></i><li></a>'
     this.legal = '<p>%data%</p>'
+
 }
 
 // Header Superclass render function
@@ -34,9 +37,11 @@ HeaderTemplate.prototype.sectionHeader = function(arr) {
     $('.legal').append(this.legal)
     //Iteration over social media array
     for (let i = 0; i < arr.sm.length; i++) {
+        this.smItemRender = this.smItem.replace('%data%', arr.sm[i].id)
         this.urlRender = this.url.replace('%data%', arr.sm[i].url)
         this.iconRender = this.icon.replace('%data%', arr.sm[i].icon)
-        $('.sm-list').append(this.urlRender + this.iconRender)
+        this.tooltiprender = this.tooltip.replace('%data%', arr.sm[i].id)
+        $('.sm-list').append(this.smItemRender + this.urlRender + this.iconRender + this.tooltiprender)
     }
     //Removes all empty <li>
     $('ul li:empty').remove()
@@ -66,6 +71,8 @@ function SectionTemplate() {
     this.tabColor = '<li class="btn %data%">'
     this.tabHref = '<a class="btn" href="%data%">'
     this.tabIcon = '<i class="%data%"></i></a></li>'
+    this.tabIconNav = '<i class="%data% tooltip">'
+    this.tabIconNavTooltip = '<span class="tooltiptext">%data%</span></i><li></a>'
     this.tabInfo = '<div id="%data%" class="tabs-info"></div>'
     this.tabTitle = '<h3>%data%</h3>'
     this.tabParagraph = '<p>%data%</p>'
@@ -97,8 +104,9 @@ SectionTemplate.prototype.sectionHeader = function(arr, divId, tabId) {
     for (i = 0; i < arr.sectionNavBtn.length; i++) {
         this.colorRender = this.tabColor.replace('%data%', arr.sectionNavBtn[i].color)
         this.hrefRender = this.tabHref.replace('%data%', arr.sectionNavBtn[i].href)
-        this.iconRender = this.tabIcon.replace('%data%', arr.sectionNavBtn[i].icon)
-        $('#' + tabId).append(this.colorRender + this.hrefRender + this.iconRender)
+        this.iconRender = this.tabIconNav.replace('%data%', arr.sectionNavBtn[i].icon)
+        this.toolTipRender = this.tabIconNavTooltip.replace('%data%', arr.sectionNavBtn[i].id)
+        $('#' + tabId + ":last").append(this.colorRender + this.hrefRender + this.iconRender + this.toolTipRender)
     }
 }
 
@@ -168,6 +176,8 @@ SectionTemplate.prototype.tabItems = function(arr, tabItemIndex) {
     $('h4:contains(\'undefined\')').remove()
     $('div.tab-item:empty').remove()
     $('div.thumbs:empty').remove()
+    $('li:empty').remove()
+    $('span.tooltiptext:contains("undefined")').remove()
 }
 
 // Navigation tab buttons focus event to assign active state
