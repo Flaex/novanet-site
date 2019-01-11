@@ -11,7 +11,7 @@ const cleanCSS = require('gulp-clean-css');
 const gzip = require('gulp-gzip');
 const sourcemaps = require('gulp-sourcemaps');
 
-task('default', () => {
+task('serve', () => {
   browserSync.init({
       server: "./"
   });
@@ -31,14 +31,6 @@ task('lint', () => {
         // To have the process exit with an error code (1) on
         // lint error, return the stream and pipe to failAfterError last.
         .pipe(eslint.failAfterError());
-});
-
-task('tests', () => {
-  return src('spec/test.js')
-    .pipe(jasmine({
-     integration : true,
-     vendor : 'js/*.js'
-    }));
 });
 
 task('css', () => {
