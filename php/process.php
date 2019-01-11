@@ -11,22 +11,21 @@ $message = $_POST['message'];
 //Validate first
 if(empty($name)||empty($visitor_email))
 {
-    echo "Name and email are mandatory!";
+    echo "¡Todos los campos son obligatorios!";
     exit;
 }
 
 if(IsInjected($visitor_email))
 {
-    echo "Bad email value!";
+    echo "Correo incorrecto";
     exit;
 }
 
-$email_from = 'fpolania@gmail.com';//<== update the email address
-$email_subject = "New Form submission";
-$email_body = "You have received a new message from the user $name.\n".
-    "Here is the message:\n $message.\n".
+$email_from = $visitor_email;//<== update the email address
+$email_subject = "Formulario de contacto gruponovanet.com.ve";
+$email_body = "$name Les ha enviado un mensaje:\n".
+    "$message.\n".
 
-$to = "fpolania@gmail.com";//<== update the email address
 $headers = "From: $email_from \r\n";
 $headers .= "Reply-To: $visitor_email \r\n";
 //Send the email!

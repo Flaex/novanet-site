@@ -63,32 +63,27 @@ task('sassdist', () => {
     .pipe(browserSync.stream());
 });
 
+//concat for testing top scripts on development
 task('jstop', () => {
   return src(['js/createjs.min.js', 'js/nosotros.js', 'js/gen_validatorv31.js'])
     .pipe(concat('topscript.js'))
     .pipe(dest('js'));
 });
-
+//concat for testing bottom scripts on development
 task('jsbot', () => {
   return src(['js/jquery-1.8.3.js', 'js/jquery-ui-1.9.2.custom.js', 'js/helper.js', 'js/builder.js'])
     .pipe(concat('botscript.js'))
     .pipe(dest('js'));
 });
 
+//concat for index top scripts on production
 task('indextop', () => {
   return src(['js/createjs.min.js', 'js/nosotros.js', 'js/gen_validatorv31.js'])
     .pipe(concat('indextop.js'))
     .pipe(gzip())
     .pipe(dest('dist/js'));
 });
-
-task('contop', () => {
-  return src(['js/createjs.min.js', 'js/contacto.js'])
-    .pipe(concat('contop.js'))
-    .pipe(gzip())
-    .pipe(dest('dist/js'));
-});
-
+//concat for index bottom scripts on production
 task('bot', () => {
   return src(['js/jquery-1.8.3.js', 'js/jquery-ui-1.9.2.custom.js', 'js/helper.js', 'js/builder.js'])
 
@@ -96,9 +91,16 @@ task('bot', () => {
     .pipe(gzip())
     .pipe(dest('dist/js'));
 });
+//concat for contact view scripts on production
+task('contop', () => {
+  return src(['js/createjs.min.js', 'js/contacto.js'])
+    .pipe(concat('contop.js'))
+    .pipe(gzip())
+    .pipe(dest('dist/js'));
+});
 
 task('views', () => {
-  return src(['*.html', '*.ico'])
+  return src(['*.html','*.ico'])
     .pipe(dest('dist'));
 });
 
