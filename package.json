@@ -18,8 +18,8 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/fpolania/novanet_site#readme",
   "devDependencies": {
-    "browser-sync": "^2.24.5",
-    "eslint": "^5.0.1",
+    "browser-sync": "^2.26.5",
+    "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.13.0",
@@ -31,6 +31,7 @@
   "dependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
+    "cryptiles": ">=4.1.2",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-babel": "^7.0.1",
     "gulp-clean-css": "^3.9.4",
@@ -38,15 +39,14 @@
     "gulp-eslint": "^5.0.0",
     "gulp-gzip": "^1.4.2",
     "gulp-jasmine-phantom": "^3.0.0",
-    "gulp-order": "^1.1.1",
+    "gulp-order": "^1.2.0",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0",
-    "make-error-cause": "^2.2.0",
-    "cryptiles": ">=4.1.2",
-    "lodash": ">=4.17.5",
+    "handlebars": "^4.1.2",
     "hoek": ">=4.2.1",
-    "uglify-js": ">=2.6.0",
-    "handlebars": ">=4.0.0"
+    "lodash": ">=4.17.5",
+    "make-error-cause": "^2.2.0",
+    "uglify-js": ">=2.6.0"
   }
 }
