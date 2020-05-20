@@ -8,12 +8,11 @@ const concat = require('gulp-concat');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const cleanCSS = require('gulp-clean-css');
-const gzip = require('gulp-gzip');
 const sourcemaps = require('gulp-sourcemaps');
 
 task('serve', () => {
   browserSync.init({
-      server: "./"
+      server: "./dist"
   });
   watch("*.html").on('change', browserSync.reload);
   watch("css/*.css").on('change', browserSync.reload);
@@ -80,7 +79,7 @@ task('jsbot', () => {
 task('indextop', () => {
   return src(['js/createjs.min.js', 'js/nosotros.js', 'js/gen_validatorv31.js'])
     .pipe(concat('indextop.js'))
-    .pipe(gzip())
+    
     .pipe(dest('dist/js'));
 });
 //concat for index bottom scripts on production
@@ -88,7 +87,7 @@ task('bot', () => {
   return src(['js/jquery-1.8.3.js', 'js/jquery-ui-1.9.2.custom.js', 'js/helper.js', 'js/builder.js'])
 
     .pipe(concat('bot.js'))
-    .pipe(gzip())
+    
     .pipe(dest('dist/js'));
 });
 //concat for contact view scripts on production
@@ -96,12 +95,6 @@ task('contop', () => {
   return src(['js/createjs.min.js', 'js/contacto.js'])
     .pipe(concat('contop.js'))
     .pipe(dest('js'));
-});
-task('contopgz', () => {
-  return src(['js/createjs.min.js', 'js/contacto.js'])
-    .pipe(concat('contop.js'))
-    .pipe(gzip())
-    .pipe(dest('dist/js'));
 });
 
 task('views', () => {
@@ -125,4 +118,4 @@ task('php', () => {
 });
 
 task('dev', series('css', 'jstop', 'jsbot', 'contop'));
-task('dist', series('cssdist', 'indextop', 'bot', 'contopgz', 'images', 'views', 'font', 'php'));
+task('dist', series('cssdist', 'indextop', 'bot', 'images', 'views', 'font', 'php'));
