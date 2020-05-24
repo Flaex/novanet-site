@@ -14,17 +14,17 @@ const header = {
     {
       "id" : "facebook",
       "icon" : "fab fa-facebook-f",
-      "url" : "https://www.facebook.com/GrupoNovanet"
+      "url" : "https://www.facebook.com/NovanetStudio/"
     },
     {
       "id" : "twitter",
       "icon" : "fab fa-twitter",
-      "url" : "https://twitter.com/gruponovanet"
+      "url" : "https://twitter.com/novanetstudio"
     },
     {
       "id" : "instagram",
       "icon" : "fab fa-instagram",
-      "url" : "https://www.instagram.com/gruponovanet/"
+      "url" : "https://www.instagram.com/novanetstudio/"
     }
   ],
   "legal" : "Derechos reservados 2018."
