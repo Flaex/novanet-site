@@ -1,22 +1,29 @@
 const {src, task, watch, dest, series} = require('gulp');
 const browserSync = require('browser-sync').create();
 const eslint = require('gulp-eslint');
-const jasmine = require('gulp-jasmine-phantom');
-const sass = require('gulp-sass');
-const autoprefixer = require('gulp-autoprefixer');
+const del = require('del');
 const concat = require('gulp-concat');
+const minify = require('gulp-minify');
+const zip = require('gulp-zip');
 const babel = require('gulp-babel');
-const uglify = require('gulp-uglify');
 const cleanCSS = require('gulp-clean-css');
-const sourcemaps = require('gulp-sourcemaps');
+
+
+// General tasks
 
 task('serve', () => {
   browserSync.init({
-      server: "./dist"
+      server: "./"
   });
   watch("*.html").on('change', browserSync.reload);
   watch("css/*.css").on('change', browserSync.reload);
   watch("js/*.js").on('change', browserSync.reload);
+});
+
+task('serve-pro', () => {
+  browserSync.init({
+      server: "./pro"
+  })
 });
 
 task('lint', () => {
@@ -32,90 +39,100 @@ task('lint', () => {
         .pipe(eslint.failAfterError());
 });
 
-task('css', () => {
-  return src(['css/normalize.css', 'css/base.css'])
-    // .pipe(sourcemaps.init())
-    .pipe(concat('styles.css'))
-    .pipe(dest('css'));
-});
+// Development build tasks
 
-task('cssdist', () => {
+task('css-dev', () => {
   return src(['css/normalize.css', 'css/base.css'])
     .pipe(concat('styles.css'))
     .pipe(cleanCSS())
-    .pipe(dest('dist/css'));
+    .pipe(dest('css'));
 });
 
-task('sass', () => {
-  return src('sass/**/*.scss')
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-    .pipe(autoprefixer({browsers: ['last 2 versions']}))
-    .pipe(dest('css'))
-    .pipe(browserSync.stream());
-});
-
-task('sassdist', () => {
-  return src('sass/**/*.scss')
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-    .pipe(autoprefixer({browsers: ['last 2 versions']}))
-    .pipe(dest('dist/css'))
-    .pipe(browserSync.stream());
-});
-
-//concat for testing top scripts on development
-task('jstop', () => {
-  return src(['js/createjs.min.js', 'js/nosotros.js', 'js/gen_validatorv31.js'])
+task('js-dev', async () => {
+  // Header scripts
+  src(['js/createjs.min.js', 'js/nosotros.js', 'js/gen_validatorv31.js'])
     .pipe(concat('topscript.js'))
     .pipe(dest('js'));
-});
-//concat for testing bottom scripts on development
-task('jsbot', () => {
-  return src(['js/jquery-1.8.3.js', 'js/jquery-ui-1.9.2.custom.js', 'js/helper.js', 'js/builder.js'])
-    .pipe(concat('botscript.js'))
-    .pipe(dest('js'));
+  // Body scripts
+  src(['js/jquery-1.8.3.js', 'js/jquery-ui-1.9.2.custom.js', 'js/helper.js', 'js/builder.js'])
+  .pipe(concat('botscript.js'))
+  .pipe(dest('js'));
 });
 
-//concat for index top scripts on production
-task('indextop', () => {
-  return src(['js/createjs.min.js', 'js/nosotros.js', 'js/gen_validatorv31.js'])
-    .pipe(concat('indextop.js'))
-    
-    .pipe(dest('dist/js'));
+// Production build tasks
+task('cleanDir', function () {
+  return del([   
+    'pro/**/*'  
+  ]);
 });
-//concat for index bottom scripts on production
-task('bot', () => {
-  return src(['js/jquery-1.8.3.js', 'js/jquery-ui-1.9.2.custom.js', 'js/helper.js', 'js/builder.js'])
 
-    .pipe(concat('bot.js'))
+task('css-pro', () => {
+  return src(['css/normalize.css', 'css/base.css'])
+    .pipe(concat('styles.css'))
+    .pipe(cleanCSS())
+    .pipe(dest('pro/css'));
+});
+
+task('js-pro', async () => {
+  // Header scripts
+  src(['js/createjs.min.js', 'js/nosotros.js', 'js/gen_validatorv31.js'])
+    .pipe(concat('topscript.js')) 
+    .pipe(minify({
+      ext:{
+          src:'-debug.js',
+          min:'.js',
+      }
+    })) 
+    .pipe(dest('pro/js'));
     
-    .pipe(dest('dist/js'));
+  // Body scripts
+  src(['js/jquery-1.8.3.js', 'js/jquery-ui-1.9.2.custom.js', 'js/helper.js', 'js/builder.js'])
+  .pipe(concat('botscript.js')) 
+  .pipe(minify({
+      ext:{
+          src:'-debug.js',
+          min:'.js',
+      }
+  }))   
+  .pipe(dest('pro/js')); 
 });
-//concat for contact view scripts on production
-task('contop', () => {
-  return src(['js/createjs.min.js', 'js/contacto.js'])
-    .pipe(concat('contop.js'))
-    .pipe(dest('js'));
-});
+
 
 task('views', () => {
   return src(['*.html','*.ico'])
-    .pipe(dest('dist'));
+    .pipe(dest('pro'));
 });
 
 task('images', () => {
   return src('img/*.*')
-    .pipe(dest('dist/img'));
+    .pipe(dest('pro/img'));
 });
 
 task('font', () => {
   return src('font/*.*')
-    .pipe(dest('dist/font'));
+    .pipe(dest('pro/font'));
 });
 
 task('php', () => {
   return src('php/*.php')
-    .pipe(dest('dist/php'));
+    .pipe(dest('pro/php'));
 });
 
-task('dev', series('css', 'jstop', 'jsbot', 'contop'));
-task('dist', series('cssdist', 'indextop', 'bot', 'images', 'views', 'font', 'php'));
+// Zip tasks
+
+task('cleanJS', function () {
+  return del([
+    'pro/js/topscript-debug.js',    
+    'pro/js/botscript-debug.js'  
+  ]);
+});
+
+task('compress', async () => {
+  src('pro/**/*')
+  .pipe(zip('archive.zip'))
+  .pipe(dest('./'))
+});
+
+task('dev', series('css-dev', 'js-dev', 'serve'));
+task('pro', series('cleanDir', 'css-pro', 'js-pro', 'views', 'images', 'font', 'php', 'serve-pro' ));
+task('zip', series('cleanJS', 'compress'));

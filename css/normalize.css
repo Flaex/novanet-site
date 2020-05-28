@@ -1,5 +1,8 @@
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
-*{ margin: 0;padding: 0}
+* {
+  margin: 0;
+  padding: 0;
+}
 
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -47,8 +50,6 @@ section {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
-
-
 /* Grouping content
    ========================================================================== */
 
@@ -59,7 +60,8 @@ section {
 
 figcaption,
 figure,
-main { /* 1 */
+main {
+  /* 1 */
   display: block;
 }
 
@@ -68,7 +70,7 @@ main { /* 1 */
  */
 
 figure {
-  margin:1px;
+  margin: 1px;
 }
 
 /**
@@ -264,7 +266,8 @@ textarea {
  */
 
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -274,7 +277,8 @@ input { /* 1 */
  */
 
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
