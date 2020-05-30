@@ -11,6 +11,11 @@ const header = {
       url: "games/memory/",
     },
     {
+      id: "instagram",
+      icon: "fab fa-instagram",
+      url: "https://www.instagram.com/novanetstudio/",
+    },
+    {
       id: "facebook",
       icon: "fab fa-facebook-f",
       url: "https://www.facebook.com/NovanetStudio/",
@@ -21,10 +26,10 @@ const header = {
       url: "https://twitter.com/novanetstudio",
     },
     {
-      id: "instagram",
-      icon: "fab fa-instagram",
-      url: "https://www.instagram.com/novanetstudio/",
-    },
+      id: "linkedin",
+      icon: "fab fa-linkedin-in",
+      url: "https://www.linkedin.com/company/2563789",
+    },    
   ],
   legal: "Derechos reservados 2018.",
 };
@@ -102,7 +107,7 @@ const navigationInt = {
       id: "blog",
       color: "redbg-1",
       icon: "ni-pencil",
-      href: "https://novanet.studio/blog/",
+      href: "index.html#por-ini",
     },
     {
       id: "contacto",
@@ -1223,6 +1228,9 @@ const portafolio = {
     },
   ],
   sectionLink: "portafolio.html",
+  sectionLinkText: "Ver todo el portafolio",
+  sectionLinkClass: "orange-1",
+  sectionLinkIcon: "far fa-image",
 };
 
 //Clientes object
@@ -1232,29 +1240,21 @@ const clientes = {
     {
       color: "redbg-3",
       icon: "ni-pencil",
-      href: "#logotipos",
-    },
-    {
-      color: "redbg-2",
-    },
-    {
-      color: "redbg-1",
+      href: "#newobject",
     },
   ],
   tabs: [
     {
-      id: "logotipos",
+      id: "newobject",
       tabTitle: "Temas de diseño y tecnología",
       tabParagraph:
-        "Compartimos artículos relacionados con el diseño, la tecnología y cualquier tema de interés relacionado con la diseño gráfico.",
-    },
-    {
-      id: "dudes",
-      tabTitle: "Temas de diseño y tecnología",
-      tabParagraph:
-        "Compartimos artículos relacionados con el diseño, la tecnología y cualquier tema de interés relacionado con la comunicación visual.",
+        "Compartimos artículos relacionados con el diseño, la tecnología <br/>y cualquier tema de interés relacionado con la diseño gráfico.",
     },
   ],
+  sectionLink: "https://novanet.studio/blog/",
+  sectionLinkText: "Ir al blog",
+  sectionLinkClass: "red-1",
+  sectionLinkIcon: "far fa-eye",
 };
 
 //Contacto object
@@ -1270,9 +1270,6 @@ const contacto = {
       color: "aquabg-2",
       icon: "ni-pin",
       href: "#location",
-    },
-    {
-      color: "aquabg-3",
     },
   ],
   tabs: [

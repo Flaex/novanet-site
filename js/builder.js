@@ -70,7 +70,10 @@ function SectionTemplate() {
   this.sectionTitle = "<h2>%data%</h2>";
   this.sectionNav = '<ul id="%data%" class="tabs"></ul>';
   this.sectionLink =
-    '<h4><a class="section-link" href="%data%">Ver más casos de éxito <i class="orange-1 far fa-images"></i></a></h4>';
+    '<h3><a class="section-link" href="%data%">';
+  this.sectionLinkText = '%data% <i ';
+  this.sectionLinkClass = 'class="%data%';
+  this.sectionLinkIcon = ' %data%"></i></a></h3>';  
   this.tabColor = '<li class="btn %data%">';
   this.tabHref = '<a class="btn" href="%data%">';
   this.tabIcon = '<i class="%data%"></i></a></li>';
@@ -80,10 +83,10 @@ function SectionTemplate() {
   this.tabInfo = '<div id="%data%" class="tabs-info"></div>';
   this.tabTitle = "<h3>%data%</h3>";
   this.tabParagraph = "<p>%data%</p>";
-  this.tabBlog = '<did id="blog"></div>';
+  this.tabBlog = '<p>hola</p>';
   this.tabMap = '<div id="map"></div>';
   this.tabInCon =
-    '<div id="instagram-feed"><h4>Síguenos en instagram <a class="aqua-1" href="https://www.instagram.com/gruponovanet/" target="_blank">@gruponovanet</a></h4><!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/62ecc39e51b659099da9a64c2e8f76b5.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe></div>';
+    '<div id="instagram-feed"><h4>Síguenos en síguenos en nuestras redes</h4><div class="sm"><ul class="sm-list"><li class="instagram"><a href="https://www.instagram.com/novanetstudio/" target="_blank"><i class="fab fa-instagram tooltip"><span class="tooltiptext">instagram</span></i></a></li><li class="facebook"><a href="https://www.facebook.com/NovanetStudio/" target="_blank"><i class="fab fa-facebook-f tooltip"><span class="tooltiptext">facebook</span></i></a></li><li class="twitter"><a href="https://twitter.com/novanetstudio" target="_blank"><i class="fab fa-twitter tooltip"><span class="tooltiptext">twitter</span></i></a></li><li class="linkedin"><a href="https://www.linkedin.com/company/2563789" target="_blank"><i class="fab fa-linkedin-in tooltip"><span class="tooltiptext">linkedin</span></i></a></li></ul></div></div>';
   this.tabFormCon =
     '<form method="post" name="myemailform" action="php/process.php"><h4>Envíanos un mensaje</h4><input type="text" name="name" placeholder="Nombre y apellido"><input type="text" name="email" " placeholder="Email"><textarea name="message" placeholder="Mensaje"></textarea><input class="aquabg-1" type="submit" name="submit" value="Enviar"></form>';
   this.tabFormWhs =
@@ -141,7 +144,10 @@ SectionTemplate.prototype.tabContent = function (arr, divId) {
   }
   $(divId).tabs();
   this.sectionLinkRender = this.sectionLink.replace("%data%", arr.sectionLink);
-  $(divId).append(this.sectionLinkRender);
+  this.sectionLinkTextRender = this.sectionLinkText.replace("%data%", arr.sectionLinkText);
+  this.sectionLinkClassRender = this.sectionLinkClass.replace("%data%", arr.sectionLinkClass);
+  this.sectionLinkIconRender = this.sectionLinkIcon.replace("%data%", arr.sectionLinkIcon);
+  $(divId).append(this.sectionLinkRender + this.sectionLinkTextRender + this.sectionLinkClassRender + this.sectionLinkIconRender);  
   $("#location").append(this.tabMap);
   $("#message").append(this.tabFormCon);
   $("#message").append(this.tabInCon);
@@ -225,6 +231,7 @@ SectionTemplate.prototype.tabItems = function (arr, tabItemIndex) {
   $("h2:empty").remove();
   $("h3:contains('undefined')").remove();
   $("h4:contains('undefined')").remove();
+  $("h4:empty").remove();
   $("div.tab-item:empty").remove();
   $("div.thumbs:empty").remove();
   $("li:empty").remove();

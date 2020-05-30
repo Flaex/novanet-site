@@ -82,8 +82,8 @@ task("images", () => {
   return src("img/*.*").pipe(dest("pro/img"));
 });
 
-task("font", () => {
-  return src("font/*.*").pipe(dest("pro/font"));
+task("fonts", () => {
+  return src("fonts/*.*").pipe(dest("pro/fonts"));
 });
 
 task("php", () => {
@@ -141,7 +141,7 @@ task(
     "js-pro",
     "views",
     "images",
-    "font",
+    "fonts",
     "php",
     (liveReload = () => {
       browserSync.init({

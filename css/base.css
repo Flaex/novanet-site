@@ -368,6 +368,26 @@ ul.sm-list li {
   background-color: #fff;
   border: #808285 solid 2px;
 }
+
+#instagram-feed ul.sm-list li {
+  list-style: none;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #00bebe;
+  border: #00bebe solid 2px;
+}
+
+#instagram-feed ul.sm-list li {
+  width: 5em;
+  height: 5em;
+  margin: 4em .8em;
+}
+
+#instagram-feed ul.sm-list li i {
+  font-size: 2.4em;
+  padding-top: 0.55em;
+}
+
 ul.sm-list li.juegos {
   border: none;
   background-color: #a80e41;
@@ -380,6 +400,12 @@ i {
   font-style: normal;
   color: #808285;
 }
+#instagram-feed  i {
+  font-style: normal;
+  color: #fff;
+}
+
+
 
 ul#navigation li a i.tooltip .tooltiptext {
   font-size: 0.6em;
@@ -391,6 +417,10 @@ ul#navigation li a i.tooltip .tooltiptext {
 
 ul#navigation li.graybg-1 a i.tooltip .tooltiptext {
   font-size: 1em;
+}
+
+#instagram-feed ul.sm-list li a i.tooltip .tooltiptext {
+  font-size: 0.3em;
 }
 
 ul#navigation li a i.tooltip .tooltiptext {
@@ -595,10 +625,16 @@ section .tab-item p.dates {
 #por-ini .thumbs .thumb img {
   width: 100%;
 }
+
+#cli p {
+  font-size: 1.3em;
+  line-height: 1.4em;
+} 
+#cli .section-link,
 #por .section-link,
 #por-ini .section-link {
   font-weight: 900;
-  color: #4e4d50;
+  color: #a2a2a1;
 }
 #por a.url {
   font-weight: 700;
@@ -1040,6 +1076,18 @@ footer ul.sm-list li {
     font-size: 0.9em;
     padding-top: 0.35em;
   }
+
+  #instagram-feed ul.sm-list li {
+    width: 3em;
+    height: 3em;
+    margin: 0.5em 0.5em;
+  }
+  
+  #instagram-feed ul.sm-list li i {
+    font-size: 1.5em;
+    padding-top: 0.25em;
+  }
+  
 }
 
 @media only screen and (width: 1024px) and (height: 768px) {
@@ -1099,6 +1147,17 @@ footer ul.sm-list li {
   }
   footer .sm {
     width: 55% !important;
+  }
+
+  #instagram-feed ul.sm-list li {
+    width: 3em;
+    height: 3em;
+    margin: 0.5em 0.5em;
+  }
+  
+  #instagram-feed ul.sm-list li i {
+    font-size: 1.5em;
+    padding-top: 0.25em;
   }
 }
 
@@ -1578,8 +1637,7 @@ footer ul.sm-list li {
   header .sm {
     width: 80%;
   }
-  ul.sm-list {
-  }
+
   ul.sm-list li {
     width: 2.5em;
     height: 2.5em;
@@ -1588,7 +1646,7 @@ footer ul.sm-list li {
   ul.sm-list li i {
     font-size: 1.45em;
     padding-top: 0.35em;
-  }
+  } 
 
   /*-- Navigation --*/
   nav {
@@ -1719,8 +1777,7 @@ footer ul.sm-list li {
   #por-ini .thumbs .thumb {
     margin: 0.5em 1em 0 0;
   }
-  #iniPor .stories {
-  }
+  
   #iniPor .canvasContainer {
     width: 50%;
   }
