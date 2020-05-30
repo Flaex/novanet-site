@@ -65,7 +65,7 @@ const navigation = {
       id: "blog",
       color: "redbg-1",
       icon: "ni-pencil",
-      href: "https://novanet.studio/blog/",
+      href: "#cli",
     },
     {
       id: "contacto",
@@ -107,7 +107,7 @@ const navigationInt = {
       id: "blog",
       color: "redbg-1",
       icon: "ni-pencil",
-      href: "index.html#por-ini",
+      href: "index.html#cli",
     },
     {
       id: "contacto",
