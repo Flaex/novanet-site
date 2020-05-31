@@ -1251,7 +1251,7 @@ const clientes = {
         "Compartimos artículos relacionados con el diseño, la tecnología <br/>y cualquier tema de interés relacionado con la diseño gráfico.",
     },
   ],
-  sectionLink: "https://novanet.studio/blog/",
+  sectionLink: "#",
   sectionLinkText: "Ir al blog",
   sectionLinkClass: "red-1",
   sectionLinkIcon: "far fa-eye",
