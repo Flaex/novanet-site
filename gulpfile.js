@@ -15,7 +15,7 @@ task("css-dev", () => {
 
 task("js-dev", async () => {
   // Header scripts
-  src(["js/createjs.min.js", "js/nosotros.js", "js/gen_validatorv31.js"])
+  src(["js/createjs.min.js", "js/nosotros.js", "js/gen_validatorv4.js", "js/emailv241.js"])
     .pipe(concat("topscript.js"))
     .pipe(dest("js"));
   // Body scripts
@@ -43,7 +43,7 @@ task("css-pro", () => {
 
 task("js-pro", async () => {
   // Header scripts
-  src(["js/createjs.min.js", "js/nosotros.js", "js/gen_validatorv31.js"])
+  src(["js/createjs.min.js", "js/nosotros.js", "js/gen_validatorv4.js", "js/emailv241.js"])
     .pipe(concat("topscript.js"))
     .pipe(
       minify({
@@ -143,7 +143,7 @@ task(
     "images",
     "fonts",
     "php",
-    (liveReload = () => {
+    (load = () => {
       browserSync.init({
         server: "./pro",
       });

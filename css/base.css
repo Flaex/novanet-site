@@ -763,6 +763,11 @@ form textarea {
 #whs form input::placeholder {
   font-weight: 300;
 }
+
+#con form input[type="submit"] {
+  margin-top: 2.5%;
+}
+
 #con form input[type="submit"],
 #whs form input[type="submit"] {
   font-family: "Fira Sans", sans-serif;

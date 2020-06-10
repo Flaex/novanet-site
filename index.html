@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="es">
   <!--
            .77777777..
@@ -79,9 +79,16 @@
       </style>
     <![endif]-->
     <!--Pinterest domain verification-->
-    <meta name="p:domain_verify" content="04d8df29f1a3081233afe2ffecf70fc9"/>
-    <!--Instagram responsive feed from https://lightwidget.com/-->
+    <meta name="p:domain_verify" content="04d8df29f1a3081233afe2ffecf70fc9" />
     <script src="js/topscript.js"></script>
+    <!-- reCAPTCHA  implementation-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!--EmailJS implementation-->
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_RfSf1tcSTDweZVWXo3B3m");
+      })();
+    </script>
   </head>
 
   <body onload="init();">
@@ -202,22 +209,60 @@
       // Code for validating the form
       // Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
       // for details
-      var frmvalidator = new Validator("myemailform");
-      frmvalidator.addValidation(
-        "name",
-        "req",
-        "Por favor introduce tu nombre"
-      );
-      frmvalidator.addValidation(
-        "email",
-        "req",
-        "Por favor introduce tu email"
-      );
-      frmvalidator.addValidation(
-        "email",
-        "email",
-        "Por favor introduce uan dirección de correo válida"
-      );
+      var frmvalidator = new Validator("myemailform"); //where myform is the name/id of your form
+
+      // EmailJS
+      window.onload = function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            // Form elements verification
+            frmvalidator.addValidation(
+              "user_name",
+              "req",
+              "Por favor introduce tu nombre"
+            );
+            frmvalidator.addValidation(
+              "user_name",
+              "maxlen=25",
+              "Parece que tu nombre es muy largo"
+            );
+            frmvalidator.addValidation(
+              "user_email",
+              "req",
+              "Por favor introduce tu correo"
+            );
+            frmvalidator.addValidation(
+              "user_email",
+              "maxlen=40",
+              "Parece que tu correo es muy largo"
+            );
+            frmvalidator.addValidation("user_email", "email", "El formato del correo es inválido");
+            frmvalidator.addValidation(
+              "message",
+              "req",
+              "Por favor escribe un mensaje"
+            );
+            frmvalidator.addValidation(
+              "message",
+              "maxlen=280",
+              "Parece que tu mensaje es muy largo"
+            );
+            var response = grecaptcha.getResponse();
+            if(response.length == 0)   { 
+              //reCaptcha not verified
+              alert("Por favor, verifica que eres humano 👍🧑 👎🤖"); 
+              evt.preventDefault();
+              return false;
+            }
+            emailjs.sendForm("nn_test", "nn_contact", this);
+            alert("Tu mensaje ha sido enviado"); 
+            this.reset();            
+          });
+          
+      };
+
       // Google maps
       function initMap() {
         var uluru = {
@@ -265,3 +310,4 @@
     ></script>
   </body>
 </html>
+ -->
