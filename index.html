@@ -91,7 +91,7 @@
     </script>
   </head>
 
-  <body onload="init();">
+  <body>
     <div id="hamburguer" onclick="openNav()">&#9776;</div>
     <nav id="nav"></nav>
     <main id="main" class="container">
@@ -213,6 +213,7 @@
 
       // EmailJS
       window.onload = function () {
+        init();
         document
           .getElementById("contact-form")
           .addEventListener("submit", function (event) {
