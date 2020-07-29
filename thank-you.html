@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<!--
+  <!--
            .77777777..
         ...7777777777...                                                                    .
          ..7777 ..7777..                                                                    .OOZ
@@ -18,68 +18,98 @@
           . ..,?7=..
 -->
 
-<head>
-  <title>novanet - estudio de diseño</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="description" content="Estudio de diseño multimedios" />
-  <meta name="Keywords" content="Diseño gráfico, páginas web, integración tecnologías." />
-  <!--FB opengraph-->
-  <meta property="og:image" content="http://www.gruponovanet.com.ve/site/img/og-thumbnail.png" />
-  <meta property="og:title" content="Novanet - Estudio de diseño integral" />
-  <meta property="og:url" content="http://www.gruponovanet.com.ve/site/" />
-  <meta property="og:site_name" content="Novanet - Estudio de diseño integral." />
-  <meta property="og:description" content="Creamos historias de éxito." />
-  <meta property="og:type" content="website" />
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!--favicon-->
-  <link rel="shortcut icon" href="favicon.ico">
-  <!--GoogleFont-->
-  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,600,700,800,900" rel="stylesheet">
-  <!--FontAwesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
-  <!--Styles-->
-  <link href="css/styles.css" rel="stylesheet" type="text/css">
-  <!--if lt IE 9-->
-  <!--[if lt IE 9]>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/livingston-css3-mediaqueries-js/1.0.0/css3-mediaqueries.js"></script>
+  <head>
+    <title>novanet - estudio de diseño</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="Estudio de diseño multimedios" />
+    <meta
+      name="Keywords"
+      content="Diseño gráfico, páginas web, integración tecnologías."
+    />
+    <!--FB opengraph-->
+    <meta
+      property="og:image"
+      content="http://www.gruponovanet.com.ve/site/img/og-thumbnail.png"
+    />
+    <meta property="og:title" content="Novanet - Estudio de diseño integral" />
+    <meta property="og:url" content="http://www.gruponovanet.com.ve/site/" />
+    <meta
+      property="og:site_name"
+      content="Novanet - Estudio de diseño integral."
+    />
+    <meta property="og:description" content="Creamos historias de éxito." />
+    <meta property="og:type" content="website" />
+    <meta
+      name="viewport"
+      content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--favicon-->
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!--GoogleFont-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,600,700,800,900"
+      rel="stylesheet"
+    />
+    <!--FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
+      integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
+      crossorigin="anonymous"
+    />
+    <!--Styles-->
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <!--if lt IE 9-->
+    <!--[if lt IE 9]>
+      <script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/livingston-css3-mediaqueries-js/1.0.0/css3-mediaqueries.js"
+      ></script>
       <style type="text/css">
-        .container { display:table; width: 100%;}
-        .row { height: 100%; display: table-row;}
-        .col-sm-4 { display: table-cell;}
+        .container {
+          display: table;
+          width: 100%;
+        }
+        .row {
+          height: 100%;
+          display: table-row;
+        }
+        .col-sm-4 {
+          display: table-cell;
+        }
       </style>
-  <![endif]-->
-  <!--Form input validation-->
-  <!--Instagram responsive feed from https://lightwidget.com/-->
-  <script src="js/contop.js"></script>
-</head>
+    <![endif]-->
+    <!--Form input validation-->
+    <!--Instagram responsive feed from https://lightwidget.com/-->
+    <script src="js/contop.js"></script>
+  </head>
 
-<body onload="init();">
-  <nav id="nav"></nav>
-  <main class="container">
-    <header>
-      <div class="logo"></div>
-      <div class="sm"></div>
-    </header>
-    <section id="ini">
-      <div class="stories line"></div>
-      <canvas id="con"></canvas>
-    </section>
-  </main>
-  <script src="js/botscript.js"></script>
-  <script>
-    // Sections creation and renderization
-    const storiesPrint = new StoriesTemplate();
-    storiesPrint.display(storiesCon);
+  <body onload="init();">
+    <nav id="nav"></nav>
+    <main class="container">
+      <header>
+        <div class="logo"></div>
+        <div class="sm"></div>
+      </header>
+      <section id="ini">
+        <div class="stories line"></div>
+        <canvas id="con"></canvas>
+      </section>
+    </main>
+    <script src="js/botscript.js"></script>
+    <script>
+      // Sections creation and renderization
+      const storiesPrint = new StoriesTemplate();
+      storiesPrint.display(storiesCon);
 
-    // Catching and removing empty and undefined elements
-    $("a.section-link").remove();
-    $('p:contains("undefined")').remove();
-    $('a[href*="undefined"]').remove();
+      // Catching and removing empty and undefined elements
+      $("a.section-link").remove();
+      $('p:contains("undefined")').remove();
+      $('a[href*="undefined"]').remove();
 
-    // Redirection to home page
-    // window.setTimeout('window.open("index.html#con","_self")', 5000);
-  </script>
-</body>
-
+      // Redirection to home page
+      // window.setTimeout('window.open("index.html#con","_self")', 5000);
+    </script>
+  </body>
 </html>
