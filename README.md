@@ -13,15 +13,17 @@ The provided file [`builder.js`](js/builder.js) contains the functions and super
 - [`shuffle`] --> Random function to shuffle the content and some UI elements order. This way the user will never se the information presented in the same way.
 - [`SectionTemplate`] --> This superclass contains all the HTML templates. Her prototypes receive some specific object(s) from the database to load its values on the html components.
 
-## gulp.js
-
-Automated tasks to help with development and production testing. Here you can check the css/js concatenation tasks and the formats in which these files are joined together. The production version needs to run on an Apache server (wamp/xamp would the job) due to css/js files are gzipped. The development environment runs on a server provided by browserSync or any other web server of your preference.
-
 ## Installling
 
 To run successfully the frontend application it is required to have node.js installed on the system.
 
 - [`npm install`]. To install required node modules and dependencies.
+
+## gulp.js
+
+Automated tasks to help with development and production testing. Here you can check the css/js concatenation tasks and the formats in which these files are joined together. The production version needs to run on an Apache server (wamp/xamp would the job). The development environment runs on a server provided by browserSync or any other web server of your preference. Remember to install the gulp command line utility, typing the following command in the command promt:
+
+- [`npm install --global gulp-cli`]
 
 ## Running and testing
 
